@@ -1,0 +1,23 @@
+extends includes/layout
+
+
+block css
+
+    link(rel="stylesheet", href="css/platonic-solids.css")
+
+
+block scene
+
+    include includes/grid
+
+    div.group(data-group-id="0", data-animation="turntable")
+
+        div.mesh(data-mesh-type="octahedron", data-mesh-id="0", data-light="1", data-animation="")
+            - var faces = [0, 1, 2, 3, 4, 5, 6, 7]
+            each index in faces
+                div.face(data-face-id="#{index}")
+
+        div.mesh(data-mesh-type="tetrahedron", data-mesh-id="0", data-light="1", data-animation="")
+            - var faces = [0, 1, 2, 3]
+            each index in faces
+                div.face(data-face-id="#{index}")

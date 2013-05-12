@@ -1,0 +1,76 @@
+/* 
+ *   Document    : svg.styl
+ *   Author      : DPR
+ *   Description : SVG utilities.
+ */
+
+
+// SVG Namespace
+
+svg-ns = "http://www.w3.org/2000/svg"
+
+
+/*
+ * Generates an svg triangle
+ *
+ * @param width
+ * @param height
+ * @param stroke
+ * @param stroke-width
+ * @param fill
+ * @api   public 
+ */
+
+svg-triangle(width = 50px, height = 50px, stroke = material-color, stroke-width = 1, fill = material-color)
+    height = unit(height, '')
+    width  = unit(width, '')
+    x1 = width / 2
+    y1 = 0
+    x2 = width
+    y2 = height
+    x3 = 0
+    y3 = height
+    points = '%s,%s %s,%s %s,%s' % (x1 y1 x2 y2 x3 y3)
+    svg-polygon(stroke, stroke-width, fill, points)
+
+
+/*
+ * Generates an svg rectangle
+ *
+ * @param width
+ * @param height
+ * @param stroke
+ * @param stroke-width
+ * @param fill
+ * @api   public
+ */
+svg-rectangle(width = 100px, height = 100px, stroke = material-color, stroke-width = 1, fill = material-color)
+    '<rect width="%s" height="%s" stroke="%s" stroke-width="%s" fill="%s"></rect>' % (width height stroke stroke-width fill)
+
+
+/*
+ * Generates an svg polygon
+ *
+ * @param stroke
+ * @param stroke-width
+ * @param fill
+ * @param points
+ * @api   public
+ */
+
+svg-polygon(stroke = "#FFFFFF", stroke-width = 1, fill = "#FFFFFF", points = "")
+    '<polygon stroke="%s" stroke-width="%s" fill="%s" points="%s"></polygon>' % (stroke stroke-width fill points)
+
+
+/*
+ * Sets the svg data uri
+ *
+ * @param width
+ * @param height
+ * @param viewBox
+ * @param content
+ * @api   public
+ */
+svg-data-uri(width = 100px, height = 100px, content = "")
+    'data:image/svg+xml;utf8,<svg xmlns="'+unquote(svg-ns)+'" width="'+("%s" % width)+'" height="'+("%s" % height)+'">'+("%s" % content)+'</svg>'
+

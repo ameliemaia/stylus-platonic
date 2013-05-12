@@ -1,0 +1,23 @@
+
+viewport-width = 100%
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+.platonic-viewport
+
+    section.scene
+
+        div.ui-component
+            &.ui-component-grid
+                ui-grid()
+
+        div.mesh
+
+            &[data-mesh-type="quad"]
+                div.face
+                    quad(width: 80px, height: 80px, translate-x: 0, translate-y: 0, color: white)
+
+            &[data-mesh-type="triangle"]
+                div.face
+                    triangle(side-length: 80px, translate-x: 100px, translate-y: 0, color: red)

@@ -1,0 +1,55 @@
+/* 
+ *   Document    : scene-object.styl
+ *   Author      : DPR
+ *   Description : Base scene object definition module.      
+ */
+
+
+// Abstract scene object
+
+.scene-object
+
+    transform-style(preserve-3d)
+    transform-origin(50% 50%)
+
+    absolute   top 50% left 50%
+    width    : 0
+    height   : 0
+
+
+.platonic-viewport
+
+    .scene
+
+        // Mesh definition 
+
+        div.mesh
+            @extend .scene-object
+            div.face
+                backface-visibility(visible)
+                position : absolute
+        
+        
+        // Group definition
+
+        div.group
+            @extend .scene-object
+
+
+        // UI Component definition
+
+        div.ui-component
+            @extend .scene-object
+
+
+        // Point definition
+
+        div.point
+
+            @extend .scene-object
+            border-radius(50%)
+
+            background-color : point-color
+            absolute           top 0 left 0
+            width            : point-size
+            height           : point-size

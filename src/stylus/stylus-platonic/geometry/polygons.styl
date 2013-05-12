@@ -1,0 +1,52 @@
+/*! 
+ *   Document    : polygons.styl
+ *   Author      : DPR
+ *   Description : Polygon mixins.
+ */
+
+
+/*
+ * Generates a triangle
+ *
+ * @param side-length
+ * @param angle
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @api   public
+ */
+
+triangle(side-length = 50px, angle = 60, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color)
+    height = triangle-height(side-length, angle)
+    center(side-length, height)
+    quad(side-length, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+    data-uri = svg-data-uri(side-length, height, svg-triangle(side-length, height, 0, white))
+    -webkit-mask-image(data-uri)
+    // -moz-mask(data-uri)
+
+
+/*
+ * Generates a quad
+ *
+ * @param width
+ * @param height
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @api   public
+ */
+
+quad(width = 50px, height = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color)
+    center(width, height)
+    transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+    background-color : color
+    width            : width 
+    height           : height 

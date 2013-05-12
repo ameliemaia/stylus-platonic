@@ -1,0 +1,36 @@
+/*
+ *   Document    : vendor.styl
+ *   Author      : DPR
+ *   Description : Vendor specific utilities.      
+ */
+
+
+/*
+ * Makes a mask (Webkit only...)
+ *
+ * https://developer.mozilla.org/en-US/docs/CSS/-webkit-mask-image
+ *
+ * @api public
+ */
+
+-webkit-mask-image(image = none, repeat = no-repeat, position = 0% 0%, origin = padding, clip = border, composite = source-over)
+    if inlist(webkit, vendor-prefixes)
+        -webkit-mask-image     : url(image)
+        -webkit-mask-repeat    : repeat
+        -webkit-mask-position  : position
+        -webkit-mask-origin    : origin
+        -webkit-mask-clip      : clip
+        -webkit-mask-composite : composite
+
+
+/*
+ * [WIP] Makes a mask (Moz only...)
+ *
+ * https://developer.mozilla.org/en-US/docs/CSS/mask
+ *
+ * @api private
+ */
+
+-moz-mask(svg)
+    if inlist(moz, vendor-prefixes)
+        // mask : url(svg)

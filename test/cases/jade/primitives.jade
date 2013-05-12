@@ -1,0 +1,51 @@
+extends includes/layout
+
+
+block css
+
+    link(rel="stylesheet", href="css/primitives.css")
+
+
+block scene
+
+    include includes/grid
+
+    div.group(data-group-id="0", data-animation="turntable")
+
+
+        //- Plane
+
+        div.mesh(data-mesh-type="plane", data-mesh-id="0", data-light="1", data-animation="")
+            div.face(data-face-id="0")
+
+
+        //- Cube
+
+        div.mesh(data-mesh-type="cube", data-mesh-id="0", data-light="1", data-animation="")
+            each index in [0, 1, 2, 3, 4, 5]
+                div.face(data-face-id="#{index}")
+
+
+        //- Pyramid
+
+        div.mesh(data-mesh-type="pyramid", data-mesh-id="0", data-light="1", data-animation="")
+            - var faces = [0, 1, 2, 3, 4]
+            each index in faces
+                div.face(data-face-id="#{index}")
+
+
+        //- Sphere
+
+        //- div.mesh(data-mesh-type="sphere", data-mesh-id="0", data-light="0", data-animation="")
+            
+        //-     - var subdivisionsAxis   = 4
+        //-     - var subdivisionsHeight = 4
+
+        //-     - var quadVertices = ((subdivisionsHeight - 2) * subdivisionsAxis) * 4
+        //-     - var triVertices  = (2 * subdivisionsAxis) * 3
+        //-     - var faceCenters  = (subdivisionsAxis - 1) * subdivisionsHeight
+
+        //-     - var len = triVertices + quadVertices + faceCenters
+
+        //-     - for(var i = 0; i < len; i++)
+        //-         div.point(data-point-id="#{i}")

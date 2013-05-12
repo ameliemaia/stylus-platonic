@@ -1,0 +1,21 @@
+extends includes/layout
+
+
+block css
+
+    link(rel="stylesheet", href="css/polygons.css")
+
+
+block scene
+
+    include includes/grid
+
+    // Quad
+
+    div.mesh(data-mesh-type="quad", data-mesh-id="0", data-light="1", data-animation="turntable")
+        div.face(data-face-id="0")
+
+    // Triangle
+
+    div.mesh(data-mesh-type="triangle", data-mesh-id="0", data-light="1", data-animation="turntable")
+        div.face(data-face-id="0")   

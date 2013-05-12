@@ -1,0 +1,315 @@
+/* 
+ *   Document    : dev.styl
+ *   Author      : DPR
+ *   Description : dev styles.
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+[data-animation="turntable"] {
+  -webkit-animation-name: turntable;
+  -moz-animation-name: turntable;
+  -o-animation-name: turntable;
+  -ms-animation-name: turntable;
+  animation-name: turntable;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  -ms-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@-moz-keyframes turntable {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+@-webkit-keyframes turntable {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+@-o-keyframes turntable {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+@-ms-keyframes turntable {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+@keyframes turntable {
+  0% {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -moz-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -o-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    -ms-transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+/* 
+ *   Document    : math.styl
+ *   Author      : DPR
+ *   Description : Math constants and functions.   
+ */
+.scene-object,
+.platonic-viewport .scene div.mesh,
+.platonic-viewport .scene div.group,
+.platonic-viewport .scene div.ui-component,
+.platonic-viewport .scene div.point {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.platonic-viewport .scene div.mesh div.face {
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  position: absolute;
+}
+.platonic-viewport .scene div.point {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ff0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+}
+.platonic-viewport {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-perspective-origin: 50%;
+  -moz-perspective-origin: 50%;
+  -ms-perspective-origin: 50%;
+  perspective-origin: 50%;
+  background-color: #575757;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #575757), color-stop(1, #272727));
+  background: -webkit-linear-gradient(top, #575757 0%, #272727 100%);
+  background: -moz-linear-gradient(top, #575757 0%, #272727 100%);
+  background: -o-linear-gradient(top, #575757 0%, #272727 100%);
+  background: -ms-linear-gradient(top, #575757 0%, #272727 100%);
+  background: linear-gradient(top, #575757 0%, #272727 100%);
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 600px;
+}
+.platonic-viewport .scene {
+  width: 100%;
+  height: 600px;
+}
+/* 
+ *   Document    : polygons.styl
+ *   Author      : DPR
+ *   Description : Polygon mixins.
+ */
+/* 
+ *   Document    : fractals.styl
+ *   Author      : DPR
+ *   Description : Fractal mixins, ooossshh.
+ */
+.platonic-viewport section.scene div.mesh[data-mesh-type="quad"] div.face {
+  margin-top: -40px;
+  margin-left: -40px;
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);
+  -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);
+  -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);
+  -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0) translateY(0) translateZ(0);
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+}
+.platonic-viewport section.scene div.mesh[data-mesh-type="triangle"] div.face {
+  margin-top: -40px;
+  margin-left: -34.64101615137754px;
+  margin-top: -40px;
+  margin-left: -34.64101615137754px;
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(100px) translateY(0) translateZ(0);
+  -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(100px) translateY(0) translateZ(0);
+  -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(100px) translateY(0) translateZ(0);
+  -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(100px) translateY(0) translateZ(0);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(100px) translateY(0) translateZ(0);
+  background-color: #f00;
+  width: 80px;
+  height: 69.28203230275508px;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80px" height="69.28203230275508px"><polygon stroke="0" stroke-width="#fff" fill="#fff" points="40,0 80,69.28203230275508 0,69.28203230275508"></polygon></svg>');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}

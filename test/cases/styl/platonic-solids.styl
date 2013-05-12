@@ -1,0 +1,26 @@
+
+viewport-width = 100%
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+.platonic-viewport
+
+    section.scene
+
+        div.ui-component
+            &.ui-component-grid
+                ui-grid(rotate-x: -30deg, rotate-y: 30deg)
+
+        div.mesh
+
+            &[data-mesh-type="octahedron"]
+                octahedron(200px)
+
+            &[data-mesh-type="tetrahedron"]
+                tetrahedron(200px, translate-x: 300px, color: red)
+
+            // &[data-mesh-type="icosahedron"]
+            //     icosahedron(200px, rotate-x: -30deg, rotate-y: 30deg)
+
+

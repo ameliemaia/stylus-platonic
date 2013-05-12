@@ -1,0 +1,21 @@
+/*
+ *   Document    : viewport.styl
+ *   Author      : DPR
+ *   Description : Viewport and scene definition module.
+ */
+
+.platonic-viewport
+    
+    perspective(viewport-perspective)
+    perspective-origin(50%)
+
+    background-color : viewport-background-color
+    background       : linear-gradient(viewport-gradient1-color, viewport-gradient2-color)
+    overflow         : hidden
+    relative           margin-top 0 margin-left 0
+    width            : viewport-width
+    height           : viewport-height
+
+    .scene
+        width  : @width
+        height : @height

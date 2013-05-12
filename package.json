@@ -1,0 +1,29 @@
+{
+  "name": "stylus-platonic",
+  "version": "0.0.1",
+  "description": "Stylus plugin for CSS3D",
+  "main": "./lib/stylus-platonic.js",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org/davidpaulrosser/stylus-platonic.git"
+  },
+  "devDependencies": {
+    "fs-util": "~0.3.13",
+    "jade": "~0.30.0"
+  },
+  "dependencies": {
+    "stylus": "*",
+    "nib": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "stylus",
+    "css",
+    "css3d"
+  ],
+  "readmeFilename": "Readme.md",
+  "author": "DPR <info@davidpaulrosser.co.uk>",
+  "license": "MIT"
+}

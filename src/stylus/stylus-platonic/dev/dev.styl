@@ -1,0 +1,24 @@
+/*! 
+ *   Document    : dev.styl
+ *   Author      : DPR
+ *   Description : dev styles.
+ */
+
+@import "nib"
+
+
+global-reset()
+
+
+[data-animation="turntable"]
+    animation-name            : turntable
+    animation-duration        : 60s
+    animation-timing-function : linear
+    animation-iteration-count : infinite
+
+
+ @keyframes turntable
+    0%
+        transform(rotateX(-30deg) rotateY(0deg) rotateZ(0deg))
+    100%
+        transform(rotateX(-30deg) rotateY(360deg) rotateZ(0deg))

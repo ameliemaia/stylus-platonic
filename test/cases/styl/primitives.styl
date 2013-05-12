@@ -1,0 +1,31 @@
+
+viewport-width = 100%
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+rotate_x = -30deg
+rotate_y = 30deg
+
+.platonic-viewport
+
+    section.scene
+
+        div.ui-component
+            &.ui-component-grid
+                ui-grid()
+
+        div.mesh
+
+            &[data-mesh-type="plane"]
+                plane(100px, 100px, 300px, color: red)
+
+            &[data-mesh-type="cube"]
+                cube(translate-x: -300px, color: orange)
+
+            &[data-mesh-type="pyramid"]
+                pyramid(200px, color: blue)
+
+            // &[data-mesh-type="sphere"]
+            //     _sphere(subdivisions-axis: 4, subdivisions-height: 4)
+

@@ -1,0 +1,33 @@
+/*! 
+ *   Document    : math.styl
+ *   Author      : DPR
+ *   Description : Math constants and functions.   
+ */
+
+
+// Math constants
+
+TWO_PI = PI * 2
+
+
+// Math functions
+
+radians(degrees){ degrees / (180 / PI) }
+degrees(radians){ radians * (180 / PI) } 
+asin(n){ math(n, 'asin') }
+acos(n){ math(n, 'acos') }
+sqrt(n){ math(n, 'sqrt') }
+pow(x, y){ return x ** y }
+
+
+// Trigonometric functions
+
+distance(x1, y1, z1, x2, y2, z2)
+    sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+distance3d(x1, y1, z1, x2, y2, z2)
+    sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)
+
+triangle-height(side-length, angle)
+    side-length * sin(radians(angle))
+

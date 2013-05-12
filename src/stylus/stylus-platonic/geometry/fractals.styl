@@ -1,0 +1,85 @@
+/*! 
+ *   Document    : fractals.styl
+ *   Author      : DPR
+ *   Description : Fractal mixins, ooossshh.
+ */
+
+
+/*
+ * Generate a sponge
+ *
+ * @param  x
+ * @param  y
+ * @param  z
+ * @param  cube_size
+ * @return positions
+ * @api    private
+ */
+
+sponge(x, y, z, cube-size)
+    i = 0
+    positions = ()
+    
+    for levels in 0 .. 2
+        for rows in 0 .. 2
+            for columns in 0 .. 2
+                
+                new_x = x + (cube-size - (rows    * cube-size))
+                new_y = y + (cube-size - (levels  * cube-size))
+                new_z = z + (cube-size - (columns * cube-size))
+                
+                if inlist(i, (4 10 12 13 14 16 22))
+                    // skip
+                else
+                    tmp = (new_x) (new_y) (new_z)
+                    merge(positions, tmp)
+                
+                i += 1
+        
+    positions
+
+
+/*
+ * Generates a Menger Sponge
+ *
+ * @param iterations
+ * @param size
+ * @api   public
+ */
+
+menger-sponge(iterations = 1, size = 300px)
+    divisor   = 1 / 3
+    cube_size  = size * divisor
+    positions = (0) (0) (0)
+
+    for i in 0 ... iterations
+
+        new_positions = ()
+        len = length(positions) / 3
+
+        for j in 0 ... len
+            index = j * 3
+            x = positions[index]
+            y = positions[index + 1]
+            z = positions[index + 2]
+
+            tmp = sponge(x, y, z, cube_size)
+            merge(new_positions, tmp)
+
+        positions = new_positions
+        cube_size  = cube_size * divisor
+
+    cube_size = size / pow(3, iterations)
+    len = length(positions) / 3
+
+    for i in 0 ... len
+
+        index = i * 3
+        x = positions[index]
+        y = positions[index + 1]
+        z = positions[index + 2]
+
+        div.mesh
+            cube(cube_size, cube_size, cube_size, x, y, z, mesh-id: i)
+
+

@@ -1,0 +1,32 @@
+/*
+ *   Document    : index.styl
+ *   Author      : DPR
+ *   Description : Various utilities.
+ */
+
+
+/*
+ * Merge list2's properties with list1 
+ *
+ * @param  list1
+ * @param  list2
+ * @return list
+ * @api    public
+ */
+
+merge(list1, list2)
+    for prop, i in list2
+        push(list1, list2[i])
+
+
+/*
+ * Return true if val is in the list
+ *
+ * @param  val
+ * @param  list
+ * @return Boolean or null
+ * @api    public
+ */
+
+inlist(val, list)
+    return true if val == prop for prop, i in list

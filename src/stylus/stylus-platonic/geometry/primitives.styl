@@ -1,0 +1,412 @@
+/*
+ *   Document    : primitives.styl
+ *   Author      : DPR
+ *   Description : Primitive mixins.
+ */
+
+
+/*
+ * Generates a plane
+ *
+ * @param width
+ * @param height
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   public
+ */
+
+plane(width = 50px, height = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 90deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    &[data-mesh-id={'"%s"' % mesh-id}]
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        div.face
+            quad(width, height, color: color)
+            center(width, height)
+
+
+/*
+ * Generates a cube
+ *
+ * @param width
+ * @param height
+ * @param depth
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   public
+ */
+
+cube(width = 50px, height = width, depth = width, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    &[data-mesh-id={'"%s"' % mesh-id}]
+        
+        half_width  = width / 2
+        half_height = height / 2
+        half_depth  = depth / 2
+        
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        
+        div.face
+            
+            // Top
+            &[data-face-id="0"]
+                quad(width, depth, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+                transform(rotateX(90deg) translateZ(half_height))
+                center(depth, width) 
+            
+            // Back
+            &[data-face-id="1"]
+                quad(width, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+                transform(translateZ(-(half_depth)))
+                center(height, width) 
+            
+            // Bottom
+            &[data-face-id="2"]
+                quad(width, depth, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+                transform(rotateX(-90deg) translateZ(half_height))
+                center(depth, width) 
+
+            // Front
+            &[data-face-id="3"]
+                quad(width, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+                transform(translateZ(half_depth))
+                center(height, width) 
+            
+            // Left
+            &[data-face-id="4"]
+                quad(depth, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+                transform(rotateY(90deg) translateZ(-(half_width)))
+                center(height, depth)
+
+            // // Right
+            &[data-face-id="5"]
+                quad(depth, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+                transform(rotateY(90deg) translateZ(half_width))
+                center(height, depth)
+
+
+/*
+ * [WIP] Generates a sphere
+ *
+ * @param radius
+ * @param subdivisions-axis
+ * @param subdivisions-height
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   private
+ */
+
+_sphere(radius = 200px, subdivisions-axis = 4, subdivisions-height = 4, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    &[data-mesh-id={'"%s"' % mesh-id}]
+        point_id = 0
+        for i in 0 ... subdivisions-height
+            if i is 0 or i is subdivisions-height - 1
+                // p('triangle')
+                vertices = _sphere-vertex-list(radius, subdivisions-axis, subdivisions-height, i, 'triangle')
+                
+                len = length(vertices) / 9
+                for j in 0 ... len
+                    index = j * 9
+                    x1 = unit(remove-const-e(vertices[index]), px)
+                    y1 = unit(remove-const-e(vertices[index + 1]), px)
+                    z1 = unit(remove-const-e(vertices[index + 2]), px)
+                    x2 = unit(remove-const-e(vertices[index + 3]), px)
+                    y2 = unit(remove-const-e(vertices[index + 4]), px)
+                    z2 = unit(remove-const-e(vertices[index + 5]), px)
+                    x3 = unit(remove-const-e(vertices[index + 6]), px)
+                    y3 = unit(remove-const-e(vertices[index + 7]), px)
+                    z3 = unit(remove-const-e(vertices[index + 8]), px)
+
+                    // Center of face
+
+                    cx = avg(x1 x2 x3)
+                    cy = avg(y1 y2 y3)
+                    cz = avg(z1 z2 z3)
+
+                    // Bounds - base of triangle
+
+                    width  = distance3d(x2, y2, z2, x3, y3, z3)
+                    height = distance3d(x2, y2, z2, x1, y1, z1)
+
+                    // p('width: '  + width)
+                    // p('height: ' + height)
+
+                    _color = yellow
+                    
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(x1) translateY(y1) translateZ(z1))
+                        background-color: _color
+
+                    point_id += 1
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(x2) translateY(y2) translateZ(z2))
+                        background-color: _color
+                    
+                    point_id += 1
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(x3) translateY(y3) translateZ(z3))
+                        background-color: _color
+
+                    point_id += 1
+                    
+                    // Face center point
+
+                    _color = blue
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(cx) translateY(cy) translateZ(cz))
+                        background-color: _color
+
+                    point_id += 1
+
+            else
+                // p('quad')
+                vertices = _sphere-vertex-list(radius, subdivisions-axis, subdivisions-height, i, 'quad')
+                len = length(vertices) / 12
+                for j in 0 ... len
+                    index = j * 12
+                    x1 = unit(remove-const-e(vertices[index]), px)
+                    y1 = unit(remove-const-e(vertices[index + 1]), px)
+                    z1 = unit(remove-const-e(vertices[index + 2]), px)
+                    x2 = unit(remove-const-e(vertices[index + 3]), px)
+                    y2 = unit(remove-const-e(vertices[index + 4]), px)
+                    z2 = unit(remove-const-e(vertices[index + 5]), px)
+                    x3 = unit(remove-const-e(vertices[index + 6]), px)
+                    y3 = unit(remove-const-e(vertices[index + 7]), px)
+                    z3 = unit(remove-const-e(vertices[index + 8]), px)
+                    x4 = unit(remove-const-e(vertices[index + 9]), px)
+                    y4 = unit(remove-const-e(vertices[index + 10]), px)
+                    z4 = unit(remove-const-e(vertices[index + 11]), px)
+
+                    // Center of face
+
+                    cx = avg(x1 x2 x3 x4)
+                    cy = avg(y1 y2 y3 y4)
+                    cz = avg(z1 z2 z3 z4)
+
+                    // Bounds - base of triangle
+
+                    width  = distance3d(x1, y1, z1, x4, y4, z4)
+                    height = distance3d(x1, y1, z1, x2, y2, z2)
+
+                    // p('width: '  + width)
+                    // p('height: ' + height)
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(x1) translateY(y1) translateZ(z1))
+
+                    point_id += 1
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(x2) translateY(y2) translateZ(z2))
+                    
+                    point_id += 1
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(x3) translateY(y3) translateZ(z3))
+
+                    point_id += 1
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(x4) translateY(y4) translateZ(z4))
+
+                    point_id += 1
+
+                    // Face center point
+
+                    _color = blue
+
+                    div.point[data-point-id={'"%s"' % point_id}]
+                        transform(translateX(cx) translateY(cy) translateZ(cz))
+                        background-color: _color
+
+                    point_id += 1
+
+
+
+// 
+
+/*
+ * [WIP] Generates the sphere's vertex list for a specified axis
+ *
+ * @param radius
+ * @param subdivisions-axis
+ * @param subdivisions-height
+ * @param subdivisions-index
+ * @param subdivisions-type
+ * @api   private
+ */
+
+_sphere-vertex-list(radius, subdivisions-axis, subdivisions-height, index, type)
+    
+    // Remove unit from numbers
+    radius = remove-unit(radius)
+    subdivisions-axis = remove-unit(subdivisions-axis)
+    subdivisions-height = remove-unit(subdivisions-height)
+    
+    // Index of next subdivision ( Y )
+    nextIndex = index + 1
+
+    // Return vertices's list
+    vertices = ()
+
+    if type == 'triangle'
+
+        // p('Generate triangles')
+
+        for i in 0 ... subdivisions-axis
+            
+            // index + 1 = right vertex index
+
+            if i < subdivisions-axis - 1
+                j = i + 1
+            else 
+                j = 0
+
+
+            // Top
+    
+            // r1 = current subdivision axis radius 
+            r1 = radius * sin(index * (PI / subdivisions-height))
+            x1 = r1     * cos(i * (TWO_PI / subdivisions-axis)) 
+            y1 = radius * cos(index * (PI / subdivisions-height))
+            z1 = r1     * sin(i * (TWO_PI / subdivisions-axis))
+
+            // Left
+    
+            // r2 = subdivision axis radius 
+            
+            // This should return 0, but it doesn't : sin(x * (PI / x)) returns -2.4492127076447545e-16 ?
+
+            if index < subdivisions-height - 1
+                r2 = radius * sin(nextIndex * (PI / subdivisions-height))
+            else
+                r2 = 0
+            x2 = r2     * cos(i * (TWO_PI / subdivisions-axis)) 
+            y2 = radius * cos(nextIndex * (PI / subdivisions-height))
+            z2 = r2     * sin(i * (TWO_PI / subdivisions-axis)) 
+
+
+            // Right
+
+            x3 = r2     * cos(j * (TWO_PI / subdivisions-axis)) 
+            y3 = radius * cos(nextIndex * (PI / subdivisions-height))
+            z3 = r2     * sin(j * (TWO_PI / subdivisions-axis))
+
+            merge(vertices, (x1) (y1) (z1) (x2) (y2) (z2) (x3) (y3) (z3))
+
+
+    else
+
+        // p('Generate quads')
+
+        for i in 0 ... subdivisions-axis
+
+            if i < subdivisions-axis - 1
+                j = i + 1
+            else 
+                j = 0
+
+            // Bottom y
+            r1 = radius * sin(index * (PI / subdivisions-axis))
+            y1 = radius * cos(index * (PI / subdivisions-height))
+
+            // Top y
+            r2 = radius * sin(nextIndex * (PI / subdivisions-axis))
+            y2 = radius * cos(nextIndex * (PI / subdivisions-height))
+                
+            // Top left
+            x1 = r2 * cos(i * (TWO_PI / subdivisions-axis))
+            z1 = r2 * sin(i * (TWO_PI / subdivisions-axis))
+
+            // Bottom left
+            x2 = r1 * cos(i * (TWO_PI / subdivisions-axis))
+            z2 = r1 * sin(i * (TWO_PI / subdivisions-axis))
+
+            // Bottom right
+            x3 = r1 * cos(j * (TWO_PI / subdivisions-axis))
+            z3 = r1 * sin(j * (TWO_PI / subdivisions-axis))
+
+            // Top right
+            x4 = r2 * cos(j * (TWO_PI / subdivisions-axis))
+            z4 = r2 * sin(j * (TWO_PI / subdivisions-axis))
+
+            merge(vertices, (x1) (y2) (z1) (x2) (y1) (z2) (x3) (y1) (z3) (x4) (y2) (z4))
+
+    vertices
+                
+
+
+/*
+ * Generates a pyramid
+ *
+ * @param side-length
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   public
+ */
+ 
+pyramid(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = plato-material-color, mesh-id = 0) 
+    &[data-mesh-id={'"%s"' % mesh-id}]
+        
+        triangle_height = triangle-height(side-length, 60)
+        radius          = side-length / 2
+        face_rotation   = unit(90 - (degrees(acos(sqrt(3)/3))), deg)
+        center_y        = triangle_height / 2
+
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        
+        div.face
+            &[data-face-id="1"],
+            &[data-face-id="2"],
+            &[data-face-id="3"],
+            &[data-face-id="4"]
+                triangle(side-length, 60, color: color)
+                transform-origin(50% 100%)
+                center(0, side-length)
+            
+            // Bottom
+            &[data-face-id="0"]
+                quad(side-length, side-length, color: color)
+                transform(translateY(center_y) rotateX(90deg))
+                center(side-length, side-length)
+            
+            // Back
+            &[data-face-id="1"]
+                transform(translate3d(0, -(center_y), radius) rotateX(face_rotation))
+            
+            // Front
+            &[data-face-id="2"]
+                transform(translate3d(radius, -(center_y), 0) rotateY(90deg) rotateX(face_rotation))
+            
+            // Left
+            &[data-face-id="3"]
+                transform(translate3d(-(radius), -(center_y), 0) rotateY(90deg) rotateX(-(face_rotation)))
+            
+            // Right
+            &[data-face-id="4"]
+                transform(translate3d(0, -(center_y), -(radius)) rotateX(-(face_rotation)))
+            

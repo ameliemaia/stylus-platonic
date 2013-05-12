@@ -1,0 +1,22 @@
+
+viewport-width = 100%
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+.platonic-viewport
+
+    section.scene
+
+        div.ui-component
+            &.grid
+                grid(component-id: 0)
+
+        div.ui-component
+            &.display-axis
+                display-axis(translate-x: -200px, component-id: 1)
+
+        div.group.menger-sponge
+            menger-sponge(iterations: 1)
+
+    

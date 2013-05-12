@@ -1,0 +1,33 @@
+/*
+ *   Document    : positioning.styl
+ *   Author      : DPR
+ *   Description : Positioning utilities.
+ */
+
+
+/*
+ * Center an element by it's offset
+ *
+ * @param width
+ * @param height
+ * @api   public
+ */
+
+center(width = 0, height = 0)
+    margin-top  : - (width / 2)
+    margin-left : - (height / 2)
+
+
+/*
+ * Offset an element
+ *
+ * @param offset-x
+ * @param offset-y
+ * @api   public
+ */
+
+offset(offset-x = 0, offset-y = 0)
+    margin-top  : offset-x
+    margin-left : offset-y
+
+

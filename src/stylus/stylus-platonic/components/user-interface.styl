@@ -1,0 +1,82 @@
+/*
+ *   Document    : user-interface.styl
+ *   Author      : DPR
+ *   Description : User interface components.      
+ */
+
+
+
+/*
+ * Generates a grid component
+ *
+ * @param width
+ * @param height
+ * @param tile
+ * @param wire-color
+ * @param wire-width
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param component-id
+ * @api public
+ */
+
+grid(width = grid-width, height = grid-height, tile = grid-tile, wire-color = grid-wire-color, wire-width = grid-wire-width, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
+    &[data-component-id={'"%s"' % component-id}]
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translate3d(translate-x, translate-y, translate-z)) 
+        div.grid
+            quad(width, height, rotate-x: 90deg, color: transparent)
+            background: url(svg-data-uri(tile, tile, svg-rectangle(tile, tile, wire-color, wire-width, transparent)))
+
+
+/*
+ * Generates a display axis indicator
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param component-id
+ * @api public
+ */
+
+display-axis(translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
+    &[data-component-id={'"%s"' % component-id}]
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        div.display-axis
+            
+            // y axis
+            border-right  : display-axis-line-width solid green
+            top          : -(display-axis-line-height)
+
+            &
+            &:before
+            &:after
+                display  : block
+                width    : display-axis-line-width
+                height   : display-axis-line-height
+                position : absolute
+
+            // x axis
+            &:before
+                transform( rotateY(90deg) rotateX(-90deg) )
+                content          : ''
+                border-right     : display-axis-line-width solid red
+                transform-origin : 0 100% 
+                left             : display-axis-line-width
+                
+                
+            // z axis
+            &:after
+                transform( rotateX(-90deg) )
+                content          : ''
+                border-right     : display-axis-line-width solid blue
+                transform-origin : 0 100% 
+                
+
+    
+    

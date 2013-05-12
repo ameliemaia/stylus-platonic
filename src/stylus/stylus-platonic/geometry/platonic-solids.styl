@@ -1,0 +1,193 @@
+/* 
+ *   Document    : platonic-solids.styl
+ *   Author      : DPR
+ *   Description : Platonic solids geometry mixins.
+ */
+
+
+/*
+ * [WIP] Generates an icosahedron
+ *
+ * @param side-length
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   private
+ */ 
+
+_icosahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    
+    radius = side-length * sin(2*PI/5)
+    face_angle = unit(degrees(asin(radius/side-length)), deg)
+    
+    &[data-mesh-id={'"%s"' % mesh-id}]
+        
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z)) 
+        
+        div.face
+            transform-origin(50% 0)
+
+            &[data-face-id="0"]
+                triangle(side-length, 60, color: color)
+                transform(rotateX(face_angle))
+
+            &[data-face-id="1"]
+                triangle(side-length, 60, color: red)
+                transform(rotateX(face_angle) rotateZ(60deg))
+
+            &[data-face-id="2"]
+                triangle(side-length, 60, color: blue)
+                transform(rotateX(face_angle) rotateZ(120deg))
+
+            &[data-face-id="3"]
+                triangle(side-length, 60, color: yellow)
+                transform(rotateX(face_angle) rotateZ(180deg))
+
+            &[data-face-id="4"]
+                triangle(side-length, 60, color: green)
+                transform(rotateX(face_angle) rotateZ(240deg))
+
+            &[data-face-id="5"]
+                triangle(side-length, 60, color: orange)
+                transform(rotateX(face_angle) rotateZ(300deg))
+    
+
+/*
+ * Generates an octahedron
+ *
+ * @param side-length
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   public
+ */
+
+octahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    
+    triangle_height = triangle-height(side-length, 60)
+    radius          = side-length / 2
+    face_rotation   = 90 - unit(degrees(acos(sqrt(3)/3)), deg)
+    
+    &[data-mesh-id={'"%s"' % mesh-id}]
+        
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        
+        div.face
+            &[data-face-id="0"],
+            &[data-face-id="1"],
+            &[data-face-id="2"],
+            &[data-face-id="3"],
+            &[data-face-id="4"],
+            &[data-face-id="5"],
+            &[data-face-id="6"],
+            &[data-face-id="7"]
+                triangle(side-length, 60, color: color)
+                transform-origin(50% 100%)
+                center(0, side-length)
+            
+            // Top Back
+            &[data-face-id="0"]
+                transform(translate3d(0, -(triangle_height), radius) rotateX(face_rotation))
+            
+            // Top Front
+            &[data-face-id="1"]
+                transform(translate3d(radius, -(triangle_height), 0) rotateY(90deg) rotateX(face_rotation))
+            
+            // Top Left
+            &[data-face-id="2"]
+                transform(translate3d(-(radius), -(triangle_height), 0) rotateY(90deg) rotateX(-(face_rotation)))
+            
+            // Top Right
+            &[data-face-id="3"]
+                transform(translate3d(0, -(triangle_height), -(radius)) rotateX(-(face_rotation)))
+            
+            // Bottom Back
+            &[data-face-id="4"]
+                transform(translate3d(0, -(triangle_height), radius) rotateX(180 - face_rotation))
+            
+            // Bottom Front
+            &[data-face-id="5"]
+                transform(translate3d(radius, -(triangle_height), 0) rotateY(90deg) rotateX(180 - face_rotation))
+            
+            // Bottom Left
+            &[data-face-id="6"]
+                transform(translate3d(-(radius), -(triangle_height), 0) rotateY(90deg) rotateX(180 + face_rotation))
+            
+            // Bottom Right
+            &[data-face-id="7"]
+                transform(translate3d(0, -(triangle_height), -(radius)) rotateX(180 + face_rotation))
+
+
+/*
+ * Generates an tetrahedron
+ *
+ * @param side-length
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   public
+ */        
+
+tetrahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    
+    height  = sqrt(6) / 3 * side-length
+    center_y = height / 2
+    
+    triangle_height = triangle-height(side-length, 60)
+    face_rotation   = 90 - unit(degrees(acos(1/3)), deg)
+    
+    // Calculate the distance between the top and back vertices's on the z-axis for the bottom triangle's z offset
+    adjacent_side_length = cos(acos(1/3)) * triangle_height
+    height_difference    = triangle_height - height
+    
+    &[data-mesh-id={'"%s"' % mesh-id}]
+        
+        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        
+        div.face
+            &[data-face-id="0"],
+            &[data-face-id="1"],
+            &[data-face-id="2"],
+            &[data-face-id="3"]
+                triangle(side-length, 60, color: color)
+                center(0, side-length)
+            
+            &[data-face-id="1"],
+            &[data-face-id="2"],
+            &[data-face-id="3"]
+                transform-origin(50% 0)
+            
+            // Bottom
+            &[data-face-id="0"]
+                transform-origin(50% 100%)
+                transform(translate3d(0, -(height_difference) + -(center_y), -(adjacent_side_length)) rotateX(-90deg))
+            
+            // Back
+            &[data-face-id="1"]
+                transform(translate3d(0, -(center_y), 0) rotateX(-(face_rotation)))
+            
+            // Left
+            &[data-face-id="2"]
+                transform(translate3d(0, -(center_y), 0) rotateY(120deg) rotateX(-(face_rotation)))
+            
+            // Right
+            &[data-face-id="3"]
+                transform(translate3d(0, -(center_y), 0) rotateY(240deg) rotateX(-(face_rotation)))
+            
+
+
