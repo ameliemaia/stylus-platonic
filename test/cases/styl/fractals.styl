@@ -4,19 +4,26 @@ viewport-width = 100%
 @import "stylus-platonic/dev/dev"
 @import "stylus-platonic"
 
+// rotate_x = -30deg
+// rotate_y = 30deg
+
+rotate_x = 0deg
+rotate_y = 0deg
+
 .platonic-viewport
 
     section.scene
 
         div.ui-component
             &.grid
-                grid(component-id: 0)
+                grid(rotate-x: rotate_x, rotate-y: rotate_y, component-id: 0)
 
         div.ui-component
             &.display-axis
-                display-axis(translate-x: -200px, component-id: 1)
+                display-axis(translate-x: 0, translate-y: 0, rotate-x: rotate_x, rotate-y: rotate_y, component-id: 1)
 
         div.group.menger-sponge
-            menger-sponge(iterations: 1)
+            menger-sponge(rotate-x: rotate_x, rotate-y: rotate_y, iterations: 1)
+            opacity(0.8)
 
     

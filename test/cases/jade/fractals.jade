@@ -11,7 +11,7 @@ block scene
     include includes/grid
     include includes/display-axis
 
-    div.group.menger-sponge(data-animation="turntable")
+    div.group.menger-sponge(data-group-id="0", data-animation="turntable")
         - var iterations = 1
         - var cubes = Math.pow(20, iterations)
         - var faces = [0, 1, 2, 3, 4, 5]
