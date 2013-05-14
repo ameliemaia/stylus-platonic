@@ -48,27 +48,25 @@ display-axis(translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg,
     &[data-component-id={'"%s"' % component-id}]
         transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
         div.display-axis
-            
-            // y axis
-            border-right  : display-axis-line-width solid green
-            top          : -(display-axis-line-height)
 
             &
             &:before
             &:after
                 display  : block
-                width    : display-axis-line-width
                 height   : display-axis-line-height
                 position : absolute
 
             // x axis
             &:before
-                transform( rotateY(90deg) rotateX(-90deg) )
+                transform( rotateZ(90deg) rotateY(90deg) )
                 content          : ''
                 border-right     : display-axis-line-width solid red
-                transform-origin : 0 100% 
-                left             : display-axis-line-width
-                
+                left             : (display-axis-line-height / 2)
+                top              : (display-axis-line-height / 2)
+
+            // y axis
+            border-right : display-axis-line-width solid green
+            top          : -(display-axis-line-height)
                 
             // z axis
             &:after
