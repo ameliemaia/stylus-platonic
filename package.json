@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "fs-util": "~0.3.13",
-    "jade": "~0.30.0"
+    "jade": "~0.30.0",
+    "grunt": "~0.4.1"
   },
   "dependencies": {
     "stylus": "*",

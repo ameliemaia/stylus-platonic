@@ -131,8 +131,8 @@ task 'build', 'Compile the library source and prepare for publish', =>
 task 'publish', 'Publish to npm', => 
     publish()
 
-task 'watch', 'Watch source files and build changes', => 
-    watch -> build -> invoke 'watch'
+# task 'watch', 'Watch source files and build changes', => 
+#     watch -> build -> invoke 'watch'
     
 
 
