@@ -1,6 +1,5 @@
 
 fs       = require 'fs'
-fsu      = require 'fs-util'
 glob     = require 'glob'
 util     = require 'util'
 stylus   = require 'stylus'
@@ -26,9 +25,6 @@ test_out =
     styl   : 'test/public/css' 
     jade   : 'test/public'
     coffee : 'test/public/js'
-
-
-watch_dirs = [ lib_src, test_src ]
 
 
 clean = (callback) ->
@@ -101,27 +97,6 @@ publish = (callback) ->
     callback?()
 
 
-watch = (callback) ->
-
-    util.log "Watching for changes..."
-
-    for dir in watch_dirs
-        for group of dir
-
-            ext     = group
-            path    = dir[ group ]
-            file    = __dirname + '/' + path
-
-            watcher = fsu.watch file, ///.#{ext}$///m, true
-
-            watcher.on 'change', ( f ) ->
-
-                watcher.close()
-                callback?()
-
-
-
-
 task 'clean', 'Clean the output directories for the lib and test files', => 
     clean()
 
@@ -130,11 +105,5 @@ task 'build', 'Compile the library source and prepare for publish', =>
 
 task 'publish', 'Publish to npm', => 
     publish()
-
-# task 'watch', 'Watch source files and build changes', => 
-#     watch -> build -> invoke 'watch'
-    
-
-
 
     
