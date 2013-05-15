@@ -4,9 +4,6 @@ viewport-width = 100%
 @import "stylus-platonic/dev/dev"
 @import "stylus-platonic"
 
-rotate_x = -30deg
-rotate_y = 30deg
-
 .platonic-viewport
 
     section.scene
@@ -18,14 +15,11 @@ rotate_y = 30deg
         div.mesh
 
             &[data-mesh-type="plane"]
-                plane(100px, 100px, 300px, color: red)
+                plane(100px, 100px, 300px, color: red, mesh-id: 0)
 
             &[data-mesh-type="cube"]
-                cube(translate-x: -300px, color: orange)
+                cube(translate-x: -300px, color: orange, mesh-id: 1)
 
             &[data-mesh-type="pyramid"]
-                pyramid(200px, color: blue)
-
-            // &[data-mesh-type="sphere"]
-            //     _sphere(subdivisions-axis: 4, subdivisions-height: 4)
+                pyramid(200px, color: blue, mesh-id: 2)
 

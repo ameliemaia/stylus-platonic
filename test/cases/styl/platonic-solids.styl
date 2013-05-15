@@ -15,12 +15,7 @@ viewport-width = 100%
         div.mesh
 
             &[data-mesh-type="octahedron"]
-                octahedron(200px)
+                octahedron(200px, translate-x: -150px, mesh-id: 0)
 
             &[data-mesh-type="tetrahedron"]
-                tetrahedron(200px, translate-x: 300px, color: red)
-
-            // &[data-mesh-type="icosahedron"]
-            //     icosahedron(200px, rotate-x: -30deg, rotate-y: 30deg)
-
-
+                tetrahedron(200px, translate-x: 150px, color: red, mesh-id: 1)

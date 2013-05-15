@@ -14,9 +14,8 @@ block scene
     div.group.menger-sponge(data-group-id="0", data-animation="turntable")
         - var iterations = 1
         - var cubes = Math.pow(20, iterations)
-        - var faces = [0, 1, 2, 3, 4, 5]
         - for (var i = 0; i < cubes; i++) {
             div.mesh(data-mesh-type="cube", data-mesh-id="#{i}")
-                each index in faces
+                each index in [0, 1, 2, 3, 4, 5]
                     div.face(data-face-id="#{index}")
         - }
