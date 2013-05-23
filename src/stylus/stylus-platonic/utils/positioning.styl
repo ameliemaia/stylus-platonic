@@ -31,3 +31,17 @@ offset(offset-x = 0, offset-y = 0)
     margin-left : offset-y
 
 
+/*
+ * Set the default transform for an object
+ *
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @api   public
+ */
+
+set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+    transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translate3d(translate-x, translate-y, translate-z)) 

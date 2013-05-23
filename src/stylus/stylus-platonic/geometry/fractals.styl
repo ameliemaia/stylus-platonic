@@ -81,7 +81,7 @@ menger-sponge(iterations = 1, size = 300px, translate-x = 0, translate-y = 0, tr
     len = length(positions) / 3
 
     &[data-group-id={'"%s"' % group-id}]
-        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         for i in 0 ... len
 
             index = i * 3

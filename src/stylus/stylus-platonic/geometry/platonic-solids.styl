@@ -27,7 +27,7 @@ _icosahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z =
     
     &[data-mesh-id={'"%s"' % mesh-id}]
         
-        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z)) 
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         
         div.face
             transform-origin(50% 0)
@@ -80,7 +80,7 @@ octahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0
     
     &[data-mesh-id={'"%s"' % mesh-id}]
         
-        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         
         div.face
             &[data-face-id="0"],
@@ -157,7 +157,7 @@ tetrahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 
     
     &[data-mesh-id={'"%s"' % mesh-id}]
         
-        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         
         div.face
             &[data-face-id="0"],

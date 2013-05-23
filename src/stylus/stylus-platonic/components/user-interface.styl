@@ -26,7 +26,7 @@
 
 grid(width = grid-width, height = grid-height, tile = grid-tile, wire-color = grid-wire-color, wire-width = grid-wire-width, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
     &[data-component-id={'"%s"' % component-id}]
-        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translate3d(translate-x, translate-y, translate-z)) 
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         div.grid
             quad(width, height, rotate-x: 90deg, color: transparent)
             background: url(svg-data-uri(tile, tile, svg-rectangle(tile, tile, wire-color, wire-width, transparent)))
@@ -46,7 +46,7 @@ grid(width = grid-width, height = grid-height, tile = grid-tile, wire-color = gr
 
 display-axis(translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
     &[data-component-id={'"%s"' % component-id}]
-        transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         div.display-axis
 
             &
