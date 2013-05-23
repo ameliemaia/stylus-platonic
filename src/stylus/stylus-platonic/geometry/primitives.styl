@@ -357,7 +357,7 @@ _sphere-vertex-list(radius, subdivisions-axis, subdivisions-height, index, type)
 /*
  * Generates a pyramid
  *
- * @param side-length
+ * @param radius
  * @param translate-x
  * @param translate-y
  * @param translate-z
@@ -369,13 +369,15 @@ _sphere-vertex-list(radius, subdivisions-axis, subdivisions-height, index, type)
  * @api   public
  */
  
-pyramid(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = plato-material-color, mesh-id = 0) 
+pyramid(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0) 
     &[data-mesh-id={'"%s"' % mesh-id}]
-        
-        triangle_height = triangle-height(side-length, 60)
-        radius          = side-length / 2
-        face_rotation   = unit(90 - (degrees(acos(sqrt(3)/3))), deg)
-        center_y        = triangle_height / 2
+
+        radius           = unit(radius, '')
+        edge_length      = unit(floor(sqrt((radius * radius) / 2)), px)
+        half_edge_length = edge_length / 2
+        triangle_height  = triangle-height(edge_length, 60)
+        face_rotation    = unit(90 - (degrees(acos(sqrt(3)/3))), deg)
+        center_y         = triangle_height / 2
 
         transform(rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z) translateX(translate-x) translateY(translate-y) translateZ(translate-z))
         
@@ -384,29 +386,29 @@ pyramid(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0, r
             &[data-face-id="2"],
             &[data-face-id="3"],
             &[data-face-id="4"]
-                triangle(side-length, 60, color: color)
+                triangle(edge_length, 60, color: color)
                 transform-origin(50% 100%)
-                center(0, side-length)
+                center(0, edge_length)
             
             // Bottom
             &[data-face-id="0"]
-                quad(side-length, side-length, color: color)
+                quad(edge_length, edge_length, color: color)
                 transform(translateY(center_y) rotateX(90deg))
-                center(side-length, side-length)
+                center(edge_length, edge_length)
             
             // Back
             &[data-face-id="1"]
-                transform(translate3d(0, -(center_y), radius) rotateX(face_rotation))
+                transform(translate3d(0, -(center_y), half_edge_length) rotateX(face_rotation))
             
             // Front
             &[data-face-id="2"]
-                transform(translate3d(radius, -(center_y), 0) rotateY(90deg) rotateX(face_rotation))
+                transform(translate3d(half_edge_length, -(center_y), 0) rotateY(90deg) rotateX(face_rotation))
             
             // Left
             &[data-face-id="3"]
-                transform(translate3d(-(radius), -(center_y), 0) rotateY(90deg) rotateX(-(face_rotation)))
+                transform(translate3d(-(half_edge_length), -(center_y), 0) rotateY(90deg) rotateX(-(face_rotation)))
             
             // Right
             &[data-face-id="4"]
-                transform(translate3d(0, -(center_y), -(radius)) rotateX(-(face_rotation)))
+                transform(translate3d(0, -(center_y), -(half_edge_length)) rotateX(-(face_rotation)))
             
