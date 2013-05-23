@@ -13,8 +13,9 @@ nodes  = stylus.nodes
 ###
 *   Adds default behavior to the url function
 *
-*   @param  String url
-*   @return Literal
+*   @param  {String} url
+*   @return {Literal}
+*   @api     public
 ###
 
 exports.url = (url) ->
@@ -24,11 +25,12 @@ exports.url = (url) ->
 ###
 *   Remove the 'e' constant expression from a floating point number
 *   
-*   @param  Float num
-*   @return Unit
+*   @param  {float} num
+*   @return {Unit}
+*   @api     public
 ###
 
-exports.removeConstE = ( num ) ->
+exports.remove_const_e = ( num ) ->
 
     str    = String num.val
     index  = str.indexOf 'e-'
