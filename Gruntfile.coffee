@@ -27,9 +27,9 @@ module.exports = ( grunt ) ->
         watch: 
             all: 
                 files: [
-                    './src/**/*.styl',
-                    './test/cases/styl/**/*.styl',
-                    './test/cases/jade/**/*.jade'
+                     './src/**/*.styl'
+                    ,'./test/cases/styl/**/*.styl'
+                    ,'./test/cases/jade/**/*.jade'
                 ],
                 tasks: [
                     'stylus',
