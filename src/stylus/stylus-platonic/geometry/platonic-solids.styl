@@ -72,11 +72,13 @@ _icosahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z =
  * @api   public
  */
 
-octahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+octahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
     
-    triangle_height = triangle-height(side-length, 60)
-    radius          = side-length / 2
-    face_rotation   = 90 - unit(degrees(acos(sqrt(3)/3)), deg)
+    radius           = unit(radius, '')
+    edge_length      = unit(floor(sqrt((radius * radius) / 2)), px)
+    half_edge_length = edge_length / 2
+    triangle_height  = triangle-height(edge_length, 60)
+    face_rotation    = 90 - unit(degrees(acos(sqrt(3)/3)), deg)
     
     &[data-mesh-id={'"%s"' % mesh-id}]
         
@@ -91,41 +93,41 @@ octahedron(side-length = 50px, translate-x = 0, translate-y = 0, translate-z = 0
             &[data-face-id="5"],
             &[data-face-id="6"],
             &[data-face-id="7"]
-                triangle(side-length, 60, color: color)
+                triangle(edge_length, 60, color: color)
                 transform-origin(50% 100%)
-                center(0, side-length)
+                center(0, edge_length)
             
             // Top Back
             &[data-face-id="0"]
-                transform(translate3d(0, -(triangle_height), radius) rotateX(face_rotation))
+                transform(translate3d(0, -(triangle_height), half_edge_length) rotateX(face_rotation))
             
             // Top Front
             &[data-face-id="1"]
-                transform(translate3d(radius, -(triangle_height), 0) rotateY(90deg) rotateX(face_rotation))
+                transform(translate3d(half_edge_length, -(triangle_height), 0) rotateY(90deg) rotateX(face_rotation))
             
             // Top Left
             &[data-face-id="2"]
-                transform(translate3d(-(radius), -(triangle_height), 0) rotateY(90deg) rotateX(-(face_rotation)))
+                transform(translate3d(-(half_edge_length), -(triangle_height), 0) rotateY(90deg) rotateX(-(face_rotation)))
             
             // Top Right
             &[data-face-id="3"]
-                transform(translate3d(0, -(triangle_height), -(radius)) rotateX(-(face_rotation)))
+                transform(translate3d(0, -(triangle_height), -(half_edge_length)) rotateX(-(face_rotation)))
             
             // Bottom Back
             &[data-face-id="4"]
-                transform(translate3d(0, -(triangle_height), radius) rotateX(180 - face_rotation))
+                transform(translate3d(0, -(triangle_height), half_edge_length) rotateX(180 - face_rotation))
             
             // Bottom Front
             &[data-face-id="5"]
-                transform(translate3d(radius, -(triangle_height), 0) rotateY(90deg) rotateX(180 - face_rotation))
+                transform(translate3d(half_edge_length, -(triangle_height), 0) rotateY(90deg) rotateX(180 - face_rotation))
             
             // Bottom Left
             &[data-face-id="6"]
-                transform(translate3d(-(radius), -(triangle_height), 0) rotateY(90deg) rotateX(180 + face_rotation))
+                transform(translate3d(-(half_edge_length), -(triangle_height), 0) rotateY(90deg) rotateX(180 + face_rotation))
             
             // Bottom Right
             &[data-face-id="7"]
-                transform(translate3d(0, -(triangle_height), -(radius)) rotateX(180 + face_rotation))
+                transform(translate3d(0, -(triangle_height), -(half_edge_length)) rotateX(180 + face_rotation))
 
 
 /*
