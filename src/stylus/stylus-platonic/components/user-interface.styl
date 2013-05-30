@@ -47,34 +47,54 @@ grid(width = grid-width, height = grid-height, tile = grid-tile, wire-color = gr
 display-axis(translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
     &[data-component-id={'"%s"' % component-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
-        div.display-axis
+        div.axis
+
+            offset = (display-axis-line-height / 2) - (display-axis-line-width / 2)
+
+            transform-style  : preserve-3d
 
             &
             &:before
-            &:after
-                display  : block
-                height   : display-axis-line-height
-                position : absolute
+                display          : block
+                position         : absolute
+                width            : display-axis-line-width
+                height           : display-axis-line-height
 
-            // x axis
-            &:before
-                transform( rotateZ(90deg) rotateY(90deg) )
-                content      : ''
-                border-right : display-axis-line-width solid red
-                left         : (display-axis-line-height / 2)
-                top          : (display-axis-line-height / 2)
+            &.x
 
-            // y axis
-            border-right : display-axis-line-width solid green
-            top          : -(display-axis-line-height)
-                
-            // z axis
-            &:after
-                transform( rotateX(-90deg) )
-                content          : ''
-                border-right     : display-axis-line-width solid blue
-                transform-origin : 0 100% 
-                
+                transform(rotateX(90deg) rotateZ(90deg) translateZ(offset) translateY(-(offset)))
+
+                &
+                &:before
+                    background-color : red
+
+                &:before
+                    content : ''
+                    transform(rotateY(90deg))
+
+            &.y
+
+                transform(translateY(-(display-axis-line-height)))
+
+                &
+                &:before
+                    background-color : green
+
+                &:before
+                    content : ''
+                    transform(rotateY(90deg))
+
+            &.z
+
+                transform(rotateX(90deg) translateY(offset) translateZ(offset))
+         
+                &
+                &:before
+                    background-color : blue
+
+                &:before
+                    content : ''
+                    transform(rotateY(90deg))
 
     
     
