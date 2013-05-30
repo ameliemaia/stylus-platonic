@@ -1,0 +1,16 @@
+
+viewport-width = 100%
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+.platonic-viewport
+
+    section.scene
+
+        div.ui-component
+            &.grid
+                grid(component-id: 0)
+
+            &.display-axis
+                display-axis(translate-y: -50px, component-id: 1)
