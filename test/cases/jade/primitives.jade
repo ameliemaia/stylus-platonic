@@ -16,36 +16,39 @@ block scene
 
         //- Plane
 
-        div.mesh(data-mesh-type="plane", data-mesh-id="0", data-light="1")
-            div.face(data-face-id="0")
+        //- div.mesh(data-mesh-type="plane", data-mesh-id="0", data-light="1")
+        //-     div.face(data-face-id="0")
 
 
         //- Cube
 
-        div.mesh(data-mesh-type="cube", data-mesh-id="1", data-light="1")
-            each index in [0, 1, 2, 3, 4, 5]
-                div.face(data-face-id="#{index}")
+        //- div.mesh(data-mesh-type="cube", data-mesh-id="1", data-light="1")
+        //-     each index in [0, 1, 2, 3, 4, 5]
+        //-         div.face(data-face-id="#{index}")
 
 
         //- Pyramid
 
-        div.mesh(data-mesh-type="pyramid", data-mesh-id="2", data-light="1")
-            each index in [0, 1, 2, 3, 4]
-                div.face(data-face-id="#{index}")
+        //- div.mesh(data-mesh-type="pyramid", data-mesh-id="2", data-light="1")
+        //-     each index in [0, 1, 2, 3, 4]
+        //-         div.face(data-face-id="#{index}")
 
 
         //- [WIP] Sphere
 
-        //- div.mesh(data-mesh-type="sphere", data-mesh-id="0", data-light="0")
+        div.mesh(data-mesh-type="sphere", data-mesh-id="3", data-light="0")
             
-        //-     - var subdivisions_axis   = 4
-        //-     - var subdivisions_height = 4
+            - var subdivisions_axis   = 4
+            - var subdivisions_height = 4
 
-        //-     - var quad_vertices = ((subdivisions_height - 2) * subdivisions_axis) * 4
-        //-     - var tri_vertices  = (2 * subdivisions_axis) * 3
-        //-     - var face_centers  = (subdivisions_axis - 1) * subdivisions_height
+            - var quad_vertices = ((subdivisions_height - 2) * subdivisions_axis) * 4
+            - var tri_vertices  = (2 * subdivisions_axis) * 3
+            - var face_centers  = (subdivisions_axis - 1) * subdivisions_height
 
-        //-     - var len = tri_vertices + quad_vertices + face_centers
+            - var len = tri_vertices + quad_vertices + face_centers
 
-        //-     - for(var i = 0; i < len; i++)
-        //-         div.point(data-point-id="#{i}")
+            //- - for(var i = 0; i < len; i++)
+            //-     div.point(data-point-id="#{i}")
+
+            - for(var i = 0; i < subdivisions_axis; i++)
+                div.point(data-point-id="#{i}")
