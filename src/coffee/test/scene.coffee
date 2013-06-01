@@ -45,8 +45,8 @@ class Scene
         cam_settings.add @cam, 'perspective', 0, 2000
         cam_settings.add @cam, 'base_rotation_x'
         cam_settings.add @cam, 'base_rotation_y'
-        cam_settings.add @cam, 'rotate_x'
-        cam_settings.add @cam, 'rotate_y'
+        cam_settings.add(@cam, 'rotate_x' ).listen()
+        cam_settings.add(@cam, 'rotate_y' ).listen()
         cam_settings.add @cam, 'manual_rotate'
         cam_settings.add @cam, 'gimball_radius'
         cam_settings.add @cam, 'max_rotation_x'

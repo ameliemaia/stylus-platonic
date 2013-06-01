@@ -36,7 +36,7 @@ Camera = (function() {
 
   Camera.prototype.rotate_x = -30;
 
-  Camera.prototype.rotate_y = 0;
+  Camera.prototype.rotate_y = -45;
 
   Camera.prototype.manual_rotate = true;
 
