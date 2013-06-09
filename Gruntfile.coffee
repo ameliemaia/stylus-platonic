@@ -27,8 +27,7 @@ module.exports = ( grunt ) ->
         watch: 
             all: 
                 files: [
-                     './src/**/*.styl'
-                    ,'./test/cases/styl/**/*.styl'
+                     './test/cases/styl/**/*.styl'
                     ,'./test/cases/jade/**/*.jade'
                 ],
                 tasks: [
@@ -38,7 +37,6 @@ module.exports = ( grunt ) ->
             
             css: 
                 files: [
-                    './src/**/*.styl',
                     './test/cases/styl/**/*.styl'
                 ],
                 tasks: [
@@ -58,6 +56,6 @@ module.exports = ( grunt ) ->
     grunt.loadNpmTasks 'grunt-contrib-stylus'
     grunt.loadNpmTasks 'grunt-contrib-watch'
 
-    grunt.registerTask 'default', [ 'watch:all' ]
-    # grunt.registerTask 'css',     'watch:css'
-    # grunt.registerTask 'html',    'watch:html'
+    grunt.registerTask 'default', [ 'watch:all'  ]
+    grunt.registerTask 'css',     [ 'watch:css'  ]
+    grunt.registerTask 'html',    [ 'watch:html' ]
