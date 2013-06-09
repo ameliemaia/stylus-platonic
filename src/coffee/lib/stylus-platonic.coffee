@@ -14,7 +14,7 @@ nodes  = stylus.nodes
 plugin = ->
     return ( stylus ) ->
         stylus.define 'url', utils.url
-        stylus.define 'remove-const-e', utils.remove_const_e
+        stylus.define 'remove-precision-e', utils.remove_precision_e
         stylus.include __dirname + '/../src/stylus/'
         return off
 

@@ -23,14 +23,14 @@ exports.url = (url) ->
 
 
 ###
-*   Remove the 'e' constant expression from a floating point number
+*   Remove the 'e' precision from a floating point number
 *   
 *   @param  {float} num
 *   @return {Unit}
 *   @api     public
 ###
 
-exports.remove_const_e = ( num ) ->
+exports.remove_precision_e = ( num ) ->
 
     str    = String num.val
     index  = str.indexOf 'e-'
