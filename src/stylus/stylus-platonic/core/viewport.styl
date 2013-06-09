@@ -1,8 +1,23 @@
 /*
  *   Document    : viewport.styl
  *   Author      : DPR
- *   Description : Viewport and scene definition module.
+ *   Description : Viewport, scene definition module.
  */
+
+
+// Base transform
+
+.transform
+
+    transform-style(preserve-3d)
+    transform-origin(50% 50%)
+
+    absolute   top 50% left 50%
+    width    : 0
+    height   : 0
+
+
+// Viewport
 
 .platonic-viewport
     
@@ -19,3 +34,33 @@
     .scene
         width  : @width
         height : @height
+
+         // Meshes 
+        .mesh
+            @extend .transform
+            .face
+                backface-visibility(face-backface-visibility)
+                position : absolute
+        
+        
+        // Groups
+        .group
+            @extend .transform
+
+
+        // UI Components
+        .ui-component
+            @extend .transform
+
+
+        // Points
+        .point
+
+            @extend .transform
+            border-radius(50%)
+            center(point-size, point-size)
+
+            background-color : point-color
+            absolute           top 0 left 0
+            width            : point-size
+            height           : point-size
