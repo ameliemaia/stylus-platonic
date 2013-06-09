@@ -3,9 +3,18 @@ window.log = (args...) => console?.log args...
 
 class Scene
 
+    view  : ''
+    views : [ 'polygons', 'primitives', 'platonic-solids', 'fractals', 'ui-components' ]
+
     constructor: ->
 
         @$window   = $(window)
+
+        ## Sort views array
+        for view, i in @views
+            if window.location.href.match ///#{view}///
+                @views.splice(i, 1)
+                @views.unshift view
 
         ## Viewport
         @$viewport = $('.platonic-viewport')
@@ -20,8 +29,6 @@ class Scene
             face_group = new Photon.FaceGroup($(element)[0], $(element).find('.face'), 0.8, 0.1, true)
             @face_groups.push face_group
 
-        log @face_groups
-
         ## Add camera
         @cam = new Camera( @$viewport )
 
@@ -32,6 +39,7 @@ class Scene
         ## GUI
         @gui = new dat.GUI()
 
+        @gui.add( @, 'view', @views ).onChange ( value ) => @_change_view value
         cam_settings = @gui.addFolder 'Camera'
         cam_settings.add @cam, 'perspective', 0, 2000
         cam_settings.add @cam, 'base_rotation_x'
@@ -42,7 +50,6 @@ class Scene
         cam_settings.add @cam, 'gimball_radius'
         cam_settings.add @cam, 'max_rotation_x'
         cam_settings.add @cam, 'max_rotation_y'
-        cam_settings.open()
 
         ## Events
         @$window.resize => @on_resize()
@@ -50,6 +57,10 @@ class Scene
 
         @loop()
 
+
+    _change_view: ( view ) =>
+
+        window.location = "#{window.location.protocol}//#{window.location.hostname}/#{view}.html"
 
     on_resize: ->
 

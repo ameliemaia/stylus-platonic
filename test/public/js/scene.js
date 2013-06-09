@@ -12,12 +12,26 @@ window.log = function() {
 
 Scene = (function() {
 
+  Scene.prototype.view = '';
+
+  Scene.prototype.views = ['polygons', 'primitives', 'platonic-solids', 'fractals', 'ui-components'];
+
   function Scene() {
     this.loop = __bind(this.loop, this);
 
-    var cam_settings,
+    this._change_view = __bind(this._change_view, this);
+
+    var cam_settings, i, view, _i, _len, _ref,
       _this = this;
     this.$window = $(window);
+    _ref = this.views;
+    for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+      view = _ref[i];
+      if (window.location.href.match(RegExp("" + view))) {
+        this.views.splice(i, 1);
+        this.views.unshift(view);
+      }
+    }
     this.$viewport = $('.platonic-viewport');
     this.$scene = this.$viewport.find('section.scene');
     this.light = new Photon.Light();
@@ -27,11 +41,13 @@ Scene = (function() {
       face_group = new Photon.FaceGroup($(element)[0], $(element).find('.face'), 0.8, 0.1, true);
       return _this.face_groups.push(face_group);
     });
-    log(this.face_groups);
     this.cam = new Camera(this.$viewport);
     this.stats = new Stats();
     this.$viewport.append(this.stats.domElement);
     this.gui = new dat.GUI();
+    this.gui.add(this, 'view', this.views).onChange(function(value) {
+      return _this._change_view(value);
+    });
     cam_settings = this.gui.addFolder('Camera');
     cam_settings.add(this.cam, 'perspective', 0, 2000);
     cam_settings.add(this.cam, 'base_rotation_x');
@@ -42,13 +58,16 @@ Scene = (function() {
     cam_settings.add(this.cam, 'gimball_radius');
     cam_settings.add(this.cam, 'max_rotation_x');
     cam_settings.add(this.cam, 'max_rotation_y');
-    cam_settings.open();
     this.$window.resize(function() {
       return _this.on_resize();
     });
     this.$window.trigger('resize');
     this.loop();
   }
+
+  Scene.prototype._change_view = function(view) {
+    return window.location = "" + window.location.protocol + "//" + window.location.hostname + "/" + view + ".html";
+  };
 
   Scene.prototype.on_resize = function() {
     this.win_width = this.$window.width();
