@@ -10,12 +10,12 @@ block scene
 
     include includes/grid
 
-    // Quad
+    //- Quad
 
-    div.mesh(data-mesh-type="quad", data-mesh-id="0", data-light="1", data-animation="turntable")
-        div.face(data-face-id="0")
+    .mesh(data-mesh-id="0", data-light="1", data-camera-transform)
+        .face(data-face-id="0")
 
-    // Triangle
+    //- Triangle
 
-    div.mesh(data-mesh-type="triangle", data-mesh-id="0", data-light="1", data-animation="turntable")
-        div.face(data-face-id="0")   
+    .mesh(data-mesh-id="1", data-light="1", data-camera-transform)
+        .face(data-face-id="0")   

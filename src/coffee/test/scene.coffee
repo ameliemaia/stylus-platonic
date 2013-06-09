@@ -1,18 +1,7 @@
 
-window.log = (args...) => console.log args...
+window.log = (args...) => console?.log args...
 
 class Scene
-
-    $window     : null
-    win_width   : 0
-    win_height  : 0
-    stats       : null
-
-    $viewport   : null
-    $scene      : null
-    light       : null
-    face_groups : Array
-
 
     constructor: ->
 
@@ -27,9 +16,11 @@ class Scene
         @face_groups = []
 
         ## Define facegroups
-        $('div.mesh-group:not([data-light="0"]), div.mesh:not(div.mesh-group > div.mesh):not([data-light="0"])').each (index, element) =>
+        $('.group:not([data-light="0"]), .mesh:not(.group > .mesh):not([data-light="0"])').each (index, element) =>
             face_group = new Photon.FaceGroup($(element)[0], $(element).find('.face'), 0.8, 0.1, true)
             @face_groups.push face_group
+
+        log @face_groups
 
         ## Add camera
         @cam = new Camera( @$viewport )
@@ -60,10 +51,6 @@ class Scene
         @loop()
 
 
-    ###
-    Window resize handler
-    ###
-
     on_resize: ->
 
         @win_width  = @$window.width()
@@ -75,8 +62,6 @@ class Scene
         @cam.resize()
 
 
-
-
     update: ->
 
         @stats.begin()
@@ -85,9 +70,9 @@ class Scene
         @cam.update()
     
         ## Update lighting
-
-        for face_group in @face_groups
-            face_group.render(@light, true)
+        if @face_groups.length > 0
+            for face_group in @face_groups
+                face_group.render(@light, true)
 
         @stats.end()
 
@@ -98,8 +83,4 @@ class Scene
         requestAnimationFrame(@loop)
 
 
-$ ->
-
-    scene = new Scene()
-
-
+$ -> scene = new Scene()

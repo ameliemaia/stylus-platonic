@@ -17,7 +17,7 @@ class Camera
     @public
     ###
 
-    el       : null
+    el                 : null
     width              : 0
     height             : 0
     perspective        : null
@@ -43,7 +43,7 @@ class Camera
         @perspective = parseFloat @el.css 'perspective'
 
         # Get all transformable objects
-        @_$objects = $('[data-transform]')
+        @_$objects = $('[data-camera-transform]')
         
         # Events
         @el.mousemove ( event ) => @_on_mouse_move( event )
@@ -115,9 +115,6 @@ class Camera
         @_mouse.x = event.pageX
         @_mouse.y = event.pageY
 
-        # log "x: #{pct_x} y: #{pct_y}"
-        # log "rx: #{rotate_x}, ry: #{rotate_y}"
-
 
     ###
     Viewport mouse down handler
@@ -131,6 +128,9 @@ class Camera
         @_mouse.lx = event.pageX
         @_mouse.ly = event.pageY
 
+        @el.css 'cursor', '-webkit-grabbing'
+
+        event.preventDefault()
 
     ###
     Viewport mouse up handler
@@ -141,5 +141,8 @@ class Camera
     _on_mouse_up: ( event ) ->
 
         @_dragging = false
+
+        @el.css 'cursor', 'inherit'
+
 
 
