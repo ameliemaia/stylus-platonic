@@ -1,3 +1,27 @@
 # Stylus Platonic
 
-A Stylus plugin in development for generating CSS3D content.
+Experimental pure CSS3D library.
+
+
+## About
+
+
+## Browser support
+
+
+## Examples
+
+
+## Features
+
+
+## Installation
+
+
+## Usage
+
+
+## Contributing
+
+
+## License
