@@ -57,7 +57,7 @@ Camera = (function() {
     var _this = this;
     this.el = el;
     this.perspective = parseFloat(this.el.css('perspective'));
-    this._$objects = $('[data-transform]');
+    this._$objects = $('[data-camera-transform]');
     this.el.mousemove(function(event) {
       return _this._on_mouse_move(event);
     });
@@ -139,7 +139,9 @@ Camera = (function() {
   Camera.prototype._on_mouse_down = function(event) {
     this._dragging = true;
     this._mouse.lx = event.pageX;
-    return this._mouse.ly = event.pageY;
+    this._mouse.ly = event.pageY;
+    this.el.css('cursor', '-webkit-grabbing');
+    return event.preventDefault();
   };
 
   /*
@@ -150,7 +152,8 @@ Camera = (function() {
 
 
   Camera.prototype._on_mouse_up = function(event) {
-    return this._dragging = false;
+    this._dragging = false;
+    return this.el.css('cursor', 'inherit');
   };
 
   return Camera;
