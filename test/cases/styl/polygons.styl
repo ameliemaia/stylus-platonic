@@ -6,18 +6,17 @@ viewport-width = 100%
 
 .platonic-viewport
 
-    section.scene
+    .scene
 
-        div.ui-component
-            &.grid
-                grid()
+        .ui-component.grid
+            grid()
 
-        div.mesh
+        .mesh
 
-            &[data-mesh-type="quad"]
-                div.face
-                    quad(width: 80px, height: 80px, translate-x: -50px, mesh-id: 0)
+            &[data-mesh-id="0"]
+                .face[data-face-id="0"]
+                    quad(translate-x: -50px)
 
-            &[data-mesh-type="triangle"]
-                div.face
-                    triangle(side-length: 80px, translate-x: 50px, color: red, mesh-id: 1)
+            &[data-mesh-id="1"]
+                .face[data-face-id="0"]
+                    triangle(translate-x: 50px, color: red)
