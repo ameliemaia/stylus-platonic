@@ -1,8 +1,30 @@
+fs = require 'fs'
+
+list_files = (path, ext) =>
+    fs.readdirSync(path).filter (file) =>
+        ~file.indexOf ext
+    .map (file) =>
+        file.replace ext, ''
 
 module.exports = ( grunt ) ->
-    
-    files    = require './test/files'
 
+    files = 
+        jade  : {}
+        styl  : {}
+
+    styl = list_files __dirname + '/test/cases/styl', '.styl'
+    jade = list_files __dirname + '/test/cases/jade', '.jade'
+
+    for file in styl
+        src  = __dirname + '/test/cases/styl/' + file + '.styl'
+        dest = __dirname + '/test/public/css/' + file + '.css'
+        files.styl[dest] = src
+
+    for file in jade
+        src  = __dirname + '/test/cases/jade/'  + file + '.jade'
+        dest = __dirname + '/test/public/' + file + '.html'
+        files.jade[dest] = src
+    
     grunt.initConfig
 
         jade:
