@@ -44,7 +44,7 @@ module.exports = ( grunt ) ->
                         require './'
                     ]
                 
-                files: files.stylus
+                files: files.styl
             
         watch: 
             all: 
