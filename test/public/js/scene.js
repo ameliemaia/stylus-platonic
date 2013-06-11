@@ -14,7 +14,7 @@ Scene = (function() {
 
   Scene.prototype.view = '';
 
-  Scene.prototype.views = ['polygons', 'primitives', 'platonic-solids', 'fractals', 'ui-components'];
+  Scene.prototype.views = ['polygons', 'primitives', 'platonic-solids', 'fractals', 'ui-components', 'particles'];
 
   function Scene() {
     this.loop = __bind(this.loop, this);

@@ -35,7 +35,7 @@
         width  : @width
         height : @height
 
-         // Meshes 
+         // Mesh
         .mesh
             @extend .transform
             .face
@@ -43,24 +43,11 @@
                 position : absolute
         
         
-        // Groups
+        // Group
         .group
             @extend .transform
 
 
-        // UI Components
+        // UI Component
         .ui-component
             @extend .transform
-
-
-        // Points
-        .point
-
-            @extend .transform
-            border-radius(50%)
-            center(point-size, point-size)
-
-            background-color : point-color
-            absolute           top 0 left 0
-            width            : point-size
-            height           : point-size
