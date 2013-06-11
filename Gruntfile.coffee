@@ -17,12 +17,12 @@ module.exports = ( grunt ) ->
 
     for file in styl
         src  = __dirname + '/src/styl/' + file + '.styl'
-        dest = __dirname + '/css/' + file + '.css'
+        dest = __dirname + '/public/css/' + file + '.css'
         files.styl[dest] = src
 
     for file in jade
         src  = __dirname + '/src/jade/'  + file + '.jade'
-        dest = __dirname + '/' + file + '.html'
+        dest = __dirname + '/public/' + file + '.html'
         files.jade[dest] = src
 
     grunt.initConfig

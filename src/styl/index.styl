@@ -1,4 +1,57 @@
 
+// viewport-gradient1-color = black
+// viewport-gradient2-color = lighten(black, 20%)
 viewport-width = 100%
 
-@import 'stylus-platonic'
+@import "stylus-platonic"
+
+random(n){ math(n, 'random') }
+
+random-range(min, max)
+    min + (random(1) * (max - min))
+
+
+.platonic-viewport
+
+    .scene
+
+        .mesh
+
+            min_range = -300
+            max_range = 300
+
+            triangles = 50
+            for i in 0...triangles
+
+                id = i
+
+                side-length = unit(random-range(10, 80), px)
+                x  = unit(random-range(min_range, max_range), px)
+                y  = unit(random-range(min_range, max_range), px)
+                z  = unit(random-range(min_range, max_range), px)
+                rx = unit(random-range(0, 360), deg)
+                ry = unit(random-range(0, 360), deg)
+                rz = unit(random-range(0, 360), deg)
+
+                &[data-mesh-id={ '"%s"' % i }]
+                    .face[data-face-id="0"]
+                        triangle(side-length, 60, x, y, z, rx, ry, rz)
+
+            cubes = 10
+            for i in 0...cubes
+
+                id      = triangles + i
+               
+                _width  = unit(random-range(20, 100), px)
+                _height = unit(random-range(20, 100), px)
+                _depth  = unit(random-range(20, 100), px)
+
+                x  = unit(random-range(min_range, max_range), px)
+                y  = unit(random-range(min_range, max_range), px)
+                z  = unit(random-range(min_range, max_range), px)
+                rx = unit(random-range(0, 360), deg)
+                ry = unit(random-range(0, 360), deg)
+                rz = unit(random-range(0, 360), deg)
+
+                &[data-mesh-type="cube"]
+                    cube(_width, _height, _height, x, y, z, rx, ry, rz, mesh-id: id)
