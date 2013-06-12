@@ -13,7 +13,7 @@ HALF_PI = PI / 2
 
 // Math functions
 
-radians(degrees){ degrees / (180 / PI) }
+radians(degrees){ degrees * (PI / 180) }
 degrees(radians){ radians * (180 / PI) } 
 asin(n){ math(n, 'asin') }
 acos(n){ math(n, 'acos') }
