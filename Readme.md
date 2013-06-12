@@ -5,14 +5,50 @@ Experimental pure CSS3D library.
 
 ## About
 
-Built on top of Stylus, Platonic is a experimental CSS3D library 
+Built on top of Stylus, Platonic is a experimental CSS3D library for creating pure CSS3D content through CSS and HTML. 
 
-[Examples](#examples) - [Installation](#installation) - [Usage](#usage)
+It's primary objectives are:
+
+1. To provide an alternative 3D library for platforms that don't support WebGL.
+2. To provide a simple API and set of styles for setting up a 3D viewport.
+3. To generate the least amount of CSS required to display content.
+
+This library should be used at the users own risk as the current [browser support](#browser-support) is very limited!
+
+[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Getting started](#usage)
 
 
 ## Browser support
 
-Chrome and Safari (inc iOS)
+Platonic is currently supported in *some* webkit based browsers due to some CSS3 properties it requires for generating the geometry.
+
+* Chrome v27.0
+* Safari v6.0
+* Safari iOS v6.0
+
+## Installation
+
+```
+npm install stylus-platonic
+``` 
+
+
+## Features
+
+* Viewport styles
+* Geometry
+ * Quad
+ * Triangle
+ * Plane
+ * Cube
+ * Pyramid
+ * Tetrahedron
+ * Octahedron
+ * Particle
+* Optimised CSS output
+* Extras
+ * Menger Sponge mixin
+* Photon.js for lighting
 
 ## Examples
 
@@ -21,32 +57,20 @@ Demo 1 - ...
 Demo 2 - 400 cubes (  )
 
 
-## Features
+## FAQ
 
-* Viewport styles
-* Geometry mixins
- * quad
- * triangle
- * plane
- * cube
- * pyramid
- * tetrahedron
- * octahedron
-* Extras
- * Menger Sponge mixin
+Q: Why should you use Platonic over other 3D libraries?
 
+A: Current existing 3D libraries are built on WebGL. Platonic offers a WebGL-independent solution for generating 3D content.
 
-## Installation
+Q: When will more browsers be supported?
 
-```
-npm install stylus-platonic
-```
-
-
-## Usage
+A: As soon as the browser vendors implement the technology required to display the 3D content.
 
 
 ## Contributing
+
+Join the Google Group...
 
 
 ## License
