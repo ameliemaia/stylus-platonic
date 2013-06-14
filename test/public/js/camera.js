@@ -56,6 +56,8 @@ Camera = (function() {
   function Camera(el) {
     var _this = this;
     this.el = el;
+    this.rotate_x = this.base_rotation_x;
+    this.rotate_y = this.base_rotation_y;
     this.perspective = parseFloat(this.el.css('perspective'));
     this._$objects = $('[data-camera-transform]');
     this.el.mousemove(function(event) {
@@ -82,10 +84,20 @@ Camera = (function() {
       if (this._dragging) {
         dist_x = this._mouse.x - this._mouse.lx;
         dist_y = this._mouse.ly - this._mouse.y;
-        pct_x = dist_x / this.gimball_radius;
-        pct_y = dist_y / this.gimball_radius;
-        this.rotate_x = this.base_rotation_x + (this.max_rotation_x * pct_y);
-        this.rotate_y = this.base_rotation_y + (this.max_rotation_y * pct_x);
+        pct_x = dist_x / (this.gimball_radius * 0.25);
+        pct_y = dist_y / (this.gimball_radius * 0.25);
+        this.rotate_x = this.rotate_x + ((this.max_rotation_x * 0.01) * pct_y);
+        this.rotate_y = this.rotate_y + ((this.max_rotation_y * 0.01) * pct_x);
+        if (this.rotate_y > 360) {
+          this.rotate_y -= 360;
+        } else if (this.rotate_y < -360) {
+          this.rotate_y += 360;
+        }
+        if (this.rotate_x > 360) {
+          this.rotate_x -= 360;
+        } else if (this.rotate_x < -360) {
+          this.rotate_x += 360;
+        }
       }
     } else {
       pct_x = (this._mouse.x - this.width / 2) / this.width;

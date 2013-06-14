@@ -39,6 +39,9 @@ class Camera
 
     constructor: ( @el ) ->
 
+        @rotate_x = @base_rotation_x
+        @rotate_y = @base_rotation_y
+
         # Get perspective
         @perspective = parseFloat @el.css 'perspective'
 
@@ -71,11 +74,21 @@ class Camera
                 dist_x = @_mouse.x  - @_mouse.lx
                 dist_y = @_mouse.ly - @_mouse.y
 
-                pct_x = dist_x / @gimball_radius
-                pct_y = dist_y / @gimball_radius
+                pct_x = dist_x / (@gimball_radius * 0.25)
+                pct_y = dist_y / (@gimball_radius * 0.25)
 
-                @rotate_x = @base_rotation_x + (@max_rotation_x * pct_y)
-                @rotate_y = @base_rotation_y + (@max_rotation_y * pct_x)
+                @rotate_x = @rotate_x + ((@max_rotation_x * 0.01) * pct_y)
+                @rotate_y = @rotate_y + ((@max_rotation_y * 0.01) * pct_x)
+
+                if @rotate_y > 360
+                    @rotate_y -= 360
+                else if @rotate_y < -360
+                    @rotate_y += 360
+
+                if @rotate_x > 360
+                    @rotate_x -= 360
+                else if @rotate_x < -360
+                    @rotate_x += 360
 
         else
             
