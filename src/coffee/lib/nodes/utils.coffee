@@ -9,6 +9,17 @@ stylus = require 'stylus'
 nodes  = stylus.nodes
 
 
+###
+*   base64 encodes a string
+*
+*   @param  {String} url
+*   @return {Literal}
+*   @api     public
+###
+
+exports.base64 = (str) ->
+    new nodes.Literal( new Buffer(str.val).toString('base64') )
+
 
 ###
 *   Adds default behavior to the url function
@@ -19,7 +30,7 @@ nodes  = stylus.nodes
 ###
 
 exports.url = (url) ->
-    new nodes.Literal( 'url(' + new nodes.String(url.val) + ')')
+    new nodes.Literal( 'url(' + new nodes.String(url.val) + ')' )
 
 
 ###
@@ -30,7 +41,7 @@ exports.url = (url) ->
 *   @api     public
 ###
 
-exports.remove_precision_e = ( num ) ->
+exports.remove_precision_e = (num) ->
 
     str    = String num.val
     index  = str.indexOf 'e-'

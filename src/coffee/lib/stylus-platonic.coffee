@@ -13,6 +13,7 @@ nodes  = stylus.nodes
 
 plugin = ->
     return ( stylus ) ->
+        stylus.define 'base64', utils.base64
         stylus.define 'url', utils.url
         stylus.define 'remove-precision-e', utils.remove_precision_e
         stylus.include __dirname + '/../src/stylus/'

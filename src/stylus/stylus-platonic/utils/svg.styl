@@ -72,5 +72,7 @@ svg-polygon(stroke = "#FFFFFF", stroke-width = 1, fill = "#FFFFFF", points = "")
  * @api   public
  */
 svg-data-uri(width = 100px, height = 100px, content = "")
-    'data:image/svg+xml;utf8,<svg xmlns="'+unquote(svg-ns)+'" width="'+("%s" % width)+'" height="'+("%s" % height)+'">'+("%s" % content)+'</svg>'
-
+    if material-encode-svg
+        'data:image/svg+xml;base64,'+base64('<svg xmlns="'+unquote(svg-ns)+'" width="'+("%s" % width)+'" height="'+("%s" % height)+'">'+("%s" % content)+'</svg>')
+    else
+        'data:image/svg+xml;utf8,<svg xmlns="'+unquote(svg-ns)+'" width="'+("%s" % width)+'" height="'+("%s" % height)+'">'+("%s" % content)+'</svg>'
