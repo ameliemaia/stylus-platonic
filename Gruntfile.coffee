@@ -15,14 +15,14 @@ module.exports = ( grunt ) ->
     grunt.loadNpmTasks 'grunt-contrib-connect'
 
     test_src = 
-        styl   : "#{__dirname}/test/cases/styl"
-        jade   : "#{__dirname}/test/cases/jade"
-        coffee : "#{__dirname}/src/coffee/test"
+        styl   : 'test/cases/styl'
+        jade   : 'test/cases/jade'
+        coffee : 'src/coffee/test'
 
     test_out = 
-        styl   : "#{__dirname}/test/public/css"
-        jade   : "#{__dirname}/test/public"
-        coffee : "#{__dirname}/test/public/js"
+        styl   : 'test/public/css'
+        jade   : 'test/public'
+        coffee : 'test/public/js'
 
     files = 
         jade   : {}
@@ -65,12 +65,11 @@ module.exports = ( grunt ) ->
         stylus: 
             compile: 
                 options: 
-                    compress: false,
+                    compress: false
                     use: [
                         require 'nib'
                         require './'
                     ]
-                
                 files: files.styl
 
         coffee:
