@@ -55,8 +55,7 @@ class Scene
 
 
     _change_view: ( view ) =>
-
-        window.location = "#{window.location.protocol}//#{window.location.hostname}/#{view}.html"
+        window.location = "#{window.location.origin}/#{view}.html"
 
     on_resize: ->
 
