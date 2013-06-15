@@ -23,8 +23,8 @@ class Camera
     perspective        : null
     base_rotation_x    : -30
     base_rotation_y    : 0
-    rotate_x           : -30
-    rotate_y           : -45
+    rotate_x           : 0
+    rotate_y           : 0
     manual_rotate      : true
     gimball_radius     : 400
     max_rotation_x     : 360
