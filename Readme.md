@@ -1,32 +1,39 @@
 # Stylus Platonic
 
-Experimental pure CSS3D library.
+Experimental *pure* CSS3D library.
 
 
 ## About
 
-Built on top of Stylus, Platonic is a experimental CSS3D library for creating pure CSS3D content through CSS and HTML. 
+Built on top of Stylus, Platonic is a experimental CSS3D library for creating pure CSS3D content with CSS and HTML (JavaScript optional). 
 
 It's primary objectives are:
 
-1. To provide an alternative 3D library for platforms that don't support WebGL.
-2. To provide a simple API and set of styles for setting up a 3D viewport.
+1. To provide an 3D library for platforms that don't support WebGL.
+2. To provide a simple API and workflow for generating content.
 3. To generate the least amount of CSS required to display content.
 
 This library should be used at the users own risk as the current [browser support](#browser-support) is very limited!
 
-[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Getting started](#usage)
+[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
 
+## Examples
+
+Demo 1 - ...
+
+Demo 2 - 400 cubes (  )
 
 ## Browser support
 
-Platonic is currently supported in *some* webkit based browsers due to some CSS3 properties it requires for generating the geometry.
+Platonic is only currently supported in *some* webkit based browsers due to various CSS3 properties it requires to display the content.
 
 * Chrome v27.0
 * Safari v6.0
 * Safari iOS v6.0
 
 ## Installation
+
+You can either install Platonic as a node module or download the [source](http://zip) and link it to your stylus middleware compiler.
 
 ```
 npm install stylus-platonic
@@ -35,7 +42,8 @@ npm install stylus-platonic
 
 ## Features
 
-* Viewport styles
+* Configurable options for the viewport, ui-components and geometry
+* Optimised CSS output
 * Geometry
  * Quad
  * Triangle
@@ -45,39 +53,37 @@ npm install stylus-platonic
  * Tetrahedron
  * Octahedron
  * Particle
-* Optimised CSS output
-* Extras
- * Menger Sponge mixin
-* Photon.js for lighting
-
-## Examples
-
-Demo 1 - ...
-
-Demo 2 - 400 cubes (  )
+ * Menger Sponge
+* Uses [Photon](http://photon.attasi.com/) for surface shading
 
 
 ## FAQ
 
 Q: Why should you use Platonic over other 3D libraries?
 
-A: Current existing 3D libraries are built on WebGL. Platonic offers a WebGL-independent solution for generating 3D content.
+A: Platonic offers a WebGL-independent solution for generating 3D content.
 
 Q: When will more browsers be supported?
 
 A: As soon as the browser vendors implement the technology required to display the 3D content.
 
+Q: This is cool and all, but what about realtime?
+
+A: I'm working on a node.js-based solution for that : )
+
 
 ## Contributing
 
-Join the Google Group...
+For any issues, bugs, feature requests please submit an issue.
+
+If you would like to contribute to the library and / or have some good ideas on how things could be improved let's discuss it in the [Google group]().
 
 
 ## License
 
 (MIT)
 
-Copyright (c) 2013 David Paul Rosser, https://github.com/davidpaulrosser/stylus-platonic
+Copyright (c) 2013 David Paul Rosser, [https://github.com/davidpaulrosser/stylus-platonic](https://github.com/davidpaulrosser/stylus-platonic)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
