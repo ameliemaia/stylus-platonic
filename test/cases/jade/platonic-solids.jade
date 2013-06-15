@@ -14,13 +14,13 @@ block scene
 
         //- Octahedron
 
-        .mesh(data-mesh-type="octahedron", data-mesh-id="0", data-light="1")
-            each index in [0, 1, 2, 3, 4, 5, 6, 7]
-                .face(data-face-id="#{index}")
+        .mesh.octahedron(data-mesh-id="0", data-light="1")
+            - for (var i = 0; i < 8; i++)
+                .face(data-face-id="#{i}")
 
 
         //- Tetrahedron
 
-        .mesh(data-mesh-type="tetrahedron", data-mesh-id="1", data-light="1")
-            each index in [0, 1, 2, 3]
-                .face(data-face-id="#{index}")
+        .mesh.tetrahedron(data-mesh-id="1", data-light="1")
+            - for (var i = 0; i < 4; i++)
+                .face(data-face-id="#{i}")

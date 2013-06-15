@@ -11,6 +11,6 @@ block scene
     include includes/grid
 
     - for(i = 0; i < 10; i++)
-        .mesh(data-mesh-type="particle", data-mesh-id="#{i}", data-camera-transform) 
+        .mesh.particles(data-mesh-id="#{i}", data-camera-transform) 
             - for(j = 0; j < 10; j++)
                 .particle(data-particle-id="#{j}")
