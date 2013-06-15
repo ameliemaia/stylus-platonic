@@ -14,8 +14,7 @@ block scene
     .group.menger-sponge(data-group-id="0", data-camera-transform)
         - var iterations = 1
         - var cubes = Math.pow(20, iterations)
-        - for (var i = 0; i < cubes; i++) {
+        - for (var i = 0; i < cubes; i++)
             .mesh(data-mesh-type="cube", data-mesh-id="#{i}")
-                each index in [0, 1, 2, 3, 4, 5]
-                    .face(data-face-id="#{index}")
-        - }
+                - for (var j = 0; j < 6; j++)
+                    .face(data-face-id="#{j}")

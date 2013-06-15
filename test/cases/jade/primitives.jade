@@ -15,17 +15,17 @@ block scene
 
         //- Plane
 
-        .mesh(data-mesh-type="plane", data-mesh-id="0", data-light="1")
+        .mesh.plane(data-mesh-id="0", data-light="1")
             .face(data-face-id="0")
 
         //- Cube
 
-        .mesh(data-mesh-type="cube", data-mesh-id="1", data-light="1")
-            each index in [0, 1, 2, 3, 4, 5]
-                .face(data-face-id="#{index}")
+        .mesh.cube(data-mesh-id="1", data-light="1")
+            - for (var i = 0; i < 6; i++)
+                .face(data-face-id="#{i}")
 
         //- Pyramid
 
-        .mesh(data-mesh-type="pyramid", data-mesh-id="2", data-light="1")
-            each index in [0, 1, 2, 3, 4]
-                .face(data-face-id="#{index}")
+        .mesh.pyramid(data-mesh-id="2", data-light="1")
+            - for (var i = 0; i < 5; i++)
+                .face(data-face-id="#{i}")
