@@ -10,7 +10,7 @@
  * Generates a grid component
  * @param width
  * @param height
- * @param tile
+ * @param tile-size
  * @param wire-color
  * @param wire-width
  * @param translate-x
@@ -23,16 +23,18 @@
  * @api   public
  */
 
-grid(width = grid-width, height = grid-height, tile = grid-tile, wire-color = grid-wire-color, wire-width = grid-wire-width, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
+grid(width = grid-width, height = grid-height, tile-size = grid-tile-size, wire-color = grid-wire-color, wire-width = grid-wire-width, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
     &[data-component-id={'"%s"' % component-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         .grid
             quad(width, height, rotate-x: 90deg, color: transparent)
-            background: url(svg-data-uri(tile, tile, svg-rectangle(tile, tile, wire-color, wire-width, transparent)))
+            background: url(svg-data-uri(tile-size, tile-size, svg-rectangle(tile-size, tile-size, wire-color, wire-width, transparent)))
 
 
 /*
  * Generates a display axis indicator
+ * @param axis-line-width
+ * @param axis-line-height
  * @param translate-x
  * @param translate-y
  * @param translate-z
@@ -43,12 +45,12 @@ grid(width = grid-width, height = grid-height, tile = grid-tile, wire-color = gr
  * @api   public
  */
 
-display-axis(translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
+display-axis(axis-line-width = display-axis-line-width, axis-line-height = display-axis-line-height, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
     &[data-component-id={'"%s"' % component-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         .axis
 
-            offset = (display-axis-line-height / 2) - (display-axis-line-width / 2)
+            offset = (axis-line-height / 2) - (axis-line-width / 2)
 
             transform-style  : preserve-3d
 
@@ -56,8 +58,8 @@ display-axis(translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg,
             &:before
                 display          : block
                 position         : absolute
-                width            : display-axis-line-width
-                height           : display-axis-line-height
+                width            : axis-line-width
+                height           : axis-line-height
 
             &.x
 
@@ -73,7 +75,7 @@ display-axis(translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg,
 
             &.y
 
-                transform(translateY(-(display-axis-line-height)))
+                transform(translateY(-(axis-line-height)))
 
                 &
                 &:before
