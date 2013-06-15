@@ -8,76 +8,87 @@ list_files = (path, ext) =>
 
 module.exports = ( grunt ) ->
 
-    files = 
-        jade  : {}
-        styl  : {}
+    grunt.loadNpmTasks 'grunt-contrib-jade'
+    grunt.loadNpmTasks 'grunt-contrib-stylus'
+    grunt.loadNpmTasks 'grunt-contrib-coffee'
+    grunt.loadNpmTasks 'grunt-contrib-watch'
+    grunt.loadNpmTasks 'grunt-contrib-connect'
 
-    styl = list_files __dirname + '/test/cases/styl', '.styl'
-    jade = list_files __dirname + '/test/cases/jade', '.jade'
+    test_src = 
+        styl   : 'test/cases/styl'
+        jade   : 'test/cases/jade'
+        coffee : 'src/coffee/test'
+
+    test_out = 
+        styl   : 'test/public/css'
+        jade   : 'test/public'
+        coffee : 'test/public/js'
+
+    files = 
+        jade   : {}
+        styl   : {}
+        coffee : {}
+
+    styl   = list_files test_src.styl, '.styl'
+    jade   = list_files test_src.jade, '.jade'
+    coffee = list_files test_src.coffee, '.coffee'
 
     for file in styl
-        src  = __dirname + '/test/cases/styl/' + file + '.styl'
-        dest = __dirname + '/test/public/css/' + file + '.css'
+        src  = test_src.styl + '/' + file + '.styl'
+        dest = test_out.styl + '/' + file + '.css'
         files.styl[dest] = src
 
     for file in jade
-        src  = __dirname + '/test/cases/jade/'  + file + '.jade'
-        dest = __dirname + '/test/public/' + file + '.html'
+        src  = test_src.jade + '/' + file + '.jade'
+        dest = test_out.jade + '/' + file + '.html'
         files.jade[dest] = src
-    
+
+    for file in coffee
+        src  = test_src.coffee + '/' + file + '.coffee'
+        dest = test_out.coffee + '/' + file + '.js'
+        files.coffee[dest] = src
+
     grunt.initConfig
+
+        connect:
+            server:
+                options:
+                    port: 9055
+                    base: test_out.jade
 
         jade:
             compile:
                 options: 
                     pretty: true
-                
                 files: files.jade
             
-        
         stylus: 
             compile: 
                 options: 
-                    compress: false,
+                    compress: false
                     use: [
                         require 'nib'
                         require './'
                     ]
-                
                 files: files.styl
+
+        coffee:
+            compile:
+                options:
+                    bare: true
+                files: files.coffee
             
         watch: 
             all: 
                 files: [
-                     './test/cases/styl/**/*.styl'
-                    ,'./test/cases/jade/**/*.jade'
-                ],
-                tasks: [
-                    'stylus',
-                    'jade'
+                     "#{test_src.styl}/**/*.styl"
+                     "#{test_src.jade}/**/*.jade"
+                     "#{test_src.coffee}/**/*.coffee"
                 ]
-            
-            css: 
-                files: [
-                    './test/cases/styl/**/*.styl'
-                ],
                 tasks: [
                     'stylus'
-                ]
-            
-            html: 
-                files: [
-                    './test/cases/jade/**/*.jade'
-                ]
-                tasks: [
                     'jade'
+                    'coffee'
                 ]
-            
 
-    grunt.loadNpmTasks 'grunt-contrib-jade'
-    grunt.loadNpmTasks 'grunt-contrib-stylus'
-    grunt.loadNpmTasks 'grunt-contrib-watch'
-
-    grunt.registerTask 'default', [ 'watch:all'  ]
-    grunt.registerTask 'css',     [ 'watch:css'  ]
-    grunt.registerTask 'html',    [ 'watch:html' ]
+    grunt.registerTask 'default', [ 'connect', 'watch:all'  ]
