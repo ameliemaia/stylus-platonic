@@ -3,7 +3,7 @@ extends includes/layout
 
 block css
 
-    link(rel="stylesheet", href="./css/fractals.css")
+    link(rel="stylesheet", href="css/fractals.css")
 
 
 block scene
@@ -11,7 +11,7 @@ block scene
     include includes/grid
     include includes/display-axis
 
-    .group.menger-sponge(data-group-id="0", data-camera-transform)
+    .group.menger-sponge(data-group-id="0", data-camera-transform="1")
         - var iterations = 1
         - var cubes = Math.pow(20, iterations)
         - for (var i = 0; i < cubes; i++)
