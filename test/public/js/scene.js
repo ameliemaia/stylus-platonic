@@ -15,8 +15,8 @@ Scene = (function() {
   Scene.prototype.views = ['polygons', 'primitives', 'platonic-solids', 'fractals', 'ui-components', 'particles'];
 
   function Scene() {
-    this.loop = __bind(this.loop, this);
     this._change_view = __bind(this._change_view, this);
+    this.loop = __bind(this.loop, this);
     var cam_settings, i, view, _i, _len, _ref,
       _this = this;
     this.$window = $(window);
@@ -29,7 +29,7 @@ Scene = (function() {
       }
     }
     this.$viewport = $('.platonic-viewport');
-    this.$scene = this.$viewport.find('section.scene');
+    this.$scene = this.$viewport.find('.scene');
     this.light = new Photon.Light();
     this.face_groups = [];
     $('.group:not([data-light="0"]), .mesh:not(.group > .mesh):not([data-light="0"])').each(function(index, element) {
@@ -46,9 +46,9 @@ Scene = (function() {
     });
     cam_settings = this.gui.addFolder('Camera');
     cam_settings.add(this.cam, 'perspective', 0, 2000);
-    cam_settings.add(this.cam, 'rotate_x').listen();
-    cam_settings.add(this.cam, 'rotate_y').listen();
-    cam_settings.add(this.cam, 'manual_rotate');
+    cam_settings.add(this.cam, 'rotation_x').listen();
+    cam_settings.add(this.cam, 'rotation_y').listen();
+    cam_settings.add(this.cam, 'reset');
     cam_settings.open();
     this.$window.resize(function() {
       return _this.on_resize();
@@ -56,10 +56,6 @@ Scene = (function() {
     this.$window.trigger('resize');
     this.loop();
   }
-
-  Scene.prototype._change_view = function(view) {
-    return window.location = "" + window.location.origin + "/" + view + ".html";
-  };
 
   Scene.prototype.on_resize = function() {
     this.win_width = this.$window.width();
@@ -90,6 +86,10 @@ Scene = (function() {
   Scene.prototype.loop = function() {
     this.update();
     return requestAnimationFrame(this.loop);
+  };
+
+  Scene.prototype._change_view = function(view) {
+    return window.location = "" + window.location.origin + "/" + view + ".html";
   };
 
   return Scene;

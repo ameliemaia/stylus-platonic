@@ -10,52 +10,47 @@ class Scene
 
         @$window   = $(window)
 
-        ## Sort views array
+        # Sort views array
         for view, i in @views
             if window.location.href.match ///#{view}///
                 @views.splice(i, 1)
                 @views.unshift view
 
-        ## Viewport
-        @$viewport = $('.platonic-viewport')
-        @$scene    = @$viewport.find('section.scene')
+        # Viewport
+        @$viewport = $ '.platonic-viewport'
+        @$scene    = @$viewport.find '.scene'
 
-        ## Lighting
+        # Lighting
         @light       = new Photon.Light()
         @face_groups = []
 
-        ## Define facegroups
+        # Define facegroups
         $('.group:not([data-light="0"]), .mesh:not(.group > .mesh):not([data-light="0"])').each (index, element) =>
             face_group = new Photon.FaceGroup($(element)[0], $(element).find('.face'), 0.8, 0.1, true)
             @face_groups.push face_group
 
-        ## Add camera
+        # Add camera
         @cam = new Camera( @$viewport )
 
-        ## Stats
+        # Stats
         @stats = new Stats()
         @$viewport.append @stats.domElement
 
-        ## GUI
+        # GUI
         @gui = new dat.GUI()
-
         @gui.add( @, 'view', @views ).onChange ( value ) => @_change_view value
         cam_settings = @gui.addFolder 'Camera'
         cam_settings.add @cam, 'perspective', 0, 2000
-        cam_settings.add(@cam, 'rotate_x' ).listen()
-        cam_settings.add(@cam, 'rotate_y' ).listen()
-        cam_settings.add @cam, 'manual_rotate'
+        cam_settings.add(@cam, 'rotation_x' ).listen()
+        cam_settings.add(@cam, 'rotation_y' ).listen()
+        cam_settings.add(@cam, 'reset' )
         cam_settings.open()
 
-        ## Events
+        # Events
         @$window.resize => @on_resize()
         @$window.trigger 'resize'
 
         @loop()
-
-
-    _change_view: ( view ) =>
-        window.location = "#{window.location.origin}/#{view}.html"
 
     on_resize: ->
 
@@ -72,10 +67,10 @@ class Scene
 
         @stats.begin()
 
-        ## Update cam
+        # Update cam
         @cam.update()
     
-        ## Update lighting
+        # Update lighting
         if @face_groups.length > 0
             for face_group in @face_groups
                 face_group.render(@light, true)
@@ -88,5 +83,8 @@ class Scene
         @update()
         requestAnimationFrame(@loop)
 
+
+    _change_view: ( view ) =>
+        window.location = "#{window.location.origin}/#{view}.html"
 
 $ -> scene = new Scene()

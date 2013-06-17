@@ -6,57 +6,52 @@ class Camera
     ###
 
     _$objects : Array
-    _mouse    : 
-        x  : 0
-        y  : 0
-        lx : 0
-        ly : 0
+    _mouse    : {x:0, y:0, lx:0, ly:0}
     _dragging : false
 
     ###
     @public
     ###
+    config :
+        perspective    : 0
+        rotation_x     : -30
+        rotation_y     : -45
+        max_rotation_x : 360
+        max_rotation_y : 360
 
     el                 : null
     width              : 0
-    height             : 0
-    perspective        : null
-    base_rotation_x    : -30
-    base_rotation_y    : 0
-    rotate_x           : 0
-    rotate_y           : 0
-    manual_rotate      : true
-    gimball_radius     : 400
-    max_rotation_x     : 360
-    max_rotation_y     : 360
+    height             : 0    
+    perspective        : 0
+    rotation_x         : 0
+    rotation_y         : 0
+    gimball_radius     : 100
 
 
     ###
     constructor
     @param {$element} el
-    @api    private
     ###
 
     constructor: ( @el ) ->
 
-        @rotate_x = @base_rotation_x
-        @rotate_y = @base_rotation_y
-
         # Get perspective
-        @perspective = parseFloat @el.css 'perspective'
+        @config.perspective = parseFloat @el.css 'perspective'
+        @perspective = @config.perspective
 
         # Get all transformable objects
-        @_$objects = $('[data-camera-transform]')
+        @_$objects = $('[data-camera-transform="1"]')
         
         # Events
-        @el.mousemove ( event ) => @_on_mouse_move( event )
-        @el.mouseup ( event ) => @_on_mouse_up( event )
-        @el.mousedown ( event ) => @_on_mouse_down( event )
+        @el.mousemove ( event ) => @_on_mouse_move event
+        @el.mouseup ( event ) => @_on_mouse_up event
+        @el.mousedown ( event ) => @_on_mouse_down event
+
+        @_update_viewport @config.rotation_x, @config.rotation_y
 
 
     ###
     Update the camera
-    @api public
     ###
 
     update: ->
@@ -64,51 +59,36 @@ class Camera
         # Update perspective 
         @el.css 'perspective', @perspective + 'px'
 
-        # Update rotation from user click / drag
-        # or update from mouse x / y
+        # Update rotation from user drag
+        if @_dragging
 
-        if @manual_rotate
+            dist_x = @_mouse.x  - @_mouse.lx
+            dist_y = @_mouse.ly - @_mouse.y
 
-            if @_dragging
+            pct_x = (dist_x / @gimball_radius)
+            pct_y = (dist_y / @gimball_radius)
 
-                dist_x = @_mouse.x  - @_mouse.lx
-                dist_y = @_mouse.ly - @_mouse.y
+            pct_x *= 0.01
+            pct_y *= 0.01
 
-                pct_x = dist_x / (@gimball_radius * 0.25)
-                pct_y = dist_y / (@gimball_radius * 0.25)
+            rx = @rotation_x + (@config.max_rotation_x * pct_y)
+            ry = @rotation_y + (@config.max_rotation_y * pct_x)
 
-                @rotate_x = @rotate_x + ((@max_rotation_x * 0.01) * pct_y)
-                @rotate_y = @rotate_y + ((@max_rotation_y * 0.01) * pct_x)
+            if ry > 360
+                ry -= 360
+            else if ry < -360
+                ry += 360
 
-                if @rotate_y > 360
-                    @rotate_y -= 360
-                else if @rotate_y < -360
-                    @rotate_y += 360
+            if rx > 360
+                rx -= 360
+            else if rx < -360
+                rx += 360
 
-                if @rotate_x > 360
-                    @rotate_x -= 360
-                else if @rotate_x < -360
-                    @rotate_x += 360
+            @_update_viewport rx, ry
 
-        else
-            
-            pct_x = (@_mouse.x - @width  / 2) / @width
-            pct_y = (@height / 2 - @_mouse.y) / @height
-
-            @rotate_x = @base_rotation_x + (@max_rotation_x * pct_y)
-            @rotate_y = @base_rotation_y + (@max_rotation_y * pct_x)
-
-        for object in @_$objects
-
-            transform = "rotateX(#{@rotate_x}deg) rotateY(#{@rotate_y}deg)"    
-
-            $(object).css
-                '-webkit-transform' : transform  
-                'transform'         : transform   
 
     ###
     Resize the viewport
-    @api public
     ###
 
     resize: ->
@@ -116,12 +96,37 @@ class Camera
         @width  = @el.width()
         @height = @el.height()
 
+    ###
+    Reset the viewport rotation
+    ###
+
+    reset: => 
+
+        @_update_viewport @config.rotation_x, @config.rotation_y 
+
+
+    ###
+    Update the viewport
+    @param {Number} rotation_x
+    @param {Number} rotation_y
+    ###
+
+    _update_viewport: ( @rotation_x, @rotation_y ) =>
+
+        for object in @_$objects
+
+            transform = "rotateX(#{@rotation_x}deg) rotateY(#{@rotation_y}deg)"    
+
+            $(object).css
+                '-webkit-transform' : transform  
+                'transform'         : transform  
+
+        return off
 
     ###
     Viewport mouse move handler
     @param {Object} event
-    @api    private
-    ###
+    ### 
 
     _on_mouse_move: ( event ) ->
 
@@ -132,7 +137,6 @@ class Camera
     ###
     Viewport mouse down handler
     @param {Object} event
-    @api    private
     ###
 
     _on_mouse_down: ( event ) ->
@@ -148,7 +152,6 @@ class Camera
     ###
     Viewport mouse up handler
     @param {Object} event
-    @api    private
     ###
 
     _on_mouse_up: ( event ) ->
@@ -156,6 +159,3 @@ class Camera
         @_dragging = false
 
         @el.css 'cursor', 'inherit'
-
-
-
