@@ -15,7 +15,7 @@ module.exports = ( grunt ) ->
     grunt.loadNpmTasks 'grunt-contrib-connect'
 
     test_src = 
-        styl   : 'test/cases/styl'
+        styl   : 'test/cases/stylus'
         jade   : 'test/cases/jade'
         coffee : 'src/coffee/test'
 
