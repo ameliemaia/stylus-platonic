@@ -17,7 +17,7 @@ lib_out =
     coffee : 'lib'
 
 test_src = 
-    styl   : 'test/cases/styl' 
+    styl   : 'test/cases/stylus' 
     jade   : 'test/cases/jade'
     coffee : 'src/coffee/test'
 
