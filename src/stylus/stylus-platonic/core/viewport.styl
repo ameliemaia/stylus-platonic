@@ -25,7 +25,12 @@
     perspective-origin(50%)
 
     background-color : viewport-background-color
-    background       : linear-gradient(viewport-gradient1-color, viewport-gradient2-color)
+    
+    if viewport-gradient-type is 'radial'
+        -radial-gradient(viewport-gradient-color1, viewport-gradient-color2)
+    else
+        background-image : linear-gradient(viewport-gradient-color1, viewport-gradient-color2)
+    
     overflow         : hidden
     relative           margin-top 0 margin-left 0
     width            : viewport-width
