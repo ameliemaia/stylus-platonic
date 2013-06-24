@@ -8,7 +8,7 @@ block css
 
 block scene
 
-    include includes/grid
+    //- include includes/grid
     include includes/display-axis
 
     .group(data-group-id="0", data-camera-transform="1")
@@ -26,6 +26,6 @@ block scene
         //-         .face(data-face-id="#{i}")
 
         .mesh.icosahedron(data-mesh-id="0", data-light="1")
-            - for (var i = 0; i < 5; i++)
+            - for (var i = 0; i < 15; i++)
                 .group(data-group-id="#{i}")
                     .face(data-face-id="#{i}")

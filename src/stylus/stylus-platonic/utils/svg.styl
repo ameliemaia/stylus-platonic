@@ -15,15 +15,27 @@ svg-ns = "http://www.w3.org/2000/svg"
  * @api   public 
  */
 
-svg-triangle(width = 50px, height = 50px, stroke = material-color, stroke-width = 1, fill = material-color)
+svg-triangle(width = 50px, height = 50px, stroke = material-color, stroke-width = 1, fill = material-color, direction = 'up')
+    
     height = unit(height, '')
     width  = unit(width, '')
-    x1 = width / 2
-    y1 = 0
-    x2 = width
-    y2 = height
-    x3 = 0
-    y3 = height
+
+    if direction is 'up'
+        x1 = width / 2
+        y1 = 0
+        x2 = width
+        y2 = height
+        x3 = 0
+        y3 = height
+
+    if direction is 'down'
+        x1 = 0
+        y1 = 0
+        x2 = width / 2
+        y2 = height
+        x3 = width
+        y3 = 0
+
     points = '%s,%s %s,%s %s,%s' % (x1 y1 x2 y2 x3 y3)
     svg-polygon(stroke, stroke-width, fill, points)
 
