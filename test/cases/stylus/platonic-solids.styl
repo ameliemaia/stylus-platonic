@@ -6,8 +6,13 @@
 
     .scene
 
-        .ui-component.grid
-            grid()
+        .ui-component
+        
+            &.grid
+                grid()
+
+            &.display-axis
+                display-axis(component-id: 1)
 
         .mesh
 
@@ -15,4 +20,7 @@
                 octahedron(translate-x: -150px, mesh-id: 0)
 
             &.tetrahedron
-                tetrahedron(translate-x: 150px, color: red, mesh-id: 1)
+                tetrahedron(translate-x: 150px, mesh-id: 1)
+
+            &.icosahedron
+                icosahedron(translate-z: 150px, mesh-id: 2)

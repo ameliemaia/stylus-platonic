@@ -32,7 +32,7 @@ Scene = (function() {
     this.$scene = this.$viewport.find('.scene');
     this.light = new Photon.Light();
     this.face_groups = [];
-    $('.group:not([data-light="0"]), .mesh:not(.group > .mesh):not([data-light="0"])').each(function(index, element) {
+    $('.group:not(.mesh > .group):not([data-light="0"]), .mesh:not(.group > .mesh):not([data-light="0"])').each(function(index, element) {
       var face_group;
       face_group = new Photon.FaceGroup($(element)[0], $(element).find('.face'), 0.8, 0.1, true);
       return _this.face_groups.push(face_group);

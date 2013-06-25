@@ -1,5 +1,152 @@
 
 /*
+ * Generates an icosahedron
+ *
+ * @param radius
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   public
+ */
+
+icosahedron_rotate_x = 58deg
+icosahedron_rotate_y = 72deg
+
+icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    
+    rotate-x += icosahedron_rotate_x
+    rotate-y += icosahedron_rotate_y
+
+    radius           = unit(radius, '')
+    side-length      = 4 * radius / sqrt( 10 + 2 * sqrt(5))
+
+    // Height of the pentagonal pyramid
+    pyramid_height   = sqrt((5 - sqrt(5)) / 10) * side-length
+    
+    // Hypotenuse from the center of the pentagon edge to the top apex
+    pyramid_hypt     = triangle-height(side-length, 60)
+    
+    // Distance from the center to the pentagon base edge
+    pyramid_opposite_a = sqrt((pyramid_hypt * pyramid_hypt) - (pyramid_height * pyramid_height))
+    
+    // Distance from a pentagon vertex to the top apex
+    pyramid_opposite_b = sqrt((side-length * side-length) - (pyramid_height * pyramid_height))
+    
+    // Calculations for the face rotation of the middle triangles
+    difference = pyramid_opposite_b - pyramid_opposite_a
+
+    face_angle_top    = 90 - unit(degrees(asin(pyramid_height/pyramid_hypt)), deg)
+    face_angle_middle = unit(degrees(asin(difference/pyramid_hypt)), deg)
+
+    radius             = unit(radius, px)
+    side-length        = unit(side-length, px)
+    pyramid_opposite_a = unit(pyramid_opposite_a, px)
+    pyramid_height     = unit(pyramid_height, px)
+    offset_y           = -(radius)
+
+    // p('radius              :' + radius)
+    // p('side-length         :' + side-length)
+    // p('face_angle_top      :' + face_angle_top)
+    // p('face_angle_middle   :' + face_angle_middle)
+    // p('pyramid_height      :' + pyramid_height)
+    // p('pyramid_hypt        :' + pyramid_hypt)
+    // p('pyramid_opposite_a  :' + pyramid_opposite_a)
+    // p('pyramid_opposite_b  :' + pyramid_opposite_b)
+
+    &[data-mesh-id={'"%s"' % mesh-id}]
+
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+        // Top faces
+        .face[data-face-id="0"]
+        .face[data-face-id="1"]
+        .face[data-face-id="2"]
+        .face[data-face-id="3"]
+        .face[data-face-id="4"]
+            triangle(side-length, 60, color: color)
+            transform-origin(50% 0)
+            center(0, side-length)
+
+        for i in 0 .. 5
+
+            rotation_y = unit(i * (360 / 5), deg)
+            
+            .group[data-group-id={'"%s"' % i}]
+
+                transform : translateY(offset_y) rotateY(rotation_y)
+
+                .face[data-face-id={'"%s"' % i}]
+                    transform : rotateX(face_angle_top)
+
+        // Middle faces
+        .face[data-face-id="5"]
+        .face[data-face-id="7"]
+        .face[data-face-id="9"]
+        .face[data-face-id="11"]
+        .face[data-face-id="13"]
+            triangle(side-length, 60, color: color)
+            transform-origin(50% 100%)
+            center(0, side-length)
+
+        .face[data-face-id="6"]
+        .face[data-face-id="8"]
+        .face[data-face-id="10"]
+        .face[data-face-id="12"]
+        .face[data-face-id="14"]
+            triangle(side-length, 60, color: color, direction: 'down')
+            transform-origin(50% 0)
+            center(0, side-length)
+
+        for i in 0 .. 9
+
+            index = 5 + i
+            angle = 360 / 5
+
+            rotation_y = unit(i * angle, deg)
+            rotation_y = rotation_y - 36 if even(i)
+
+            face_angle_middle_negative = 0 - face_angle_middle
+
+            .group[data-group-id={'"%s"' % index}]
+
+                transform : translateY(offset_y) rotateY(rotation_y)
+
+                .face[data-face-id={'"%s"' % index}]
+                    if even(i)
+                        transform : translateZ(pyramid_opposite_a) translateY(pyramid_height) rotateX(face_angle_middle_negative)
+                    else
+                        transform : translateZ(pyramid_opposite_a) translateY(pyramid_height) rotateX(face_angle_middle)
+                        
+
+        // Bottom faces
+        .face[data-face-id="15"]
+        .face[data-face-id="16"]
+        .face[data-face-id="17"]
+        .face[data-face-id="18"]
+        .face[data-face-id="19"]
+            triangle(side-length, 60, color: color, direction: 'down')
+            transform-origin(0 100%)
+            center(0, side-length)
+
+        for i in 0 .. 4
+
+            index      = 15 + i
+            rotation_y = unit(i * (360 / 5), deg)
+        
+            .group[data-group-id={'"%s"' % index}]
+                
+                transform : translateY(offset_y) rotateY(rotation_y)
+
+                .face[data-face-id={'"%s"' % index}]
+                    transform : translateY(pyramid_height*2) rotateX(face_angle_top)
+
+        
+/*
  * Generates an octahedron
  *
  * @param radius
