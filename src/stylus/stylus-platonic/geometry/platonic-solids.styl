@@ -14,11 +14,17 @@
  * @api   public
  */
 
-icosahedron(side-length = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+icosahedron_rotate_x = 58deg
+icosahedron_rotate_y = 72deg
+
+icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
     
-    side-length      = unit(side-length, '')
-    radius           = unit(side-length * sin((2 * PI) / 5), px)
-    
+    rotate-x += icosahedron_rotate_x
+    rotate-y += icosahedron_rotate_y
+
+    radius           = unit(radius, '')
+    side-length      = 4 * radius / sqrt( 10 + 2 * sqrt(5))
+
     // Height of the pentagonal pyramid
     pyramid_height   = sqrt((5 - sqrt(5)) / 10) * side-length
     
@@ -37,6 +43,7 @@ icosahedron(side-length = 100px, translate-x = 0, translate-y = 0, translate-z =
     face_angle_top    = 90 - unit(degrees(asin(pyramid_height/pyramid_hypt)), deg)
     face_angle_middle = unit(degrees(asin(difference/pyramid_hypt)), deg)
 
+    radius             = unit(radius, px)
     side-length        = unit(side-length, px)
     pyramid_opposite_a = unit(pyramid_opposite_a, px)
     pyramid_height     = unit(pyramid_height, px)
@@ -65,7 +72,7 @@ icosahedron(side-length = 100px, translate-x = 0, translate-y = 0, translate-z =
             transform-origin(50% 0)
             center(0, side-length)
 
-        for i in 0 ... 6
+        for i in 0 .. 5
 
             rotation_y = unit(i * (360 / 5), deg)
             
@@ -95,7 +102,7 @@ icosahedron(side-length = 100px, translate-x = 0, translate-y = 0, translate-z =
             transform-origin(50% 0)
             center(0, side-length)
 
-        for i in 0 ... 10
+        for i in 0 .. 9
 
             index = 5 + i
             angle = 360 / 5
@@ -126,7 +133,7 @@ icosahedron(side-length = 100px, translate-x = 0, translate-y = 0, translate-z =
             transform-origin(0 100%)
             center(0, side-length)
 
-        for i in 0 ... 5
+        for i in 0 .. 4
 
             index      = 15 + i
             rotation_y = unit(i * (360 / 5), deg)
