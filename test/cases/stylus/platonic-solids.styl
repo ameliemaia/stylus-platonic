@@ -1,4 +1,6 @@
 
+material-encode-svg = false
+
 @import "stylus-platonic/dev/dev"
 @import "stylus-platonic"
 
@@ -13,14 +15,18 @@
 
             &.display-axis
                 display-axis(component-id: 1)
+                z-index: 2
 
         .mesh
 
-            &.octahedron
-                octahedron(translate-x: -150px, mesh-id: 0)
+            // &.octahedron
+            //     octahedron(translate-x: -150px, mesh-id: 0)
 
-            &.tetrahedron
-                tetrahedron(translate-x: 150px, mesh-id: 1)
+            // &.tetrahedron
+            //     tetrahedron(translate-x: 150px, mesh-id: 1)
 
-            &.icosahedron
-                icosahedron(translate-z: 150px, mesh-id: 2)
+            // &.icosahedron
+            //     icosahedron(translate-z: 150px, mesh-id: 2)
+
+            &.dodecahedron
+                dodecahedron(mesh-id: 3)

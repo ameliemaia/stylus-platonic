@@ -1,5 +1,31 @@
 
 /*
+ * Generates an dodecahedron
+ *
+ * @param radius
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param mesh-id
+ * @api   public
+ */
+
+dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+    
+    &[data-mesh-id={'"%s"' % mesh-id}]
+
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+        .face[data-face-id="0"]
+            pentagon(radius, rotate-x: 90deg, rotate-z: -90deg)
+
+
+
+/*
  * Generates an icosahedron
  *
  * @param radius

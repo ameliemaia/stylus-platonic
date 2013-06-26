@@ -27,3 +27,16 @@ distance3d(x1, y1, z1, x2, y2, z2)
 
 triangle-height(side-length, angle)
     side-length * sin(radians(angle))
+
+pentagon-width(radius)
+    radius   = remove-unit(radius)
+    angle    = HALF_PI - (TWO_PI / 5)
+    opposite = radius * cos(angle)
+    opposite * 2
+
+pentagon-height(radius)
+    radius      = remove-unit(radius)
+    side_length = (2 * radius) * sin(PI / 5)
+    a1          = radians(18)
+    a2          = radians(36)
+    side_length * (cos(a1) + sin(a2))
