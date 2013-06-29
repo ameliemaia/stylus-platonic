@@ -22,9 +22,7 @@ _sponge(x, y, z, cube-size)
                 new_y = y + (cube-size - (levels  * cube-size))
                 new_z = z + (cube-size - (columns * cube-size))
                 
-                if inlist(i, (4 10 12 13 14 16 22))
-                    // skip
-                else
+                if not inlist(i, (4 10 12 13 14 16 22))
                     tmp = (new_x) (new_y) (new_z)
                     merge(positions, tmp)
                 
