@@ -7,7 +7,7 @@ block css
 
 
 block scene
-
+    
     include includes/grid
     include includes/display-axis
 
@@ -36,3 +36,16 @@ block scene
 
         .mesh.dodecahedron(data-mesh-id="3", data-light="1")
             .face(data-face-id="0")
+            .face(data-face-id="11")
+            //- .group(data-group-id="1")
+            //-     .face(data-face-id="1")
+            .particle(data-particle-id="10")
+            .particle(data-particle-id="0")
+            .particle(data-particle-id="1")
+            .particle(data-particle-id="2")
+            .particle(data-particle-id="3")
+            .particle(data-particle-id="4")
+
+            - for (var i = 0; i < 5; i++)
+                .group(data-group-id="#{i}")
+                    .face(data-face-id="#{i}")
