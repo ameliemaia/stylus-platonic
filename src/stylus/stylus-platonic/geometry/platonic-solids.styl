@@ -14,27 +14,40 @@
  * @api   public
  */
 
-dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+dodecahedron(radius = 400px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
     
-    // Is this right?
-    face_radius      = radius / 5
-    pentagon_width   = unit(pentagon-width(face_radius), px)
-    pentagon_height  = unit(pentagon-height(face_radius), px)
-    face_center_x    = pentagon_width / 2
-    face_center_y    = pentagon_height / 2
-    
-    face_angle  = HALF_PI - (PI - (PI - atan(2)))
-    face_angle  = unit(degrees(face_angle), deg)
+    radius           = remove-unit(radius)
+    side_length      = 4 * radius / (sqrt(3) * (1 + sqrt(5)))
+    face_radius      = polygon-radius(5, side_length)
+    face_width       = unit(pentagon-width(face_radius), px)
+    face_height      = unit(pentagon-height(face_radius), px)
+    face_center_x    = face_width / 2
+    face_center_y    = face_height / 2
 
-    height = sqrt((radius * radius) - (face_radius * face_radius))
+    // Difference between the diameter of the circum circle and the pentagon height
+    difference       = (face_radius * 2) - face_height
+    dihedral_angle   = PI - (PI - atan(2))
+    face_angle       = HALF_PI  - dihedral_angle
+    face_angle       = unit(degrees(face_angle), deg)
 
-    p('dodecahedron height: ' + height)
-    p('pentagon_width:  ' + pentagon_width)
-    p('pentagon_height: ' + pentagon_height)
-    p('face_center_x: '   + face_center_x)
-    p('face_center_y: '   + face_center_y)
+    // Calculate the distance between the top and bottom faces
+    height           = radius / 2
+    height           = unit(height, px) 
 
-    &[data-mesh-id={'"%s"' % mesh-id}]
+    t = face_height * sin(dihedral_angle)
+
+    particle(3px, 0, -(t), 0, color:green, particle-id: 15)
+
+    p('dihedral_angle:  ' + degrees(dihedral_angle))
+    p('height:          ' + height)
+    p('side_length:     ' + side_length)
+    p('face_radius:     ' + face_radius)
+    p('face_width:      ' + face_width)
+    p('face_height:     ' + face_height)
+    p('face_center_x:   ' + face_center_x)
+    p('face_center_y:   ' + face_center_y)
+
+    &[data-mesh-id={'"%s"' % mesh-id}]  
 
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
 
@@ -46,16 +59,13 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
         .face[data-face-id="0"]
             pentagon(face_radius, rotate-x: 90deg, rotate-z: -90deg)
 
-
         .face[data-face-id="11"]
 
+            x = difference / 2
             y = -(height)
 
-            pentagon(face_radius, translate-y: y, rotate-x: 90deg, rotate-z: 90deg)
+            pentagon(face_radius, translate-x: x, translate-y: y, rotate-x: 90deg, rotate-z: 90deg, color: gray)
 
-
-        // Difference between the diameter of the circum circle and the pentagon height
-        difference = (face_radius * 2) - pentagon_height
 
         particle(3px, 0px, -4px, 0px, color:red, particle-id: 10)
 
@@ -75,6 +85,8 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
 
             particle(3px, x, y, z, color:red, particle-id: i)
 
+            // Bottom faces
+
             .group[data-group-id={'"%s"' % i}]
 
                 rotation_y = unit(degrees(angle - HALF_PI), deg) 
@@ -83,6 +95,42 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
 
                 .face[data-face-id={'"%s"' % i}]
                     pentagon(face_radius, rotate-x: face_angle)
+                    transform-origin : 50% 100%
+
+
+            // Top faces
+
+            ax    = angle - PI
+            az    = angle - PI
+
+            az = 0 if degrees(angle - PI) is -180
+            
+            x = (face_radius - difference) * cos(ax)
+            y = -(height)
+            z = (face_radius - difference) * sin(az)
+
+            index = 5 + i 
+
+            particle(3px, x, y, z, color:orange, particle-id: index)
+
+            .group[data-group-id={'"%s"' % index}]
+
+                p(degrees(ax))
+
+                // ax - (face_angle / 2)
+
+                rotation_y_angle = (ax + (theta / 2)) - HALF_PI
+                
+                rotation_x  = unit(degrees(-(180) + face_angle), deg) 
+                rotation_y  = unit(degrees(rotation_y_angle), deg) 
+                translate_y = -(height) - face_center_y
+
+                // p('rotation_y:' + rotation_y)
+
+                transform : translateX(x) translateY(translate_y) translateZ(z) rotateY(rotation_y)
+
+                .face[data-face-id={'"%s"' % index}]
+                    pentagon(face_radius, rotate-x: rotation_x)
                     transform-origin : 50% 100%
 
 
@@ -109,20 +157,20 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
     rotate-x += icosahedron_rotate_x
     rotate-y += icosahedron_rotate_y
 
-    radius           = unit(radius, '')
-    side-length      = 4 * radius / sqrt( 10 + 2 * sqrt(5))
+    radius           = remove-unit(radius)
+    side_length      = 4 * radius / (sqrt( 10 + 2 * sqrt(5)))
 
     // Height of the top pentagon pyramid
-    pyramid_height   = sqrt((5 - sqrt(5)) / 10) * side-length
+    pyramid_height   = sqrt((5 - sqrt(5)) / 10) * side_length
     
     // Hypotenuse from the center of the pentagon edge to the top apex
-    pyramid_hypt     = triangle-height(side-length, 60)
+    pyramid_hypt     = triangle-height(side_length, 60)
     
     // Distance from the center to the pentagon base edge
     pyramid_opposite_a = sqrt((pyramid_hypt * pyramid_hypt) - (pyramid_height * pyramid_height))
     
     // Distance from a pentagon vertex to the top apex
-    pyramid_opposite_b = sqrt((side-length * side-length) - (pyramid_height * pyramid_height))
+    pyramid_opposite_b = sqrt((side_length * side_length) - (pyramid_height * pyramid_height))
     
     // Calculations for the face rotation of the middle triangles
     difference = pyramid_opposite_b - pyramid_opposite_a
@@ -131,7 +179,7 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
     face_angle_middle  = unit(degrees(asin(difference/pyramid_hypt)), deg)
 
     radius             = unit(radius, px)
-    side-length        = unit(side-length, px)
+    side_length        = unit(side_length, px)
     pyramid_opposite_a = unit(pyramid_opposite_a, px)
     pyramid_height     = unit(pyramid_height, px)
     offset_y           = -(radius)
@@ -146,9 +194,9 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
         .face[data-face-id="2"]
         .face[data-face-id="3"]
         .face[data-face-id="4"]
-            triangle(side-length, 60, color: color)
-            transform-origin(50% 0)
-            center(0, side-length)
+            triangle(side_length, 60, color: color)
+            center(0, side_length)
+            transform-origin : 50% 0
 
         for i in 0 .. 5
 
@@ -167,9 +215,9 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
         .face[data-face-id="9"]
         .face[data-face-id="11"]
         .face[data-face-id="13"]
-            triangle(side-length, 60, color: color)
+            triangle(side_length, 60, color: color)
             transform-origin : 50% 100%
-            center(0, side-length)
+            center(0, side_length)
 
         .face[data-face-id="6"]
         .face[data-face-id="8"]
@@ -178,7 +226,7 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
         .face[data-face-id="14"]
             triangle(side-length, 60, color: color, direction: 'down')
             transform-origin : 50% 0
-            center(0, side-length)
+            center(0, side_length)
 
         for i in 0 .. 9
 
@@ -207,9 +255,9 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
         .face[data-face-id="17"]
         .face[data-face-id="18"]
         .face[data-face-id="19"]
-            triangle(side-length, 60, color: color, direction: 'down')
+            triangle(side_length, 60, color: color, direction: 'down')
             transform-origin : 0 100%
-            center(0, side-length)
+            center(0, side_length)
 
         for i in 0 .. 4
 
