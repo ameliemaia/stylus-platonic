@@ -14,7 +14,7 @@
  * @api   public
  */
 
-dodecahedron(radius = 400px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
     
     radius           = remove-unit(radius)
     side_length      = 4 * radius / (sqrt(3) * (1 + sqrt(5)))
@@ -23,23 +23,21 @@ dodecahedron(radius = 400px, translate-x = 0, translate-y = 0, translate-z = 0, 
     face_height      = unit(pentagon-height(face_radius), px)
     face_center_x    = face_width / 2
     face_center_y    = face_height / 2
+    face_radius      = unit(face_radius, px)
 
-    // Difference between the diameter of the circum circle and the pentagon height
-    difference       = (face_radius * 2) - face_height
+    // Difference between the diameter of the circum circle and the pentagon width
+    difference       = (face_radius * 2) - face_width
     dihedral_angle   = PI - (PI - atan(2))
     face_angle       = HALF_PI  - dihedral_angle
     face_angle       = unit(degrees(face_angle), deg)
 
     // Calculate the distance between the top and bottom faces
-    height           = radius / 2
-    height           = unit(height, px) 
-
-    t = face_height * sin(dihedral_angle)
-
-    particle(3px, 0, -(t), 0, color:green, particle-id: 15)
+    // height           = radius / 2
+    dodecahedron_height = 2 * sqrt((radius * radius) - (face_radius * face_radius))
+    dodecahedron_height = unit(dodecahedron_height, px) 
 
     p('dihedral_angle:  ' + degrees(dihedral_angle))
-    p('height:          ' + height)
+    p('height:          ' + dodecahedron_height)
     p('side_length:     ' + side_length)
     p('face_radius:     ' + face_radius)
     p('face_width:      ' + face_width)
@@ -49,89 +47,85 @@ dodecahedron(radius = 400px, translate-x = 0, translate-y = 0, translate-z = 0, 
 
     &[data-mesh-id={'"%s"' % mesh-id}]  
 
+        z-index: 10
+
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
 
-        .face
-            opacity(.9)
-
-        // Bottom
-
         .face[data-face-id="0"]
-            pentagon(face_radius, rotate-x: 90deg, rotate-z: -90deg)
+            pentagon(face_radius, rotate-x: 90deg, rotate-z: 90deg)
 
         .face[data-face-id="11"]
+            pentagon(face_radius, translate-y: -(dodecahedron_height), translate-x: -(difference), rotate-x: 90deg, rotate-z: -90deg)
+            background-color : red
 
-            x = difference / 2
-            y = -(height)
-
-            pentagon(face_radius, translate-x: x, translate-y: y, rotate-x: 90deg, rotate-z: 90deg, color: gray)
-
-
-        particle(3px, 0px, -4px, 0px, color:red, particle-id: 10)
+        // Bottom faces
 
         theta = TWO_PI / 5
 
+        p('difference: ' + difference)
+
         for i in 0 .. 4
 
-            angle = i * theta
-            ax    = angle
-            az    = angle
+            angle      = i * theta
+            angle_next = angle + theta
 
-            az = 0 if degrees(angle - PI) is -180
-                
-            x = (difference / 2) + ((face_radius - difference) * cos(ax))
-            y = -4px
-            z = (difference - face_radius) * sin(az)
+            x = face_radius * cos(angle)
+            y = 0
+            z = face_radius * sin(angle)
 
-            particle(3px, x, y, z, color:red, particle-id: i)
+            nx = face_radius * cos(angle_next)            
+            nz = face_radius * sin(angle_next)
 
-            // Bottom faces
+            x  -= difference
+            nx -= difference
 
-            .group[data-group-id={'"%s"' % i}]
+            cx = center-between(x, nx)
+            cz = center-between(z, nz)
+            cz = 0 if degrees(angle_next) is 216 // Fixes sin(216) -2.4492127076447545e-16
 
-                rotation_y = unit(degrees(angle - HALF_PI), deg) 
+            // particle(3px, x, -(dodecahedron_height), z, color:red, particle-id: i)
 
-                transform : translateX(x) translateY(-(face_center_y)) translateZ(z) rotateY(rotation_y)
-
-                .face[data-face-id={'"%s"' % i}]
-                    pentagon(face_radius, rotate-x: face_angle)
-                    transform-origin : 50% 100%
-
-
-            // Top faces
-
-            ax    = angle - PI
-            az    = angle - PI
-
-            az = 0 if degrees(angle - PI) is -180
-            
-            x = (face_radius - difference) * cos(ax)
-            y = -(height)
-            z = (face_radius - difference) * sin(az)
-
-            index = 5 + i 
-
-            particle(3px, x, y, z, color:orange, particle-id: index)
+            index = i + 1
 
             .group[data-group-id={'"%s"' % index}]
 
-                p(degrees(ax))
+                rotation_y = 54 - degrees(angle)
+                rotation_y = unit(rotation_y, deg) 
 
-                // ax - (face_angle / 2)
-
-                rotation_y_angle = (ax + (theta / 2)) - HALF_PI
-                
-                rotation_x  = unit(degrees(-(180) + face_angle), deg) 
-                rotation_y  = unit(degrees(rotation_y_angle), deg) 
-                translate_y = -(height) - face_center_y
-
-                // p('rotation_y:' + rotation_y)
-
-                transform : translateX(x) translateY(translate_y) translateZ(z) rotateY(rotation_y)
+                // transform : translateX(x) translateY(-(face_center_y)) translateZ(z) rotateY(rotation_y)
+                transform : translateX(cx) translateY(-(face_center_y)) translateZ(cz) rotateY(rotation_y)
 
                 .face[data-face-id={'"%s"' % index}]
-                    pentagon(face_radius, rotate-x: rotation_x)
+                    pentagon(face_radius, rotate-x: -(face_angle))
                     transform-origin : 50% 100%
+
+        for i in 6 .. 10
+
+            angle  = i * theta
+            angle -= PI
+            angle_next = angle + theta
+
+            x = face_radius * cos(angle)
+            y = 0
+            z = face_radius * sin(angle)
+            z = 0 if degrees(angle) is 540 // Fixes sin(540) 3.673819061467132e-16
+
+            nx = face_radius * cos(angle_next)            
+            nz = face_radius * sin(angle_next)
+
+            cx = center-between(x, nx)
+            cz = center-between(z, nz)
+
+            p('------' + i)
+            p(angle_next)
+            p(degrees(angle_next))
+            p(cos(angle_next))
+            p(sin(angle_next))
+
+            particle(3px, cx, -(dodecahedron_height), cz, color:yellow, particle-id: i)
+
+
+
 
 
 /*

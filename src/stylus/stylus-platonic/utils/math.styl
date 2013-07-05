@@ -20,6 +20,9 @@ pow(x, y){ return x ** y }
 random-range(min, max)
     min + (random(1) * (max - min))
 
+center-between(x1, x2)
+    x1 + ((x2 - x1) / 2)
+
 distance(x1, y1, z1, x2, y2, z2)
     sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 
@@ -30,7 +33,7 @@ triangle-height(side-length, angle)
     side-length * sin(radians(angle))
 
 polygon-radius(sides, side-length)
-    side-length / 2 * sin(PI / sides)
+    side-length / (2 * sin(PI / sides))
 
 polygon-side-length(sides, radius)
     (2 * radius) * sin(PI / sides)
