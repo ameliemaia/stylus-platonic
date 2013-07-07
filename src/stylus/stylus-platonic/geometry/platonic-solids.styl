@@ -14,7 +14,7 @@
  * @api   public
  */
 
-dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
     
     radius           = remove-unit(radius)
     side_length      = 4 * radius / (sqrt(3) * (1 + sqrt(5)))
@@ -32,22 +32,10 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
     face_angle       = unit(degrees(face_angle), deg)
 
     // Calculate the distance between the top and bottom faces
-    // height           = radius / 2
     dodecahedron_height = 2 * sqrt((radius * radius) - (face_radius * face_radius))
     dodecahedron_height = unit(dodecahedron_height, px) 
 
-    p('dihedral_angle:  ' + degrees(dihedral_angle))
-    p('height:          ' + dodecahedron_height)
-    p('side_length:     ' + side_length)
-    p('face_radius:     ' + face_radius)
-    p('face_width:      ' + face_width)
-    p('face_height:     ' + face_height)
-    p('face_center_x:   ' + face_center_x)
-    p('face_center_y:   ' + face_center_y)
-
     &[data-mesh-id={'"%s"' % mesh-id}]  
-
-        z-index: 10
 
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
 
@@ -55,14 +43,11 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
             pentagon(face_radius, rotate-x: 90deg, rotate-z: 90deg)
 
         .face[data-face-id="11"]
-            pentagon(face_radius, translate-y: -(dodecahedron_height), translate-x: -(difference), rotate-x: 90deg, rotate-z: -90deg)
-            background-color : red
+            pentagon(face_radius, translate-y: -(dodecahedron_height), translate-x: -(difference * 2), rotate-x: 90deg, rotate-z: -90deg)
 
         // Bottom faces
 
         theta = TWO_PI / 5
-
-        p('difference: ' + difference)
 
         for i in 0 .. 4
 
@@ -83,8 +68,6 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
             cz = center-between(z, nz)
             cz = 0 if degrees(angle_next) is 216 // Fixes sin(216) -2.4492127076447545e-16
 
-            // particle(3px, x, -(dodecahedron_height), z, color:red, particle-id: i)
-
             index = i + 1
 
             .group[data-group-id={'"%s"' % index}]
@@ -92,14 +75,15 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
                 rotation_y = 54 - degrees(angle)
                 rotation_y = unit(rotation_y, deg) 
 
-                // transform : translateX(x) translateY(-(face_center_y)) translateZ(z) rotateY(rotation_y)
                 transform : translateX(cx) translateY(-(face_center_y)) translateZ(cz) rotateY(rotation_y)
 
                 .face[data-face-id={'"%s"' % index}]
                     pentagon(face_radius, rotate-x: -(face_angle))
                     transform-origin : 50% 100%
 
-        for i in 6 .. 10
+        for i in 0 .. 4
+
+            index = 6 + i
 
             angle  = i * theta
             angle -= PI
@@ -113,18 +97,27 @@ dodecahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, 
             nx = face_radius * cos(angle_next)            
             nz = face_radius * sin(angle_next)
 
+            x  -= difference
+            nx -= difference
+
             cx = center-between(x, nx)
             cz = center-between(z, nz)
 
-            p('------' + i)
-            p(angle_next)
-            p(degrees(angle_next))
-            p(cos(angle_next))
-            p(sin(angle_next))
+            .group[data-group-id={'"%s"' % index}]
 
-            particle(3px, cx, -(dodecahedron_height), cz, color:yellow, particle-id: i)
+                translate_y = -(dodecahedron_height) - face_center_y
+                rotation_y  = 54 - degrees(angle)
+                rotation_y  = unit(rotation_y, deg) 
 
+                transform : translateX(cx) translateY(translate_y) translateZ(cz) rotateY(rotation_y)
 
+                .face[data-face-id={'"%s"' % index}]
+
+                    rotate_x = -(PI - radians(remove-unit(face_angle)))
+                    rotate_x = unit(degrees(rotate_x), deg)
+
+                    pentagon(face_radius, rotate-x: rotate_x)
+                    transform-origin : 50% 100%
 
 
 
