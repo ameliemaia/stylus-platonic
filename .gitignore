@@ -1,3 +1,5 @@
 /node_modules/
 /test/public/css/
 /test/public/*.html
+
+/test/public/js/*.js
