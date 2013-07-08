@@ -165,13 +165,3 @@ class Camera
         @_dragging = false
 
         @el.css 'cursor', 'inherit'
-
-
-    ###
-    Viewport mouse up handler
-    @param {Object} event
-    ###
-
-    _on_mouse_scroll: ( event ) ->
-
-        log event
