@@ -4,7 +4,7 @@ window.log = (args...) => console?.log args...
 class Scene
 
     view  : ''
-    views : [ 'polygons', 'primitives', 'platonic-solids', 'fractals', 'ui-components', 'particles' ]
+    views : [ 'shapes', 'primitives', 'platonic-solids', 'fractals', 'ui-components', 'particles' ]
 
     constructor: ->
 

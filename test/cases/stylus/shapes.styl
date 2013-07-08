@@ -1,0 +1,24 @@
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+.platonic-viewport
+
+    .scene
+
+        .ui-component.grid
+            grid()
+
+        .mesh
+
+            &.rectangle[data-mesh-id="0"]
+                .face[data-face-id="0"]
+                    rectangle(translate-x: -50px)
+
+            &.triangle[data-mesh-id="1"]
+                .face[data-face-id="0"]
+                    triangle(translate-x: 50px)
+
+            &.line[data-mesh-id="2"]
+                line(translate-y: -50px)
+

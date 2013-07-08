@@ -20,7 +20,7 @@ grid(width = grid-width, height = grid-height, tile-size = grid-tile-size, wire-
     &[data-component-id={'"%s"' % component-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         .grid
-            quad(width, height, rotate-x: 90deg, color: transparent)
+            rectangle(width, height, rotate-x: 90deg, color: transparent)
             background: url(svg-data-uri(tile-size, tile-size, svg-rectangle(tile-size, tile-size, wire-color, wire-width, transparent)))
 
 
@@ -56,39 +56,39 @@ display-axis(axis-line-width = display-axis-line-width, axis-line-height = displ
 
             &.x
 
-                transform(rotateX(90deg) rotateZ(90deg) translateZ(offset) translateY(-(offset)))
+                transform : rotateX(90deg) rotateZ(90deg) translateZ(offset) translateY(-(offset))
 
                 &
                 &:before
                     background-color : red
 
                 &:before
-                    content : ''
-                    transform(rotateY(90deg))
+                    content   : ''
+                    transform : rotateY(90deg)
 
             &.y
 
-                transform(translateY(-(axis-line-height)))
+                transform : translateY(-(axis-line-height))
 
                 &
                 &:before
                     background-color : green
 
                 &:before
-                    content : ''
-                    transform(rotateY(90deg))
+                    content   : ''
+                    transform : rotateY(90deg)
 
             &.z
 
-                transform(rotateX(90deg) translateY(offset) translateZ(offset))
+                transform : rotateX(90deg) translateY(offset) translateZ(offset)
          
                 &
                 &:before
                     background-color : blue
 
                 &:before
-                    content : ''
-                    transform(rotateY(90deg))
+                    content   : ''
+                    transform : rotateY(90deg)
 
     
     
