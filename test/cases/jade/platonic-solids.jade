@@ -15,37 +15,28 @@ block scene
 
         //- Octahedron
 
-        //- .mesh.octahedron(data-mesh-id="0", data-light="1")
-        //-     - for (var i = 0; i < 8; i++)
-        //-         .face(data-face-id="#{i}")
+        .mesh.octahedron(data-mesh-id="0", data-light="1")
+            - for (var i = 0; i < 8; i++)
+                .face(data-face-id="#{i}")
 
         //- Tetrahedron
 
-        //- .mesh.tetrahedron(data-mesh-id="1", data-light="1")
-        //-     - for (var i = 0; i < 4; i++)
-        //-         .face(data-face-id="#{i}")
+        .mesh.tetrahedron(data-mesh-id="1", data-light="1")
+            - for (var i = 0; i < 4; i++)
+                .face(data-face-id="#{i}")
 
         //- Icosahedron
 
-        //- .mesh.icosahedron(data-mesh-id="2", data-light="1")
-        //-     - for (var i = 0; i < 20; i++)
-        //-         .group(data-group-id="#{i}")
-        //-             .face(data-face-id="#{i}")
+        .mesh.icosahedron(data-mesh-id="2", data-light="1")
+            - for (var i = 0; i < 20; i++)
+                .group(data-group-id="#{i}")
+                    .face(data-face-id="#{i}")
 
         //- Dodecahedron
 
         .mesh.dodecahedron(data-mesh-id="3", data-light="1")
             .face(data-face-id="0")
-            .face(data-face-id="11")
-
-            - for i in [0, 1, 2, 3, 4]
-                .particle(data-particle-id="#{i}")
-
-            - for i in [6, 7, 8, 9, 10]
-                .particle(data-particle-id="#{i}")
-
-
             - for (var j = 1; j < 11; j++)
                 .group(data-group-id="#{j}")
                     .face(data-face-id="#{j}")
-        
+            .face(data-face-id="11")
