@@ -1,0 +1,25 @@
+extends includes/layout
+
+
+block css
+
+    link(rel="stylesheet", href="css/shapes.css")
+
+
+block scene
+
+    include includes/grid
+
+    //- Rectangle
+
+    .mesh.rectangle(data-mesh-id="0", data-light="1", data-camera-transform="1")
+        .face(data-face-id="0")
+
+    //- Triangle
+
+    .mesh.triangle(data-mesh-id="1", data-light="1", data-camera-transform="1")
+        .face(data-face-id="0")  
+
+    //- Line
+    .group(data-group-id="0", data-camera-transform="1")
+        .mesh.line(data-mesh-id="2", data-light="1")
