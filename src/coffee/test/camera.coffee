@@ -25,6 +25,8 @@ class Camera
     perspective        : 0
     rotation_x         : 0
     rotation_y         : 0
+    rotation_lock_x    : 0
+    rotation_lock_y    : 0
     gimball_radius     : 100
 
 
@@ -68,11 +70,11 @@ class Camera
             pct_x = (dist_x / @gimball_radius)
             pct_y = (dist_y / @gimball_radius)
 
-            pct_x *= 0.01
-            pct_y *= 0.01
+            pct_x *= 0.1
+            pct_y *= 0.1
 
-            rx = @rotation_x + (@config.max_rotation_x * pct_y)
-            ry = @rotation_y + (@config.max_rotation_y * pct_x)
+            rx = @_rotation_lock_x + (@config.max_rotation_x * pct_y)
+            ry = @_rotation_lock_y + (@config.max_rotation_y * pct_x)
 
             if ry > 360
                 ry -= 360
@@ -144,6 +146,9 @@ class Camera
         @_dragging = true
         @_mouse.lx = event.pageX
         @_mouse.ly = event.pageY
+
+        @_rotation_lock_x = @rotation_x
+        @_rotation_lock_y = @rotation_y
 
         @el.css 'cursor', '-webkit-grabbing'
 
