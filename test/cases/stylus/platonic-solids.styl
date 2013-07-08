@@ -1,6 +1,4 @@
 
-material-encode-svg = false
-
 @import "stylus-platonic/dev/dev"
 @import "stylus-platonic"
 
@@ -19,14 +17,14 @@ material-encode-svg = false
 
         .mesh
 
-            &.octahedron
-                octahedron(translate-x: -150px, mesh-id: 0)
-
-            &.tetrahedron
-                tetrahedron(translate-x: 150px, mesh-id: 1)
+            &.dodecahedron
+                dodecahedron(translate-z: -150px, mesh-id: 0)
 
             &.icosahedron
-                icosahedron(translate-z: 150px, mesh-id: 2)
+                icosahedron(translate-z: 150px, mesh-id: 1)
 
-            &.dodecahedron
-                dodecahedron(translate-z: -150px, mesh-id: 3)
+            &.octahedron
+                octahedron(translate-x: -150px, mesh-id: 2)
+
+            &.tetrahedron
+                tetrahedron(translate-x: 150px, mesh-id: 3)
