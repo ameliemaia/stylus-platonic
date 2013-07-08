@@ -48,6 +48,7 @@ class Camera
         @el.mousemove ( event ) => @_on_mouse_move event
         @el.mouseup ( event ) => @_on_mouse_up event
         @el.mousedown ( event ) => @_on_mouse_down event
+        @el.scroll ( event ) => @_on_mouse_scroll event
 
         @_update_viewport @config.rotation_x, @config.rotation_y
 
@@ -164,3 +165,13 @@ class Camera
         @_dragging = false
 
         @el.css 'cursor', 'inherit'
+
+
+    ###
+    Viewport mouse up handler
+    @param {Object} event
+    ###
+
+    _on_mouse_scroll: ( event ) ->
+
+        log event
