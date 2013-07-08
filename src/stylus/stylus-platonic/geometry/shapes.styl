@@ -4,6 +4,7 @@
  *
  * @param side-length
  * @param angle
+ * @param direction
  * @param translate-x
  * @param translate-y
  * @param translate-z
@@ -43,3 +44,29 @@ quad(width = 50px, height = 50px, translate-x = 0, translate-y = 0, translate-z 
     background-color : color
     width            : width 
     height           : height 
+
+
+/*
+ * Generates a pentagon
+ *
+ * @param side-length
+ * @param angle
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @api   public
+ */
+
+pentagon(radius = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color)
+    
+    width  = unit(pentagon-width(radius), px)
+    height = unit(pentagon-height(radius), px)
+
+    quad(width, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+    data-uri = svg-data-uri(width, height, svg-pentagon(radius))
+    -webkit-mask-image(data-uri)
+

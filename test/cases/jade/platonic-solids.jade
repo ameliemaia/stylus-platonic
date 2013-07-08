@@ -7,7 +7,7 @@ block css
 
 
 block scene
-
+    
     include includes/grid
     include includes/display-axis
 
@@ -25,7 +25,18 @@ block scene
             - for (var i = 0; i < 4; i++)
                 .face(data-face-id="#{i}")
 
+        //- Icosahedron
+
         .mesh.icosahedron(data-mesh-id="2", data-light="1")
             - for (var i = 0; i < 20; i++)
                 .group(data-group-id="#{i}")
                     .face(data-face-id="#{i}")
+
+        //- Dodecahedron
+
+        .mesh.dodecahedron(data-mesh-id="3", data-light="1")
+            .face(data-face-id="0")
+            - for (var j = 1; j < 11; j++)
+                .group(data-group-id="#{j}")
+                    .face(data-face-id="#{j}")
+            .face(data-face-id="11")

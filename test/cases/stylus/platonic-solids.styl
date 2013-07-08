@@ -1,4 +1,6 @@
 
+material-encode-svg = false
+
 @import "stylus-platonic/dev/dev"
 @import "stylus-platonic"
 
@@ -13,6 +15,8 @@
 
             &.display-axis
                 display-axis(component-id: 1)
+                z-index: 2
+                opacity(.2)
 
         .mesh
 
@@ -24,3 +28,6 @@
 
             &.icosahedron
                 icosahedron(translate-z: 150px, mesh-id: 2)
+
+            &.dodecahedron
+                dodecahedron(translate-z: -150px, mesh-id: 3)

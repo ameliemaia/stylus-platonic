@@ -53,6 +53,39 @@ svg-triangle(width = 50px, height = 50px, direction = '', stroke = material-colo
     points = s('%s,%s %s,%s %s,%s', x1 y1 x2 y2 x3 y3)
     svg-polygon(stroke, stroke-width, fill, points)
 
+/*
+ * Generates an svg pentagon
+ *
+ * @param radius
+ * @param stroke
+ * @param stroke-width
+ * @param fill
+ * @api   public 
+ */
+
+svg-pentagon(radius = 50px, stroke = material-color, stroke-width = 1, fill = material-color)
+    
+    radius   = remove-unit(radius)
+    center_x = pentagon-width(radius) / 2
+
+    angle = TWO_PI / 5
+
+    points = ''
+
+    len = 4
+    seperator = ' '
+
+    for i in 0 .. len
+
+        seperator = '' if i is len
+        
+        x = center_x     + (radius * cos((i * angle) - HALF_PI))
+        y = (radius + 1) + (radius * sin((i * angle) - HALF_PI))
+
+        points += join(',', x y) + seperator
+
+    svg-polygon(stroke, stroke-width, fill, unquote(points))
+
 
 /*
  * Generates an svg rectangle
