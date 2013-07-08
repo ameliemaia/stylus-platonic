@@ -40,55 +40,22 @@ grid(width = grid-width, height = grid-height, tile-size = grid-tile-size, wire-
 
 display-axis(axis-line-width = display-axis-line-width, axis-line-height = display-axis-line-height, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, component-id = 0)
     &[data-component-id={'"%s"' % component-id}]
+        
+        offset = (axis-line-height / 2) - (axis-line-width / 2)
+
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
-        .axis
+        
+        .mesh.line
 
-            offset = (axis-line-height / 2) - (axis-line-width / 2)
-
-            transform-style  : preserve-3d
-
-            &
-            &:before
-                display          : block
-                position         : absolute
-                width            : axis-line-width
-                height           : axis-line-height
+            // Y and Z require a different order of transformations
 
             &.x
-
+                line(axis-line-height, axis-line-width, color: red)
                 transform : rotateX(90deg) rotateZ(90deg) translateZ(offset) translateY(-(offset))
 
-                &
-                &:before
-                    background-color : red
-
-                &:before
-                    content   : ''
-                    transform : rotateY(90deg)
-
             &.y
-
-                transform : translateY(-(axis-line-height))
-
-                &
-                &:before
-                    background-color : green
-
-                &:before
-                    content   : ''
-                    transform : rotateY(90deg)
+                line(axis-line-height, axis-line-width, translate-y: -(axis-line-height), color: green)
 
             &.z
-
+                line(axis-line-height, axis-line-width, color: blue)
                 transform : rotateX(90deg) translateY(offset) translateZ(offset)
-         
-                &
-                &:before
-                    background-color : blue
-
-                &:before
-                    content   : ''
-                    transform : rotateY(90deg)
-
-    
-    
