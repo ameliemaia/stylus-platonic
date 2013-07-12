@@ -36,19 +36,28 @@ plane(width = 50px, height = 50px, translate-x = 0, translate-y = 0, translate-z
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param mesh-id
  * @api   public
  */
 
-cube(width = 50px, height = width, depth = width, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+cube(width = 50px, height = width, depth = width, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, instance = false, mesh-id = 0)
         
     half_width  = width / 2
     half_height = height / 2
     half_depth  = depth / 2
 
+    // Set the initial tranform for the instance
+
     &[data-mesh-id={'"%s"' % mesh-id}]
-        
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    mesh = '[data-mesh-id="%s"]' % mesh-id
+    mesh = '' if instance is true and mesh-id is 0
+
+    return if instance is true and mesh-id > 0
+
+    &{unquote(mesh)}
         
         .face
             

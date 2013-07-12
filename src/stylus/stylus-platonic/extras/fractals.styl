@@ -72,6 +72,8 @@ menger-sponge(iterations = 1, size = 300px, translate-x = 0, translate-y = 0, tr
     cube_size = size / pow(3, iterations)
     len = length(positions) / 3
 
+    p('menger start')
+
     &[data-group-id={'"%s"' % group-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
         for i in 0 ... len
@@ -82,6 +84,8 @@ menger-sponge(iterations = 1, size = 300px, translate-x = 0, translate-y = 0, tr
             z = positions[index + 2]
 
             .mesh
-                cube(cube_size, cube_size, cube_size, x, y, z, color: color, mesh-id: i)
+                cube(cube_size, cube_size, cube_size, x, y, z, color: color, instance:true, mesh-id: i)
+
+    p('menger end')
 
 
