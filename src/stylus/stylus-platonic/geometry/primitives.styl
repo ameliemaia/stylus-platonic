@@ -11,13 +11,25 @@
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param mesh-id
  * @api   public
  */
 
-plane(width = 50px, height = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 90deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+plane(width = 50px, height = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 90deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, instance = false, mesh-id = 0)
+    
     &[data-mesh-id={'"%s"' % mesh-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    if instance is true and mesh-id is 0
+        selector = '' 
+    else
+        selector = '[data-mesh-id="%s"]' % mesh-id
+
+    return if instance and mesh-id > 0
+
+    &{unquote(selector)}
+    
         .face
             rectangle(width, height, color: color)
             center(width, height)
@@ -47,17 +59,17 @@ cube(width = 50px, height = width, depth = width, translate-x = 0, translate-y =
     half_height = height / 2
     half_depth  = depth / 2
 
-    // Set the initial tranform for the instance
-
     &[data-mesh-id={'"%s"' % mesh-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
 
-    mesh = '[data-mesh-id="%s"]' % mesh-id
-    mesh = '' if instance is true and mesh-id is 0
+    if instance is true and mesh-id is 0
+        selector = '' 
+    else
+        selector = '[data-mesh-id="%s"]' % mesh-id
 
-    return if instance is true and mesh-id > 0
+    return if instance and mesh-id > 0
 
-    &{unquote(mesh)}
+    &{unquote(selector)}
         
         .face
             
@@ -103,11 +115,12 @@ cube(width = 50px, height = width, depth = width, translate-x = 0, translate-y =
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param mesh-id
  * @api   public
  */
  
-pyramid(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0) 
+pyramid(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, instance = false, mesh-id = 0) 
     
     radius           = unit(radius, '')
     edge_length      = unit(floor(sqrt((radius * radius) / 2)), px)
@@ -116,8 +129,16 @@ pyramid(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotat
     face_rotation    = unit(90 - (degrees(acos(sqrt(3) / 3))), deg)
 
     &[data-mesh-id={'"%s"' % mesh-id}]
-
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    if instance is true and mesh-id is 0
+        selector = '' 
+    else
+        selector = '[data-mesh-id="%s"]' % mesh-id
+
+    return if instance and mesh-id > 0
+
+    &{unquote(selector)}
         
         .face
             &[data-face-id="1"],
