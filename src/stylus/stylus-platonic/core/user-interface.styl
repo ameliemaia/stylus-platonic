@@ -47,15 +47,13 @@ display-axis(axis-line-width = display-axis-line-width, axis-line-height = displ
         
         .mesh.line
 
-            // Y and Z require a different order of transformations
-
             &.x
-                line(axis-line-height, axis-line-width, color: red)
+                line(axis-line-height, axis-line-width, color: red, mesh-id: 0)
                 transform : rotateX(90deg) rotateZ(90deg) translateZ(offset) translateY(-(offset))
 
             &.y
-                line(axis-line-height, axis-line-width, translate-y: -(axis-line-height), color: green)
+                line(axis-line-height, axis-line-width, translate-y: -(axis-line-height), color: green, mesh-id: 1)
 
             &.z
-                line(axis-line-height, axis-line-width, color: blue)
+                line(axis-line-height, axis-line-width, color: blue, mesh-id: 2)
                 transform : rotateX(90deg) translateY(offset) translateZ(offset)
