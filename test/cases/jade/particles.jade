@@ -10,7 +10,6 @@ block scene
 
     include includes/grid
 
-    - for(i = 0; i < 10; i++)
-        .mesh.particles(data-mesh-id="#{i}", data-camera-transform="1") 
-            - for(j = 0; j < 10; j++)
-                .particle(data-particle-id="#{j}")
+    .mesh.particles(data-mesh-id="0", data-camera-transform="1") 
+        - for(j = 0; j < 200; j++)
+            .particle(data-particle-id="#{j}")
