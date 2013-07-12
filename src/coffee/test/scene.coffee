@@ -1,10 +1,20 @@
 
 window.log = (args...) => console?.log args...
 
+class SceneStats
+    
+
 class Scene
 
     view  : ''
     views : [ 'shapes', 'primitives', 'platonic-solids', 'fractals', 'ui-components', 'particles' ]
+    stats : {
+        groups         : 0
+        meshes         : 0
+        faces          : 0
+        photon_shaders : 0
+        ui_components  : 0 
+    }
 
     constructor: ->
 
@@ -30,20 +40,35 @@ class Scene
             @face_groups.push face_group
 
         # Add camera
-        @cam = new Camera( @$viewport )
+        @cam = new Camera @$viewport
 
         # Stats
-        @stats = new Stats()
-        @$viewport.append @stats.domElement
+        @fps = new Stats()
+        @$viewport.append @fps.domElement
+
+        @stats.groups         = $('.group').length
+        @stats.meshes         = $('.mesh').length
+        @stats.faces          = $('.face').length
+        @stats.photon_shaders = $('.photon-shader').length
+        @stats.ui_components  = $('.ui-component').length
 
         # GUI
         @gui = new dat.GUI()
-        @gui.add( @, 'view', @views ).onChange ( value ) => @_change_view value
+
+        scene_stats = @gui.addFolder 'Scene'
+        scene_stats.add(@, 'view', @views).onChange ( value ) => @_change_view value
+        scene_stats.add(@stats, 'groups').listen()
+        scene_stats.add(@stats, 'meshes').listen()
+        scene_stats.add(@stats, 'faces').listen()
+        scene_stats.add(@stats, 'photon_shaders').listen()
+        scene_stats.add(@stats, 'ui_components').listen()
+        scene_stats.open()
+
         cam_settings = @gui.addFolder 'Camera'
         cam_settings.add @cam, 'perspective', 0, 2000
-        cam_settings.add(@cam, 'rotation_x' ).listen()
-        cam_settings.add(@cam, 'rotation_y' ).listen()
-        cam_settings.add(@cam, 'reset' )
+        cam_settings.add(@cam, 'rotation_x').listen()
+        cam_settings.add(@cam, 'rotation_y').listen()
+        cam_settings.add(@cam, 'reset')
         cam_settings.open()
 
         # Events
@@ -65,7 +90,7 @@ class Scene
 
     update: ->
 
-        @stats.begin()
+        @fps.begin()
 
         # Update cam
         @cam.update()
@@ -75,7 +100,7 @@ class Scene
             for face_group in @face_groups
                 face_group.render(@light, true)
 
-        @stats.end()
+        @fps.end()
 
 
     loop: =>
