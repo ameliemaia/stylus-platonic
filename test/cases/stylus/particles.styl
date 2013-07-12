@@ -13,19 +13,17 @@
 
             &.particles
 
-                for i in 0...10
+                &[data-mesh-id="0"]
 
-                    &[data-mesh-id={'"%s"' % i}]
+                    for j in 0...200
 
-                        for j in 0...10
+                        min = -400px
+                        max = 400px
 
-                            min = -500px
-                            max = 500px
-
-                            x = unit(random-range(min, max), px)
-                            y = unit(random-range(min, max), px)
-                            z = unit(random-range(min, max), px)
-                           
-                            particle(particle-size, x, y, z, particle-id: j)
+                        x = unit(random-range(min, max), px)
+                        y = unit(random-range(min, max), px)
+                        z = unit(random-range(min, max), px)
+                       
+                        particle(particle-size, x, y, z, instance: true, particle-id: j)
 
         

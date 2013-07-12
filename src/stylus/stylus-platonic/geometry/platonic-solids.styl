@@ -10,13 +10,14 @@
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param mesh-id
  * @api   public
  */
 
 dodecahedron_rotate_z = -31.7deg 
 
-dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, instance = false, mesh-id = 0)
     
     rotate-z += dodecahedron_rotate_z
 
@@ -40,9 +41,17 @@ dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, 
     dodecahedron_height = unit(dodecahedron_height, px) 
     dodecahedron_center = dodecahedron_height / 2
 
-    &[data-mesh-id={'"%s"' % mesh-id}]  
-
+    &[data-mesh-id={'"%s"' % mesh-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    if instance is true and mesh-id is 0
+        selector = '' 
+    else
+        selector = '[data-mesh-id="%s"]' % mesh-id
+
+    return if instance and mesh-id > 0
+
+    &{unquote(selector)}
 
         .face[data-face-id="0"]
             pentagon(face_radius, translate-y: dodecahedron_center, rotate-x: 90deg, rotate-z: 90deg)
@@ -144,6 +153,7 @@ dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, 
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param mesh-id
  * @api   public
  */
@@ -151,7 +161,7 @@ dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, 
 icosahedron_rotate_x = 58deg
 icosahedron_rotate_y = 72deg
 
-icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, instance = false, mesh-id = 0)
     
     rotate-x += icosahedron_rotate_x
     rotate-y += icosahedron_rotate_y
@@ -184,8 +194,16 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
     offset_y           = -(radius/2)
 
     &[data-mesh-id={'"%s"' % mesh-id}]
-
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    if instance is true and mesh-id is 0
+        selector = '' 
+    else
+        selector = '[data-mesh-id="%s"]' % mesh-id
+
+    return if instance and mesh-id > 0
+
+    &{unquote(selector)}
 
         // Top faces
         .face[data-face-id="0"]
@@ -278,11 +296,12 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param mesh-id
  * @api   public
  */
 
-octahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+octahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, instance = false, mesh-id = 0)
     
     radius           = unit(radius, '')
     edge_length      = unit(floor(sqrt((radius * radius) / 2)), px)
@@ -292,8 +311,16 @@ octahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, ro
     translate_y      = -(triangle_height / 2)
     
     &[data-mesh-id={'"%s"' % mesh-id}]
-        
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    if instance is true and mesh-id is 0
+        selector = '' 
+    else
+        selector = '[data-mesh-id="%s"]' % mesh-id
+
+    return if instance and mesh-id > 0
+
+    &{unquote(selector)}
         
         .face
             &[data-face-id="0"],
@@ -351,11 +378,12 @@ octahedron(radius = 200px, translate-x = 0, translate-y = 0, translate-z = 0, ro
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param mesh-id
  * @api   public
  */        
 
-tetrahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, mesh-id = 0)
+tetrahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, instance = false, mesh-id = 0)
     
     edge_length     = floor((4 * radius) / sqrt(6))
     height          = sqrt(6) / 3 * edge_length
@@ -367,8 +395,16 @@ tetrahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
     height_difference    = triangle_height - height
 
     &[data-mesh-id={'"%s"' % mesh-id}]
-        
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    if instance is true and mesh-id is 0
+        selector = '' 
+    else
+        selector = '[data-mesh-id="%s"]' % mesh-id
+
+    return if instance and mesh-id > 0
+
+    &{unquote(selector)}
         
         .face
             &[data-face-id="0"],

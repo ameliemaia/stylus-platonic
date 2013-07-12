@@ -10,15 +10,24 @@
  * @param rotate-y
  * @param rotate-z
  * @param color
+ * @param instance
  * @param particle-id
  * @api   public
  */
 
-particle(radius = particle-size, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = particle-color, particle-id = 0)
-                    
+particle(radius = particle-size, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = particle-color, instance = false, particle-id = 0)
+    
     .particle[data-particle-id={'"%s"' % particle-id}]
-
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    if instance is true and particle-id is 0
+        selector = '' 
+    else
+        selector = '[data-particle-id="%s"]' % particle-id
+
+    return if instance and particle-id > 0
+
+    .particle{unquote(selector)}
         
         transform-style  : preserve-3d
         center(particle-size, particle-size)
