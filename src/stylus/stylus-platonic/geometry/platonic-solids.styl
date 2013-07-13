@@ -190,8 +190,13 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
     radius             = unit(radius, px)
     side_length        = unit(side_length, px)
     pyramid_opposite_a = unit(pyramid_opposite_a, px)
+    pyramid_opposite_b = unit(pyramid_opposite_b, px)
     pyramid_height     = unit(pyramid_height, px)
     offset_y           = -(radius/2)
+
+    // Distance between the two pentagonal bases - top and bottom
+    theta = PI - HALF_PI + asin(difference/pyramid_hypt)
+    middle_height = pyramid_hypt * sin(theta)
 
     &[data-mesh-id={'"%s"' % mesh-id}]
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
@@ -232,7 +237,7 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
         .face[data-face-id="11"]
         .face[data-face-id="13"]
             triangle(side_length, 60, color: color)
-            transform-origin : 50% 100%
+            transform-origin : 50% 0%
 
         .face[data-face-id="6"]
         .face[data-face-id="8"]
@@ -245,9 +250,9 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
         for i in 0 .. 9
 
             index = 5 + i
-            angle = 360 / 5
+            theta = 360 / 5
 
-            rotation_y = unit(i * angle, deg)
+            rotation_y = unit(i * theta, deg)
             rotation_y = rotation_y - 36 if even(i)
 
             face_angle_middle_negative = 0 - face_angle_middle
@@ -258,7 +263,7 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
 
                 .face[data-face-id={'"%s"' % index}]
                     if even(i)
-                        transform : translateZ(pyramid_opposite_a) translateY(pyramid_height) rotateX(face_angle_middle_negative)
+                        transform : translateZ(pyramid_opposite_b) translateY(pyramid_height) rotateX(face_angle_middle_negative)
                     else
                         transform : translateZ(pyramid_opposite_a) translateY(pyramid_height) rotateX(face_angle_middle)
                         
@@ -270,20 +275,24 @@ icosahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, r
         .face[data-face-id="18"]
         .face[data-face-id="19"]
             triangle(side_length, 60, color: color, direction: 'down')
-            transform-origin : 0 100%
+            transform-origin : 0% 0%
 
         for i in 0 .. 4
 
-            index      = 15 + i
-            rotation_y = unit(i * (360 / 5), deg)
+            theta = 360 / 5
+            index = 15 + i
+            angle = (i * theta) + (theta/2)
+            
+            rotation_y  = unit(angle, deg)
+            translate_y = middle_height + pyramid_height
         
             .group[data-group-id={'"%s"' % index}]
                 
                 transform : translateY(offset_y) rotateY(rotation_y)
 
                 .face[data-face-id={'"%s"' % index}]
-                    transform : translateY(pyramid_height*2) rotateX(face_angle_top)
-
+                    transform : translateZ(pyramid_opposite_a) translateY(translate_y) rotateX(-(face_angle_top))
+                    
         
 /*
  * Generates an octahedron
