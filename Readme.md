@@ -1,11 +1,11 @@
 # Stylus Platonic
 
-Experimental *pure* CSS3D library.
+Pure CSS 3D library.
 
 
 ## About
 
-Built on top of Stylus, Platonic is a experimental CSS3D library for creating pure CSS3D content with CSS and HTML. 
+Built on top of Stylus, Platonic is a CSS3D library for creating CSS3D content with just CSS and HTML. 
 
 It's primary objectives are:
 
