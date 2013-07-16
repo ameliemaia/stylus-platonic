@@ -1,7 +1,3 @@
-###
-    @author DPR http://davidpaulrosser.co.uk
-###
-
 
 # Dependencies
 
