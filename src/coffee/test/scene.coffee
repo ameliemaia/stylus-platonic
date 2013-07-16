@@ -62,14 +62,14 @@ class Scene
         scene_stats.add(@stats, 'faces').listen()
         scene_stats.add(@stats, 'photon_shaders').listen()
         scene_stats.add(@stats, 'ui_components').listen()
-        scene_stats.open()
+        # scene_stats.open()
 
         cam_settings = @gui.addFolder 'Camera'
         cam_settings.add @cam, 'perspective', 0, 2000
         cam_settings.add(@cam, 'rotation_x').listen()
         cam_settings.add(@cam, 'rotation_y').listen()
         cam_settings.add(@cam, 'reset')
-        cam_settings.open()
+        # cam_settings.open()
 
         # Events
         @$window.resize => @on_resize()
