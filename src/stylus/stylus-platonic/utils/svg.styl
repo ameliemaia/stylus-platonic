@@ -68,23 +68,24 @@ svg-pentagon(radius = 50px, stroke = material-color, stroke-width = 1, fill = ma
     radius   = remove-unit(radius)
     center_x = pentagon-width(radius) / 2
 
-    angle = TWO_PI / 5
-
-    points = ''
-
-    len = 4
+    theta = TWO_PI / 5
+    len   = 4
+    
+    points    = ''
     seperator = ' '
 
     for i in 0 .. len
 
         seperator = '' if i is len
+
+        angle = (i * theta) - HALF_PI
         
-        x = center_x     + (radius * cos((i * angle) - HALF_PI))
-        y = (radius + 1) + (radius * sin((i * angle) - HALF_PI))
+        x = center_x + radius * cos(angle)
+        y = radius   + radius * sin(angle)
 
         points += join(',', x y) + seperator
 
-    svg-polygon(stroke, stroke-width, fill, unquote(points))
+    svg-polygon(stroke, 0, fill, unquote(points))
 
 
 /*
