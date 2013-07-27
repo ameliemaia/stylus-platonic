@@ -91,4 +91,4 @@ module.exports = ( grunt ) ->
                     'coffee'
                 ]
 
-    grunt.registerTask 'default', [ 'connect', 'watch:all'  ]
+    grunt.registerTask 'default', [ 'connect', 'jade:compile', 'stylus:compile', 'coffee:compile', 'watch:all'  ]

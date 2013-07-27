@@ -1,8 +1,5 @@
 
-window.log = (args...) => console?.log args...
-
-class SceneStats
-    
+window.log = (args...) => console?.log args...    
 
 class Scene
 

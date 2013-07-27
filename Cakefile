@@ -88,13 +88,6 @@ build = (callback) ->
     util.log "Build complete"
 
     callback?()
-    
-
-publish = (callback) ->
-
-    util.log "Publishing to npm..."
-
-    callback?()
 
 
 task 'clean', 'Clean the output directories for the lib and test files', => 
@@ -102,8 +95,4 @@ task 'clean', 'Clean the output directories for the lib and test files', =>
 
 task 'build', 'Compile the library source and prepare for publish', => 
     clean -> build()
-
-task 'publish', 'Publish to npm', => 
-    publish()
-
     
