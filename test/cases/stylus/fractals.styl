@@ -5,12 +5,15 @@
 
 .platonic-viewport
 
-    .scene
+	.scene
 
-        .ui-component.grid
-            grid(component-id: 0)
+		.ui-component
+			
+			&.grid
+				grid(component-id: 0)
 
-        .group.menger-sponge
-            menger-sponge(iterations: 1, group-id: 0)
+			&.display-axis
+				display-axis(component-id: 1)
 
-    
+		.group.menger-sponge
+			sierpinksi-sponge(iterations: 1, group-id: 0)

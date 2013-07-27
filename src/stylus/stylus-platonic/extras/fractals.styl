@@ -6,23 +6,25 @@
  * @param  y
  * @param  z
  * @param  cube-size
+ * @param  grid
+ * @param  holes
  * @return positions
  * @api    private
  */
 
-_sponge(x, y, z, cube-size)
+_sponge(x, y, z, cube-size, grid, holes)
     i = 0
     positions = ()
     
-    for levels in 0 .. 2
-        for rows in 0 .. 2
-            for columns in 0 .. 2
+    for levels in 0 ... grid
+        for rows in 0 ... grid
+            for columns in 0 ... grid
                 
-                new_x = x + (cube-size - (rows    * cube-size))
-                new_y = y + (cube-size - (levels  * cube-size))
-                new_z = z + (cube-size - (columns * cube-size))
+                new_x = x + (rows    * cube-size)
+                new_y = y + (levels  * cube-size)
+                new_z = z + (columns * cube-size)
                 
-                if not inlist(i, (4 10 12 13 14 16 22))
+                if not inlist(i, holes)
                     tmp = (new_x) (new_y) (new_z)
                     merge(positions, tmp)
                 
@@ -36,6 +38,8 @@ _sponge(x, y, z, cube-size)
  *
  * @param iterations
  * @param size
+ * @param grid
+ * @param holes
  * @param translate-x
  * @param translate-y
  * @param translate-z
@@ -47,8 +51,8 @@ _sponge(x, y, z, cube-size)
  * @api   public
  */
 
-menger-sponge(iterations = 1, size = 300px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, group-id = 0)
-    divisor   = 1 / 3
+sierpinksi-sponge(iterations = 1, size = 300px, grid = 3, holes = (4 10 12 13 14 16 22), translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, group-id = 0)
+    divisor   = 1 / grid
     cube_size  = size * divisor
     positions = (0) (0) (0)
 
@@ -63,17 +67,19 @@ menger-sponge(iterations = 1, size = 300px, translate-x = 0, translate-y = 0, tr
             y = positions[index + 1]
             z = positions[index + 2]
 
-            tmp = _sponge(x, y, z, cube_size)
+            tmp = _sponge(x, y, z, cube_size, grid, holes)
             merge(new_positions, tmp)
 
         positions = new_positions
         cube_size  = cube_size * divisor
 
-    cube_size = size / pow(3, iterations)
+    cube_size = size / pow(grid, iterations)
     len = length(positions) / 3
 
     &[data-group-id={'"%s"' % group-id}]
+        
         set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+        
         for i in 0 ... len
 
             index = i * 3
@@ -81,6 +87,10 @@ menger-sponge(iterations = 1, size = 300px, translate-x = 0, translate-y = 0, tr
             y = positions[index + 1]
             z = positions[index + 2]
 
+            x -= (size / 2) - (cube_size / 2)
+            y -= (size / 2) - (cube_size / 2)
+            z -= (size / 2) - (cube_size / 2)
+
             .mesh
-                cube(cube_size, cube_size, cube_size, x, y, z, color: color, instance:true, mesh-id: i)
+                cube(cube_size, cube_size, cube_size, x, y, z, color: color, instance: true, mesh-id: i)
 
