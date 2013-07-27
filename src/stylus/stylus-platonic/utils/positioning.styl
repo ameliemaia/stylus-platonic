@@ -1,0 +1,41 @@
+
+/*
+ * Center an element by it's offset
+ *
+ * @param width
+ * @param height
+ * @api   public
+ */
+
+center(width = 0, height = 0)
+    margin-top  : - (height / 2)
+    margin-left : - (width / 2)
+
+
+/*
+ * Offset an element
+ *
+ * @param offset-x
+ * @param offset-y
+ * @api   public
+ */
+
+offset(offset-x = 0, offset-y = 0)
+    margin-top  : offset-x
+    margin-left : offset-y
+
+
+/*
+ * Set the default transform for an object
+ *
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @api   public
+ */
+
+set-transform(translate-x = 0px, translate-y = 0px, translate-z = 0px, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg)
+    transform : translate3d(translate-x, translate-y, translate-z) rotateX(rotate-x) rotateY(rotate-y) rotateZ(rotate-z)

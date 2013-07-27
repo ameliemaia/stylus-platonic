@@ -1,0 +1,52 @@
+
+// Math constants
+
+TWO_PI  = PI * 2
+HALF_PI = PI / 2
+
+
+// Math functions
+
+radians(degrees){ degrees * (PI / 180) }
+degrees(radians){ radians * (180 / PI) } 
+asin(n){ math(n, 'asin') }
+acos(n){ math(n, 'acos') }
+atan(n){ math(n, 'atan') }
+sqrt(n){ math(n, 'sqrt') }
+floor(n){ math(n, 'floor') }
+random(n){ math(n, 'random') }
+pow(x, y){ return x ** y }
+
+random-range(min, max)
+    min + (random(1) * (max - min))
+
+center-between(x1, x2)
+    x1 + ((x2 - x1) / 2)
+
+distance(x1, y1, z1, x2, y2, z2)
+    sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+
+distance3d(x1, y1, z1, x2, y2, z2)
+    sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)
+
+triangle-height(side-length, angle)
+    side-length * sin(radians(angle))
+
+polygon-radius(sides, side-length)
+    side-length / (2 * sin(PI / sides))
+
+polygon-side-length(sides, radius)
+    (2 * radius) * sin(PI / sides)
+
+pentagon-width(radius)
+    radius   = remove-unit(radius)
+    angle    = HALF_PI - (TWO_PI / 5)
+    opposite = radius * cos(angle)
+    opposite * 2
+
+pentagon-height(radius)
+    radius      = remove-unit(radius)
+    side_length = polygon-side-length(5, radius)
+    a1          = radians(18)
+    a2          = radians(36)
+    side_length * (cos(a1) + sin(a2))

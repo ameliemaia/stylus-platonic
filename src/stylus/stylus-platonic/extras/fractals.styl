@@ -1,0 +1,96 @@
+
+/*
+ * Generate a sponge
+ *
+ * @param  x
+ * @param  y
+ * @param  z
+ * @param  cube-size
+ * @param  grid
+ * @param  holes
+ * @return positions
+ * @api    private
+ */
+
+_sponge(x, y, z, cube-size, grid, holes)
+    i = 0
+    positions = ()
+    
+    for levels in 0 ... grid
+        for rows in 0 ... grid
+            for columns in 0 ... grid
+                
+                new_x = x + (rows    * cube-size)
+                new_y = y + (levels  * cube-size)
+                new_z = z + (columns * cube-size)
+                
+                if not inlist(i, holes)
+                    tmp = (new_x) (new_y) (new_z)
+                    merge(positions, tmp)
+                
+                i += 1
+        
+    positions
+
+
+/*
+ * Generates a Menger Sponge
+ *
+ * @param iterations
+ * @param size
+ * @param grid
+ * @param holes
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @param group-id
+ * @api   public
+ */
+
+sierpinksi-sponge(iterations = 1, size = 300px, grid = 3, holes = (4 10 12 13 14 16 22), translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color, group-id = 0)
+    divisor   = 1 / grid
+    cube_size  = size * divisor
+    positions = (0) (0) (0)
+
+    for i in 0 ... iterations
+
+        new_positions = ()
+        len = length(positions) / 3
+
+        for j in 0 ... len
+            index = j * 3
+            x = positions[index]
+            y = positions[index + 1]
+            z = positions[index + 2]
+
+            tmp = _sponge(x, y, z, cube_size, grid, holes)
+            merge(new_positions, tmp)
+
+        positions = new_positions
+        cube_size  = cube_size * divisor
+
+    cube_size = size / pow(grid, iterations)
+    len = length(positions) / 3
+
+    &[data-group-id={'"%s"' % group-id}]
+        
+        set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+        
+        for i in 0 ... len
+
+            index = i * 3
+            x = positions[index]
+            y = positions[index + 1]
+            z = positions[index + 2]
+
+            x -= (size / 2) - (cube_size / 2)
+            y -= (size / 2) - (cube_size / 2)
+            z -= (size / 2) - (cube_size / 2)
+
+            .mesh
+                cube(cube_size, cube_size, cube_size, x, y, z, color: color, instance: true, mesh-id: i)
+

@@ -1,0 +1,31 @@
+extends includes/layout
+
+
+block css
+
+    link(rel="stylesheet", href="css/primitives.css")
+
+
+block scene
+
+    include includes/grid
+    include includes/display-axis
+
+    .group(data-group-id="0", data-camera-transform="1")
+
+        //- Plane
+
+        .mesh.plane(data-mesh-id="0", data-light="1")
+            .face(data-face-id="0")
+
+        //- Cube
+
+        .mesh.cube(data-mesh-id="1", data-light="1")
+            - for (var i = 0; i < 6; i++)
+                .face(data-face-id="#{i}")
+
+        //- Pyramid
+
+        .mesh.pyramid(data-mesh-id="2", data-light="1")
+            - for (var i = 0; i < 5; i++)
+                .face(data-face-id="#{i}")

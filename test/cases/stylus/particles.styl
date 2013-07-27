@@ -1,0 +1,29 @@
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+.platonic-viewport
+
+    .scene
+
+        .ui-component.grid
+            grid()
+
+        .mesh
+
+            &.particles
+
+                &[data-mesh-id="0"]
+
+                    for j in 0...200
+
+                        min = -400px
+                        max = 400px
+
+                        x = unit(random-range(min, max), px)
+                        y = unit(random-range(min, max), px)
+                        z = unit(random-range(min, max), px)
+                       
+                        particle(particle-size, x, y, z, instance: true, particle-id: j)
+
+        

@@ -1,0 +1,21 @@
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+
+.platonic-viewport
+
+    .scene
+
+        .ui-component.grid
+            grid(component-id: 0)
+
+        .mesh
+
+            &.plane
+                plane(translate-x: 150px, mesh-id: 0)
+
+            &.cube
+                cube(translate-x: -150px, mesh-id: 1)
+
+            &.pyramid
+                pyramid(mesh-id: 2)

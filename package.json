@@ -1,0 +1,36 @@
+{
+  "name": "stylus-platonic",
+  "version": "0.0.1",
+  "description": "Stylus plugin for CSS3D",
+  "main": "./lib/stylus-platonic.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davidpaulrosser/stylus-platonic.git"
+  },
+  "devDependencies": {
+    "fs-util": "~0.3.13",
+    "jade": "~0.30.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jade": "~0.5.1",
+    "grunt-contrib-stylus": "~0.5.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "glob": "~3.2.1",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-connect": "~0.3.0"
+  },
+  "dependencies": {
+    "stylus": "*",
+    "nib": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "stylus",
+    "css",
+    "css3d"
+  ],
+  "readmeFilename": "Readme.md",
+  "author": "DPR <info@davidpaulrosser.co.uk>",
+  "license": "MIT"
+}
