@@ -1,0 +1,17 @@
+extends includes/layout
+
+block css
+
+	link(rel="stylesheet", href="css/sierpinski.css")
+
+block scene
+
+	.group(data-camera-transform="1")
+		.group.sierpinski-sponge(data-group-id="0")
+			- var iterations = 1
+			- var cubes = Math.pow(20, iterations)
+			- for (var i = 0; i < cubes; i++)
+				.mesh(data-mesh-type="cube", data-mesh-id="#{i}")
+					- for (var j = 0; j < 6; j++)
+						.face(data-face-id="#{j}")
+

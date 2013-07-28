@@ -1,0 +1,30 @@
+
+@keyframes spin
+    0%
+        transform(translateZ(0) rotate3d(1, 1, 1, 0deg))
+    50%
+        transform(translateZ(0) rotate3d(1, 1, 1, 180deg))
+    100%
+        transform(translateZ(0) rotate3d(1, 1, 1, 360deg))
+
+spin(duration = 30s)
+	animation-name : spin
+	animation-duration : duration
+	animation-iteration-count : infinite
+	animation-timing-function : linear
+
+a.dpr
+	
+	_width  = 50px
+	_height = 50px
+
+	background-image : url('../img/logo_inverse.svg')
+	background-size  : 100%
+	absolute           bottom 20px left 20px
+	opacity 		 : .5
+	transition 		 : opacity .5s ease
+	width  			 : _width
+	height 			 : _height
+
+	&:hover
+		opacity : 1

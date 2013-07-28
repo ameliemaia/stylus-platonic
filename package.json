@@ -1,0 +1,26 @@
+{
+  "name": "platonic-project",
+  "version": "0.0.1",
+  "description": "A simple project scaffold for Stylus Platonic.",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "fs-util": "~0.3.14",
+    "grunt-contrib-stylus": "~0.5.0",
+    "stylus-platonic": "~0.0.1",
+    "grunt-contrib-jade": "~0.5.1",
+    "grunt-contrib-watch": "~0.4.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidpaulrosser/platonic-project"
+  },
+  "keywords": [
+    "stylus",
+    "css",
+    "css3d"
+  ],
+  "author": "DPR <info@davidpaulrosser.co.uk>",
+  "license": "MIT",
+  "gitHead": "a39a4fb0164254b1e5732cf26f5e0d8087a836ea"
+}

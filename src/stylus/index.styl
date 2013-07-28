@@ -1,0 +1,199 @@
+
+material-color = lighten(black, 30%)
+
+@import 'nib'
+@import 'stylus-platonic'
+@import 'global'
+
+global-reset()
+
+
+@keyframes dodecahedron
+
+	0%
+		opacity : 0
+	
+	10%
+		opacity : 0
+
+	20%
+		opacity : 1
+
+	40%
+		opacity : 1
+
+	80%
+		opacity : 1
+
+	100%
+		opacity : 1
+
+
+@keyframes hexahedron	
+
+	0%
+		opacity : 0
+	
+	10%
+		opacity : 0
+
+	20%
+		opacity : 0
+
+	40%
+		opacity : 0
+
+	50%
+		opacity : 1
+
+	80%
+		opacity : 1
+
+	100%
+		opacity : 1
+
+
+@keyframes octahedron	
+
+	0%
+		opacity : 0
+	
+	10%
+		opacity : 0
+
+	20%
+		opacity : 0
+
+	40%
+		opacity : 0
+
+	60%
+		opacity : 0
+
+	70%
+		opacity : 1
+
+	80%
+		opacity : 1
+
+	100%
+		opacity : 1
+
+@keyframes tetrahedron	
+
+	0%
+		opacity : 0
+	
+	10%
+		opacity : 0
+
+	20%
+		opacity : 0
+
+	40%
+		opacity : 0
+
+	60%
+		opacity : 0
+
+	70%
+		opacity : 0
+
+	80%
+		opacity : 1
+
+	100%
+		opacity : 1
+
+
+audio
+	absolute   top 0 left 0
+	z-index  : 10 
+
+.platonic-viewport 
+
+	.scene
+
+		.group
+
+			&.dodecahedron
+				animation-name : dodecahedron
+				animation-duration : 60s
+				animation-iteration-count : infinite
+				animation-timing-function : ease
+
+			&.hexahedron
+				animation-name : hexahedron
+				animation-duration : 60s
+				animation-iteration-count : infinite
+				animation-timing-function : ease
+
+			&.octahedron
+				animation-name : octahedron
+				animation-duration : 60s
+				animation-iteration-count : infinite
+				animation-timing-function : ease
+
+			&.tetrahedron
+				animation-name : tetrahedron
+				animation-duration : 60s
+				animation-iteration-count : infinite
+				animation-timing-function : ease
+
+
+		.mesh
+
+			&.dodecahedron
+
+				_color = lighten(black, 30%)
+
+				dodecahedron(300px, color: _color, mesh-id: 0)
+
+				spin(30s)
+
+				.face
+					opacity: .35
+
+			&.cube
+				_color = lighten(black, 20%)
+				_size  = 350px
+
+				cube(_size, _size, _size, color: _color, mesh-id: 1)
+
+				spin(25s)
+
+				.face
+					opacity: .2
+
+			&.tetrahedron
+
+				_color = lighten(black, 30%)
+
+				tetrahedron(300px, color: _color, mesh-id: 2)
+
+				spin(22s)
+
+				.face
+					opacity: .35
+
+			&.octahedron
+
+				_color = lighten(black, 50%)
+
+				octahedron(500px, color: _color, mesh-id: 3)
+
+				spin(20s)
+
+				.face
+					opacity: .2
+
+			&.icosahedron
+
+				_color = lighten(black, 50%)
+
+				icosahedron(150px, translate-x: 0, color: _color, mesh-id: 4)
+
+				spin(20s)
+
+				.face
+					opacity: .2

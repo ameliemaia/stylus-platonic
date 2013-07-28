@@ -1,0 +1,21 @@
+
+//- Grid
+
+mixin grid(id, light, camera)
+    - id     = id     || 0
+    - light  = light  || 0
+    - camera = camera || 0
+    .ui-component.grid(data-component-id="#{id}", data-light="#{light}", data-camera-transform="#{camera}")
+        .grid
+
+
+//- Display axis
+
+mixin display-axis(id, light, camera)
+    - id     = id     || 0
+    - light  = light  || 0
+    - camera = camera || 0
+    .ui-component.display-axis(data-component-id="#{id}", data-light="0", data-camera-transform="#{camera}")
+        .mesh.line.x
+        .mesh.line.y
+        .mesh.line.z

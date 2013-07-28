@@ -1,0 +1,39 @@
+
+material-color = lighten(black, 30%)
+
+@import 'nib'
+@import 'stylus-platonic'
+@import 'global'
+
+global-reset()
+
+.platonic-viewport .scene
+
+	.mesh
+
+		&.dodecahedron
+
+			_color = lighten(black, 30%)
+
+			dodecahedron(300px, color: _color, mesh-id: 0)
+
+			spin(30s)
+
+		&.cube
+			_color = lighten(black, 30%)
+			_size  = 300px
+
+			cube(_size, _size, _size, color: _color, mesh-id: 1)
+
+			spin(25s)
+
+		&.icosahedron
+
+			_color = lighten(black, 50%)
+
+			icosahedron(200px, translate-x: 0, color: _color, mesh-id: 1)
+
+			spin(20s)
+
+		.face
+			opacity: .6

@@ -1,0 +1,43 @@
+//- Dodecahedron
+
+mixin dodecahedron(id, light, camera)
+    - id     = id     || 0
+    - light  = light  || 0
+    - camera = camera || 0
+    .mesh.dodecahedron(data-mesh-id="#{id}", data-light="#{light}", data-camera-transform="#{camera}")
+        .face(data-face-id="0")
+        - for (var j = 1; j < 11; j++)
+            .group(data-group-id="#{j}")
+                .face(data-face-id="#{j}")
+        .face(data-face-id="11")
+
+//- Icosahedron
+
+mixin icosahedron(id, light, camera)
+    - id     = id     || 0
+    - light  = light  || 0
+    - camera = camera || 0
+    .mesh.icosahedron(data-mesh-id="#{id}", data-light="#{light}", data-camera-transform="#{camera}")
+        - for (var i = 0; i < 20; i++)
+            .group(data-group-id="#{i}")
+                .face(data-face-id="#{i}")
+
+//- Octahedron
+
+mixin octahedron(id, light, camera)
+    - id     = id     || 0
+    - light  = light  || 0
+    - camera = camera || 0
+    .mesh.octahedron(data-mesh-id="#{id}", data-light="#{light}", data-camera-transform="#{camera}")
+        - for (var i = 0; i < 8; i++)
+            .face(data-face-id="#{i}")
+
+//- Tetrahedron
+
+mixin tetrahedron(id, light, camera)
+    - id     = id     || 0
+    - light  = light  || 0
+    - camera = camera || 0
+    .mesh.tetrahedron(data-mesh-id="#{id}", data-light="#{light}", data-camera-transform="#{camera}")
+        - for (var i = 0; i < 4; i++)
+            .face(data-face-id="#{i}")

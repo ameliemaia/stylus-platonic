@@ -1,0 +1,26 @@
+
+//- Triangle
+
+mixin triangle(id)
+    - id = id || 0
+    .face(data-face-id="#{id}")
+
+//- Rectangle
+
+mixin quad(id)
+    - id = id || 0
+    .face(data-face-id="#{id}")
+
+//- Pentagon
+
+mixin pentagon(id)
+    - id = id || 0
+    .face(data-face-id="#{id}")
+
+//- Line
+
+mixin line(id, light, camera)
+    - id     = id     || 0
+    - light  = light  || 0
+    - camera = camera || 0
+    .mesh.line(data-mesh-id="#{id}", data-light="#{light}", data-camera-transform="#{camera}")
