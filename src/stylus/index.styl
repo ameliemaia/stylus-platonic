@@ -7,104 +7,32 @@ material-color = lighten(black, 30%)
 
 global-reset()
 
-
-@keyframes dodecahedron
-
+@keyframes opacity_glitch
 	0%
-		opacity : 0
-	
-	10%
-		opacity : 0
-
-	20%
-		opacity : 1
-
-	40%
-		opacity : 1
-
-	80%
-		opacity : 1
-
+		opacity : .4
+	36%
+		opacity : 0.6
+	56%
+		opacity : 0.9
 	100%
+		opacity : .3
+
+face-glitch(duration = 1s, delay = 0s)
+	animation-name            : opacity_glitch
+	animation-duration        : duration
+	animation-delay           : delay
+	animation-iteration-count : 1
+	animation-timing-function : ease
+
+transition-in(duration)
+	opacity    : 0
+	transition : opacity duration ease
+
+	&.in
 		opacity : 1
 
-
-@keyframes hexahedron	
-
-	0%
-		opacity : 0
+pulse()
 	
-	10%
-		opacity : 0
-
-	20%
-		opacity : 0
-
-	40%
-		opacity : 0
-
-	50%
-		opacity : 1
-
-	80%
-		opacity : 1
-
-	100%
-		opacity : 1
-
-
-@keyframes octahedron	
-
-	0%
-		opacity : 0
-	
-	10%
-		opacity : 0
-
-	20%
-		opacity : 0
-
-	40%
-		opacity : 0
-
-	60%
-		opacity : 0
-
-	70%
-		opacity : 1
-
-	80%
-		opacity : 1
-
-	100%
-		opacity : 1
-
-@keyframes tetrahedron	
-
-	0%
-		opacity : 0
-	
-	10%
-		opacity : 0
-
-	20%
-		opacity : 0
-
-	40%
-		opacity : 0
-
-	60%
-		opacity : 0
-
-	70%
-		opacity : 0
-
-	80%
-		opacity : 1
-
-	100%
-		opacity : 1
-
 
 audio
 	absolute   top 0 left 0
@@ -116,30 +44,36 @@ audio
 
 		.group
 
-			&.dodecahedron
-				animation-name : dodecahedron
-				animation-duration : 60s
-				animation-iteration-count : infinite
-				animation-timing-function : ease
+			&#dodecahedron
 
-			&.hexahedron
-				animation-name : hexahedron
-				animation-duration : 60s
-				animation-iteration-count : infinite
-				animation-timing-function : ease
+				transition-in(2.1s)
 
-			&.octahedron
-				animation-name : octahedron
-				animation-duration : 60s
-				animation-iteration-count : infinite
-				animation-timing-function : ease
+				// Glitch animation of the faces
+				&.glitch
 
-			&.tetrahedron
-				animation-name : tetrahedron
-				animation-duration : 60s
-				animation-iteration-count : infinite
-				animation-timing-function : ease
+					for i in 0 ... 12
+						
+						index = floor(random-range(0, 12))
+						
+						.face[data-face-id={'"%s"' % index}]
 
+							duration = random-range(0, 1)
+							duration = '%ss' % duration 
+
+							delay = random-range(0, .8)
+							delay = '%ss' % delay 
+
+							face-glitch(duration, delay)
+
+			&#hexahedron
+				transition-in(3s)
+
+			&#octahedron
+				transition-in(1s)
+
+			&#tetrahedron
+				transition-in(3.2s)
+			
 
 		.mesh
 

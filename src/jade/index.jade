@@ -14,20 +14,25 @@ block scene
 
 	.group(data-camera-transform="1")
 
-		.group.dodecahedron
-			mixin dodecahedron(0, 0, 0)
-		.group.hexahedron
-			mixin cube(1, 0, 0)
-		.group.tetrahedron
-			mixin tetrahedron(2, 0, 0)
-		.group.octahedron
-			mixin octahedron(3, 0, 0)
-		.group.icosahedron
-			mixin icosahedron(4, 0, 0)
+		.group#dodecahedron
+			mixin dodecahedron(0, 1, 0)
+		.group#hexahedron
+			mixin cube(1, 1, 0)
+		.group#tetrahedron
+			mixin tetrahedron(2, 1, 0)
+		.group#octahedron
+			mixin octahedron(3, 1, 0)
+		.group#icosahedron
+			mixin icosahedron(4, 1, 0)
 
 
 
 block extra
 
-	audio(controls, autoplay)
+	audio#audio
 		source(src="sound/therall_toge.mp3", type="audio/mpeg")
+
+block append js
+
+	script(src="js/lib/signals.min.js")
+	script(src="js/index.js")

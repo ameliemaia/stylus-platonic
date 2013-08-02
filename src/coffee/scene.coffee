@@ -24,7 +24,7 @@ class Scene
         @face_groups = []
 
         # Define facegroups
-        $('.group:not(.mesh > .group):not([data-light="0"]), .mesh:not(.group > .mesh):not([data-light="0"])').each (index, element) =>
+        $('[data-light="1"]').each (index, element) =>
             face_group = new Photon.FaceGroup($(element)[0], $(element).find('.face'), 0.8, 0.1, true)
             @face_groups.push face_group
 
@@ -43,6 +43,7 @@ class Scene
 
         # GUI
         @gui = new dat.GUI()
+        window.gui = @gui
 
         scene_stats = @gui.addFolder 'Scene'
         scene_stats.add(@stats, 'groups').listen()

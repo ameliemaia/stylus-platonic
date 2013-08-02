@@ -7,7 +7,7 @@ block css
 block scene
 
 	.group(data-camera-transform="1")
-		.group.sierpinski-sponge(data-group-id="0")
+		.group.sierpinski-sponge(data-group-id="0", data-light="1")
 			- var iterations = 1
 			- var cubes = Math.pow(20, iterations)
 			- for (var i = 0; i < cubes; i++)
