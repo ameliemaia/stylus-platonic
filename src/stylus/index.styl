@@ -17,26 +17,33 @@ global-reset()
 	100%
 		opacity : .3
 
-face-glitch(duration = 1s, delay = 0s)
+glitch-animation(duration = 1s, delay = 0s)
 	animation-name            : opacity_glitch
 	animation-duration        : duration
 	animation-delay           : delay
 	animation-iteration-count : 1
 	animation-timing-function : ease
 
-transition-in(duration)
-	opacity    : 0
-	transition : opacity duration ease
+face-glitch(faces, max-duration, max-delay)
 
-	&.in
-		opacity : 1
+	for i in 0 ... faces
+		
+		index = floor(random-range(0, faces))
+		
+		.face[data-face-id={'"%s"' % index}]
 
-pulse()
-	
+			duration = random-range(0, max-duration)
+			duration = '%ss' % duration 
 
-audio
-	absolute   top 0 left 0
-	z-index  : 10 
+			delay = random-range(0, max-delay)
+			delay = '%ss' % delay 
+
+			glitch-animation(duration, delay)
+
+
+fade-to(alpha, duration, delay = 0)
+	opacity    : alpha
+	transition : opacity duration ease delay
 
 .platonic-viewport 
 
@@ -44,37 +51,87 @@ audio
 
 		.group
 
+			&#icosahedron
+
+				opacity : 0
+
+				&.in-1
+					fade-to(1, 1.6s, .5s)
+
+				&.glitch-1
+					face-glitch(20, .9, .7)
+
+				&.out-1
+					fade-to(0, 2.4s)
+
+				&.in-2
+					fade-to(1, .4s)
+
+				&.glitch-2
+					face-glitch(20, .9, .7)
+
 			&#dodecahedron
 
-				transition-in(2.1s)
+				opacity : 0
 
-				// Glitch animation of the faces
-				&.glitch
+				&.in-1
+					fade-to(1, 2.1s)
 
-					for i in 0 ... 12
-						
-						index = floor(random-range(0, 12))
-						
-						.face[data-face-id={'"%s"' % index}]
+				&.glitch-1
+					face-glitch(12, .9, .7)
 
-							duration = random-range(0, 1)
-							duration = '%ss' % duration 
+				&.out-1
+					fade-to(0, 2.1s)
 
-							delay = random-range(0, .8)
-							delay = '%ss' % delay 
+				&.in-2
+					fade-to(1, .3s)
 
-							face-glitch(duration, delay)
+				&.glitch-2
+					face-glitch(12, .9, .7)
 
 			&#hexahedron
-				transition-in(3s)
+				
+				opacity : 0
+
+				&.in-1
+					fade-to(1, 1.8s)
+
+				&.out-1
+					fade-to(0, 1s)
+
+				&.in-2
+					fade-to(1, .5s)
+
+				&.glitch-2
+					face-glitch(6, .9, .7)
 
 			&#octahedron
-				transition-in(1s)
+				
+				opacity : 0
+
+				&.in-1
+					fade-to(1, 1.5s)
+					face-glitch(8, .9, .7)
+
+				&.out-1
+					fade-to(0, 1s)
+
+				&.in-2
+					fade-to(1, .3s)
+
+				&.glitch-2
+					face-glitch(8, .9, .7)
 
 			&#tetrahedron
-				transition-in(3.2s)
-			
+				
+				opacity : 0
 
+				&.in-1
+					fade-to(1, 3s)
+
+				&.glitch-1
+					face-glitch(4, .9, .7)
+			
 		.mesh
 
 			&.dodecahedron
