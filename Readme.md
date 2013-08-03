@@ -13,7 +13,7 @@ It's primary objectives are:
 2. To provide a simple API and workflow for generating content.
 3. To generate the least amount of CSS required to display content.
 
-[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
+[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Platonic project](#platonic-project) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
 
 ## Demos
 
@@ -70,6 +70,10 @@ server.use(stylus.middleware({
   , compile: compile
 }));
 ```
+
+## Platonic Project
+
+I've created a [simple project](https://github.com/davidpaulrosser/platonic-project) scaffold for Platonic. I highly recommend using this as a starting point.
 
 ## Platonic API
 
