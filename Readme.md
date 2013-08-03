@@ -13,7 +13,7 @@ It's primary objectives are:
 2. To provide a simple API and workflow for generating content.
 3. To generate the least amount of CSS required to display content.
 
-[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Platonic project](#platonic-project) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
+[Installation](#installation) - [Features](#features) - [Demos](#Demos) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
 
 ## Demos
 
