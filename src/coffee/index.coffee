@@ -51,6 +51,10 @@ class IndexView
 	percent: 0
 	current_time: 0
 
+	song: {
+		credits: 'therall toge © hems'
+	}
+
 	constructor: ->
 
 		@timeline = {
@@ -132,20 +136,21 @@ class IndexView
 		}
 
 		@gui_sound = window.gui.addFolder 'Sound'
-		@gui_sound.open()
 
 		@player = new AudioPlayer 'audio'
 
 		@player.on.loadedmetadata.addOnce @on_audio_ready
 		@player.on.timeupdate.add @on_time_update
 		@player.on.ended.add @on_audio_ended
-		@player.set_volume 1
+		@player.set_volume 0
 		@player.setup()
 
 
 	on_audio_ready: =>
 
 		@gui_sound.add(@player, 'volume', 0, 1).onChange (e) => @player.set_volume e
+		@gui_sound.add(@song, 'credits')
+		@gui_sound.open()
 			
 		# @gui_sound.add(@player, 'current_time', 0, @player.get_duration()).listen()
 		# @gui_sound.add(@player, 'percent', 0, 100).listen()
