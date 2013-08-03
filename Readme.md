@@ -13,7 +13,7 @@ It's primary objectives are:
 2. To provide a simple API and workflow for generating content.
 3. To generate the least amount of CSS required to display content.
 
-[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Platonic project](#platonic-project) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
+[Installation](#installation) - [Features](#features) - [Demos](#Demos) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
 
 ## Demos
 
@@ -118,8 +118,6 @@ A: I'm working on a node.js-based solution for that : )
 ## Contributing
 
 For any issues and bugs please submit an issue.
-
-If you would like to contribute to the library and / or have some good ideas on how things could be improved let's discuss it in the [Google group]().
 
 
 ## License
