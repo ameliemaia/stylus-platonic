@@ -1,6 +1,6 @@
 # Stylus Platonic
 
-Pure CSS 3D library.
+CSS 3D library.
 
 
 ## About
@@ -15,19 +15,18 @@ It's primary objectives are:
 
 [Installation](#installation) - [Features](#features) - [Examples](#examples) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
 
-## Examples
+## Demos
 
-Demo 1 - ...
-
-Demo 2 - 400 cubes (  )
+1. [Dualism](davidpaulrosser.github.io/stylus-platonic)
+2. [Sierpinski](davidpaulrosser.github.io/stylus-platonic/sierpinski.html)
 
 ## Browser support
 
 Platonic is only currently supported in *some* webkit based browsers due to various CSS3 properties it requires to display the content.
 
-* Chrome v27.0
-* Safari v6.0
-* Safari iOS v6.0
+* Chrome v27.0 +
+* Safari v6.0 +
+* Safari iOS v6.0 +
 
 ## Features
 
@@ -89,7 +88,7 @@ Click [here](https://github.com/davidpaulrosser/stylus-platonic/wiki/API) for th
 You will first need to install the dependencies.
 
 ```
-$ npm install -d
+$ npm install
 ```
 
 Then run ```grunt``` from the lib directory and open ```http://localhost:9055```
