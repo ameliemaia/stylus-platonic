@@ -1,14 +1,13 @@
 {
   "name": "stylus-platonic",
   "version": "0.0.1",
-  "description": "Stylus plugin for CSS3D",
+  "description": "CSS3D library built on Stylus",
   "main": "./lib/stylus-platonic.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:davidpaulrosser/stylus-platonic.git"
   },
   "devDependencies": {
-    "fs-util": "~0.3.13",
     "jade": "~0.30.0",
     "grunt": "~0.4.1",
     "grunt-contrib-jade": "~0.5.1",

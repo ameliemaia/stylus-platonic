@@ -1,6 +1,6 @@
 # Stylus Platonic
 
-Pure CSS 3D library.
+CSS 3D library.
 
 
 ## About
@@ -13,21 +13,20 @@ It's primary objectives are:
 2. To provide a simple API and workflow for generating content.
 3. To generate the least amount of CSS required to display content.
 
-[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
+[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Platonic project](#platonic-project) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
 
-## Examples
+## Demos
 
-Demo 1 - ...
-
-Demo 2 - 400 cubes (  )
+1. [Sierpinski](davidpaulrosser.github.io/stylus-platonic)
+2. [Dualism](davidpaulrosser.github.io/stylus-platonic/dualism.html)
 
 ## Browser support
 
 Platonic is only currently supported in *some* webkit based browsers due to various CSS3 properties it requires to display the content.
 
-* Chrome v27.0
-* Safari v6.0
-* Safari iOS v6.0
+* Chrome v27.0 +
+* Safari v6.0 +
+* Safari iOS v6.0 +
 
 ## Features
 
@@ -72,6 +71,10 @@ server.use(stylus.middleware({
 }));
 ```
 
+## Platonic Project
+
+I've created a [simple project](https://github.com/davidpaulrosser/platonic-project) scaffold for Platonic. I highly recommend using this as a starting point.
+
 ## Platonic API
 
 To use Platonic's mixins and styles you first need to import it into your stylus file.
@@ -89,7 +92,7 @@ Click [here](https://github.com/davidpaulrosser/stylus-platonic/wiki/API) for th
 You will first need to install the dependencies.
 
 ```
-$ npm install -d
+$ npm install
 ```
 
 Then run ```grunt``` from the lib directory and open ```http://localhost:9055```
