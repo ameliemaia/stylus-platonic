@@ -1,0 +1,1753 @@
+.transform,
+.platonic-viewport .scene .mesh,
+.platonic-viewport .scene .group,
+.platonic-viewport .scene .ui-component {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+.platonic-viewport {
+  -webkit-perspective: 1000px;
+  -webkit-perspective-origin: 50%;
+  background-color: #575757;
+  background-image: -webkit-radial-gradient(#575757, #272727);
+  background-image: radial-gradient(#575757, #272727);
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 600px;
+}
+.platonic-viewport .scene {
+  width: 100%;
+}
+.platonic-viewport .scene .mesh .face {
+  -webkit-backface-visibility: visible;
+  position: absolute;
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff');
+}
+header {
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Droid Serif';
+  font-size: 13px;
+  z-index: 2;
+}
+header h1 {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+header h2 {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+header h3 {
+  font-style: italic;
+  margin-top: 20px;
+}
+header a {
+  color: #808080;
+  text-decoration: none;
+  -webkit-transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+header a:hover {
+  color: #666;
+}
+header ul {
+  margin-top: 10px;
+}
+header ul li {
+  margin: 2px 0;
+}
+a.dpr {
+  background-image: url('../img/logo_inverse.svg');
+  -webkit-background-size: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-transition: opacity 0.5s ease;
+  width: 50px;
+  height: 50px;
+}
+a.dpr:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#stats {
+  position: absolute;
+  top: 225px;
+  left: 20px;
+  z-index: 100;
+}
+#stats #fps {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+#stats #fps span {
+  background-color: #fff !important;
+}
+#stats #fps #fpsText {
+  color: #fff !important;
+  font-family: 'Droid Serif' !important;
+  font-weight: normal !important;
+}
+#stats #fpsGraph {
+  background-color: transparent !important;
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+@-moz-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+.platonic-viewport .scene .group#icosahedron {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.platonic-viewport .scene .group#icosahedron.in-1 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 1.6s ease 0.5s;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="17"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8440789532382041s;
+  -webkit-animation-delay: 0.6564476060448214s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7240910672117025s;
+  -webkit-animation-delay: 0.26237307901028545s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.596249092114158s;
+  -webkit-animation-delay: 0.34613510873168707s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7524279923178255s;
+  -webkit-animation-delay: 0.5998361906968057s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7331451866542921s;
+  -webkit-animation-delay: 0.36550133184064176s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="12"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.2343825758434832s;
+  -webkit-animation-delay: 0.34515602488536384s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="15"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.22001723223365843s;
+  -webkit-animation-delay: 0.6791516745928674s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="19"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.23604668704792858s;
+  -webkit-animation-delay: 0.526236534724012s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8199646193068475s;
+  -webkit-animation-delay: 0.07934074471704661s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.23985955549869686s;
+  -webkit-animation-delay: 0.510168654914014s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8880228091729805s;
+  -webkit-animation-delay: 0.34922275922726836s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="19"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6585898183984682s;
+  -webkit-animation-delay: 0.29695811213459816s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="13"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.32584069767035545s;
+  -webkit-animation-delay: 0.38239497102331366s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="8"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4432517852867022s;
+  -webkit-animation-delay: 0.03347077963408082s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.15673648912925273s;
+  -webkit-animation-delay: 0.023605398996733126s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="15"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.869812332233414s;
+  -webkit-animation-delay: 0.19812947751488535s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="12"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.2598867225693539s;
+  -webkit-animation-delay: 0.5842104311566799s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5086154248332605s;
+  -webkit-animation-delay: 0.006699339323677122s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.22752430129330606s;
+  -webkit-animation-delay: 0.19506448437459767s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="18"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6531797351315618s;
+  -webkit-animation-delay: 0.38741076639853417s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.out-1 {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 2.1s ease 0;
+}
+.platonic-viewport .scene .group#icosahedron.in-2 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.4s ease 0;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="13"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.42900389540009204s;
+  -webkit-animation-delay: 0.6825698252301663s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.870864987373352s;
+  -webkit-animation-delay: 0.6232615168672054s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.2973652528133243s;
+  -webkit-animation-delay: 0.5969155661994591s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="11"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5047770427074284s;
+  -webkit-animation-delay: 0.5820614557014778s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="18"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.854940168466419s;
+  -webkit-animation-delay: 0.5487247817683965s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.23142676851712168s;
+  -webkit-animation-delay: 0.31626203542109577s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="15"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6104898408288136s;
+  -webkit-animation-delay: 0.3325539382873103s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="8"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.12569424253888428s;
+  -webkit-animation-delay: 0.4932754538254812s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7028125752462074s;
+  -webkit-animation-delay: 0.6419764230726286s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="17"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.858927424508147s;
+  -webkit-animation-delay: 0.23809904274530708s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="17"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.305872997478582s;
+  -webkit-animation-delay: 0.18038803359959274s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.10906117942649872s;
+  -webkit-animation-delay: 0.5803715869318693s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="11"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8578170132357628s;
+  -webkit-animation-delay: 0.3068778024287894s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.304831137182191s;
+  -webkit-animation-delay: 0.6897886555409058s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="19"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.49389817393384877s;
+  -webkit-animation-delay: 0.3850835206918418s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8306018388597295s;
+  -webkit-animation-delay: 0.5982047111727297s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.48485026401467624s;
+  -webkit-animation-delay: 0.00969438375905156s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="18"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.40666465975809846s;
+  -webkit-animation-delay: 0.6834349816199392s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="17"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.04365172397810966s;
+  -webkit-animation-delay: 0.4984008514555171s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="11"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.11182256997562945s;
+  -webkit-animation-delay: 0.355144488136284s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.platonic-viewport .scene .group#dodecahedron.in-1 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 2.1s ease 0;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.11591036799363792s;
+  -webkit-animation-delay: 0.3620861178031191s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4569224704988301s;
+  -webkit-animation-delay: 0.4147966766031459s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.36443037281278523s;
+  -webkit-animation-delay: 0.1000770684564486s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7751491994597018s;
+  -webkit-animation-delay: 0.5756467833649367s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.3421859964262694s;
+  -webkit-animation-delay: 0.6804287335136905s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.04547470808029175s;
+  -webkit-animation-delay: 0.21503384038805962s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4930243569659069s;
+  -webkit-animation-delay: 0.06398096145130694s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.05898718466050923s;
+  -webkit-animation-delay: 0.41439166346099227s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4125826130155474s;
+  -webkit-animation-delay: 0.10535578795243054s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6913153326138854s;
+  -webkit-animation-delay: 0.13458405220881103s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8226415215292946s;
+  -webkit-animation-delay: 0.4705685653723776s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.23634486340451985s;
+  -webkit-animation-delay: 0.32073279311880465s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.out-1 {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 2.1s ease 0;
+}
+.platonic-viewport .scene .group#dodecahedron.in-2 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s ease 0;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="8"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5458449375350028s;
+  -webkit-animation-delay: 0.6320176183711737s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="7"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.35333241198677573s;
+  -webkit-animation-delay: 0.664785828650929s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5269647773355246s;
+  -webkit-animation-delay: 0.40689010939095166s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6108942443970591s;
+  -webkit-animation-delay: 0.09632621221244335s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5414098799927161s;
+  -webkit-animation-delay: 0.11288353444542736s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="7"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8531344186048955s;
+  -webkit-animation-delay: 0.1712594855809584s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8496121871983633s;
+  -webkit-animation-delay: 0.23889917735941707s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7205239461036399s;
+  -webkit-animation-delay: 0.3857776050688699s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.2931967454496771s;
+  -webkit-animation-delay: 0.005919925682246685s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7610486736986787s;
+  -webkit-animation-delay: 0.0014974165242165327s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8106570120435208s;
+  -webkit-animation-delay: 0.6803169269347563s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4478085885057226s;
+  -webkit-animation-delay: 0.531932577677071s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#hexahedron {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.platonic-viewport .scene .group#hexahedron.in-1 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 1.8s ease 0;
+}
+.platonic-viewport .scene .group#hexahedron.out-1 {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 1s ease 0;
+}
+.platonic-viewport .scene .group#hexahedron.in-2 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.5s ease 0;
+}
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.29332022680900993s;
+  -webkit-animation-delay: 0.6514699023682624s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.15126634784974158s;
+  -webkit-animation-delay: 0.6385988199384882s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8770567839033901s;
+  -webkit-animation-delay: 0.49928735042922195s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7462864846922458s;
+  -webkit-animation-delay: 0.47169183581136165s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.24254092087503523s;
+  -webkit-animation-delay: 0.6090817209333181s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7549092998960987s;
+  -webkit-animation-delay: 0.17337039231788365s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.platonic-viewport .scene .group#octahedron.in-1 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 1.5s ease 0;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.36549609156791124s;
+  -webkit-animation-delay: 0.34712851212825624s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5777994989650325s;
+  -webkit-animation-delay: 0.38610724385362116s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.13453850909136236s;
+  -webkit-animation-delay: 0.5775219987146556s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.0009324314072728157s;
+  -webkit-animation-delay: 0.43167113286908715s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.07215815568342805s;
+  -webkit-animation-delay: 0.28123534652404486s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6108819923596457s;
+  -webkit-animation-delay: 0.3030215565115213s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.0128502341452986s;
+  -webkit-animation-delay: 0.574958581640385s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7763582539977506s;
+  -webkit-animation-delay: 0.632269457145594s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.out-1 {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 1s ease 0;
+}
+.platonic-viewport .scene .group#octahedron.in-2 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 0.3s ease 0;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7059153760084883s;
+  -webkit-animation-delay: 0.1485449705738574s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.08982779870275408s;
+  -webkit-animation-delay: 0.030472608399577435s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.07094437018968165s;
+  -webkit-animation-delay: 0.5916213942691684s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.14673840708564967s;
+  -webkit-animation-delay: 0.5976207636296749s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.3664834529394284s;
+  -webkit-animation-delay: 0.3731668426422402s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5690079107880592s;
+  -webkit-animation-delay: 0.16944880681112406s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.22893987020943316s;
+  -webkit-animation-delay: 0.08761330926790833s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7423344575800002s;
+  -webkit-animation-delay: 0.1810528264613822s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#tetrahedron {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.platonic-viewport .scene .group#tetrahedron.in-1 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 3s ease 0;
+}
+.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6515151562169195s;
+  -webkit-animation-delay: 0.02750850289594382s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.774398481217213s;
+  -webkit-animation-delay: 0.3747226091334596s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5691239377018065s;
+  -webkit-animation-delay: 0.4402742528123781s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.18773045784328132s;
+  -webkit-animation-delay: 0.24064770804252475s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .mesh.dodecahedron {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(-31.7deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="0"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 238.39634168752983px, 0) rotateX(90deg) rotateY(0deg) rotateZ(90deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="11"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(-35.6540748204726px, -238.39634168752983px, 0) rotateX(90deg) rotateY(0deg) rotateZ(-90deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face {
+  -webkit-transform-origin: 50% 100%;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="11"] {
+  -webkit-transform-origin: inherit;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="1"] {
+  -webkit-transform: translateX(101.37113343352863px) translateY(73.66852097826344px) translateZ(86.60254037844386px) rotateY(54deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="1"] .face[data-face-id="1"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="2"] {
+  -webkit-transform: translateX(-63.356687275737755px) translateY(73.66852097826344px) translateZ(140.12585384440737px) rotateY(-18deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="2"] .face[data-face-id="2"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="3"] {
+  -webkit-transform: translateX(-165.16407936676322px) translateY(73.66852097826344px) translateZ(0) rotateY(-90deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="3"] .face[data-face-id="3"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="4"] {
+  -webkit-transform: translateX(-63.35668727573781px) translateY(73.66852097826344px) translateZ(-140.12585384440735px) rotateY(-162deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="4"] .face[data-face-id="4"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="5"] {
+  -webkit-transform: translateX(101.3711334335286px) translateY(73.66852097826344px) translateZ(-86.6025403784439px) rotateY(-234deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="5"] .face[data-face-id="5"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="6"] {
+  -webkit-transform: translateX(-137.0252082540012px) translateY(-403.12416239679624px) translateZ(-86.60254037844389px) rotateY(234deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="6"] .face[data-face-id="6"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="7"] {
+  -webkit-transform: translateX(27.702612455265182px) translateY(-403.12416239679624px) translateZ(-140.12585384440737px) rotateY(162deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="7"] .face[data-face-id="7"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="8"] {
+  -webkit-transform: translateX(129.51000454629062px) translateY(-403.12416239679624px) translateZ(0px) rotateY(90deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="8"] .face[data-face-id="8"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="9"] {
+  -webkit-transform: translateX(27.702612455265182px) translateY(-403.12416239679624px) translateZ(140.12585384440737px) rotateY(18deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="9"] .face[data-face-id="9"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="10"] {
+  -webkit-transform: translateX(-137.0252082540012px) translateY(-403.12416239679624px) translateZ(86.60254037844389px) rotateY(-54deg);
+}
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="10"] .face[data-face-id="10"] {
+  margin-top: -164.72782070926638px;
+  margin-left: -173.20508075688772px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 346.41016151377545px;
+  height: 329.45564141853276px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNDYuNDEwMTYxNTEzNzc1NDVweCIgaGVpZ2h0PSIzMjkuNDU1NjQxNDE4NTMyNzZweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMTczLjIwNTA4MDc1Njg4NzcyLDAgMzQ2LjQxMDE2MTUxMzc3NTQ1LDEyNS44NDA4NTcyMzY0ODE5MSAyODAuMjUxNzA3Njg4ODE0NywzMjkuNDU1NjQxNDE4NTMyNzYgNjYuMTU4NDUzODI0OTYwNzYsMzI5LjQ1NTY0MTQxODUzMjc2IC0yLjg0MjE3MDk0MzA0MDQwMWUtMTQsMTI1Ljg0MDg1NzIzNjQ4MTkyIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.dodecahedron .face {
+  opacity: 0.35;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+  filter: alpha(opacity=35);
+}
+.platonic-viewport .scene .mesh.cube {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 25s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.platonic-viewport .scene .mesh.cube[data-mesh-id="1"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+.platonic-viewport .scene .mesh.cube[data-mesh-id="1"] .face[data-face-id="0"] {
+  margin-top: -175px;
+  margin-left: -175px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #333;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: rotateX(90deg) translateZ(175px);
+}
+.platonic-viewport .scene .mesh.cube[data-mesh-id="1"] .face[data-face-id="1"] {
+  margin-top: -175px;
+  margin-left: -175px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #333;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: translateZ(-175px);
+}
+.platonic-viewport .scene .mesh.cube[data-mesh-id="1"] .face[data-face-id="2"] {
+  margin-top: -175px;
+  margin-left: -175px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #333;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: rotateX(-90deg) translateZ(175px);
+}
+.platonic-viewport .scene .mesh.cube[data-mesh-id="1"] .face[data-face-id="3"] {
+  margin-top: -175px;
+  margin-left: -175px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #333;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: translateZ(175px);
+}
+.platonic-viewport .scene .mesh.cube[data-mesh-id="1"] .face[data-face-id="4"] {
+  margin-top: -175px;
+  margin-left: -175px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #333;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: rotateY(90deg) translateZ(-175px);
+}
+.platonic-viewport .scene .mesh.cube[data-mesh-id="1"] .face[data-face-id="5"] {
+  margin-top: -175px;
+  margin-left: -175px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #333;
+  width: 350px;
+  height: 350px;
+  -webkit-transform: rotateY(90deg) translateZ(175px);
+}
+.platonic-viewport .scene .mesh.cube .face {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+.platonic-viewport .scene .mesh.tetrahedron {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 22s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="3"] {
+  margin-top: -211.74321122529523px;
+  margin-left: -244.5px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #4d4d4d;
+  width: 489px;
+  height: 423.48642245059045px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0ODlweCIgaGVpZ2h0PSI0MjMuNDg2NDIyNDUwNTkwNDVweCI+PHBvbHlnb24gc3Ryb2tlPSIjNGQ0ZDRkIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiM0ZDRkNGQiIHBvaW50cz0iMjQ0LjUgMCA0ODkgNDIzLjQ4NjQyMjQ1MDU5MDQ1IDAgNDIzLjQ4NjQyMjQ1MDU5MDQ1LCAsICwiPjwvcG9seWdvbj48L3N2Zz4=');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="3"] {
+  -webkit-transform-origin: 50% 0;
+}
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="0"] {
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transform: translate3d(0, -24.21959437693249px, -141.16214081686346px) rotateX(-90deg);
+}
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="1"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-19.47122063449069deg);
+}
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="2"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateY(120deg) rotateX(-19.47122063449069deg);
+}
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] .face[data-face-id="3"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateY(240deg) rotateX(-19.47122063449069deg);
+}
+.platonic-viewport .scene .mesh.tetrahedron .face {
+  opacity: 0.35;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+  filter: alpha(opacity=35);
+}
+.platonic-viewport .scene .mesh.octahedron {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="3"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="4"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="5"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="6"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="7"] {
+  margin-top: -152.8534837679534px;
+  margin-left: -176.5px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #808080;
+  width: 353px;
+  height: 305.7069675359068px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNTNweCIgaGVpZ2h0PSIzMDUuNzA2OTY3NTM1OTA2OHB4Ij48cG9seWdvbiBzdHJva2U9IiM0ZDRkNGQiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzRkNGQ0ZCIgcG9pbnRzPSIxNzYuNSAwIDM1MyAzMDUuNzA2OTY3NTM1OTA2OCAwIDMwNS43MDY5Njc1MzU5MDY4LCAsICwiPjwvcG9seWdvbj48L3N2Zz4=');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 100%;
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="0"] {
+  -webkit-transform: translate3d(0, -152.8534837679534px, 176.5px) rotateX(35.264389682754654deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="1"] {
+  -webkit-transform: translate3d(176.5px, -152.8534837679534px, 0) rotateY(90deg) rotateX(35.264389682754654deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="2"] {
+  -webkit-transform: translate3d(-176.5px, -152.8534837679534px, 0) rotateY(90deg) rotateX(-35.264389682754654deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="3"] {
+  -webkit-transform: translate3d(0, -152.8534837679534px, -176.5px) rotateX(-35.264389682754654deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="4"] {
+  -webkit-transform: translate3d(0, -152.8534837679534px, 176.5px) rotateX(144.73561031724535deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="5"] {
+  -webkit-transform: translate3d(176.5px, -152.8534837679534px, 0) rotateY(90deg) rotateX(144.73561031724535deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="6"] {
+  -webkit-transform: translate3d(-176.5px, -152.8534837679534px, 0) rotateY(90deg) rotateX(215.26438968275465deg);
+}
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] .face[data-face-id="7"] {
+  -webkit-transform: translate3d(0, -152.8534837679534px, -176.5px) rotateX(215.26438968275465deg);
+}
+.platonic-viewport .scene .mesh.octahedron .face {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+.platonic-viewport .scene .mesh.icosahedron {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(58deg) rotateY(72deg) rotateZ(0deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="3"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="4"] {
+  margin-top: -68.29447479825221px;
+  margin-left: -78.85966681787005px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #808080;
+  width: 157.7193336357401px;
+  height: 136.58894959650442px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTcuNzE5MzMzNjM1NzQwMXB4IiBoZWlnaHQ9IjEzNi41ODg5NDk1OTY1MDQ0MnB4Ij48cG9seWdvbiBzdHJva2U9IiM0ZDRkNGQiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzRkNGQ0ZCIgcG9pbnRzPSI3OC44NTk2NjY4MTc4NzAwNSAwIDE1Ny43MTkzMzM2MzU3NDAxIDEzNi41ODg5NDk1OTY1MDQ0MiAwIDEzNi41ODg5NDk1OTY1MDQ0MiwgLCAsIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 0;
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="0"] {
+  -webkit-transform: translateY(-75px) rotateY(0deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="0"] .face[data-face-id="0"] {
+  -webkit-transform: rotateX(52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="1"] {
+  -webkit-transform: translateY(-75px) rotateY(72deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="1"] .face[data-face-id="1"] {
+  -webkit-transform: rotateX(52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="2"] {
+  -webkit-transform: translateY(-75px) rotateY(144deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="2"] .face[data-face-id="2"] {
+  -webkit-transform: rotateX(52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="3"] {
+  -webkit-transform: translateY(-75px) rotateY(216deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="3"] .face[data-face-id="3"] {
+  -webkit-transform: rotateX(52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="4"] {
+  -webkit-transform: translateY(-75px) rotateY(288deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="4"] .face[data-face-id="4"] {
+  -webkit-transform: rotateX(52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="5"] {
+  -webkit-transform: translateY(-75px) rotateY(360deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="5"] .face[data-face-id="5"] {
+  -webkit-transform: rotateX(52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="5"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="7"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="9"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="11"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="13"] {
+  margin-top: -68.29447479825221px;
+  margin-left: -78.85966681787005px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #808080;
+  width: 157.7193336357401px;
+  height: 136.58894959650442px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTcuNzE5MzMzNjM1NzQwMXB4IiBoZWlnaHQ9IjEzNi41ODg5NDk1OTY1MDQ0MnB4Ij48cG9seWdvbiBzdHJva2U9IiM0ZDRkNGQiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzRkNGQ0ZCIgcG9pbnRzPSI3OC44NTk2NjY4MTc4NzAwNSAwIDE1Ny43MTkzMzM2MzU3NDAxIDEzNi41ODg5NDk1OTY1MDQ0MiAwIDEzNi41ODg5NDk1OTY1MDQ0MiwgLCAsIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 0%;
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="6"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="8"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="10"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="12"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="14"] {
+  margin-top: -68.29447479825221px;
+  margin-left: -78.85966681787005px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #808080;
+  width: 157.7193336357401px;
+  height: 136.58894959650442px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTcuNzE5MzMzNjM1NzQwMXB4IiBoZWlnaHQ9IjEzNi41ODg5NDk1OTY1MDQ0MnB4Ij48cG9seWdvbiBzdHJva2U9IiM0ZDRkNGQiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzRkNGQ0ZCIgcG9pbnRzPSIwIDAgNzguODU5NjY2ODE3ODcwMDUgMTM2LjU4ODk0OTU5NjUwNDQyIDE1Ny43MTkzMzM2MzU3NDAxIDAsICwgLCI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 0;
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="5"] {
+  -webkit-transform: translateY(-75px) rotateY(-36deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="5"] .face[data-face-id="5"] {
+  -webkit-transform: translateZ(134.1640786499874px) translateY(82.91796067500631px) rotateX(-10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="6"] {
+  -webkit-transform: translateY(-75px) rotateY(72deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="6"] .face[data-face-id="6"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(82.91796067500631px) rotateX(10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="7"] {
+  -webkit-transform: translateY(-75px) rotateY(108deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="7"] .face[data-face-id="7"] {
+  -webkit-transform: translateZ(134.1640786499874px) translateY(82.91796067500631px) rotateX(-10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="8"] {
+  -webkit-transform: translateY(-75px) rotateY(216deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="8"] .face[data-face-id="8"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(82.91796067500631px) rotateX(10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="9"] {
+  -webkit-transform: translateY(-75px) rotateY(252deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="9"] .face[data-face-id="9"] {
+  -webkit-transform: translateZ(134.1640786499874px) translateY(82.91796067500631px) rotateX(-10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="10"] {
+  -webkit-transform: translateY(-75px) rotateY(360deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="10"] .face[data-face-id="10"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(82.91796067500631px) rotateX(10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="11"] {
+  -webkit-transform: translateY(-75px) rotateY(396deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="11"] .face[data-face-id="11"] {
+  -webkit-transform: translateZ(134.1640786499874px) translateY(82.91796067500631px) rotateX(-10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="12"] {
+  -webkit-transform: translateY(-75px) rotateY(504deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="12"] .face[data-face-id="12"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(82.91796067500631px) rotateX(10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="13"] {
+  -webkit-transform: translateY(-75px) rotateY(540deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="13"] .face[data-face-id="13"] {
+  -webkit-transform: translateZ(134.1640786499874px) translateY(82.91796067500631px) rotateX(-10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="14"] {
+  -webkit-transform: translateY(-75px) rotateY(648deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="14"] .face[data-face-id="14"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(82.91796067500631px) rotateX(10.8123169635717deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="15"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="16"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="17"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="18"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .face[data-face-id="19"] {
+  margin-top: -68.29447479825221px;
+  margin-left: -78.85966681787005px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #808080;
+  width: 157.7193336357401px;
+  height: 136.58894959650442px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTcuNzE5MzMzNjM1NzQwMXB4IiBoZWlnaHQ9IjEzNi41ODg5NDk1OTY1MDQ0MnB4Ij48cG9seWdvbiBzdHJva2U9IiM0ZDRkNGQiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzRkNGQ0ZCIgcG9pbnRzPSIwIDAgNzguODU5NjY2ODE3ODcwMDUgMTM2LjU4ODk0OTU5NjUwNDQyIDE1Ny43MTkzMzM2MzU3NDAxIDAsICwgLCI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 0% 0%;
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="15"] {
+  -webkit-transform: translateY(-75px) rotateY(36deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="15"] .face[data-face-id="15"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(217.08203932499373px) rotateX(-52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="16"] {
+  -webkit-transform: translateY(-75px) rotateY(108deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="16"] .face[data-face-id="16"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(217.08203932499373px) rotateX(-52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="17"] {
+  -webkit-transform: translateY(-75px) rotateY(180deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="17"] .face[data-face-id="17"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(217.08203932499373px) rotateX(-52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="18"] {
+  -webkit-transform: translateY(-75px) rotateY(252deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="18"] .face[data-face-id="18"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(217.08203932499373px) rotateX(-52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="19"] {
+  -webkit-transform: translateY(-75px) rotateY(324deg);
+}
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] .group[data-group-id="19"] .face[data-face-id="19"] {
+  -webkit-transform: translateZ(108.54101966249688px) translateY(217.08203932499373px) rotateX(-52.62263185935031deg);
+}
+.platonic-viewport .scene .mesh.icosahedron .face {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+@-moz-keyframes opacity_glitch {
+  0% {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+  }
+
+  36% {
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+  }
+
+  56% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+  }
+
+  100% {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+  }
+}
+@-webkit-keyframes opacity_glitch {
+  0% {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+  }
+
+  36% {
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+  }
+
+  56% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+  }
+
+  100% {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+  }
+}
+@-o-keyframes opacity_glitch {
+  0% {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+  }
+
+  36% {
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+  }
+
+  56% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+  }
+
+  100% {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+  }
+}
+@-ms-keyframes opacity_glitch {
+  0% {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+  }
+
+  36% {
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+  }
+
+  56% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+  }
+
+  100% {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+  }
+}
+@keyframes opacity_glitch {
+  0% {
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+  }
+
+  36% {
+    opacity: 0.6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+  }
+
+  56% {
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+  }
+
+  100% {
+    opacity: 0.3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+  }
+}
