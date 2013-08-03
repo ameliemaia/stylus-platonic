@@ -17,8 +17,8 @@ It's primary objectives are:
 
 ## Demos
 
-1. [Sierpinski](davidpaulrosser.github.io/stylus-platonic)
-2. [Dualism](davidpaulrosser.github.io/stylus-platonic/dualism.html)
+1. [Sierpinski](http://davidpaulrosser.github.io/stylus-platonic)
+2. [Dualism](http://davidpaulrosser.github.io/stylus-platonic/dualism.html)
 
 ## Browser support
 
