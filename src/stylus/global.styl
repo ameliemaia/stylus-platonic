@@ -1,4 +1,25 @@
 
+@import 'easing'
+
+@font-face
+  font-family: 'Droid Serif'
+  font-style: normal
+  font-weight: 400
+  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff')
+
+@font-face
+  font-family: 'Droid Serif'
+  font-style: normal
+  font-weight: 700
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff')
+
+@font-face
+  font-family: 'Droid Serif'
+  font-style: italic
+  font-weight: 400
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff')
+
+
 @keyframes spin
     0%
         transform(translateZ(0) rotate3d(1, 1, 1, 0deg))
@@ -12,6 +33,41 @@ spin(duration = 30s)
 	animation-duration : duration
 	animation-iteration-count : infinite
 	animation-timing-function : linear
+
+
+header
+	
+	color       : white
+	absolute     top 20px left 20px
+	font-family : 'Droid Serif'
+	font-size   : 13px
+	z-index     : 2 
+
+	h1
+		font-size      : 23px
+		text-transform : uppercase
+
+	h2
+		font-style    : italic
+		margin-bottom : 30px
+
+	h3
+		font-style    : italic
+		margin-top    : 20px
+
+	a
+		color 			: lighten(black, 50%)
+		text-decoration : none
+		transition      : color .3s easeOutQuad
+
+		&:hover
+			color : lighten(black, 40%)
+
+	ul
+		margin-top : 10px
+
+		li
+			margin : 2px 0
 
 a.dpr
 	

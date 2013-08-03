@@ -9,6 +9,27 @@ html(lang="en")
 
     body
 
+        header
+            h1 Platonic
+            h2 CSS3D Library
+
+            h3 Demos
+            
+            ul
+                li
+                    a(href="http://davidpaulrosser.github.io/stylus-platonic", title="Dualism") Dualism
+                li
+                    a(href="http://davidpaulrosser.github.io/stylus-platonic/sierpinski.html", title="Sierpinski") Sierpinski
+
+            h3 Devs
+
+            ul 
+                li
+                    a(href="https://github.com/davidpaulrosser/stylus-platonic", title="Github") Github
+                li
+                    a(href="https://github.com/davidpaulrosser/stylus-platonic/wiki", title="Github Docs") Docs
+
+
         .platonic-viewport
 
             .scene
@@ -17,7 +38,8 @@ html(lang="en")
 
         block extra
 
-        a.dpr(href="http://davidpaulrosser.co.uk/", title="DPR")
+        footer
+            a.dpr(href="http://davidpaulrosser.co.uk/", title="DPR")
 
         block js
 
@@ -28,4 +50,13 @@ html(lang="en")
             script(src="js/lib/rAF.js")
             script(src="js/camera.js")
             script(src="js/scene.js")
+
+            script
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-42933258-1', 'davidpaulrosser.github.io');
+                ga('send', 'pageview');
 
