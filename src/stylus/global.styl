@@ -1,6 +1,8 @@
 
 @import 'easing'
 
+global-reset()
+
 @font-face
   font-family: 'Droid Serif'
   font-style: normal
@@ -21,12 +23,12 @@
 
 
 @keyframes spin
-    0%
-        transform(translateZ(0) rotate3d(1, 1, 1, 0deg))
-    50%
-        transform(translateZ(0) rotate3d(1, 1, 1, 180deg))
-    100%
-        transform(translateZ(0) rotate3d(1, 1, 1, 360deg))
+	0%
+		transform(translateZ(0) rotate3d(1, 1, 1, 0deg))
+	50%
+		transform(translateZ(0) rotate3d(1, 1, 1, 180deg))
+	100%
+		transform(translateZ(0) rotate3d(1, 1, 1, 360deg))
 
 spin(duration = 30s)
 	animation-name : spin
@@ -84,3 +86,23 @@ a.dpr
 
 	&:hover
 		opacity : 1
+
+#stats
+	absolute   top 225px left 20px
+	z-index  : 100
+
+	#fps
+		background-color : transparent !important
+		padding 		 : 0 !important
+
+		span
+			background-color : white !important
+
+		#fpsText
+			color       : white !important
+			font-family : 'Droid Serif' !important
+			font-weight : normal !important
+
+	#fpsGraph
+		background-color : transparent !important
+		opacity          : 0.2 

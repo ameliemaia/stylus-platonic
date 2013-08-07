@@ -1,0 +1,17 @@
+extends includes/layout
+include mixins/ui_components
+
+block css
+
+	link(rel="stylesheet", href="css/particles.css")
+
+block scene
+
+	//- mixin grid(0, 0, 1)
+	mixin display-axis(1, 0, 1)
+
+	.mesh.particles(data-mesh-id="0", data-camera-transform="1") 
+		//- - particles = Math.pow(18, 2)
+		- particles = Math.pow(25, 2)
+		- for(j = 0; j < particles; j++)
+			.particle(data-particle-id="#{j}")

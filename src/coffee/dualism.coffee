@@ -142,7 +142,7 @@ class IndexView
 		@player.on.loadedmetadata.addOnce @on_audio_ready
 		@player.on.timeupdate.add @on_time_update
 		@player.on.ended.add @on_audio_ended
-		@player.set_volume 0
+		@player.set_volume 0.5
 		@player.setup()
 
 
