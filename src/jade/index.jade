@@ -1,7 +1,4 @@
 extends includes/layout
-include mixins/ui_components
-include mixins/primitives
-include mixins/platonic-solids
 
 block css
 
@@ -9,25 +6,11 @@ block css
 
 block scene
 
-	mixin grid(0, 0, 1)
-	mixin display-axis(1, 0, 1)
-
 	.group(data-camera-transform="1")
-
-		.group.dodecahedron
-			mixin dodecahedron(0, 0, 0)
-		.group.hexahedron
-			mixin cube(1, 0, 0)
-		.group.tetrahedron
-			mixin tetrahedron(2, 0, 0)
-		.group.octahedron
-			mixin octahedron(3, 0, 0)
-		.group.icosahedron
-			mixin icosahedron(4, 0, 0)
-
-
-
-block extra
-
-	audio(controls, autoplay)
-		source(src="sound/therall_toge.mp3", type="audio/mpeg")
+		.group.sierpinski-sponge(data-group-id="0", data-light="1")
+			- var iterations = 1
+			- var cubes = Math.pow(20, iterations)
+			- for (var i = 0; i < cubes; i++)
+				.mesh(data-mesh-type="cube", data-mesh-id="#{i}")
+					- for (var j = 0; j < 6; j++)
+						.face(data-face-id="#{j}")

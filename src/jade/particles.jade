@@ -1,0 +1,24 @@
+extends includes/layout
+include mixins/ui_components
+
+block css
+
+	link(rel="stylesheet", href="css/particles.css")
+
+block scene
+
+	.group(data-camera-transform="1")
+
+		- particles = 80
+		- particle_sets = 2
+
+		- for(i = 0; i < particle_sets; i++)
+			.mesh.particles(data-mesh-id="#{i}") 
+				- for(j = 0; j < particles; j++)
+					.group(data-group-id="#{j}")
+						.particle(data-particle-id="#{j}")
+
+
+block append js
+
+	script(src="js/particles.js")
