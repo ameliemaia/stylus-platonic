@@ -16,6 +16,14 @@
   font-weight: 400;
   src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff');
 }
+.show,
+.platonic-viewport .scene .ui-component {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+.hide {
+  opacity: 0 !important;
+}
 header {
   color: #fff;
   absolute: top 20px left 20px;
@@ -62,7 +70,7 @@ a.dpr:hover {
   opacity: 1;
 }
 #stats {
-  absolute: top 225px left 20px;
+  absolute: top 242px left 20px;
   z-index: 100;
 }
 #stats #fps {

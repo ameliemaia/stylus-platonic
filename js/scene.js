@@ -20,6 +20,7 @@ Scene = (function() {
 
   function Scene() {
     this.loop = __bind(this.loop, this);
+    this.add_ui_controls = __bind(this.add_ui_controls, this);
     var cam_settings, scene_stats,
       _this = this;
     this.$window = $(window);
@@ -33,6 +34,7 @@ Scene = (function() {
       return _this.face_groups.push(face_group);
     });
     this.cam = new Camera(this.$viewport);
+    this.ui = new UserInterface(this.$viewport);
     this.fps = new Stats();
     this.$viewport.append(this.fps.domElement);
     this.stats.groups = $('.group').length;
@@ -48,6 +50,7 @@ Scene = (function() {
     scene_stats.add(this.stats, 'faces').listen();
     scene_stats.add(this.stats, 'photon_shaders').listen();
     scene_stats.add(this.stats, 'ui_components').listen();
+    window.scene_stats = scene_stats;
     cam_settings = this.gui.addFolder('Camera');
     cam_settings.add(this.cam, 'perspective', 0, 2000);
     cam_settings.add(this.cam, 'rotation_x').listen();
@@ -59,6 +62,18 @@ Scene = (function() {
     this.$window.trigger('resize');
     this.loop();
   }
+
+  Scene.prototype.add_ui_controls = function() {
+    var ui_settings,
+      _this = this;
+    ui_settings = this.gui.addFolder('UI');
+    ui_settings.add(this.ui, 'grid').onChange(function() {
+      return _this.ui.update();
+    });
+    return ui_settings.add(this.ui, 'display_axis').onChange(function() {
+      return _this.ui.update();
+    });
+  };
 
   Scene.prototype.on_resize = function() {
     this.win_width = this.$window.width();
@@ -96,6 +111,5 @@ Scene = (function() {
 })();
 
 $(function() {
-  var scene;
-  return scene = new Scene();
+  return window.PLATONIC_SCENE = new Scene();
 });

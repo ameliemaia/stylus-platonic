@@ -30,166 +30,6 @@
   -webkit-backface-visibility: visible;
   position: absolute;
 }
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff');
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff');
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff');
-}
-header {
-  color: #fff;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-family: 'Droid Serif';
-  font-size: 13px;
-  z-index: 2;
-}
-header h1 {
-  font-size: 23px;
-  text-transform: uppercase;
-}
-header h2 {
-  font-style: italic;
-  margin-bottom: 30px;
-}
-header h3 {
-  font-style: italic;
-  margin-top: 20px;
-}
-header a {
-  color: #808080;
-  text-decoration: none;
-  -webkit-transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-header a:hover {
-  color: #666;
-}
-header ul {
-  margin-top: 10px;
-}
-header ul li {
-  margin: 2px 0;
-}
-a.dpr {
-  background-image: url('../img/logo_inverse.svg');
-  -webkit-background-size: 100%;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  -webkit-transition: opacity 0.5s ease;
-  width: 50px;
-  height: 50px;
-}
-a.dpr:hover {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-}
-#stats {
-  position: absolute;
-  top: 225px;
-  left: 20px;
-  z-index: 100;
-}
-#stats #fps {
-  background-color: transparent !important;
-  padding: 0 !important;
-}
-#stats #fps span {
-  background-color: #fff !important;
-}
-#stats #fps #fpsText {
-  color: #fff !important;
-  font-family: 'Droid Serif' !important;
-  font-weight: normal !important;
-}
-#stats #fpsGraph {
-  background-color: transparent !important;
-  opacity: 0.2;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20);
-}
-@-moz-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@-o-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@-ms-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
 html,
 body,
 div,
@@ -280,6 +120,243 @@ td {
 }
 a img {
   border: none;
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff');
+}
+.show,
+.platonic-viewport .scene .ui-component {
+  -webkit-transition: opacity 1s ease;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.hide {
+  opacity: 0 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
+  filter: alpha(opacity=0) !important;
+}
+header {
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Droid Serif';
+  font-size: 13px;
+  z-index: 2;
+}
+header h1 {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+header h2 {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+header h3 {
+  font-style: italic;
+  margin-top: 20px;
+}
+header a {
+  color: #808080;
+  text-decoration: none;
+  -webkit-transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+header a:hover {
+  color: #666;
+}
+header ul {
+  margin-top: 10px;
+}
+header ul li {
+  margin: 2px 0;
+}
+a.dpr {
+  background-image: url('../img/logo_inverse.svg');
+  -webkit-background-size: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-transition: opacity 0.5s ease;
+  width: 50px;
+  height: 50px;
+}
+a.dpr:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#stats {
+  position: absolute;
+  top: 242px;
+  left: 20px;
+  z-index: 100;
+}
+#stats #fps {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+#stats #fps span {
+  background-color: #fff !important;
+}
+#stats #fps #fpsText {
+  color: #fff !important;
+  font-family: 'Droid Serif' !important;
+  font-weight: normal !important;
+}
+#stats #fpsGraph {
+  background-color: transparent !important;
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"] .grid {
+  margin-top: -400px;
+  margin-left: -400px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  background-color: transparent;
+  width: 800px;
+  height: 800px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiPjxyZWN0IHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PC9zdmc+');
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
+  background-color: #f00;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y {
+  -webkit-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
+  background-color: #008000;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
+  background-color: #00f;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+}
+@-moz-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
+  }
+
+  50% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
+  }
 }
 .platonic-viewport .scene .group.sierpinski-sponge {
   -webkit-animation-name: spin;

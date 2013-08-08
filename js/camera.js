@@ -71,6 +71,15 @@ Camera = (function() {
     this.el.mousedown(function(event) {
       return _this._on_mouse_down(event);
     });
+    Hammer(this.el[0]).on('move', function(event) {
+      return _this._on_mouse_move(event);
+    });
+    Hammer(this.el[0]).on('start', function(event) {
+      return _this._on_mouse_down(event);
+    });
+    Hammer(this.el[0]).on('end', function(event) {
+      return _this._on_mouse_up(event);
+    });
     this._update_viewport(this.config.rotation_x, this.config.rotation_y);
   }
 
