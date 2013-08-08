@@ -37,6 +37,13 @@ spin(duration = 30s)
 	animation-timing-function : linear
 
 
+.show
+	transition : opacity 1s ease
+	opacity    : 1
+
+.hide
+	opacity : 0 !important
+
 header
 	
 	color       : white
@@ -88,7 +95,7 @@ a.dpr
 		opacity : 1
 
 #stats
-	absolute   top 225px left 20px
+	absolute   top 242px left 20px
 	z-index  : 100
 
 	#fps
@@ -106,3 +113,18 @@ a.dpr
 	#fpsGraph
 		background-color : transparent !important
 		opacity          : 0.2 
+
+
+.platonic-viewport
+
+	.scene
+
+		.ui-component
+
+			@extend .show
+
+			&.grid
+				grid(component-id: 0)
+
+			&.display-axis
+				display-axis(component-id: 1)

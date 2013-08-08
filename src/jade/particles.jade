@@ -7,11 +7,18 @@ block css
 
 block scene
 
-	//- mixin grid(0, 0, 1)
-	mixin display-axis(1, 0, 1)
+	.group(data-camera-transform="1")
 
-	.mesh.particles(data-mesh-id="0", data-camera-transform="1") 
-		//- - particles = Math.pow(18, 2)
-		- particles = Math.pow(25, 2)
-		- for(j = 0; j < particles; j++)
-			.particle(data-particle-id="#{j}")
+		- particles = 80
+		- particle_sets = 2
+
+		- for(i = 0; i < particle_sets; i++)
+			.mesh.particles(data-mesh-id="#{i}") 
+				- for(j = 0; j < particles; j++)
+					.group(data-group-id="#{j}")
+						.particle(data-particle-id="#{j}")
+
+
+block append js
+
+	script(src="js/particles.js")

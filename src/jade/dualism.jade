@@ -1,5 +1,4 @@
 extends includes/layout
-include mixins/ui_components
 include mixins/primitives
 include mixins/platonic-solids
 
@@ -8,9 +7,6 @@ block css
 	link(rel="stylesheet", href="css/dualism.css")
 
 block scene
-
-	mixin grid(0, 0, 1)
-	mixin display-axis(1, 0, 1)
 
 	.group(data-camera-transform="1")
 

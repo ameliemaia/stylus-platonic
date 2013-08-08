@@ -31,6 +31,9 @@ class Scene
         # Add camera
         @cam = new Camera @$viewport
 
+         # Add UI
+        @ui = new UserInterface @$viewport
+
         # Stats
         @fps = new Stats()
         @$viewport.append @fps.domElement
@@ -51,6 +54,8 @@ class Scene
         scene_stats.add(@stats, 'faces').listen()
         scene_stats.add(@stats, 'photon_shaders').listen()
         scene_stats.add(@stats, 'ui_components').listen()
+
+        window.scene_stats = scene_stats
         # scene_stats.open()
 
         cam_settings = @gui.addFolder 'Camera'
@@ -65,6 +70,11 @@ class Scene
         @$window.trigger 'resize'
 
         @loop()
+
+    add_ui_controls: =>
+        ui_settings = @gui.addFolder 'UI'
+        ui_settings.add(@ui, 'grid').onChange => @ui.update()
+        ui_settings.add(@ui, 'display_axis').onChange => @ui.update()
 
     on_resize: ->
 
@@ -97,4 +107,4 @@ class Scene
         @update()
         requestAnimationFrame(@loop)
 
-$ -> scene = new Scene()
+$ -> window.PLATONIC_SCENE = new Scene()

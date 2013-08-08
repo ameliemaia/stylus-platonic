@@ -49,6 +49,10 @@ class Camera
         @el.mouseup ( event ) => @_on_mouse_up event
         @el.mousedown ( event ) => @_on_mouse_down event
 
+        Hammer(@el[0]).on 'move', ( event ) => @_on_mouse_move event
+        Hammer(@el[0]).on 'start', ( event ) => @_on_mouse_down event
+        Hammer(@el[0]).on 'end', ( event ) => @_on_mouse_up event
+
         @_update_viewport @config.rotation_x, @config.rotation_y
 
 
