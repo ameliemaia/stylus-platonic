@@ -165,7 +165,6 @@ Camera = (function() {
   Camera.prototype._on_mouse_move = function(event) {
     var position;
     position = this._get_event_position(event);
-    log('move');
     this._mouse.x = position.x;
     return this._mouse.y = position.y;
   };
