@@ -177,7 +177,9 @@ Camera = (function() {
 
   Camera.prototype._on_mouse_down = function(event) {
     var position;
-    event.gesture.preventDefault();
+    if (event.hasOwnProperty('gesture')) {
+      event.gesture.preventDefault();
+    }
     this._dragging = true;
     position = this._get_event_position(event);
     this._mouse.lx = position.x;
