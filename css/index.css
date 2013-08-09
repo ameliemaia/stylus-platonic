@@ -141,7 +141,7 @@ a img {
 }
 .show,
 .platonic-viewport .scene .ui-component {
-  -webkit-transition: opacity 1s ease;
+  -webkit-transition: opacity 0.5s ease;
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -363,6 +363,7 @@ a.dpr:hover {
   -webkit-animation-duration: 30s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
 }
 .platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] {
   -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);

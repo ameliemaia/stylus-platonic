@@ -18,7 +18,7 @@
 }
 .show,
 .platonic-viewport .scene .ui-component {
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
   opacity: 1;
 }
 .hide {

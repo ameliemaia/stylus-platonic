@@ -74,7 +74,7 @@ Camera = (function() {
     Hammer(this.el[0]).on('move', function(event) {
       return _this._on_mouse_move(event);
     });
-    Hammer(this.el[0]).on('start', function(event) {
+    Hammer(this.el[0]).on('touch', function(event) {
       return _this._on_mouse_down(event);
     });
     Hammer(this.el[0]).on('end', function(event) {
@@ -163,8 +163,10 @@ Camera = (function() {
 
 
   Camera.prototype._on_mouse_move = function(event) {
-    this._mouse.x = event.pageX;
-    return this._mouse.y = event.pageY;
+    var position;
+    position = this._get_event_position(event);
+    this._mouse.x = position.x;
+    return this._mouse.y = position.y;
   };
 
   /*
@@ -174,13 +176,15 @@ Camera = (function() {
 
 
   Camera.prototype._on_mouse_down = function(event) {
+    var position;
+    event.gesture.preventDefault();
     this._dragging = true;
-    this._mouse.lx = event.pageX;
-    this._mouse.ly = event.pageY;
+    position = this._get_event_position(event);
+    this._mouse.lx = position.x;
+    this._mouse.ly = position.y;
     this._rotation_lock_x = this.rotation_x;
     this._rotation_lock_y = this.rotation_y;
-    this.el.css('cursor', '-webkit-grabbing');
-    return event.preventDefault();
+    return this.el.css('cursor', '-webkit-grabbing');
   };
 
   /*
@@ -192,6 +196,28 @@ Camera = (function() {
   Camera.prototype._on_mouse_up = function(event) {
     this._dragging = false;
     return this.el.css('cursor', 'inherit');
+  };
+
+  /*
+  Get the touch / mouse position and return the coords
+  @param  {Object} event
+  @return {Object}
+  */
+
+
+  Camera.prototype._get_event_position = function(event) {
+    var evt_x, evt_y;
+    if (event.hasOwnProperty('gesture')) {
+      evt_x = event.gesture.center.pageX;
+      evt_y = event.gesture.center.pageY;
+    } else {
+      evt_x = event.pageX;
+      evt_y = event.pageY;
+    }
+    return {
+      x: evt_x,
+      y: evt_y
+    };
   };
 
   return Camera;
