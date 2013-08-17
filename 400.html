@@ -1,0 +1,3264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Platonic - CSS3D Library</title>
+    <link rel="stylesheet" href="css/400.css">
+  </head>
+  <body>
+    <header>
+      <h1>Platonic</h1>
+      <h2>CSS3D Library</h2>
+      <h3>Demos</h3>
+      <ul>
+        <li><a href="http://davidpaulrosser.github.io/stylus-platonic" title="Sierpinski">Sierpinski</a></li>
+        <li><a href="http://davidpaulrosser.github.io/stylus-platonic/dualism.html" title="Dualism">Dualism<span class="asterisk">*</span></a></li>
+        <li><a href="http://davidpaulrosser.github.io/stylus-platonic/particles.html" title="Particles">Particles</a></li>
+        <li><a href="http://davidpaulrosser.github.io/stylus-platonic/400.html" title="400">400<span class="asterisk">*</span></a></li>
+      </ul>
+      <p class="legend"> <small><span class="asterisk">* </span>Desktop only</small></p>
+      <h3>Devs</h3>
+      <ul> 
+        <li><a href="https://github.com/davidpaulrosser/stylus-platonic" title="Github">Github</a></li>
+        <li><a href="https://github.com/davidpaulrosser/stylus-platonic/wiki" title="Github Docs">Docs</a></li>
+      </ul>
+    </header>
+    <div class="platonic-viewport">
+      <div class="scene">
+        <div data-component-id="0" data-light="0" data-camera-transform="1" class="ui-component grid hide">
+          <div class="grid"></div>
+        </div>
+        <div data-component-id="1" data-light="0" data-camera-transform="1" class="ui-component display-axis hide">
+          <div class="mesh line x"></div>
+          <div class="mesh line y"></div>
+          <div class="mesh line z"></div>
+        </div>
+        <div data-camera-transform="1" class="group">
+          <div data-group-id="0" data-light="0" class="group sierpinski-sponge">
+            <div data-mesh-type="cube" data-mesh-id="0" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="1" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="2" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="3" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="4" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="5" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="6" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="7" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="8" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="9" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="10" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="11" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="12" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="13" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="14" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="15" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="16" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="17" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="18" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="19" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="20" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="21" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="22" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="23" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="24" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="25" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="26" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="27" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="28" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="29" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="30" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="31" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="32" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="33" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="34" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="35" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="36" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="37" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="38" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="39" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="40" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="41" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="42" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="43" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="44" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="45" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="46" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="47" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="48" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="49" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="50" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="51" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="52" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="53" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="54" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="55" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="56" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="57" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="58" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="59" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="60" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="61" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="62" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="63" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="64" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="65" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="66" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="67" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="68" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="69" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="70" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="71" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="72" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="73" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="74" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="75" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="76" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="77" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="78" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="79" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="80" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="81" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="82" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="83" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="84" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="85" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="86" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="87" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="88" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="89" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="90" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="91" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="92" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="93" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="94" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="95" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="96" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="97" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="98" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="99" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="100" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="101" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="102" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="103" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="104" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="105" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="106" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="107" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="108" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="109" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="110" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="111" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="112" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="113" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="114" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="115" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="116" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="117" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="118" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="119" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="120" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="121" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="122" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="123" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="124" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="125" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="126" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="127" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="128" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="129" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="130" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="131" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="132" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="133" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="134" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="135" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="136" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="137" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="138" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="139" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="140" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="141" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="142" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="143" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="144" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="145" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="146" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="147" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="148" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="149" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="150" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="151" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="152" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="153" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="154" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="155" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="156" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="157" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="158" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="159" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="160" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="161" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="162" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="163" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="164" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="165" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="166" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="167" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="168" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="169" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="170" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="171" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="172" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="173" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="174" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="175" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="176" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="177" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="178" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="179" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="180" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="181" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="182" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="183" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="184" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="185" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="186" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="187" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="188" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="189" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="190" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="191" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="192" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="193" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="194" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="195" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="196" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="197" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="198" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="199" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="200" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="201" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="202" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="203" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="204" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="205" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="206" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="207" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="208" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="209" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="210" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="211" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="212" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="213" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="214" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="215" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="216" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="217" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="218" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="219" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="220" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="221" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="222" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="223" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="224" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="225" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="226" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="227" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="228" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="229" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="230" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="231" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="232" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="233" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="234" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="235" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="236" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="237" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="238" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="239" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="240" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="241" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="242" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="243" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="244" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="245" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="246" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="247" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="248" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="249" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="250" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="251" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="252" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="253" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="254" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="255" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="256" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="257" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="258" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="259" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="260" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="261" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="262" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="263" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="264" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="265" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="266" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="267" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="268" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="269" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="270" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="271" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="272" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="273" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="274" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="275" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="276" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="277" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="278" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="279" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="280" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="281" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="282" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="283" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="284" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="285" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="286" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="287" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="288" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="289" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="290" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="291" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="292" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="293" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="294" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="295" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="296" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="297" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="298" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="299" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="300" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="301" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="302" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="303" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="304" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="305" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="306" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="307" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="308" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="309" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="310" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="311" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="312" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="313" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="314" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="315" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="316" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="317" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="318" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="319" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="320" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="321" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="322" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="323" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="324" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="325" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="326" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="327" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="328" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="329" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="330" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="331" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="332" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="333" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="334" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="335" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="336" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="337" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="338" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="339" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="340" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="341" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="342" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="343" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="344" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="345" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="346" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="347" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="348" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="349" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="350" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="351" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="352" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="353" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="354" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="355" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="356" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="357" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="358" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="359" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="360" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="361" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="362" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="363" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="364" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="365" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="366" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="367" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="368" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="369" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="370" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="371" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="372" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="373" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="374" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="375" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="376" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="377" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="378" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="379" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="380" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="381" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="382" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="383" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="384" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="385" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="386" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="387" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="388" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="389" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="390" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="391" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="392" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="393" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="394" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="395" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="396" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="397" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="398" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+            <div data-mesh-type="cube" data-mesh-id="399" class="mesh">
+              <div data-face-id="0" class="face"></div>
+              <div data-face-id="1" class="face"></div>
+              <div data-face-id="2" class="face"></div>
+              <div data-face-id="3" class="face"></div>
+              <div data-face-id="4" class="face"></div>
+              <div data-face-id="5" class="face"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer><a href="http://davidpaulrosser.co.uk/" title="DPR" class="dpr"></a></footer>
+    <script src="js/lib/jquery-2.0.2.min.js"></script>
+    <script src="js/lib/stats.min.js"></script>
+    <script src="js/lib/photon.js"></script>
+    <script src="js/lib/dat.gui.min.js"></script>
+    <script src="js/lib/hammer.js"></script>
+    <script src="js/lib/rAF.js"></script>
+    <script src="js/lib/signals.min.js"></script>
+    <script src="js/camera.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/scene.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-42933258-1', 'davidpaulrosser.github.io');
+      ga('send', 'pageview');
+      
+    </script>
+    <script src="js/400.js"></script>
+  </body>
+</html>

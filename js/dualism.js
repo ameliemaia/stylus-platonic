@@ -87,6 +87,7 @@ IndexView = (function() {
     this.on_time_update = __bind(this.on_time_update, this);
     this.on_audio_ended = __bind(this.on_audio_ended, this);
     this.on_audio_ready = __bind(this.on_audio_ready, this);
+    this.on_scene_ready = __bind(this.on_scene_ready, this);
     this.timeline = {
       '0': {
         "in": {
@@ -157,14 +158,21 @@ IndexView = (function() {
         }
       }
     };
+    this.particles = $('.particle').length;
+    this.scene = new PlatonicScene();
+    this.scene.on.ready.addOnce(this.on_scene_ready);
+    this.scene.setup();
+  }
+
+  IndexView.prototype.on_scene_ready = function() {
     this.gui_sound = window.gui.addFolder('Sound');
     this.player = new AudioPlayer('audio');
     this.player.on.loadedmetadata.addOnce(this.on_audio_ready);
     this.player.on.timeupdate.add(this.on_time_update);
     this.player.on.ended.add(this.on_audio_ended);
     this.player.set_volume(0.5);
-    this.player.setup();
-  }
+    return this.player.setup();
+  };
 
   IndexView.prototype.on_audio_ready = function() {
     var _this = this;
@@ -173,6 +181,7 @@ IndexView = (function() {
     });
     this.gui_sound.add(this.song, 'credits');
     this.gui_sound.open();
+    this.scene.loop();
     return this.player.play();
   };
 

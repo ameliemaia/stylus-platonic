@@ -57,6 +57,17 @@ header ul {
 header ul li {
   margin: 2px 0;
 }
+header span.asterisk {
+  color: #bfbfbf;
+}
+header p.legend {
+  margin-top: 20px;
+}
+header p.legend small {
+  color: #808080;
+  font-size: 10px;
+  font-style: italic;
+}
 a.dpr {
   background-image: url('../img/logo_inverse.svg');
   background-size: 100%;
@@ -70,8 +81,7 @@ a.dpr:hover {
   opacity: 1;
 }
 #stats {
-  absolute: top 242px left 20px;
-  z-index: 100;
+  margin-top: 20px;
 }
 #stats #fps {
   background-color: transparent !important;

@@ -1,4 +1,4 @@
-var Scene,
+var PlatonicScene,
   _this = this,
   __slice = [].slice,
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
@@ -9,8 +9,10 @@ window.log = function() {
   return typeof console !== "undefined" && console !== null ? console.log.apply(console, args) : void 0;
 };
 
-Scene = (function() {
-  Scene.prototype.stats = {
+PlatonicScene = (function() {
+  PlatonicScene.prototype.SCENE_READY_CLASS = 'scene-ready';
+
+  PlatonicScene.prototype.stats = {
     groups: 0,
     meshes: 0,
     faces: 0,
@@ -18,14 +20,21 @@ Scene = (function() {
     ui_components: 0
   };
 
-  function Scene() {
+  function PlatonicScene(camera_config) {
+    this.camera_config = camera_config != null ? camera_config : {};
     this.loop = __bind(this.loop, this);
     this.add_ui_controls = __bind(this.add_ui_controls, this);
-    var cam_settings, scene_stats,
-      _this = this;
+    this.setup = __bind(this.setup, this);
     this.$window = $(window);
     this.$viewport = $('.platonic-viewport');
     this.$scene = this.$viewport.find('.scene');
+    this.on = new Object();
+    this.on.ready = new signals.Signal();
+  }
+
+  PlatonicScene.prototype.setup = function() {
+    var cam_settings,
+      _this = this;
     this.light = new Photon.Light();
     this.face_groups = [];
     $('[data-light="1"]').each(function(index, element) {
@@ -33,10 +42,10 @@ Scene = (function() {
       face_group = new Photon.FaceGroup($(element)[0], $(element).find('.face'), 0.8, 0.1, true);
       return _this.face_groups.push(face_group);
     });
-    this.cam = new Camera(this.$viewport);
+    this.cam = new Camera(this.$viewport, this.camera_config);
     this.ui = new UserInterface(this.$viewport);
     this.fps = new Stats();
-    this.$viewport.append(this.fps.domElement);
+    $('header').append(this.fps.domElement);
     this.stats.groups = $('.group').length;
     this.stats.meshes = $('.mesh').length;
     this.stats.faces = $('.face').length;
@@ -44,13 +53,12 @@ Scene = (function() {
     this.stats.ui_components = $('.ui-component').length;
     this.gui = new dat.GUI();
     window.gui = this.gui;
-    scene_stats = this.gui.addFolder('Scene');
-    scene_stats.add(this.stats, 'groups').listen();
-    scene_stats.add(this.stats, 'meshes').listen();
-    scene_stats.add(this.stats, 'faces').listen();
-    scene_stats.add(this.stats, 'photon_shaders').listen();
-    scene_stats.add(this.stats, 'ui_components').listen();
-    window.scene_stats = scene_stats;
+    this.scene_stats = this.gui.addFolder('Scene');
+    this.scene_stats.add(this.stats, 'groups').listen();
+    this.scene_stats.add(this.stats, 'meshes').listen();
+    this.scene_stats.add(this.stats, 'faces').listen();
+    this.scene_stats.add(this.stats, 'photon_shaders').listen();
+    this.scene_stats.add(this.stats, 'ui_components').listen();
     cam_settings = this.gui.addFolder('Camera');
     cam_settings.add(this.cam, 'perspective', 0, 2000);
     cam_settings.add(this.cam, 'rotation_x').listen();
@@ -60,10 +68,11 @@ Scene = (function() {
       return _this.on_resize();
     });
     this.$window.trigger('resize');
-    this.loop();
-  }
+    this.$scene.addClass(this.SCENE_READY_CLASS);
+    return this.on.ready.dispatch();
+  };
 
-  Scene.prototype.add_ui_controls = function() {
+  PlatonicScene.prototype.add_ui_controls = function() {
     var ui_settings,
       _this = this;
     ui_settings = this.gui.addFolder('UI');
@@ -75,7 +84,7 @@ Scene = (function() {
     });
   };
 
-  Scene.prototype.on_resize = function() {
+  PlatonicScene.prototype.on_resize = function() {
     this.win_width = this.$window.width();
     this.win_height = this.$window.height();
     this.$viewport.css({
@@ -87,7 +96,7 @@ Scene = (function() {
     return this.cam.resize();
   };
 
-  Scene.prototype.update = function() {
+  PlatonicScene.prototype.update = function() {
     var face_group, _i, _len, _ref;
     this.fps.begin();
     this.cam.update();
@@ -101,15 +110,11 @@ Scene = (function() {
     return this.fps.end();
   };
 
-  Scene.prototype.loop = function() {
+  PlatonicScene.prototype.loop = function() {
     this.update();
     return requestAnimationFrame(this.loop);
   };
 
-  return Scene;
+  return PlatonicScene;
 
 })();
-
-$(function() {
-  return window.PLATONIC_SCENE = new Scene();
-});

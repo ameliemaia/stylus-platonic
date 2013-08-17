@@ -186,6 +186,17 @@ header ul {
 header ul li {
   margin: 2px 0;
 }
+header span.asterisk {
+  color: #bfbfbf;
+}
+header p.legend {
+  margin-top: 20px;
+}
+header p.legend small {
+  color: #808080;
+  font-size: 10px;
+  font-style: italic;
+}
 a.dpr {
   background-image: url('../img/logo_inverse.svg');
   -webkit-background-size: 100%;
@@ -205,10 +216,7 @@ a.dpr:hover {
   filter: none;
 }
 #stats {
-  position: absolute;
-  top: 242px;
-  left: 20px;
-  z-index: 100;
+  margin-top: 20px;
 }
 #stats #fps {
   background-color: transparent !important;
@@ -358,12 +366,16 @@ a.dpr:hover {
     -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
   }
 }
+.platonic-viewport .scene.scene-ready .group.sierpinski-sponge {
+  -webkit-animation-play-state: running !important;
+}
 .platonic-viewport .scene .group.sierpinski-sponge {
   -webkit-animation-name: spin;
   -webkit-animation-duration: 30s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
 }
 .platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] {
   -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);

@@ -186,6 +186,17 @@ header ul {
 header ul li {
   margin: 2px 0;
 }
+header span.asterisk {
+  color: #bfbfbf;
+}
+header p.legend {
+  margin-top: 20px;
+}
+header p.legend small {
+  color: #808080;
+  font-size: 10px;
+  font-style: italic;
+}
 a.dpr {
   background-image: url('../img/logo_inverse.svg');
   -webkit-background-size: 100%;
@@ -205,10 +216,7 @@ a.dpr:hover {
   filter: none;
 }
 #stats {
-  position: absolute;
-  top: 242px;
-  left: 20px;
-  z-index: 100;
+  margin-top: 20px;
 }
 #stats #fps {
   background-color: transparent !important;
@@ -358,6 +366,9 @@ a.dpr:hover {
     -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
   }
 }
+.platonic-viewport .scene.scene-ready .mesh {
+  -webkit-animation-play-state: running !important;
+}
 .platonic-viewport .scene .group#icosahedron {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -369,143 +380,143 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 1.6s ease 0.5s;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="2"] {
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8771498358109966s;
-  -webkit-animation-delay: 0.6348597866948693s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="11"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3454133799299598s;
-  -webkit-animation-delay: 0.42280916236341s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="17"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.4977876699529588s;
-  -webkit-animation-delay: 0.5486361575080081s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="12"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8731933836825192s;
-  -webkit-animation-delay: 0.27704290165565904s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="16"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.22164485575631263s;
-  -webkit-animation-delay: 0.1795471796998754s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="17"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3499345166841522s;
-  -webkit-animation-delay: 0.05340393339283764s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="1"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.601873765513301s;
-  -webkit-animation-delay: 0.13235497006680816s;
+  -webkit-animation-duration: 0.4935849883127958s;
+  -webkit-animation-delay: 0.5526095763314515s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="14"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.732154909428209s;
-  -webkit-animation-delay: 0.6339560389053076s;
+  -webkit-animation-duration: 0.6379790426697582s;
+  -webkit-animation-delay: 0.028015657328069207s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="8"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6420490932650864s;
+  -webkit-animation-delay: 0.3483726813923567s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="17"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3701043632347137s;
-  -webkit-animation-delay: 0.1771477032219991s;
+  -webkit-animation-duration: 0.2727501393528655s;
+  -webkit-animation-delay: 0.01372366496361792s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="17"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.47180257046129553s;
+  -webkit-animation-delay: 0.2254656317643821s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.05969322924502194s;
+  -webkit-animation-delay: 0.004033482703380287s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="12"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.13241252107545734s;
-  -webkit-animation-delay: 0.6230169056681916s;
+  -webkit-animation-duration: 0.4418340050149709s;
+  -webkit-animation-delay: 0.5344668297097086s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="19"] {
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="5"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.010531361354514957s;
-  -webkit-animation-delay: 0.6605801949976011s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="8"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8864501405507327s;
-  -webkit-animation-delay: 0.08514644012320786s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="12"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.4887515066424385s;
-  -webkit-animation-delay: 0.5672061759745701s;
+  -webkit-animation-duration: 0.3402019618079066s;
+  -webkit-animation-delay: 0.3506185753969475s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="8"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.43694176264107226s;
-  -webkit-animation-delay: 0.2615275030490011s;
+  -webkit-animation-duration: 0.6039688997436315s;
+  -webkit-animation-delay: 0.27282321834936735s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="7"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.6890214276267216s;
-  -webkit-animation-delay: 0.3094034433364868s;
+  -webkit-animation-duration: 0.7657205786788837s;
+  -webkit-animation-delay: 0.27174798196647315s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="7"] {
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="14"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.22106623998843133s;
-  -webkit-animation-delay: 0.5421737778931855s;
+  -webkit-animation-duration: 0.5913845374714584s;
+  -webkit-animation-delay: 0.5968280544504523s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="17"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4648102347040549s;
+  -webkit-animation-delay: 0.1282902852166444s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="13"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6931996756000445s;
+  -webkit-animation-delay: 0.5561500867595895s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="11"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.2592042313423008s;
+  -webkit-animation-delay: 0.41534654048737135s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="18"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.16840618522837758s;
-  -webkit-animation-delay: 0.6428718907525762s;
+  -webkit-animation-duration: 0.4478530576452613s;
+  -webkit-animation-delay: 0.68072628271766s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="10"] {
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="5"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.10046250619925559s;
-  -webkit-animation-delay: 0.032064666785299775s;
+  -webkit-animation-duration: 0.6111305130645633s;
+  -webkit-animation-delay: 0.1667198121547699s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="4"] {
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="2"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3228161484701559s;
-  -webkit-animation-delay: 0.5921610778430476s;
+  -webkit-animation-duration: 0.6413800103589893s;
+  -webkit-animation-delay: 0.46135271405801176s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="4"] {
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="15"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.25927505171857773s;
-  -webkit-animation-delay: 0.31543144120369104s;
+  -webkit-animation-duration: 0.1731137964874506s;
+  -webkit-animation-delay: 0.30514396305661645s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.0028796742903068663s;
+  -webkit-animation-delay: 0.47310579980257894s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-1 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.05685553131625056s;
+  -webkit-animation-delay: 0.608965719374828s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -521,143 +532,143 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 0.4s ease 0;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="18"] {
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="7"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.712078995932825s;
-  -webkit-animation-delay: 0.5824552809819579s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="16"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.5000046892091632s;
-  -webkit-animation-delay: 0.361144378548488s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="16"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.13838446594309062s;
-  -webkit-animation-delay: 0.36459876338485625s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.5160433802520856s;
-  -webkit-animation-delay: 0.5851318665081635s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="6"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.12334752841852606s;
-  -webkit-animation-delay: 0.25708728122990576s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="15"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.49595293127931656s;
-  -webkit-animation-delay: 0.6301158137386664s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="0"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.05015329343732446s;
-  -webkit-animation-delay: 0.2048273620661348s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="12"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.13893828762229532s;
-  -webkit-animation-delay: 0.4818881895625963s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="18"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.6769731767009944s;
-  -webkit-animation-delay: 0.5447789449477568s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="17"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3190157734556124s;
-  -webkit-animation-delay: 0.5590933638857677s;
+  -webkit-animation-duration: 0.5119518114253879s;
+  -webkit-animation-delay: 0.027614755230024456s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="3"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.1904369781492278s;
-  -webkit-animation-delay: 0.30520165034104135s;
+  -webkit-animation-duration: 0.09403986765537412s;
+  -webkit-animation-delay: 0.25081773817073555s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="5"] {
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="9"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3863402031362057s;
-  -webkit-animation-delay: 0.4933142716065049s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="12"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.17316129044629633s;
-  -webkit-animation-delay: 0.21197996225673704s;
+  -webkit-animation-duration: 0.20019184711854907s;
+  -webkit-animation-delay: 0.6967026468133554s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="7"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.403775841020979s;
-  -webkit-animation-delay: 0.5328911304241046s;
+  -webkit-animation-duration: 0.017630596971139313s;
+  -webkit-animation-delay: 0.19722689064219592s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="6"] {
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="14"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.42172422632575035s;
-  -webkit-animation-delay: 0.4821142555912956s;
+  -webkit-animation-duration: 0.2547142295865342s;
+  -webkit-animation-delay: 0.2304886076133698s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="17"] {
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="9"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.4168339247815311s;
-  -webkit-animation-delay: 0.2050768358167261s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="18"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.37485538080800324s;
-  -webkit-animation-delay: 0.016527485218830407s;
+  -webkit-animation-duration: 0.7517068605171516s;
+  -webkit-animation-delay: 0.15280742624308913s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="3"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8386387705570088s;
-  -webkit-animation-delay: 0.21386957440990953s;
+  -webkit-animation-duration: 0.5309768844628707s;
+  -webkit-animation-delay: 0.09470343997236341s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="17"] {
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="4"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.40692841918207706s;
-  -webkit-animation-delay: 0.5405472212238237s;
+  -webkit-animation-duration: 0.7468851487152278s;
+  -webkit-animation-delay: 0.30186227336525917s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.3983724986901507s;
+  -webkit-animation-delay: 0.27194150581490245s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="19"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.44085426509846004s;
-  -webkit-animation-delay: 0.3831027284031734s;
+  -webkit-animation-duration: 0.49808240721467884s;
+  -webkit-animation-delay: 0.3670407098950818s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="14"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8731101490790024s;
+  -webkit-animation-delay: 0.38013856161851434s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="11"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.08942260053008795s;
+  -webkit-animation-delay: 0.5668392514344305s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="11"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.18280053441412747s;
+  -webkit-animation-delay: 0.6170944875106215s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.14535715179517866s;
+  -webkit-animation-delay: 0.41216192743740976s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="11"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.7575359077658504s;
+  -webkit-animation-delay: 0.18813535945955662s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="17"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8266654475592077s;
+  -webkit-animation-delay: 0.05846251482143998s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="8"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4062446497147903s;
+  -webkit-animation-delay: 0.09021151147317141s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.13667745154816657s;
+  -webkit-animation-delay: 0.16216166347730904s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.206516449037008s;
+  -webkit-animation-delay: 0.4381134347990155s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#icosahedron.glitch-2 .face[data-face-id="14"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8950022784993052s;
+  -webkit-animation-delay: 0.5274617148563265s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -672,87 +683,87 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 2.1s ease 0;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="7"] {
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="9"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.190822133095935s;
-  -webkit-animation-delay: 0.19667066917754708s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="6"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.7272782064741478s;
-  -webkit-animation-delay: 0.4060906636994332s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="8"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.08325358328875154s;
-  -webkit-animation-delay: 0.10297598887700588s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="0"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8363524036249146s;
-  -webkit-animation-delay: 0.1483998308656737s;
+  -webkit-animation-duration: 0.3278713195351884s;
+  -webkit-animation-delay: 0.3936944210436195s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="11"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.44122144191060214s;
-  -webkit-animation-delay: 0.217054413841106s;
+  -webkit-animation-duration: 0.4731642596656457s;
+  -webkit-animation-delay: 0.31580625437200066s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="3"] {
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="10"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.6520604122197255s;
-  -webkit-animation-delay: 0.31185326217673714s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="1"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3996505377581343s;
-  -webkit-animation-delay: 0.49270554957911367s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="0"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.5483107526320964s;
-  -webkit-animation-delay: 0.6375009421724825s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="8"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.4257756152423099s;
-  -webkit-animation-delay: 0.32179674271028486s;
+  -webkit-animation-duration: 0.15960813858546316s;
+  -webkit-animation-delay: 0.6836120189167558s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="5"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.09619397863280028s;
-  -webkit-animation-delay: 0.022408662224188445s;
+  -webkit-animation-duration: 0.8665325855137781s;
+  -webkit-animation-delay: 0.18165397881530224s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="4"] {
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="8"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.7503058038186282s;
-  -webkit-animation-delay: 0.6926822686335071s;
+  -webkit-animation-duration: 0.6001378641463816s;
+  -webkit-animation-delay: 0.2076868419535458s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="11"] {
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="8"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.2684558477019891s;
-  -webkit-animation-delay: 0.5327580078272148s;
+  -webkit-animation-duration: 0.1882295465329662s;
+  -webkit-animation-delay: 0.49453644407913083s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.34812272912822667s;
+  -webkit-animation-delay: 0.5143203050363808s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.22872651158832014s;
+  -webkit-animation-delay: 0.5707849578699097s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="7"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.1524289947235957s;
+  -webkit-animation-delay: 0.24600995765067635s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="0"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.14482922621537s;
+  -webkit-animation-delay: 0.14624599530361593s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="5"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.12881283333990723s;
+  -webkit-animation-delay: 0.2591301133856177s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-1 .face[data-face-id="10"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.4168945389334113s;
+  -webkit-animation-delay: 0.07181026502512394s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -768,87 +779,87 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 0.3s ease 0;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="8"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.3782660547411069s;
-  -webkit-animation-delay: 0.2753293013200164s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
 .platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="2"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.6012814620975405s;
-  -webkit-animation-delay: 0.2598517173435539s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="1"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.6722077175276354s;
-  -webkit-animation-delay: 0.5915354239987209s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="1"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.05058994721621275s;
-  -webkit-animation-delay: 0.32655485006980595s;
+  -webkit-animation-duration: 0.034921912313438955s;
+  -webkit-animation-delay: 0.08518539415672421s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="5"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.603492630366236s;
-  -webkit-animation-delay: 0.09100279684644191s;
+  -webkit-animation-duration: 0.06321112574078143s;
+  -webkit-animation-delay: 0.10153530521783977s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="6"] {
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="2"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.40395262876991184s;
-  -webkit-animation-delay: 0.21458760125096887s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="4"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.04019871912896633s;
-  -webkit-animation-delay: 0.3189938413444906s;
+  -webkit-animation-duration: 0.1993039204739034s;
+  -webkit-animation-delay: 0.49837398428935553s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="1"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.41087721339426936s;
-  -webkit-animation-delay: 0.00955102217849344s;
+  -webkit-animation-duration: 0.4933100595837459s;
+  -webkit-animation-delay: 0.16714644657913594s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8130914082052186s;
+  -webkit-animation-delay: 0.18561772289685904s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="9"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.01146005631890148s;
+  -webkit-animation-delay: 0.08960196003317833s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.720117399492301s;
-  -webkit-animation-delay: 0.2743433546507731s;
+  -webkit-animation-duration: 0.30206794515252117s;
+  -webkit-animation-delay: 0.4498535923659801s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="8"] {
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="1"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.7578384963562712s;
-  -webkit-animation-delay: 0.3574282446876168s;
+  -webkit-animation-duration: 0.7964766541030258s;
+  -webkit-animation-delay: 0.21025378839112818s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="10"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.7841497908113525s;
-  -webkit-animation-delay: 0.4965913950465619s;
+  -webkit-animation-duration: 0.19324277937412263s;
+  -webkit-animation-delay: 0.5658530356828123s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="8"] {
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8234226899687201s;
-  -webkit-animation-delay: 0.0637523208046332s;
+  -webkit-animation-duration: 0.8646933991927653s;
+  -webkit-animation-delay: 0.032422714051790535s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.22572962266858668s;
+  -webkit-animation-delay: 0.2808302134275436s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#dodecahedron.glitch-2 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.10180764680262655s;
+  -webkit-animation-delay: 0.5506364546017721s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -875,45 +886,45 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 0.5s ease 0;
 }
-.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="1"] {
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.4295984483091161s;
-  -webkit-animation-delay: 0.4921921130269766s;
+  -webkit-animation-duration: 0.5518610181519762s;
+  -webkit-animation-delay: 0.3975554635049775s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="5"] {
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.30757710691541434s;
-  -webkit-animation-delay: 0.43121396109927446s;
+  -webkit-animation-duration: 0.39971719023305924s;
+  -webkit-animation-delay: 0.30255443537607785s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="1"] {
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8275628212373703s;
-  -webkit-animation-delay: 0.03416783271823078s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="5"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.18062614656519146s;
-  -webkit-animation-delay: 0.6096019186079502s;
+  -webkit-animation-duration: 0.4947249059798196s;
+  -webkit-animation-delay: 0.3653464127564803s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="3"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.23874256359413268s;
-  -webkit-animation-delay: 0.4311809544218704s;
+  -webkit-animation-duration: 0.11589774254243822s;
+  -webkit-animation-delay: 0.18640122818760574s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="5"] {
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="4"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.19553483384661377s;
-  -webkit-animation-delay: 0.41621894857380537s;
+  -webkit-animation-duration: 0.720838971552439s;
+  -webkit-animation-delay: 0.3581504332600161s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#hexahedron.glitch-2 .face[data-face-id="4"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.19736182345077397s;
+  -webkit-animation-delay: 0.5392521667061373s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -928,59 +939,59 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 1.5s ease 0;
 }
-.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="3"] {
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.07067009944003076s;
-  -webkit-animation-delay: 0.3196901342831552s;
+  -webkit-animation-duration: 0.8061140982666984s;
+  -webkit-animation-delay: 0.2775669028284028s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
-.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="6"] {
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="7"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.7487972196657211s;
-  -webkit-animation-delay: 0.002511278656311333s;
+  -webkit-animation-duration: 0.7141681002220139s;
+  -webkit-animation-delay: 0.6407169100828468s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.35116493941750376s;
+  -webkit-animation-delay: 0.4289181729312986s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="7"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.17901274231262507s;
+  -webkit-animation-delay: 0.47592978102620687s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.062034661928191785s;
+  -webkit-animation-delay: 0.3833954782923683s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="2"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.20754398193676024s;
+  -webkit-animation-delay: 0.12220824270043522s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="0"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.32417143096681683s;
-  -webkit-animation-delay: 0.13600290743634103s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.827812072634697s;
-  -webkit-animation-delay: 0.4102412335807457s;
+  -webkit-animation-duration: 0.3852940835757181s;
+  -webkit-animation-delay: 0.22671457214746624s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="3"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.21964224390685558s;
-  -webkit-animation-delay: 0.25354332504794s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="3"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.500251540238969s;
-  -webkit-animation-delay: 0.15021576138678938s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.4022428778931499s;
-  -webkit-animation-delay: 0.07695456703659147s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.in-1 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.49519043939653784s;
-  -webkit-animation-delay: 0.05633928473107516s;
+  -webkit-animation-duration: 0.8658814145252108s;
+  -webkit-animation-delay: 0.3560361366719007s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -996,59 +1007,59 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 0.3s ease 0;
 }
-.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="5"] {
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="4"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.7090760965598747s;
-  -webkit-animation-delay: 0.6811330968048424s;
+  -webkit-animation-duration: 0.7647540170000866s;
+  -webkit-animation-delay: 0.6030179983470588s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="1"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.5882146701682359s;
-  -webkit-animation-delay: 0.31527613243088126s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="6"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8474279032554478s;
-  -webkit-animation-delay: 0.5747960767475888s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.6536638097371906s;
-  -webkit-animation-delay: 0.04643546834122389s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.35433518872596326s;
-  -webkit-animation-delay: 0.594828618550673s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8758363643428311s;
-  -webkit-animation-delay: 0.3372927312040701s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="2"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.8988437948282808s;
-  -webkit-animation-delay: 0.4088756281416863s;
+  -webkit-animation-duration: 0.32898022583685815s;
+  -webkit-animation-delay: 0.23556906587909907s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
 .platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="7"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.4018270617350936s;
-  -webkit-animation-delay: 0.23436949208844451s;
+  -webkit-animation-duration: 0.4903827697969973s;
+  -webkit-animation-delay: 0.6132602346362546s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="7"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.8707669616444037s;
+  -webkit-animation-delay: 0.031714514992199835s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="7"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.3294880715198815s;
+  -webkit-animation-delay: 0.5945503642316907s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="6"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.294290583813563s;
+  -webkit-animation-delay: 0.27270650782156736s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.29964181773830206s;
+  -webkit-animation-delay: 0.3984457628801465s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#octahedron.glitch-2 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.3559972145128995s;
+  -webkit-animation-delay: 0.293246942688711s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -1063,31 +1074,31 @@ a.dpr:hover {
   filter: none;
   -webkit-transition: opacity 3s ease 0;
 }
-.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="1"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.7178320251870901s;
-  -webkit-animation-delay: 0.41120647019706663s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="1"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.27409852668643s;
-  -webkit-animation-delay: 0.5259208756731822s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
-.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="1"] {
-  -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.5118341550696641s;
-  -webkit-animation-delay: 0.29226618926040826s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-}
 .platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="2"] {
   -webkit-animation-name: opacity_glitch;
-  -webkit-animation-duration: 0.5061316898558289s;
-  -webkit-animation-delay: 0.6809230394661426s;
+  -webkit-animation-duration: 0.1974643825320527s;
+  -webkit-animation-delay: 0.23495379867963492s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="3"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6779837276553735s;
+  -webkit-animation-delay: 0.3047443426446989s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.5954825863474981s;
+  -webkit-animation-delay: 0.2518236761447042s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+}
+.platonic-viewport .scene .group#tetrahedron.glitch-1 .face[data-face-id="1"] {
+  -webkit-animation-name: opacity_glitch;
+  -webkit-animation-duration: 0.6892371363239364s;
+  -webkit-animation-delay: 0.23620696126017718s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
 }
@@ -1097,6 +1108,7 @@ a.dpr:hover {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
 }
 .platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] {
   -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(-31.7deg);
@@ -1317,6 +1329,7 @@ a.dpr:hover {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
 }
 .platonic-viewport .scene .mesh.cube[data-mesh-id="1"] {
   -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -1386,6 +1399,7 @@ a.dpr:hover {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
 }
 .platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="2"] {
   -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -1436,6 +1450,7 @@ a.dpr:hover {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
 }
 .platonic-viewport .scene .mesh.octahedron[data-mesh-id="3"] {
   -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -1497,6 +1512,7 @@ a.dpr:hover {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
 }
 .platonic-viewport .scene .mesh.icosahedron[data-mesh-id="4"] {
   -webkit-transform: translate3d(0, 0, 0) rotateX(58deg) rotateY(72deg) rotateZ(0deg);

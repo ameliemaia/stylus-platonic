@@ -54,11 +54,15 @@ Camera = (function() {
   */
 
 
-  function Camera(el) {
+  function Camera(el, config) {
     var _this = this;
     this.el = el;
+    if (config == null) {
+      config = {};
+    }
     this._update_viewport = __bind(this._update_viewport, this);
     this.reset = __bind(this.reset, this);
+    this.config = $.extend(this.config, config);
     this.config.perspective = parseFloat(this.el.css('perspective'));
     this.perspective = this.config.perspective;
     this._$objects = $('[data-camera-transform="1"]');
