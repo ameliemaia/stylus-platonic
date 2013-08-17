@@ -1,121 +1,24 @@
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff');
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff');
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff');
-}
-.show,
-.platonic-viewport .scene .ui-component {
-  transition: opacity 0.5s ease;
-  opacity: 1;
-}
-.hide {
-  opacity: 0 !important;
-}
-header {
-  color: #fff;
-  absolute: top 20px left 20px;
-  font-family: 'Droid Serif';
-  font-size: 13px;
-  z-index: 2;
-}
-header h1 {
-  font-size: 23px;
-  text-transform: uppercase;
-}
-header h2 {
-  font-style: italic;
-  margin-bottom: 30px;
-}
-header h3 {
-  font-style: italic;
-  margin-top: 20px;
-}
-header a {
-  color: #808080;
-  text-decoration: none;
-  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-header a:hover {
-  color: #666;
-}
-header ul {
-  margin-top: 10px;
-}
-header ul li {
-  margin: 2px 0;
-}
-header span.asterisk {
-  color: #bfbfbf;
-}
-header p.legend {
-  margin-top: 20px;
-}
-header p.legend small {
-  color: #808080;
-  font-size: 10px;
-  font-style: italic;
-}
-a.dpr {
-  background-image: url('../img/logo_inverse.svg');
-  background-size: 100%;
-  absolute: bottom 20px left 20px;
-  opacity: 0.5;
-  transition: opacity 0.5s ease;
-  width: 50px;
-  height: 50px;
-}
-a.dpr:hover {
-  opacity: 1;
-}
-#stats {
-  margin-top: 20px;
-}
-#stats #fps {
-  background-color: transparent !important;
-  padding: 0 !important;
-}
-#stats #fps span {
-  background-color: #fff !important;
-}
-#stats #fps #fpsText {
-  color: #fff !important;
-  font-family: 'Droid Serif' !important;
-  font-weight: normal !important;
-}
-#stats #fpsGraph {
-  background-color: transparent !important;
-  opacity: 0.2;
-}
-@-moz-keyframes spin {
-  0%
-  50%
-  100%}
-@-webkit-keyframes spin {
-  0%
-  50%
-  100%}
-@-o-keyframes spin {
-  0%
-  50%
-  100%}
-@-ms-keyframes spin {
-  0%
-  50%
-  100%}
-@keyframes spin {
-  0%
-  50%
-  100%}
+@font-face{font-family:'Droid Serif';font-style:normal;font-weight:400;src:local('Droid Serif'),local('DroidSerif'),url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff')}
+@font-face{font-family:'Droid Serif';font-style:normal;font-weight:700;src:local('Droid Serif Bold'),local('DroidSerif-Bold'),url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff')}
+@font-face{font-family:'Droid Serif';font-style:italic;font-weight:400;src:local('Droid Serif Italic'),local('DroidSerif-Italic'),url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff')}
+.show,.platonic-viewport .scene .ui-component{transition:opacity .5s ease;opacity:1}
+.hide{opacity:0 !important}
+header{color:#fff;absolute:top 20px left 20px;font-family:'Droid Serif';font-size:13px;z-index:2;}
+header h1{font-size:23px;text-transform:uppercase}
+header h2{font-style:italic;margin-bottom:30px}
+header h3{font-style:italic;margin-top:20px}
+header a{color:#808080;text-decoration:none;transition:color .3s cubic-bezier(.25,.46,.45,.94);}
+header a:hover{color:#666}
+header ul{margin-top:10px;}
+header ul li{margin:2px 0}
+header span.asterisk{color:#bfbfbf}
+header p.legend{margin-top:20px;}
+header p.legend small{color:#808080;font-size:10px;font-style:italic}
+a.dpr{background-image:url('../img/logo_inverse.svg');background-size:100%;absolute:bottom 20px left 20px;opacity:.5;transition:opacity .5s ease;width:50px;height:50px;}
+a.dpr:hover{opacity:1}
+#stats{margin-top:20px;}
+#stats #fps{background-color:transparent !important;padding:0 !important;}
+#stats #fps span{background-color:#fff !important}
+#stats #fps #fpsText{color:#fff !important;font-family:'Droid Serif' !important;font-weight:normal !important}
+#stats #fpsGraph{background-color:transparent !important;opacity:.2}
+@-moz-keyframes spin{0%50%100%}@-webkit-keyframes spin{0%50%100%}@-o-keyframes spin{0%50%100%}@-ms-keyframes spin{0%50%100%}@keyframes spin{0%50%100%}

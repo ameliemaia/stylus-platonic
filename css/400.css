@@ -1,1648 +1,474 @@
-.transform,
-.platonic-viewport .scene .mesh,
-.platonic-viewport .scene .group,
-.platonic-viewport .scene .ui-component {
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform-origin: 50% 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-}
-.platonic-viewport {
-  -webkit-perspective: 1000px;
-  -webkit-perspective-origin: 50%;
-  background-color: #575757;
-  background-image: -webkit-radial-gradient(#575757, #272727);
-  background-image: radial-gradient(#575757, #272727);
-  overflow: hidden;
-  position: relative;
-  margin-top: 0;
-  margin-left: 0;
-  width: 100%;
-  height: 600px;
-}
-.platonic-viewport .scene {
-  width: 100%;
-}
-.platonic-viewport .scene .mesh .face {
-  -webkit-backface-visibility: visible;
-  position: absolute;
-}
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-body {
-  line-height: 1;
-  color: #000;
-  background: #fff;
-}
-ol,
-ul {
-  list-style: none;
-}
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-a img {
-  border: none;
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Serif'), local('DroidSerif'), url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff');
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff');
-}
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff');
-}
-.show,
-.platonic-viewport .scene .ui-component {
-  -webkit-transition: opacity 0.5s ease;
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-}
-.hide {
-  opacity: 0 !important;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
-  filter: alpha(opacity=0) !important;
-}
-header {
-  color: #fff;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-family: 'Droid Serif';
-  font-size: 13px;
-  z-index: 2;
-}
-header h1 {
-  font-size: 23px;
-  text-transform: uppercase;
-}
-header h2 {
-  font-style: italic;
-  margin-bottom: 30px;
-}
-header h3 {
-  font-style: italic;
-  margin-top: 20px;
-}
-header a {
-  color: #808080;
-  text-decoration: none;
-  -webkit-transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-header a:hover {
-  color: #666;
-}
-header ul {
-  margin-top: 10px;
-}
-header ul li {
-  margin: 2px 0;
-}
-header span.asterisk {
-  color: #bfbfbf;
-}
-header p.legend {
-  margin-top: 20px;
-}
-header p.legend small {
-  color: #808080;
-  font-size: 10px;
-  font-style: italic;
-}
-a.dpr {
-  background-image: url('../img/logo_inverse.svg');
-  -webkit-background-size: 100%;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-  -webkit-transition: opacity 0.5s ease;
-  width: 50px;
-  height: 50px;
-}
-a.dpr:hover {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-}
-#stats {
-  margin-top: 20px;
-}
-#stats #fps {
-  background-color: transparent !important;
-  padding: 0 !important;
-}
-#stats #fps span {
-  background-color: #fff !important;
-}
-#stats #fps #fpsText {
-  color: #fff !important;
-  font-family: 'Droid Serif' !important;
-  font-weight: normal !important;
-}
-#stats #fpsGraph {
-  background-color: transparent !important;
-  opacity: 0.2;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20);
-}
-.platonic-viewport .scene .ui-component.grid[data-component-id="0"] {
-  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .ui-component.grid[data-component-id="0"] .grid {
-  margin-top: -400px;
-  margin-left: -400px;
-  -webkit-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
-  background-color: transparent;
-  width: 800px;
-  height: 800px;
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiPjxyZWN0IHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PC9zdmc+');
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] {
-  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x {
-  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x,
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
-  background-color: #f00;
-  display: block;
-  position: absolute;
-  width: 2px;
-  height: 50px;
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
-  content: '';
-  -webkit-transform: rotateY(90deg);
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y {
-  -webkit-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -webkit-transform-style: preserve-3d;
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y,
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
-  background-color: #008000;
-  display: block;
-  position: absolute;
-  width: 2px;
-  height: 50px;
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
-  content: '';
-  -webkit-transform: rotateY(90deg);
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z {
-  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: rotateX(90deg) translateY(24px) translateZ(24px);
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z,
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
-  background-color: #00f;
-  display: block;
-  position: absolute;
-  width: 2px;
-  height: 50px;
-}
-.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
-  content: '';
-  -webkit-transform: rotateY(90deg);
-}
-@-moz-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@-o-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@-ms-keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 0deg);
-  }
-
-  50% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 180deg);
-  }
-
-  100% {
-    -webkit-transform: translateZ(0) rotate3d(1, 1, 1, 360deg);
-  }
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] {
-  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="0"] {
-  -webkit-transform: translate3d(-400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="0"] {
-  margin-top: -50px;
-  margin-left: -50px;
-  -webkit-transform: translate3d(-400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  background-color: #4d4d4d;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: rotateX(90deg) translateZ(50px);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="1"] {
-  margin-top: -50px;
-  margin-left: -50px;
-  -webkit-transform: translate3d(-400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  background-color: #4d4d4d;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: translateZ(-50px);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="2"] {
-  margin-top: -50px;
-  margin-left: -50px;
-  -webkit-transform: translate3d(-400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  background-color: #4d4d4d;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: rotateX(-90deg) translateZ(50px);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="3"] {
-  margin-top: -50px;
-  margin-left: -50px;
-  -webkit-transform: translate3d(-400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  background-color: #4d4d4d;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: translateZ(50px);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="4"] {
-  margin-top: -50px;
-  margin-left: -50px;
-  -webkit-transform: translate3d(-400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  background-color: #4d4d4d;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: rotateY(90deg) translateZ(-50px);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="5"] {
-  margin-top: -50px;
-  margin-left: -50px;
-  -webkit-transform: translate3d(-400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  background-color: #4d4d4d;
-  width: 100px;
-  height: 100px;
-  -webkit-transform: rotateY(90deg) translateZ(50px);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="1"] {
-  -webkit-transform: translate3d(-400px, -400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="2"] {
-  -webkit-transform: translate3d(-400px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="3"] {
-  -webkit-transform: translate3d(-300px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="4"] {
-  -webkit-transform: translate3d(-300px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="5"] {
-  -webkit-transform: translate3d(-200px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="6"] {
-  -webkit-transform: translate3d(-200px, -400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="7"] {
-  -webkit-transform: translate3d(-200px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="8"] {
-  -webkit-transform: translate3d(-400px, -300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="9"] {
-  -webkit-transform: translate3d(-400px, -300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="10"] {
-  -webkit-transform: translate3d(-200px, -300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="11"] {
-  -webkit-transform: translate3d(-200px, -300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="12"] {
-  -webkit-transform: translate3d(-400px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="13"] {
-  -webkit-transform: translate3d(-400px, -200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="14"] {
-  -webkit-transform: translate3d(-400px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="15"] {
-  -webkit-transform: translate3d(-300px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="16"] {
-  -webkit-transform: translate3d(-300px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="17"] {
-  -webkit-transform: translate3d(-200px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="18"] {
-  -webkit-transform: translate3d(-200px, -200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="19"] {
-  -webkit-transform: translate3d(-200px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="20"] {
-  -webkit-transform: translate3d(-400px, -400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="21"] {
-  -webkit-transform: translate3d(-400px, -400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="22"] {
-  -webkit-transform: translate3d(-400px, -400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="23"] {
-  -webkit-transform: translate3d(-300px, -400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="24"] {
-  -webkit-transform: translate3d(-300px, -400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="25"] {
-  -webkit-transform: translate3d(-200px, -400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="26"] {
-  -webkit-transform: translate3d(-200px, -400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="27"] {
-  -webkit-transform: translate3d(-200px, -400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="28"] {
-  -webkit-transform: translate3d(-400px, -300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="29"] {
-  -webkit-transform: translate3d(-400px, -300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="30"] {
-  -webkit-transform: translate3d(-200px, -300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="31"] {
-  -webkit-transform: translate3d(-200px, -300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="32"] {
-  -webkit-transform: translate3d(-400px, -200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="33"] {
-  -webkit-transform: translate3d(-400px, -200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="34"] {
-  -webkit-transform: translate3d(-400px, -200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="35"] {
-  -webkit-transform: translate3d(-300px, -200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="36"] {
-  -webkit-transform: translate3d(-300px, -200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="37"] {
-  -webkit-transform: translate3d(-200px, -200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="38"] {
-  -webkit-transform: translate3d(-200px, -200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="39"] {
-  -webkit-transform: translate3d(-200px, -200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="40"] {
-  -webkit-transform: translate3d(-400px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="41"] {
-  -webkit-transform: translate3d(-400px, -400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="42"] {
-  -webkit-transform: translate3d(-400px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="43"] {
-  -webkit-transform: translate3d(-300px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="44"] {
-  -webkit-transform: translate3d(-300px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="45"] {
-  -webkit-transform: translate3d(-200px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="46"] {
-  -webkit-transform: translate3d(-200px, -400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="47"] {
-  -webkit-transform: translate3d(-200px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="48"] {
-  -webkit-transform: translate3d(-400px, -300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="49"] {
-  -webkit-transform: translate3d(-400px, -300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="50"] {
-  -webkit-transform: translate3d(-200px, -300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="51"] {
-  -webkit-transform: translate3d(-200px, -300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="52"] {
-  -webkit-transform: translate3d(-400px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="53"] {
-  -webkit-transform: translate3d(-400px, -200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="54"] {
-  -webkit-transform: translate3d(-400px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="55"] {
-  -webkit-transform: translate3d(-300px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="56"] {
-  -webkit-transform: translate3d(-300px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="57"] {
-  -webkit-transform: translate3d(-200px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="58"] {
-  -webkit-transform: translate3d(-200px, -200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="59"] {
-  -webkit-transform: translate3d(-200px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="60"] {
-  -webkit-transform: translate3d(-100px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="61"] {
-  -webkit-transform: translate3d(-100px, -400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="62"] {
-  -webkit-transform: translate3d(-100px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="63"] {
-  -webkit-transform: translate3d(0px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="64"] {
-  -webkit-transform: translate3d(0px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="65"] {
-  -webkit-transform: translate3d(100px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="66"] {
-  -webkit-transform: translate3d(100px, -400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="67"] {
-  -webkit-transform: translate3d(100px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="68"] {
-  -webkit-transform: translate3d(-100px, -300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="69"] {
-  -webkit-transform: translate3d(-100px, -300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="70"] {
-  -webkit-transform: translate3d(100px, -300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="71"] {
-  -webkit-transform: translate3d(100px, -300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="72"] {
-  -webkit-transform: translate3d(-100px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="73"] {
-  -webkit-transform: translate3d(-100px, -200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="74"] {
-  -webkit-transform: translate3d(-100px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="75"] {
-  -webkit-transform: translate3d(0px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="76"] {
-  -webkit-transform: translate3d(0px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="77"] {
-  -webkit-transform: translate3d(100px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="78"] {
-  -webkit-transform: translate3d(100px, -200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="79"] {
-  -webkit-transform: translate3d(100px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="80"] {
-  -webkit-transform: translate3d(-100px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="81"] {
-  -webkit-transform: translate3d(-100px, -400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="82"] {
-  -webkit-transform: translate3d(-100px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="83"] {
-  -webkit-transform: translate3d(0px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="84"] {
-  -webkit-transform: translate3d(0px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="85"] {
-  -webkit-transform: translate3d(100px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="86"] {
-  -webkit-transform: translate3d(100px, -400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="87"] {
-  -webkit-transform: translate3d(100px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="88"] {
-  -webkit-transform: translate3d(-100px, -300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="89"] {
-  -webkit-transform: translate3d(-100px, -300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="90"] {
-  -webkit-transform: translate3d(100px, -300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="91"] {
-  -webkit-transform: translate3d(100px, -300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="92"] {
-  -webkit-transform: translate3d(-100px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="93"] {
-  -webkit-transform: translate3d(-100px, -200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="94"] {
-  -webkit-transform: translate3d(-100px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="95"] {
-  -webkit-transform: translate3d(0px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="96"] {
-  -webkit-transform: translate3d(0px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="97"] {
-  -webkit-transform: translate3d(100px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="98"] {
-  -webkit-transform: translate3d(100px, -200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="99"] {
-  -webkit-transform: translate3d(100px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="100"] {
-  -webkit-transform: translate3d(200px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="101"] {
-  -webkit-transform: translate3d(200px, -400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="102"] {
-  -webkit-transform: translate3d(200px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="103"] {
-  -webkit-transform: translate3d(300px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="104"] {
-  -webkit-transform: translate3d(300px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="105"] {
-  -webkit-transform: translate3d(400px, -400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="106"] {
-  -webkit-transform: translate3d(400px, -400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="107"] {
-  -webkit-transform: translate3d(400px, -400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="108"] {
-  -webkit-transform: translate3d(200px, -300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="109"] {
-  -webkit-transform: translate3d(200px, -300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="110"] {
-  -webkit-transform: translate3d(400px, -300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="111"] {
-  -webkit-transform: translate3d(400px, -300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="112"] {
-  -webkit-transform: translate3d(200px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="113"] {
-  -webkit-transform: translate3d(200px, -200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="114"] {
-  -webkit-transform: translate3d(200px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="115"] {
-  -webkit-transform: translate3d(300px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="116"] {
-  -webkit-transform: translate3d(300px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="117"] {
-  -webkit-transform: translate3d(400px, -200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="118"] {
-  -webkit-transform: translate3d(400px, -200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="119"] {
-  -webkit-transform: translate3d(400px, -200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="120"] {
-  -webkit-transform: translate3d(200px, -400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="121"] {
-  -webkit-transform: translate3d(200px, -400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="122"] {
-  -webkit-transform: translate3d(200px, -400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="123"] {
-  -webkit-transform: translate3d(300px, -400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="124"] {
-  -webkit-transform: translate3d(300px, -400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="125"] {
-  -webkit-transform: translate3d(400px, -400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="126"] {
-  -webkit-transform: translate3d(400px, -400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="127"] {
-  -webkit-transform: translate3d(400px, -400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="128"] {
-  -webkit-transform: translate3d(200px, -300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="129"] {
-  -webkit-transform: translate3d(200px, -300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="130"] {
-  -webkit-transform: translate3d(400px, -300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="131"] {
-  -webkit-transform: translate3d(400px, -300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="132"] {
-  -webkit-transform: translate3d(200px, -200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="133"] {
-  -webkit-transform: translate3d(200px, -200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="134"] {
-  -webkit-transform: translate3d(200px, -200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="135"] {
-  -webkit-transform: translate3d(300px, -200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="136"] {
-  -webkit-transform: translate3d(300px, -200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="137"] {
-  -webkit-transform: translate3d(400px, -200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="138"] {
-  -webkit-transform: translate3d(400px, -200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="139"] {
-  -webkit-transform: translate3d(400px, -200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="140"] {
-  -webkit-transform: translate3d(200px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="141"] {
-  -webkit-transform: translate3d(200px, -400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="142"] {
-  -webkit-transform: translate3d(200px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="143"] {
-  -webkit-transform: translate3d(300px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="144"] {
-  -webkit-transform: translate3d(300px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="145"] {
-  -webkit-transform: translate3d(400px, -400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="146"] {
-  -webkit-transform: translate3d(400px, -400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="147"] {
-  -webkit-transform: translate3d(400px, -400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="148"] {
-  -webkit-transform: translate3d(200px, -300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="149"] {
-  -webkit-transform: translate3d(200px, -300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="150"] {
-  -webkit-transform: translate3d(400px, -300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="151"] {
-  -webkit-transform: translate3d(400px, -300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="152"] {
-  -webkit-transform: translate3d(200px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="153"] {
-  -webkit-transform: translate3d(200px, -200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="154"] {
-  -webkit-transform: translate3d(200px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="155"] {
-  -webkit-transform: translate3d(300px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="156"] {
-  -webkit-transform: translate3d(300px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="157"] {
-  -webkit-transform: translate3d(400px, -200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="158"] {
-  -webkit-transform: translate3d(400px, -200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="159"] {
-  -webkit-transform: translate3d(400px, -200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="160"] {
-  -webkit-transform: translate3d(-400px, -100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="161"] {
-  -webkit-transform: translate3d(-400px, -100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="162"] {
-  -webkit-transform: translate3d(-400px, -100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="163"] {
-  -webkit-transform: translate3d(-300px, -100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="164"] {
-  -webkit-transform: translate3d(-300px, -100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="165"] {
-  -webkit-transform: translate3d(-200px, -100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="166"] {
-  -webkit-transform: translate3d(-200px, -100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="167"] {
-  -webkit-transform: translate3d(-200px, -100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="168"] {
-  -webkit-transform: translate3d(-400px, 0px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="169"] {
-  -webkit-transform: translate3d(-400px, 0px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="170"] {
-  -webkit-transform: translate3d(-200px, 0px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="171"] {
-  -webkit-transform: translate3d(-200px, 0px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="172"] {
-  -webkit-transform: translate3d(-400px, 100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="173"] {
-  -webkit-transform: translate3d(-400px, 100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="174"] {
-  -webkit-transform: translate3d(-400px, 100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="175"] {
-  -webkit-transform: translate3d(-300px, 100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="176"] {
-  -webkit-transform: translate3d(-300px, 100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="177"] {
-  -webkit-transform: translate3d(-200px, 100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="178"] {
-  -webkit-transform: translate3d(-200px, 100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="179"] {
-  -webkit-transform: translate3d(-200px, 100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="180"] {
-  -webkit-transform: translate3d(-400px, -100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="181"] {
-  -webkit-transform: translate3d(-400px, -100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="182"] {
-  -webkit-transform: translate3d(-400px, -100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="183"] {
-  -webkit-transform: translate3d(-300px, -100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="184"] {
-  -webkit-transform: translate3d(-300px, -100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="185"] {
-  -webkit-transform: translate3d(-200px, -100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="186"] {
-  -webkit-transform: translate3d(-200px, -100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="187"] {
-  -webkit-transform: translate3d(-200px, -100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="188"] {
-  -webkit-transform: translate3d(-400px, 0px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="189"] {
-  -webkit-transform: translate3d(-400px, 0px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="190"] {
-  -webkit-transform: translate3d(-200px, 0px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="191"] {
-  -webkit-transform: translate3d(-200px, 0px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="192"] {
-  -webkit-transform: translate3d(-400px, 100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="193"] {
-  -webkit-transform: translate3d(-400px, 100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="194"] {
-  -webkit-transform: translate3d(-400px, 100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="195"] {
-  -webkit-transform: translate3d(-300px, 100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="196"] {
-  -webkit-transform: translate3d(-300px, 100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="197"] {
-  -webkit-transform: translate3d(-200px, 100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="198"] {
-  -webkit-transform: translate3d(-200px, 100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="199"] {
-  -webkit-transform: translate3d(-200px, 100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="200"] {
-  -webkit-transform: translate3d(200px, -100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="201"] {
-  -webkit-transform: translate3d(200px, -100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="202"] {
-  -webkit-transform: translate3d(200px, -100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="203"] {
-  -webkit-transform: translate3d(300px, -100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="204"] {
-  -webkit-transform: translate3d(300px, -100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="205"] {
-  -webkit-transform: translate3d(400px, -100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="206"] {
-  -webkit-transform: translate3d(400px, -100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="207"] {
-  -webkit-transform: translate3d(400px, -100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="208"] {
-  -webkit-transform: translate3d(200px, 0px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="209"] {
-  -webkit-transform: translate3d(200px, 0px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="210"] {
-  -webkit-transform: translate3d(400px, 0px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="211"] {
-  -webkit-transform: translate3d(400px, 0px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="212"] {
-  -webkit-transform: translate3d(200px, 100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="213"] {
-  -webkit-transform: translate3d(200px, 100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="214"] {
-  -webkit-transform: translate3d(200px, 100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="215"] {
-  -webkit-transform: translate3d(300px, 100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="216"] {
-  -webkit-transform: translate3d(300px, 100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="217"] {
-  -webkit-transform: translate3d(400px, 100px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="218"] {
-  -webkit-transform: translate3d(400px, 100px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="219"] {
-  -webkit-transform: translate3d(400px, 100px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="220"] {
-  -webkit-transform: translate3d(200px, -100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="221"] {
-  -webkit-transform: translate3d(200px, -100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="222"] {
-  -webkit-transform: translate3d(200px, -100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="223"] {
-  -webkit-transform: translate3d(300px, -100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="224"] {
-  -webkit-transform: translate3d(300px, -100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="225"] {
-  -webkit-transform: translate3d(400px, -100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="226"] {
-  -webkit-transform: translate3d(400px, -100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="227"] {
-  -webkit-transform: translate3d(400px, -100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="228"] {
-  -webkit-transform: translate3d(200px, 0px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="229"] {
-  -webkit-transform: translate3d(200px, 0px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="230"] {
-  -webkit-transform: translate3d(400px, 0px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="231"] {
-  -webkit-transform: translate3d(400px, 0px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="232"] {
-  -webkit-transform: translate3d(200px, 100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="233"] {
-  -webkit-transform: translate3d(200px, 100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="234"] {
-  -webkit-transform: translate3d(200px, 100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="235"] {
-  -webkit-transform: translate3d(300px, 100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="236"] {
-  -webkit-transform: translate3d(300px, 100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="237"] {
-  -webkit-transform: translate3d(400px, 100px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="238"] {
-  -webkit-transform: translate3d(400px, 100px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="239"] {
-  -webkit-transform: translate3d(400px, 100px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="240"] {
-  -webkit-transform: translate3d(-400px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="241"] {
-  -webkit-transform: translate3d(-400px, 200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="242"] {
-  -webkit-transform: translate3d(-400px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="243"] {
-  -webkit-transform: translate3d(-300px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="244"] {
-  -webkit-transform: translate3d(-300px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="245"] {
-  -webkit-transform: translate3d(-200px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="246"] {
-  -webkit-transform: translate3d(-200px, 200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="247"] {
-  -webkit-transform: translate3d(-200px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="248"] {
-  -webkit-transform: translate3d(-400px, 300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="249"] {
-  -webkit-transform: translate3d(-400px, 300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="250"] {
-  -webkit-transform: translate3d(-200px, 300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="251"] {
-  -webkit-transform: translate3d(-200px, 300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="252"] {
-  -webkit-transform: translate3d(-400px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="253"] {
-  -webkit-transform: translate3d(-400px, 400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="254"] {
-  -webkit-transform: translate3d(-400px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="255"] {
-  -webkit-transform: translate3d(-300px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="256"] {
-  -webkit-transform: translate3d(-300px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="257"] {
-  -webkit-transform: translate3d(-200px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="258"] {
-  -webkit-transform: translate3d(-200px, 400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="259"] {
-  -webkit-transform: translate3d(-200px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="260"] {
-  -webkit-transform: translate3d(-400px, 200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="261"] {
-  -webkit-transform: translate3d(-400px, 200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="262"] {
-  -webkit-transform: translate3d(-400px, 200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="263"] {
-  -webkit-transform: translate3d(-300px, 200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="264"] {
-  -webkit-transform: translate3d(-300px, 200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="265"] {
-  -webkit-transform: translate3d(-200px, 200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="266"] {
-  -webkit-transform: translate3d(-200px, 200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="267"] {
-  -webkit-transform: translate3d(-200px, 200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="268"] {
-  -webkit-transform: translate3d(-400px, 300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="269"] {
-  -webkit-transform: translate3d(-400px, 300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="270"] {
-  -webkit-transform: translate3d(-200px, 300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="271"] {
-  -webkit-transform: translate3d(-200px, 300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="272"] {
-  -webkit-transform: translate3d(-400px, 400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="273"] {
-  -webkit-transform: translate3d(-400px, 400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="274"] {
-  -webkit-transform: translate3d(-400px, 400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="275"] {
-  -webkit-transform: translate3d(-300px, 400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="276"] {
-  -webkit-transform: translate3d(-300px, 400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="277"] {
-  -webkit-transform: translate3d(-200px, 400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="278"] {
-  -webkit-transform: translate3d(-200px, 400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="279"] {
-  -webkit-transform: translate3d(-200px, 400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="280"] {
-  -webkit-transform: translate3d(-400px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="281"] {
-  -webkit-transform: translate3d(-400px, 200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="282"] {
-  -webkit-transform: translate3d(-400px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="283"] {
-  -webkit-transform: translate3d(-300px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="284"] {
-  -webkit-transform: translate3d(-300px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="285"] {
-  -webkit-transform: translate3d(-200px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="286"] {
-  -webkit-transform: translate3d(-200px, 200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="287"] {
-  -webkit-transform: translate3d(-200px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="288"] {
-  -webkit-transform: translate3d(-400px, 300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="289"] {
-  -webkit-transform: translate3d(-400px, 300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="290"] {
-  -webkit-transform: translate3d(-200px, 300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="291"] {
-  -webkit-transform: translate3d(-200px, 300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="292"] {
-  -webkit-transform: translate3d(-400px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="293"] {
-  -webkit-transform: translate3d(-400px, 400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="294"] {
-  -webkit-transform: translate3d(-400px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="295"] {
-  -webkit-transform: translate3d(-300px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="296"] {
-  -webkit-transform: translate3d(-300px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="297"] {
-  -webkit-transform: translate3d(-200px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="298"] {
-  -webkit-transform: translate3d(-200px, 400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="299"] {
-  -webkit-transform: translate3d(-200px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="300"] {
-  -webkit-transform: translate3d(-100px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="301"] {
-  -webkit-transform: translate3d(-100px, 200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="302"] {
-  -webkit-transform: translate3d(-100px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="303"] {
-  -webkit-transform: translate3d(0px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="304"] {
-  -webkit-transform: translate3d(0px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="305"] {
-  -webkit-transform: translate3d(100px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="306"] {
-  -webkit-transform: translate3d(100px, 200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="307"] {
-  -webkit-transform: translate3d(100px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="308"] {
-  -webkit-transform: translate3d(-100px, 300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="309"] {
-  -webkit-transform: translate3d(-100px, 300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="310"] {
-  -webkit-transform: translate3d(100px, 300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="311"] {
-  -webkit-transform: translate3d(100px, 300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="312"] {
-  -webkit-transform: translate3d(-100px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="313"] {
-  -webkit-transform: translate3d(-100px, 400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="314"] {
-  -webkit-transform: translate3d(-100px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="315"] {
-  -webkit-transform: translate3d(0px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="316"] {
-  -webkit-transform: translate3d(0px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="317"] {
-  -webkit-transform: translate3d(100px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="318"] {
-  -webkit-transform: translate3d(100px, 400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="319"] {
-  -webkit-transform: translate3d(100px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="320"] {
-  -webkit-transform: translate3d(-100px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="321"] {
-  -webkit-transform: translate3d(-100px, 200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="322"] {
-  -webkit-transform: translate3d(-100px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="323"] {
-  -webkit-transform: translate3d(0px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="324"] {
-  -webkit-transform: translate3d(0px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="325"] {
-  -webkit-transform: translate3d(100px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="326"] {
-  -webkit-transform: translate3d(100px, 200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="327"] {
-  -webkit-transform: translate3d(100px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="328"] {
-  -webkit-transform: translate3d(-100px, 300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="329"] {
-  -webkit-transform: translate3d(-100px, 300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="330"] {
-  -webkit-transform: translate3d(100px, 300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="331"] {
-  -webkit-transform: translate3d(100px, 300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="332"] {
-  -webkit-transform: translate3d(-100px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="333"] {
-  -webkit-transform: translate3d(-100px, 400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="334"] {
-  -webkit-transform: translate3d(-100px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="335"] {
-  -webkit-transform: translate3d(0px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="336"] {
-  -webkit-transform: translate3d(0px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="337"] {
-  -webkit-transform: translate3d(100px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="338"] {
-  -webkit-transform: translate3d(100px, 400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="339"] {
-  -webkit-transform: translate3d(100px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="340"] {
-  -webkit-transform: translate3d(200px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="341"] {
-  -webkit-transform: translate3d(200px, 200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="342"] {
-  -webkit-transform: translate3d(200px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="343"] {
-  -webkit-transform: translate3d(300px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="344"] {
-  -webkit-transform: translate3d(300px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="345"] {
-  -webkit-transform: translate3d(400px, 200px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="346"] {
-  -webkit-transform: translate3d(400px, 200px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="347"] {
-  -webkit-transform: translate3d(400px, 200px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="348"] {
-  -webkit-transform: translate3d(200px, 300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="349"] {
-  -webkit-transform: translate3d(200px, 300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="350"] {
-  -webkit-transform: translate3d(400px, 300px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="351"] {
-  -webkit-transform: translate3d(400px, 300px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="352"] {
-  -webkit-transform: translate3d(200px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="353"] {
-  -webkit-transform: translate3d(200px, 400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="354"] {
-  -webkit-transform: translate3d(200px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="355"] {
-  -webkit-transform: translate3d(300px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="356"] {
-  -webkit-transform: translate3d(300px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="357"] {
-  -webkit-transform: translate3d(400px, 400px, -400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="358"] {
-  -webkit-transform: translate3d(400px, 400px, -300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="359"] {
-  -webkit-transform: translate3d(400px, 400px, -200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="360"] {
-  -webkit-transform: translate3d(200px, 200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="361"] {
-  -webkit-transform: translate3d(200px, 200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="362"] {
-  -webkit-transform: translate3d(200px, 200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="363"] {
-  -webkit-transform: translate3d(300px, 200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="364"] {
-  -webkit-transform: translate3d(300px, 200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="365"] {
-  -webkit-transform: translate3d(400px, 200px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="366"] {
-  -webkit-transform: translate3d(400px, 200px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="367"] {
-  -webkit-transform: translate3d(400px, 200px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="368"] {
-  -webkit-transform: translate3d(200px, 300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="369"] {
-  -webkit-transform: translate3d(200px, 300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="370"] {
-  -webkit-transform: translate3d(400px, 300px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="371"] {
-  -webkit-transform: translate3d(400px, 300px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="372"] {
-  -webkit-transform: translate3d(200px, 400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="373"] {
-  -webkit-transform: translate3d(200px, 400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="374"] {
-  -webkit-transform: translate3d(200px, 400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="375"] {
-  -webkit-transform: translate3d(300px, 400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="376"] {
-  -webkit-transform: translate3d(300px, 400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="377"] {
-  -webkit-transform: translate3d(400px, 400px, -100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="378"] {
-  -webkit-transform: translate3d(400px, 400px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="379"] {
-  -webkit-transform: translate3d(400px, 400px, 100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="380"] {
-  -webkit-transform: translate3d(200px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="381"] {
-  -webkit-transform: translate3d(200px, 200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="382"] {
-  -webkit-transform: translate3d(200px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="383"] {
-  -webkit-transform: translate3d(300px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="384"] {
-  -webkit-transform: translate3d(300px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="385"] {
-  -webkit-transform: translate3d(400px, 200px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="386"] {
-  -webkit-transform: translate3d(400px, 200px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="387"] {
-  -webkit-transform: translate3d(400px, 200px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="388"] {
-  -webkit-transform: translate3d(200px, 300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="389"] {
-  -webkit-transform: translate3d(200px, 300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="390"] {
-  -webkit-transform: translate3d(400px, 300px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="391"] {
-  -webkit-transform: translate3d(400px, 300px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="392"] {
-  -webkit-transform: translate3d(200px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="393"] {
-  -webkit-transform: translate3d(200px, 400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="394"] {
-  -webkit-transform: translate3d(200px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="395"] {
-  -webkit-transform: translate3d(300px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="396"] {
-  -webkit-transform: translate3d(300px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="397"] {
-  -webkit-transform: translate3d(400px, 400px, 200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="398"] {
-  -webkit-transform: translate3d(400px, 400px, 300px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="399"] {
-  -webkit-transform: translate3d(400px, 400px, 400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-.platonic-viewport .scene .group.sierpinski-sponge .face {
-  opacity: 0.3;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-  filter: alpha(opacity=30);
-}
-.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="0"] {
-  background-color: #332e2e !important;
-}
-.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="1"] {
-  background-color: #a19f9f !important;
-}
-.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="2"] {
-  background-color: #1b1616 !important;
-}
-.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="3"] {
-  background-color: #3b3b3b !important;
-}
-.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="4"] {
-  background-color: #eaeaea !important;
-}
-.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="5"] {
-  background-color: #1c1515 !important;
-}
+.transform,.platonic-viewport .scene .mesh,.platonic-viewport .scene .group,.platonic-viewport .scene .ui-component{-webkit-transform-style:preserve-3d;-webkit-transform-origin:50% 50%;position:absolute;top:50%;left:50%;width:0;height:0}
+.platonic-viewport{-webkit-perspective:1000px;-webkit-perspective-origin:50%;background-color:#575757;background-image:-webkit-radial-gradient(#575757,#272727);background-image:radial-gradient(#575757,#272727);overflow:hidden;position:relative;margin-top:0;margin-left:0;width:100%;height:600px;}
+.platonic-viewport .scene{width:100%;}
+.platonic-viewport .scene .mesh .face{-webkit-backface-visibility:visible;position:absolute}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-family:inherit;font-size:100%;vertical-align:baseline}
+body{line-height:1;color:#000;background:#fff}
+ol,ul{list-style:none}
+table{border-collapse:separate;border-spacing:0;vertical-align:middle}
+caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
+a img{border:none}
+@font-face{font-family:'Droid Serif';font-style:normal;font-weight:400;src:local('Droid Serif'),local('DroidSerif'),url('../fonts/0AKsP294HTD-nvJgucYTaLrIa-7acMAeDBVuclsi6Gc.woff') format('woff')}
+@font-face{font-family:'Droid Serif';font-style:normal;font-weight:700;src:local('Droid Serif Bold'),local('DroidSerif-Bold'),url('../fonts/QQt14e8dY39u-eYBZmppwRbnBKKEOwRKgsHDreGcocg.woff') format('woff')}
+@font-face{font-family:'Droid Serif';font-style:italic;font-weight:400;src:local('Droid Serif Italic'),local('DroidSerif-Italic'),url('../fonts/cj2hUnSRBhwmSPr9kS5894o3ZslTYfJv0R05CazkwN8.woff') format('woff')}
+.show,.platonic-viewport .scene .ui-component{-webkit-transition:opacity .5s ease;opacity:1;-ms-filter:none;filter:none}
+.hide{opacity:0 !important;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;filter:alpha(opacity=0) !important}
+header{color:#fff;position:absolute;top:20px;left:20px;font-family:'Droid Serif';font-size:13px;z-index:2;}
+header h1{font-size:23px;text-transform:uppercase}
+header h2{font-style:italic;margin-bottom:30px}
+header h3{font-style:italic;margin-top:20px}
+header a{color:#808080;text-decoration:none;-webkit-transition:color .3s cubic-bezier(.25,.46,.45,.94);}
+header a:hover{color:#666}
+header ul{margin-top:10px;}
+header ul li{margin:2px 0}
+header span.asterisk{color:#bfbfbf}
+header p.legend{margin-top:20px;}
+header p.legend small{color:#808080;font-size:10px;font-style:italic}
+a.dpr{background-image:url('../img/logo_inverse.svg');-webkit-background-size:100%;position:absolute;bottom:20px;left:20px;opacity:.5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:alpha(opacity=50);-webkit-transition:opacity .5s ease;width:50px;height:50px;}
+a.dpr:hover{opacity:1;-ms-filter:none;filter:none}
+#stats{margin-top:20px;}
+#stats #fps{background-color:transparent !important;padding:0 !important;}
+#stats #fps span{background-color:#fff !important}
+#stats #fps #fpsText{color:#fff !important;font-family:'Droid Serif' !important;font-weight:normal !important}
+#stats #fpsGraph{background-color:transparent !important;opacity:.2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:alpha(opacity=20)}
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"]{-webkit-transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0);}
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"] .grid{margin-top:-400px;margin-left:-400px;-webkit-transform:translate3d(0,0,0) rotateX(90deg) rotateY(0) rotateZ(0);background-color:transparent;width:800px;height:800px;background:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiPjxyZWN0IHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PC9zdmc+')}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"]{-webkit-transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0);}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x{-webkit-transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0);-webkit-transform-style:preserve-3d;-webkit-transform:rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px)}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x,.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before{background-color:#f00;display:block;position:absolute;width:2px;height:50px}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before{content:'';-webkit-transform:rotateY(90deg)}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y{-webkit-transform:translate3d(0,-50px,0) rotateX(0) rotateY(0) rotateZ(0);-webkit-transform-style:preserve-3d;}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y,.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before{background-color:#008000;display:block;position:absolute;width:2px;height:50px}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before{content:'';-webkit-transform:rotateY(90deg)}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z{-webkit-transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0);-webkit-transform-style:preserve-3d;-webkit-transform:rotateX(90deg) translateY(24px) translateZ(24px)}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z,.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before{background-color:#00f;display:block;position:absolute;width:2px;height:50px}
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before{content:'';-webkit-transform:rotateY(90deg)}
+@-moz-keyframes spin{0%{-webkit-transform:translateZ(0) rotate3d(1,1,1,0)}
+50%{-webkit-transform:translateZ(0) rotate3d(1,1,1,180deg)}
+100%{-webkit-transform:translateZ(0) rotate3d(1,1,1,360deg)}
+}@-webkit-keyframes spin{0%{-webkit-transform:translateZ(0) rotate3d(1,1,1,0)}
+50%{-webkit-transform:translateZ(0) rotate3d(1,1,1,180deg)}
+100%{-webkit-transform:translateZ(0) rotate3d(1,1,1,360deg)}
+}@-o-keyframes spin{0%{-webkit-transform:translateZ(0) rotate3d(1,1,1,0)}
+50%{-webkit-transform:translateZ(0) rotate3d(1,1,1,180deg)}
+100%{-webkit-transform:translateZ(0) rotate3d(1,1,1,360deg)}
+}@-ms-keyframes spin{0%{-webkit-transform:translateZ(0) rotate3d(1,1,1,0)}
+50%{-webkit-transform:translateZ(0) rotate3d(1,1,1,180deg)}
+100%{-webkit-transform:translateZ(0) rotate3d(1,1,1,360deg)}
+}@keyframes spin{0%{-webkit-transform:translateZ(0) rotate3d(1,1,1,0)}
+50%{-webkit-transform:translateZ(0) rotate3d(1,1,1,180deg)}
+100%{-webkit-transform:translateZ(0) rotate3d(1,1,1,360deg)}
+}.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"]{-webkit-transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0);}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="0"]{-webkit-transform:translate3d(-400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="0"]{margin-top:-50px;margin-left:-50px;-webkit-transform:translate3d(-400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0);background-color:#4d4d4d;width:100px;height:100px;-webkit-transform:rotateX(90deg) translateZ(50px)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="1"]{margin-top:-50px;margin-left:-50px;-webkit-transform:translate3d(-400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0);background-color:#4d4d4d;width:100px;height:100px;-webkit-transform:translateZ(-50px)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="2"]{margin-top:-50px;margin-left:-50px;-webkit-transform:translate3d(-400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0);background-color:#4d4d4d;width:100px;height:100px;-webkit-transform:rotateX(-90deg) translateZ(50px)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="3"]{margin-top:-50px;margin-left:-50px;-webkit-transform:translate3d(-400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0);background-color:#4d4d4d;width:100px;height:100px;-webkit-transform:translateZ(50px)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="4"]{margin-top:-50px;margin-left:-50px;-webkit-transform:translate3d(-400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0);background-color:#4d4d4d;width:100px;height:100px;-webkit-transform:rotateY(90deg) translateZ(-50px)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh .face[data-face-id="5"]{margin-top:-50px;margin-left:-50px;-webkit-transform:translate3d(-400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0);background-color:#4d4d4d;width:100px;height:100px;-webkit-transform:rotateY(90deg) translateZ(50px)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="1"]{-webkit-transform:translate3d(-400px,-400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="2"]{-webkit-transform:translate3d(-400px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="3"]{-webkit-transform:translate3d(-300px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="4"]{-webkit-transform:translate3d(-300px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="5"]{-webkit-transform:translate3d(-200px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="6"]{-webkit-transform:translate3d(-200px,-400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="7"]{-webkit-transform:translate3d(-200px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="8"]{-webkit-transform:translate3d(-400px,-300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="9"]{-webkit-transform:translate3d(-400px,-300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="10"]{-webkit-transform:translate3d(-200px,-300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="11"]{-webkit-transform:translate3d(-200px,-300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="12"]{-webkit-transform:translate3d(-400px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="13"]{-webkit-transform:translate3d(-400px,-200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="14"]{-webkit-transform:translate3d(-400px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="15"]{-webkit-transform:translate3d(-300px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="16"]{-webkit-transform:translate3d(-300px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="17"]{-webkit-transform:translate3d(-200px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="18"]{-webkit-transform:translate3d(-200px,-200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="19"]{-webkit-transform:translate3d(-200px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="20"]{-webkit-transform:translate3d(-400px,-400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="21"]{-webkit-transform:translate3d(-400px,-400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="22"]{-webkit-transform:translate3d(-400px,-400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="23"]{-webkit-transform:translate3d(-300px,-400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="24"]{-webkit-transform:translate3d(-300px,-400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="25"]{-webkit-transform:translate3d(-200px,-400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="26"]{-webkit-transform:translate3d(-200px,-400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="27"]{-webkit-transform:translate3d(-200px,-400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="28"]{-webkit-transform:translate3d(-400px,-300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="29"]{-webkit-transform:translate3d(-400px,-300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="30"]{-webkit-transform:translate3d(-200px,-300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="31"]{-webkit-transform:translate3d(-200px,-300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="32"]{-webkit-transform:translate3d(-400px,-200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="33"]{-webkit-transform:translate3d(-400px,-200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="34"]{-webkit-transform:translate3d(-400px,-200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="35"]{-webkit-transform:translate3d(-300px,-200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="36"]{-webkit-transform:translate3d(-300px,-200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="37"]{-webkit-transform:translate3d(-200px,-200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="38"]{-webkit-transform:translate3d(-200px,-200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="39"]{-webkit-transform:translate3d(-200px,-200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="40"]{-webkit-transform:translate3d(-400px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="41"]{-webkit-transform:translate3d(-400px,-400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="42"]{-webkit-transform:translate3d(-400px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="43"]{-webkit-transform:translate3d(-300px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="44"]{-webkit-transform:translate3d(-300px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="45"]{-webkit-transform:translate3d(-200px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="46"]{-webkit-transform:translate3d(-200px,-400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="47"]{-webkit-transform:translate3d(-200px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="48"]{-webkit-transform:translate3d(-400px,-300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="49"]{-webkit-transform:translate3d(-400px,-300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="50"]{-webkit-transform:translate3d(-200px,-300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="51"]{-webkit-transform:translate3d(-200px,-300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="52"]{-webkit-transform:translate3d(-400px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="53"]{-webkit-transform:translate3d(-400px,-200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="54"]{-webkit-transform:translate3d(-400px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="55"]{-webkit-transform:translate3d(-300px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="56"]{-webkit-transform:translate3d(-300px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="57"]{-webkit-transform:translate3d(-200px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="58"]{-webkit-transform:translate3d(-200px,-200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="59"]{-webkit-transform:translate3d(-200px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="60"]{-webkit-transform:translate3d(-100px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="61"]{-webkit-transform:translate3d(-100px,-400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="62"]{-webkit-transform:translate3d(-100px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="63"]{-webkit-transform:translate3d(0,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="64"]{-webkit-transform:translate3d(0,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="65"]{-webkit-transform:translate3d(100px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="66"]{-webkit-transform:translate3d(100px,-400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="67"]{-webkit-transform:translate3d(100px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="68"]{-webkit-transform:translate3d(-100px,-300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="69"]{-webkit-transform:translate3d(-100px,-300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="70"]{-webkit-transform:translate3d(100px,-300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="71"]{-webkit-transform:translate3d(100px,-300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="72"]{-webkit-transform:translate3d(-100px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="73"]{-webkit-transform:translate3d(-100px,-200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="74"]{-webkit-transform:translate3d(-100px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="75"]{-webkit-transform:translate3d(0,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="76"]{-webkit-transform:translate3d(0,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="77"]{-webkit-transform:translate3d(100px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="78"]{-webkit-transform:translate3d(100px,-200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="79"]{-webkit-transform:translate3d(100px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="80"]{-webkit-transform:translate3d(-100px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="81"]{-webkit-transform:translate3d(-100px,-400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="82"]{-webkit-transform:translate3d(-100px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="83"]{-webkit-transform:translate3d(0,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="84"]{-webkit-transform:translate3d(0,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="85"]{-webkit-transform:translate3d(100px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="86"]{-webkit-transform:translate3d(100px,-400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="87"]{-webkit-transform:translate3d(100px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="88"]{-webkit-transform:translate3d(-100px,-300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="89"]{-webkit-transform:translate3d(-100px,-300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="90"]{-webkit-transform:translate3d(100px,-300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="91"]{-webkit-transform:translate3d(100px,-300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="92"]{-webkit-transform:translate3d(-100px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="93"]{-webkit-transform:translate3d(-100px,-200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="94"]{-webkit-transform:translate3d(-100px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="95"]{-webkit-transform:translate3d(0,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="96"]{-webkit-transform:translate3d(0,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="97"]{-webkit-transform:translate3d(100px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="98"]{-webkit-transform:translate3d(100px,-200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="99"]{-webkit-transform:translate3d(100px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="100"]{-webkit-transform:translate3d(200px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="101"]{-webkit-transform:translate3d(200px,-400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="102"]{-webkit-transform:translate3d(200px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="103"]{-webkit-transform:translate3d(300px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="104"]{-webkit-transform:translate3d(300px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="105"]{-webkit-transform:translate3d(400px,-400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="106"]{-webkit-transform:translate3d(400px,-400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="107"]{-webkit-transform:translate3d(400px,-400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="108"]{-webkit-transform:translate3d(200px,-300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="109"]{-webkit-transform:translate3d(200px,-300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="110"]{-webkit-transform:translate3d(400px,-300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="111"]{-webkit-transform:translate3d(400px,-300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="112"]{-webkit-transform:translate3d(200px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="113"]{-webkit-transform:translate3d(200px,-200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="114"]{-webkit-transform:translate3d(200px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="115"]{-webkit-transform:translate3d(300px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="116"]{-webkit-transform:translate3d(300px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="117"]{-webkit-transform:translate3d(400px,-200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="118"]{-webkit-transform:translate3d(400px,-200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="119"]{-webkit-transform:translate3d(400px,-200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="120"]{-webkit-transform:translate3d(200px,-400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="121"]{-webkit-transform:translate3d(200px,-400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="122"]{-webkit-transform:translate3d(200px,-400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="123"]{-webkit-transform:translate3d(300px,-400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="124"]{-webkit-transform:translate3d(300px,-400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="125"]{-webkit-transform:translate3d(400px,-400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="126"]{-webkit-transform:translate3d(400px,-400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="127"]{-webkit-transform:translate3d(400px,-400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="128"]{-webkit-transform:translate3d(200px,-300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="129"]{-webkit-transform:translate3d(200px,-300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="130"]{-webkit-transform:translate3d(400px,-300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="131"]{-webkit-transform:translate3d(400px,-300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="132"]{-webkit-transform:translate3d(200px,-200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="133"]{-webkit-transform:translate3d(200px,-200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="134"]{-webkit-transform:translate3d(200px,-200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="135"]{-webkit-transform:translate3d(300px,-200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="136"]{-webkit-transform:translate3d(300px,-200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="137"]{-webkit-transform:translate3d(400px,-200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="138"]{-webkit-transform:translate3d(400px,-200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="139"]{-webkit-transform:translate3d(400px,-200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="140"]{-webkit-transform:translate3d(200px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="141"]{-webkit-transform:translate3d(200px,-400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="142"]{-webkit-transform:translate3d(200px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="143"]{-webkit-transform:translate3d(300px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="144"]{-webkit-transform:translate3d(300px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="145"]{-webkit-transform:translate3d(400px,-400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="146"]{-webkit-transform:translate3d(400px,-400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="147"]{-webkit-transform:translate3d(400px,-400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="148"]{-webkit-transform:translate3d(200px,-300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="149"]{-webkit-transform:translate3d(200px,-300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="150"]{-webkit-transform:translate3d(400px,-300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="151"]{-webkit-transform:translate3d(400px,-300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="152"]{-webkit-transform:translate3d(200px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="153"]{-webkit-transform:translate3d(200px,-200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="154"]{-webkit-transform:translate3d(200px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="155"]{-webkit-transform:translate3d(300px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="156"]{-webkit-transform:translate3d(300px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="157"]{-webkit-transform:translate3d(400px,-200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="158"]{-webkit-transform:translate3d(400px,-200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="159"]{-webkit-transform:translate3d(400px,-200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="160"]{-webkit-transform:translate3d(-400px,-100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="161"]{-webkit-transform:translate3d(-400px,-100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="162"]{-webkit-transform:translate3d(-400px,-100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="163"]{-webkit-transform:translate3d(-300px,-100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="164"]{-webkit-transform:translate3d(-300px,-100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="165"]{-webkit-transform:translate3d(-200px,-100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="166"]{-webkit-transform:translate3d(-200px,-100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="167"]{-webkit-transform:translate3d(-200px,-100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="168"]{-webkit-transform:translate3d(-400px,0,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="169"]{-webkit-transform:translate3d(-400px,0,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="170"]{-webkit-transform:translate3d(-200px,0,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="171"]{-webkit-transform:translate3d(-200px,0,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="172"]{-webkit-transform:translate3d(-400px,100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="173"]{-webkit-transform:translate3d(-400px,100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="174"]{-webkit-transform:translate3d(-400px,100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="175"]{-webkit-transform:translate3d(-300px,100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="176"]{-webkit-transform:translate3d(-300px,100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="177"]{-webkit-transform:translate3d(-200px,100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="178"]{-webkit-transform:translate3d(-200px,100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="179"]{-webkit-transform:translate3d(-200px,100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="180"]{-webkit-transform:translate3d(-400px,-100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="181"]{-webkit-transform:translate3d(-400px,-100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="182"]{-webkit-transform:translate3d(-400px,-100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="183"]{-webkit-transform:translate3d(-300px,-100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="184"]{-webkit-transform:translate3d(-300px,-100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="185"]{-webkit-transform:translate3d(-200px,-100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="186"]{-webkit-transform:translate3d(-200px,-100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="187"]{-webkit-transform:translate3d(-200px,-100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="188"]{-webkit-transform:translate3d(-400px,0,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="189"]{-webkit-transform:translate3d(-400px,0,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="190"]{-webkit-transform:translate3d(-200px,0,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="191"]{-webkit-transform:translate3d(-200px,0,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="192"]{-webkit-transform:translate3d(-400px,100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="193"]{-webkit-transform:translate3d(-400px,100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="194"]{-webkit-transform:translate3d(-400px,100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="195"]{-webkit-transform:translate3d(-300px,100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="196"]{-webkit-transform:translate3d(-300px,100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="197"]{-webkit-transform:translate3d(-200px,100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="198"]{-webkit-transform:translate3d(-200px,100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="199"]{-webkit-transform:translate3d(-200px,100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="200"]{-webkit-transform:translate3d(200px,-100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="201"]{-webkit-transform:translate3d(200px,-100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="202"]{-webkit-transform:translate3d(200px,-100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="203"]{-webkit-transform:translate3d(300px,-100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="204"]{-webkit-transform:translate3d(300px,-100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="205"]{-webkit-transform:translate3d(400px,-100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="206"]{-webkit-transform:translate3d(400px,-100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="207"]{-webkit-transform:translate3d(400px,-100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="208"]{-webkit-transform:translate3d(200px,0,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="209"]{-webkit-transform:translate3d(200px,0,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="210"]{-webkit-transform:translate3d(400px,0,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="211"]{-webkit-transform:translate3d(400px,0,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="212"]{-webkit-transform:translate3d(200px,100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="213"]{-webkit-transform:translate3d(200px,100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="214"]{-webkit-transform:translate3d(200px,100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="215"]{-webkit-transform:translate3d(300px,100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="216"]{-webkit-transform:translate3d(300px,100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="217"]{-webkit-transform:translate3d(400px,100px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="218"]{-webkit-transform:translate3d(400px,100px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="219"]{-webkit-transform:translate3d(400px,100px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="220"]{-webkit-transform:translate3d(200px,-100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="221"]{-webkit-transform:translate3d(200px,-100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="222"]{-webkit-transform:translate3d(200px,-100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="223"]{-webkit-transform:translate3d(300px,-100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="224"]{-webkit-transform:translate3d(300px,-100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="225"]{-webkit-transform:translate3d(400px,-100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="226"]{-webkit-transform:translate3d(400px,-100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="227"]{-webkit-transform:translate3d(400px,-100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="228"]{-webkit-transform:translate3d(200px,0,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="229"]{-webkit-transform:translate3d(200px,0,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="230"]{-webkit-transform:translate3d(400px,0,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="231"]{-webkit-transform:translate3d(400px,0,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="232"]{-webkit-transform:translate3d(200px,100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="233"]{-webkit-transform:translate3d(200px,100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="234"]{-webkit-transform:translate3d(200px,100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="235"]{-webkit-transform:translate3d(300px,100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="236"]{-webkit-transform:translate3d(300px,100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="237"]{-webkit-transform:translate3d(400px,100px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="238"]{-webkit-transform:translate3d(400px,100px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="239"]{-webkit-transform:translate3d(400px,100px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="240"]{-webkit-transform:translate3d(-400px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="241"]{-webkit-transform:translate3d(-400px,200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="242"]{-webkit-transform:translate3d(-400px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="243"]{-webkit-transform:translate3d(-300px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="244"]{-webkit-transform:translate3d(-300px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="245"]{-webkit-transform:translate3d(-200px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="246"]{-webkit-transform:translate3d(-200px,200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="247"]{-webkit-transform:translate3d(-200px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="248"]{-webkit-transform:translate3d(-400px,300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="249"]{-webkit-transform:translate3d(-400px,300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="250"]{-webkit-transform:translate3d(-200px,300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="251"]{-webkit-transform:translate3d(-200px,300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="252"]{-webkit-transform:translate3d(-400px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="253"]{-webkit-transform:translate3d(-400px,400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="254"]{-webkit-transform:translate3d(-400px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="255"]{-webkit-transform:translate3d(-300px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="256"]{-webkit-transform:translate3d(-300px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="257"]{-webkit-transform:translate3d(-200px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="258"]{-webkit-transform:translate3d(-200px,400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="259"]{-webkit-transform:translate3d(-200px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="260"]{-webkit-transform:translate3d(-400px,200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="261"]{-webkit-transform:translate3d(-400px,200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="262"]{-webkit-transform:translate3d(-400px,200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="263"]{-webkit-transform:translate3d(-300px,200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="264"]{-webkit-transform:translate3d(-300px,200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="265"]{-webkit-transform:translate3d(-200px,200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="266"]{-webkit-transform:translate3d(-200px,200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="267"]{-webkit-transform:translate3d(-200px,200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="268"]{-webkit-transform:translate3d(-400px,300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="269"]{-webkit-transform:translate3d(-400px,300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="270"]{-webkit-transform:translate3d(-200px,300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="271"]{-webkit-transform:translate3d(-200px,300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="272"]{-webkit-transform:translate3d(-400px,400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="273"]{-webkit-transform:translate3d(-400px,400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="274"]{-webkit-transform:translate3d(-400px,400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="275"]{-webkit-transform:translate3d(-300px,400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="276"]{-webkit-transform:translate3d(-300px,400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="277"]{-webkit-transform:translate3d(-200px,400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="278"]{-webkit-transform:translate3d(-200px,400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="279"]{-webkit-transform:translate3d(-200px,400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="280"]{-webkit-transform:translate3d(-400px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="281"]{-webkit-transform:translate3d(-400px,200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="282"]{-webkit-transform:translate3d(-400px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="283"]{-webkit-transform:translate3d(-300px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="284"]{-webkit-transform:translate3d(-300px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="285"]{-webkit-transform:translate3d(-200px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="286"]{-webkit-transform:translate3d(-200px,200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="287"]{-webkit-transform:translate3d(-200px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="288"]{-webkit-transform:translate3d(-400px,300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="289"]{-webkit-transform:translate3d(-400px,300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="290"]{-webkit-transform:translate3d(-200px,300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="291"]{-webkit-transform:translate3d(-200px,300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="292"]{-webkit-transform:translate3d(-400px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="293"]{-webkit-transform:translate3d(-400px,400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="294"]{-webkit-transform:translate3d(-400px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="295"]{-webkit-transform:translate3d(-300px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="296"]{-webkit-transform:translate3d(-300px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="297"]{-webkit-transform:translate3d(-200px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="298"]{-webkit-transform:translate3d(-200px,400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="299"]{-webkit-transform:translate3d(-200px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="300"]{-webkit-transform:translate3d(-100px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="301"]{-webkit-transform:translate3d(-100px,200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="302"]{-webkit-transform:translate3d(-100px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="303"]{-webkit-transform:translate3d(0,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="304"]{-webkit-transform:translate3d(0,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="305"]{-webkit-transform:translate3d(100px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="306"]{-webkit-transform:translate3d(100px,200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="307"]{-webkit-transform:translate3d(100px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="308"]{-webkit-transform:translate3d(-100px,300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="309"]{-webkit-transform:translate3d(-100px,300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="310"]{-webkit-transform:translate3d(100px,300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="311"]{-webkit-transform:translate3d(100px,300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="312"]{-webkit-transform:translate3d(-100px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="313"]{-webkit-transform:translate3d(-100px,400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="314"]{-webkit-transform:translate3d(-100px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="315"]{-webkit-transform:translate3d(0,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="316"]{-webkit-transform:translate3d(0,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="317"]{-webkit-transform:translate3d(100px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="318"]{-webkit-transform:translate3d(100px,400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="319"]{-webkit-transform:translate3d(100px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="320"]{-webkit-transform:translate3d(-100px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="321"]{-webkit-transform:translate3d(-100px,200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="322"]{-webkit-transform:translate3d(-100px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="323"]{-webkit-transform:translate3d(0,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="324"]{-webkit-transform:translate3d(0,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="325"]{-webkit-transform:translate3d(100px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="326"]{-webkit-transform:translate3d(100px,200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="327"]{-webkit-transform:translate3d(100px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="328"]{-webkit-transform:translate3d(-100px,300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="329"]{-webkit-transform:translate3d(-100px,300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="330"]{-webkit-transform:translate3d(100px,300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="331"]{-webkit-transform:translate3d(100px,300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="332"]{-webkit-transform:translate3d(-100px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="333"]{-webkit-transform:translate3d(-100px,400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="334"]{-webkit-transform:translate3d(-100px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="335"]{-webkit-transform:translate3d(0,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="336"]{-webkit-transform:translate3d(0,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="337"]{-webkit-transform:translate3d(100px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="338"]{-webkit-transform:translate3d(100px,400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="339"]{-webkit-transform:translate3d(100px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="340"]{-webkit-transform:translate3d(200px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="341"]{-webkit-transform:translate3d(200px,200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="342"]{-webkit-transform:translate3d(200px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="343"]{-webkit-transform:translate3d(300px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="344"]{-webkit-transform:translate3d(300px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="345"]{-webkit-transform:translate3d(400px,200px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="346"]{-webkit-transform:translate3d(400px,200px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="347"]{-webkit-transform:translate3d(400px,200px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="348"]{-webkit-transform:translate3d(200px,300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="349"]{-webkit-transform:translate3d(200px,300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="350"]{-webkit-transform:translate3d(400px,300px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="351"]{-webkit-transform:translate3d(400px,300px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="352"]{-webkit-transform:translate3d(200px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="353"]{-webkit-transform:translate3d(200px,400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="354"]{-webkit-transform:translate3d(200px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="355"]{-webkit-transform:translate3d(300px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="356"]{-webkit-transform:translate3d(300px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="357"]{-webkit-transform:translate3d(400px,400px,-400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="358"]{-webkit-transform:translate3d(400px,400px,-300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="359"]{-webkit-transform:translate3d(400px,400px,-200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="360"]{-webkit-transform:translate3d(200px,200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="361"]{-webkit-transform:translate3d(200px,200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="362"]{-webkit-transform:translate3d(200px,200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="363"]{-webkit-transform:translate3d(300px,200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="364"]{-webkit-transform:translate3d(300px,200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="365"]{-webkit-transform:translate3d(400px,200px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="366"]{-webkit-transform:translate3d(400px,200px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="367"]{-webkit-transform:translate3d(400px,200px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="368"]{-webkit-transform:translate3d(200px,300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="369"]{-webkit-transform:translate3d(200px,300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="370"]{-webkit-transform:translate3d(400px,300px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="371"]{-webkit-transform:translate3d(400px,300px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="372"]{-webkit-transform:translate3d(200px,400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="373"]{-webkit-transform:translate3d(200px,400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="374"]{-webkit-transform:translate3d(200px,400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="375"]{-webkit-transform:translate3d(300px,400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="376"]{-webkit-transform:translate3d(300px,400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="377"]{-webkit-transform:translate3d(400px,400px,-100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="378"]{-webkit-transform:translate3d(400px,400px,0) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="379"]{-webkit-transform:translate3d(400px,400px,100px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="380"]{-webkit-transform:translate3d(200px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="381"]{-webkit-transform:translate3d(200px,200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="382"]{-webkit-transform:translate3d(200px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="383"]{-webkit-transform:translate3d(300px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="384"]{-webkit-transform:translate3d(300px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="385"]{-webkit-transform:translate3d(400px,200px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="386"]{-webkit-transform:translate3d(400px,200px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="387"]{-webkit-transform:translate3d(400px,200px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="388"]{-webkit-transform:translate3d(200px,300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="389"]{-webkit-transform:translate3d(200px,300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="390"]{-webkit-transform:translate3d(400px,300px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="391"]{-webkit-transform:translate3d(400px,300px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="392"]{-webkit-transform:translate3d(200px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="393"]{-webkit-transform:translate3d(200px,400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="394"]{-webkit-transform:translate3d(200px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="395"]{-webkit-transform:translate3d(300px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="396"]{-webkit-transform:translate3d(300px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="397"]{-webkit-transform:translate3d(400px,400px,200px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="398"]{-webkit-transform:translate3d(400px,400px,300px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge[data-group-id="0"] .mesh[data-mesh-id="399"]{-webkit-transform:translate3d(400px,400px,400px) rotateX(0) rotateY(0) rotateZ(0)}
+.platonic-viewport .scene .group.sierpinski-sponge .face{opacity:.3;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";filter:alpha(opacity=30);}
+.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="0"]{background-color:#332e2e !important}
+.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="1"]{background-color:#a19f9f !important}
+.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="2"]{background-color:#1b1616 !important}
+.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="3"]{background-color:#3b3b3b !important}
+.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="4"]{background-color:#eaeaea !important}
+.platonic-viewport .scene .group.sierpinski-sponge .face[data-face-id="5"]{background-color:#1c1515 !important}
