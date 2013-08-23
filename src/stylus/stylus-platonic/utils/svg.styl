@@ -17,41 +17,41 @@ svg-ns = "http://www.w3.org/2000/svg"
  */
 
 svg-triangle(width = 50px, height = 50px, direction = '', stroke = material-color, stroke-width = 1, fill = material-color)
-    
-    height = unit(height, '')
-    width  = unit(width, '')
+	
+	height = unit(height, '')
+	width  = unit(width, '')
 
-    if direction is 'down'
-        x1 = 0
-        y1 = 0
-        x2 = width / 2
-        y2 = height
-        x3 = width
-        y3 = 0
-    else if direction is 'left'
-        x1 = 0
-        y1 = height / 2
-        x2 = width
-        y2 = height
-        x3 = width
-        y3 = 0
-    else if direction is 'right'
-        x1 = width
-        y1 = height / 2
-        x2 = 0
-        y2 = height
-        x3 = 0
-        y3 = 0
-    else
-        x1 = width / 2
-        y1 = 0
-        x2 = width
-        y2 = height
-        x3 = 0
-        y3 = height
+	if direction is 'down'
+		x1 = 0
+		y1 = 0
+		x2 = width / 2
+		y2 = height
+		x3 = width
+		y3 = 0
+	else if direction is 'left'
+		x1 = 0
+		y1 = height / 2
+		x2 = width
+		y2 = height
+		x3 = width
+		y3 = 0
+	else if direction is 'right'
+		x1 = width
+		y1 = height / 2
+		x2 = 0
+		y2 = height
+		x3 = 0
+		y3 = 0
+	else
+		x1 = width / 2
+		y1 = 0
+		x2 = width
+		y2 = height
+		x3 = 0
+		y3 = height
 
-    points = s('%s,%s %s,%s %s,%s', x1 y1 x2 y2 x3 y3)
-    svg-polygon(stroke, stroke-width, fill, points)
+	points = s('%s,%s %s,%s %s,%s', x1 y1 x2 y2 x3 y3)
+	svg-polygon(stroke, stroke-width, fill, points)
 
 /*
  * Generates an svg pentagon
@@ -64,28 +64,28 @@ svg-triangle(width = 50px, height = 50px, direction = '', stroke = material-colo
  */
 
 svg-pentagon(radius = 50px, stroke = material-color, stroke-width = 1, fill = material-color)
-    
-    radius   = remove-unit(radius)
-    center_x = pentagon-width(radius) / 2
+	
+	radius   = remove-unit(radius)
+	center_x = pentagon-width(radius) / 2
 
-    theta = TWO_PI / 5
-    len   = 4
-    
-    points    = ''
-    seperator = ' '
+	theta = TWO_PI / 5
+	len   = 4
+	
+	points    = ''
+	seperator = ' '
 
-    for i in 0 .. len
+	for i in 0 .. len
 
-        seperator = '' if i is len
+		seperator = '' if i is len
 
-        angle = (i * theta) - HALF_PI
-        
-        x = center_x + radius * cos(angle)
-        y = radius   + radius * sin(angle)
+		angle = (i * theta) - HALF_PI
+		
+		x = center_x + radius * cos(angle)
+		y = radius   + radius * sin(angle)
 
-        points += join(',', x y) + seperator
+		points += join(',', x y) + seperator
 
-    svg-polygon(stroke, stroke-width, fill, unquote(points))
+	svg-polygon(stroke, stroke-width, fill, unquote(points))
 
 
 /*
@@ -99,7 +99,7 @@ svg-pentagon(radius = 50px, stroke = material-color, stroke-width = 1, fill = ma
  * @api   public
  */
 svg-rectangle(width = 100px, height = 100px, stroke = material-color, stroke-width = 1, fill = material-color)
-    '<rect width="%s" height="%s" stroke="%s" stroke-width="%s" fill="%s"></rect>' % (width height stroke stroke-width fill)
+	'<rect width="%s" height="%s" stroke="%s" stroke-width="%s" fill="%s"></rect>' % (width height stroke stroke-width fill)
 
 
 /*
@@ -113,7 +113,7 @@ svg-rectangle(width = 100px, height = 100px, stroke = material-color, stroke-wid
  */
 
 svg-polygon(stroke = "#FFFFFF", stroke-width = 1, fill = "#FFFFFF", points = "")
-    '<polygon stroke="%s" stroke-width="%s" fill="%s" points="%s"></polygon>' % (stroke stroke-width fill points)
+	'<polygon stroke="%s" stroke-width="%s" fill="%s" points="%s"></polygon>' % (stroke stroke-width fill points)
 
 
 /*
@@ -126,7 +126,22 @@ svg-polygon(stroke = "#FFFFFF", stroke-width = 1, fill = "#FFFFFF", points = "")
  * @api   public
  */
 svg-data-uri(width = 100px, height = 100px, content = "")
-    if material-encode-svg
-        'data:image/svg+xml;base64,'+base64('<svg xmlns="'+unquote(svg-ns)+'" width="'+("%s" % width)+'" height="'+("%s" % height)+'">'+("%s" % content)+'</svg>')
-    else
-        'data:image/svg+xml;utf8,<svg xmlns="'+unquote(svg-ns)+'" width="'+("%s" % width)+'" height="'+("%s" % height)+'">'+("%s" % content)+'</svg>'
+	svg = 'data:image/svg+xml;'
+	
+	if material-encode-svg
+		svg += 'base64'
+	else
+		svg += 'utf8'
+	
+	svg += ','
+	svg_content  = '<svg xmlns="'+unquote(svg-ns)+'" width="'+("%s" % width)+'" height="'+("%s" % height)+'">'
+	svg_content		+= "%s" % content
+	svg_content	+= '</svg>'
+
+	if material-encode-svg
+		svg_content = base64(svg_content)
+
+	svg += svg_content
+
+	return svg
+

@@ -1,11 +1,11 @@
 # Stylus Platonic
 
-CSS 3D library.
+Pure CSS3D library.
 
 
 ## About
 
-Built on top of Stylus, Platonic is a CSS3D library for creating CSS3D content with just CSS and HTML. 
+Built on top of Stylus, Platonic is a CSS3D library for creating 3D content with just CSS and HTML. 
 
 It's primary objectives are:
 
@@ -13,12 +13,16 @@ It's primary objectives are:
 2. To provide a simple API and workflow for generating content.
 3. To generate the least amount of CSS required to display content.
 
-[Installation](#installation) - [Features](#features) - [Demos](#Demos) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
+[Installation](#installation) - [Features](#features) - [Examples](#examples) - [Platonic project](#platonic-project) - [Core concepts](https://github.com/davidpaulrosser/stylus-platonic/wiki/Core-concepts) - [API](https://github.com/davidpaulrosser/stylus-platonic/wiki/API)
 
 ## Demos
 
-1. [Sierpinski](http://davidpaulrosser.github.io/stylus-platonic)
-2. [Dualism](http://davidpaulrosser.github.io/stylus-platonic/dualism.html)
+1. [Sierpinski](davidpaulrosser.github.io/stylus-platonic)
+2. [Dualism*](davidpaulrosser.github.io/stylus-platonic/dualism.html)
+3. [Particles](davidpaulrosser.github.io/stylus-platonic/particles.html)
+3. [400*](davidpaulrosser.github.io/stylus-platonic/400.html)
+
+* Desktop only
 
 ## Browser support
 
@@ -30,10 +34,11 @@ Platonic is only currently supported in *some* webkit based browsers due to vari
 
 ## Features
 
-* Configurable options for the viewport, ui-components and geometry
+* Base styles for your viewport and scene
+* Configurable options for the viewport, ui-components, geometry and more
 * Optimised CSS output
-* Shapes, Primitives, Platonic Solids and a Fractal
-* Uses [Photon](http://photon.attasi.com/) for lighting
+* Mixins for Shapes, Primitives, Platonic Solids and a Fractal
+* Can be used with the CSS3D lighting engine [Photon](http://photon.attasi.com/)
 
 ## Installation
 
@@ -102,9 +107,9 @@ This will create a local test server with watch / compile action.
 
 ## FAQ
 
-Q: Why should you use Platonic over other 3D libraries?
+Q: Is Platonic ready for commerical use?
 
-A: Platonic offers a WebGL / canvas independent solution for generating 3D content.
+A: With the current browser support list being very limited at this moment of time I recommend only using Platonic for experimental CSS3D projects. 
 
 Q: When will more browsers be supported?
 
@@ -118,6 +123,8 @@ A: I'm working on a node.js-based solution for that : )
 ## Contributing
 
 For any issues and bugs please submit an issue.
+
+If you would like to contribute to the library and / or have some good ideas on how things could be improved let's discuss it in the [Google group]().
 
 
 ## License
