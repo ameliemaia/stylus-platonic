@@ -1,6 +1,6 @@
 # Stylus Platonic
 
-CSS 3D library.
+CSS3D library.
 
 
 ## About
@@ -18,7 +18,11 @@ It's primary objectives are:
 ## Demos
 
 1. [Sierpinski](davidpaulrosser.github.io/stylus-platonic)
-2. [Dualism](davidpaulrosser.github.io/stylus-platonic/dualism.html)
+2. [Dualism*](davidpaulrosser.github.io/stylus-platonic/dualism.html)
+3. [Particles](davidpaulrosser.github.io/stylus-platonic/particles.html)
+3. [400*](davidpaulrosser.github.io/stylus-platonic/400.html)
+
+* Desktop only
 
 ## Browser support
 
