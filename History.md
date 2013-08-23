@@ -1,7 +1,7 @@
 0.0.2 / 2013-08-23
 ==================
 
-    * Added more demo links to Readme
+    * Readme updates for Features and FAQ
     * Cleaned up svg-data-ui function
 
 0.0.1 / 2013-07-27
