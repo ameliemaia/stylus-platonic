@@ -1,0 +1,52 @@
+
+// Base transform
+
+.transform
+
+    transform-style(preserve-3d)
+    transform-origin(50% 50%)
+
+    absolute   top 50% left 50%
+    width    : 0
+    height   : 0
+
+
+// Viewport
+
+.platonic-viewport
+    
+    perspective(viewport-perspective)
+    perspective-origin(50%)
+
+    background-color : viewport-background-color
+    
+    if viewport-gradient-type is 'radial'
+        -radial-gradient(viewport-gradient-color1, viewport-gradient-color2)
+    else
+        background-image : linear-gradient(viewport-gradient-color1, viewport-gradient-color2)
+    
+    overflow         : hidden
+    relative           margin-top 0 margin-left 0
+    width            : viewport-width
+    height           : viewport-height
+
+    .scene
+        width  : @width
+        height : @height
+
+         // Mesh
+        .mesh
+            @extend .transform
+            .face
+                backface-visibility : face-backface-visibility
+                position            : absolute
+        
+        
+        // Group
+        .group
+            @extend .transform
+
+
+        // UI Component
+        .ui-component
+            @extend .transform

@@ -1,4 +1,5 @@
+.DS_Store
 /node_modules/
-/public/css/*.css
-/public/js/*.js
-/public/*.html
+/test/public/css/
+/test/public/*.html
+/test/public/js/*.js

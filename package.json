@@ -1,26 +1,35 @@
 {
-  "name": "platonic-project",
+  "name": "stylus-platonic",
   "version": "0.0.1",
-  "description": "A simple project scaffold for Stylus Platonic.",
-  "dependencies": {
-    "grunt": "~0.4.1",
-    "fs-util": "~0.3.14",
-    "grunt-contrib-stylus": "~0.5.0",
-    "stylus-platonic": "~0.0.1",
-    "grunt-contrib-jade": "~0.5.1",
-    "grunt-contrib-watch": "~0.4.3"
-  },
-  "devDependencies": {},
+  "description": "CSS3D library built on Stylus",
+  "main": "./lib/stylus-platonic.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidpaulrosser/platonic-project"
+    "url": "git@github.com:davidpaulrosser/stylus-platonic.git"
+  },
+  "devDependencies": {
+    "jade": "~0.30.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jade": "~0.5.1",
+    "grunt-contrib-stylus": "~0.5.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "glob": "~3.2.1",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-connect": "~0.3.0"
+  },
+  "dependencies": {
+    "stylus": "*",
+    "nib": "*"
+  },
+  "engines": {
+    "node": "*"
   },
   "keywords": [
     "stylus",
     "css",
     "css3d"
   ],
+  "readmeFilename": "Readme.md",
   "author": "DPR <info@davidpaulrosser.co.uk>",
-  "license": "MIT",
-  "gitHead": "a39a4fb0164254b1e5732cf26f5e0d8087a836ea"
+  "license": "MIT"
 }

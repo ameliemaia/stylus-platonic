@@ -15,14 +15,14 @@ module.exports = ( grunt ) ->
     grunt.loadNpmTasks 'grunt-contrib-connect'
 
     test_src = 
-        styl   : 'src/stylus'
-        jade   : 'src/jade'
-        coffee : 'src/coffee'
+        styl   : 'test/cases/stylus'
+        jade   : 'test/cases/jade'
+        coffee : 'src/coffee/test'
 
     test_out = 
-        styl   : 'public/css'
-        jade   : 'public'
-        coffee : 'public/js'
+        styl   : 'test/public/css'
+        jade   : 'test/public'
+        coffee : 'test/public/js'
 
     files = 
         jade   : {}
@@ -53,7 +53,7 @@ module.exports = ( grunt ) ->
         connect:
             server:
                 options:
-                    port: 9056
+                    port: 9055
                     base: test_out.jade
 
         jade:
@@ -68,7 +68,7 @@ module.exports = ( grunt ) ->
                     compress: false
                     use: [
                         require 'nib'
-                        require 'stylus-platonic'
+                        require './'
                     ]
                 files: files.styl
 

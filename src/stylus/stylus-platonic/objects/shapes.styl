@@ -1,0 +1,105 @@
+
+/*
+ * Generates a triangle
+ *
+ * @param side-length
+ * @param angle
+ * @param direction
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @api   public
+ */
+
+triangle(side-length = 50px, angle = 60, direction = 'up', translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color)
+    height = triangle-height(side-length, angle)
+    rectangle(side-length, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+    data-uri = svg-data-uri(side-length, height, svg-triangle(side-length, height, direction, stroke-width: 0))
+    -webkit-mask-image(data-uri)
+
+
+/*
+ * Generates a rectangle
+ *
+ * @param width
+ * @param height
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @api   public
+ */
+
+rectangle(width = 50px, height = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color)
+    center(width, height)
+    set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+    background-color : color
+    width            : width 
+    height           : height 
+
+
+/*
+ * Generates a pentagon
+ *
+ * @param side-length
+ * @param angle
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @api   public
+ */
+
+pentagon(radius = 50px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color)
+    
+    width  = unit(pentagon-width(radius), px)
+    height = unit(pentagon-height(radius), px)
+
+    rectangle(width, height, translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z, color)
+    data-uri = svg-data-uri(width, height, svg-pentagon(radius, stroke-width: 0))
+    -webkit-mask-image(data-uri)
+
+
+/*
+ * Generates a line
+ *
+ * @param length
+ * @param width
+ * @param translate-x
+ * @param translate-y
+ * @param translate-z
+ * @param rotate-x
+ * @param rotate-y
+ * @param rotate-z
+ * @param color
+ * @api   public
+ */
+
+line(length = 100px, depth = 2px, translate-x = 0, translate-y = 0, translate-z = 0, rotate-x = 0deg, rotate-y = 0deg, rotate-z = 0deg, color = material-color)
+        
+    set-transform(translate-x, translate-y, translate-z, rotate-x, rotate-y, rotate-z)
+
+    transform-style : preserve-3d
+
+    &
+    &:before
+        background-color : color
+        display          : block
+        position         : absolute
+        width            : depth
+        height           : length
+
+    &:before
+        content   : ''
+        transform : rotateY(90deg)
+

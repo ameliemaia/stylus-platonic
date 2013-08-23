@@ -1,0 +1,19 @@
+
+@import "stylus-platonic/dev/dev"
+@import "stylus-platonic"
+@import "stylus-platonic/extras/fractals"
+
+.platonic-viewport
+
+	.scene
+
+		.ui-component
+			
+			&.grid
+				grid(component-id: 0)
+
+			&.display-axis
+				display-axis(component-id: 1)
+
+		.group.sierpinski-sponge
+			sierpinksi-sponge(iterations: 1, group-id: 0)

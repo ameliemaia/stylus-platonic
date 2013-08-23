@@ -1,0 +1,29 @@
+
+/*
+ * Makes a mask (Webkit only...)
+ *
+ * https://developer.mozilla.org/en-US/docs/CSS/-webkit-mask-image
+ *
+ * @api public
+ */
+
+-webkit-mask-image(image = none, repeat = no-repeat, position = 0% 0%, origin = padding, clip = border, composite = source-over)
+    if inlist(webkit, vendor-prefixes)
+        -webkit-mask-image     : url(image)
+        -webkit-mask-repeat    : repeat
+        -webkit-mask-position  : position
+        -webkit-mask-origin    : origin
+        -webkit-mask-clip      : clip
+        -webkit-mask-composite : composite
+
+
+/*
+ * Makes a radial gradient from two colors
+ * @param color1
+ * @param color2
+ * @api public
+ */
+
+-radial-gradient(color1, color2)
+    background-image : -webkit-radial-gradient(color1, color2)
+    background-image : radial-gradient(color1, color2)
