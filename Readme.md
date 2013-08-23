@@ -1,11 +1,11 @@
 # Stylus Platonic
 
-CSS3D library.
+Pure CSS3D library.
 
 
 ## About
 
-Built on top of Stylus, Platonic is a CSS3D library for creating CSS3D content with just CSS and HTML. 
+Built on top of Stylus, Platonic is a CSS3D library for creating 3D content with just CSS and HTML. 
 
 It's primary objectives are:
 
@@ -34,10 +34,11 @@ Platonic is only currently supported in *some* webkit based browsers due to vari
 
 ## Features
 
-* Configurable options for the viewport, ui-components and geometry
+* Base styles for your viewport and scene
+* Configurable options for the viewport, ui-components, geometry and more
 * Optimised CSS output
-* Shapes, Primitives, Platonic Solids and a Fractal
-* Uses [Photon](http://photon.attasi.com/) for lighting
+* Mixins for Shapes, Primitives, Platonic Solids and a Fractal
+* Can be used with the CSS3D lighting engine [Photon](http://photon.attasi.com/)
 
 ## Installation
 
@@ -106,9 +107,9 @@ This will create a local test server with watch / compile action.
 
 ## FAQ
 
-Q: Why should you use Platonic over other 3D libraries?
+Q: Is Platonic ready for commerical use?
 
-A: Platonic offers a WebGL / canvas independent solution for generating 3D content.
+A: With the current browser support list being very limited at this moment of time I recommend only using Platonic for experimental CSS3D projects. 
 
 Q: When will more browsers be supported?
 
