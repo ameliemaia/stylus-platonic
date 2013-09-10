@@ -17,10 +17,10 @@ It's primary objectives are:
 
 ## Demos
 
-1. [Sierpinski](davidpaulrosser.github.io/stylus-platonic)
-2. [Dualism*](davidpaulrosser.github.io/stylus-platonic/dualism.html)
-3. [Particles](davidpaulrosser.github.io/stylus-platonic/particles.html)
-3. [400*](davidpaulrosser.github.io/stylus-platonic/400.html)
+1. [Sierpinski](http://davidpaulrosser.github.io/stylus-platonic)
+2. [Dualism*](http://davidpaulrosser.github.io/stylus-platonic/dualism.html)
+3. [Particles](http://davidpaulrosser.github.io/stylus-platonic/particles.html)
+3. [400*](http://davidpaulrosser.github.io/stylus-platonic/400.html)
 
 * Desktop only
 
@@ -42,7 +42,7 @@ Platonic is only currently supported in *some* webkit based browsers due to vari
 
 ## Installation
 
-You can either install Platonic as a node module or download the [source](http://zip). 
+You can either install Platonic as a node module or download the [source](https://github.com/davidpaulrosser/stylus-platonic/releases). 
 
 See [usage](#usage) on how to link it to your stylus middleware compiler.
 
