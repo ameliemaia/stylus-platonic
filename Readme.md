@@ -107,7 +107,7 @@ This will create a local test server with watch / compile action.
 
 ## FAQ
 
-Q: Is Platonic ready for commerical use?
+Q: Is Platonic ready for commercial use?
 
 A: With the current browser support list being very limited at this moment of time I recommend only using Platonic for experimental CSS3D projects. 
 
