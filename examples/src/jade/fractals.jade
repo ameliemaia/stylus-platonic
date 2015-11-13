@@ -15,6 +15,6 @@ block scene
         - var iterations = 1
         - var cubes = Math.pow(20, iterations)
         - for (var i = 0; i < cubes; i++)
-            .mesh(data-mesh-type="cube", data-mesh-id="#{i}")
+            .mesh(data-mesh-type="cube", data-mesh-id="#{i}", data-light="1")
                 - for (var j = 0; j < 6; j++)
                     .face(data-face-id="#{j}")

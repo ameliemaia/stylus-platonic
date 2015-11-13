@@ -59,7 +59,7 @@ class Camera
     update: ->
 
         # Update perspective 
-        @el.css 'perspective', @perspective + 'px'
+        @el.css 'perspective' : @perspective + 'px'
 
         # Update rotation from user drag
         if @_dragging
@@ -121,6 +121,8 @@ class Camera
 
             $(object).css
                 '-webkit-transform' : transform  
+                '-moz-transform'    : transform  
+                '-ms-transform'     : transform  
                 'transform'         : transform  
 
         return off

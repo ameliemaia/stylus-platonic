@@ -1,0 +1,639 @@
+
+/* line 286 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/ui-components.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/stylus/lib/functions/index.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/stylus/lib/functions/index.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
+
+/* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 10 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 196 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 90 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 25 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 6 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 30 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 17 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 69 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 66 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 78 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 5 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 12 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 577 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+
+/* line 16 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 18 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+a img {
+  border: none;
+}
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
+div#stats {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 25 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/index.styl */
+
+/* line 43 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/index.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/config.styl */
+
+/* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/config.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 10 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 196 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 90 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 25 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 6 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 30 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 17 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 69 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 66 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 78 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 5 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 12 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 577 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 26 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/index.styl */
+
+/* line 52 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/index.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/math.styl */
+
+/* line 29 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/math.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/vendor.styl */
+
+/* line 41 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/vendor.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/positioning.styl */
+
+/* line 146 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/positioning.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/svg.styl */
+
+/* line 52 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/svg.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.transform,
+.platonic-viewport .scene .mesh,
+.platonic-viewport .scene .group,
+.platonic-viewport .scene .ui-component {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+/* line 16 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.platonic-viewport {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-perspective-origin: 50%;
+  -moz-perspective-origin: 50%;
+  -ms-perspective-origin: 50%;
+  perspective-origin: 50%;
+  background-color: #575757;
+  background-image: -webkit--webkit-radial-gradient(#575757, #272727);
+  background-image: -webkit--moz-radial-gradient(#575757, #272727);
+  background-image: -webkit--o-radial-gradient(#575757, #272727);
+  background-image: -webkit--ms-radial-gradient(#575757, #272727);
+  background-image: -webkit-radial-gradient(#575757, #272727);
+  background-image: -webkit-radial-gradient(#575757, #272727);
+  background-image: -moz-radial-gradient(#575757, #272727);
+  background-image: -o-radial-gradient(#575757, #272727);
+  background-image: -ms-radial-gradient(#575757, #272727);
+  background-image: radial-gradient(#575757, #272727);
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 600px;
+}
+
+/* line 33 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.platonic-viewport .scene {
+  width: 100%;
+  height: 600px;
+}
+
+/* line 38 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 40 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.platonic-viewport .scene .mesh .face {
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  position: absolute;
+}
+
+/* line 46 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 51 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 59 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+
+/* line 104 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+
+/* line 170 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/primitives.styl */
+
+/* line 445 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/primitives.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 53 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/particles.styl */
+
+/* line 5 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/ui-components.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/ui-components.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/ui-components.styl */
+
+/* line 10 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/ui-components.styl */
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"] .grid {
+  margin-top: -400px;
+  margin-left: -400px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  background-color: transparent;
+  width: 800px;
+  height: 800px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiPjxyZWN0IHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PC9zdmc+');
+}
+
+/* line 13 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/ui-components.styl */
+
+/* line 42 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* line 48 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+
+/* line 50 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  -o-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  -ms-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+}
+
+/* line 94 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
+  background-color: #f00;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+
+/* line 102 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+/* line 54 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y {
+  -webkit-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 94 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
+  background-color: #008000;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+
+/* line 102 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+/* line 57 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  -moz-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  -o-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  -ms-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  transform: rotateX(90deg) translateY(24px) translateZ(24px);
+}
+
+/* line 94 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
+  background-color: #00f;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+
+/* line 102 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}

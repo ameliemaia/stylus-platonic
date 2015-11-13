@@ -1,0 +1,1722 @@
+
+/* line 286 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/stylus/lib/functions/index.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/stylus/lib/functions/index.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
+
+/* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 10 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 196 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 90 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 25 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 6 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 30 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 17 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 69 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 66 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 78 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 5 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 12 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 577 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+
+/* line 16 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 18 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+a img {
+  border: none;
+}
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
+div#stats {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 25 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/index.styl */
+
+/* line 43 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/index.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/config.styl */
+
+/* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/config.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 10 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/border.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/clearfix.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 196 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/color-image.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 90 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 25 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/iconic.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/base.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 6 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/html5.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 30 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/links.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 17 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/embed.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 69 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/groups.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/forms.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/tables.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 66 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/overflow.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 78 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/positions.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 5 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 12 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/aliases.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/ellipsis.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/hide-text.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/replace-text.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 577 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/shadow-stroke.styl */
+
+/* line 541 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/vendor.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 28 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/config.styl */
+
+/* line 1 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 26 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/index.styl */
+
+/* line 52 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/index.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/math.styl */
+
+/* line 29 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/math.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/vendor.styl */
+
+/* line 41 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/vendor.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/positioning.styl */
+
+/* line 146 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/positioning.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/svg.styl */
+
+/* line 52 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/utils/svg.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 4 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.transform,
+.platonic-viewport .scene .mesh,
+.platonic-viewport .scene .group,
+.platonic-viewport .scene .ui-component {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+/* line 16 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.platonic-viewport {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-perspective-origin: 50%;
+  -moz-perspective-origin: 50%;
+  -ms-perspective-origin: 50%;
+  perspective-origin: 50%;
+  background-color: #575757;
+  background-image: -webkit--webkit-radial-gradient(#575757, #272727);
+  background-image: -webkit--moz-radial-gradient(#575757, #272727);
+  background-image: -webkit--o-radial-gradient(#575757, #272727);
+  background-image: -webkit--ms-radial-gradient(#575757, #272727);
+  background-image: -webkit-radial-gradient(#575757, #272727);
+  background-image: -webkit-radial-gradient(#575757, #272727);
+  background-image: -moz-radial-gradient(#575757, #272727);
+  background-image: -o-radial-gradient(#575757, #272727);
+  background-image: -ms-radial-gradient(#575757, #272727);
+  background-image: radial-gradient(#575757, #272727);
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 600px;
+}
+
+/* line 33 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.platonic-viewport .scene {
+  width: 100%;
+  height: 600px;
+}
+
+/* line 38 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 40 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+.platonic-viewport .scene .mesh .face {
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  position: absolute;
+}
+
+/* line 46 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 51 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 59 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/viewport.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+
+/* line 104 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+
+/* line 170 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/primitives.styl */
+
+/* line 445 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/primitives.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 53 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 2 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/particles.styl */
+
+/* line 5 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 7 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 9 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 11 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.grid[data-component-id="0"] .grid {
+  margin-top: -400px;
+  margin-left: -400px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  background-color: transparent;
+  width: 800px;
+  height: 800px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiPjxyZWN0IHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEwcHgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9InRyYW5zcGFyZW50Ij48L3JlY3Q+PC9zdmc+');
+}
+
+/* line 14 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+.platonic-viewport .scene .ui-component.display-axis {
+  z-index: 2;
+}
+
+/* line 42 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* line 48 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+
+/* line 50 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  -o-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  -ms-transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(24px) translateY(-24px);
+}
+
+/* line 94 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
+  background-color: #f00;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+
+/* line 102 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.x:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+/* line 54 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y {
+  -webkit-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, -50px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 94 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
+  background-color: #008000;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+
+/* line 102 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.y:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+/* line 57 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/user-interface.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  -moz-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  -o-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  -ms-transform: rotateX(90deg) translateY(24px) translateZ(24px);
+  transform: rotateX(90deg) translateY(24px) translateZ(24px);
+}
+
+/* line 94 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z,
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
+  background-color: #00f;
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+
+/* line 102 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/shapes.styl */
+.platonic-viewport .scene .ui-component.display-axis[data-component-id="1"] .mesh.line.z:before {
+  content: '';
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+/* line 18 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 20 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 44 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] {
+  -webkit-transform: translate3d(0, 0, -150px) rotateX(0deg) rotateY(0deg) rotateZ(-31.7deg);
+  -moz-transform: translate3d(0, 0, -150px) rotateX(0deg) rotateY(0deg) rotateZ(-31.7deg);
+  -o-transform: translate3d(0, 0, -150px) rotateX(0deg) rotateY(0deg) rotateZ(-31.7deg);
+  -ms-transform: translate3d(0, 0, -150px) rotateX(0deg) rotateY(0deg) rotateZ(-31.7deg);
+  transform: translate3d(0, 0, -150px) rotateX(0deg) rotateY(0deg) rotateZ(-31.7deg);
+}
+
+/* line 54 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 56 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="0"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(90deg);
+  -moz-transform: translate3d(0, 79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(90deg);
+  -o-transform: translate3d(0, 79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(90deg);
+  -ms-transform: translate3d(0, 79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(90deg);
+  transform: translate3d(0, 79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(90deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 59 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="11"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(-11.884691684408438px, -79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(-90deg);
+  -moz-transform: translate3d(-11.884691684408438px, -79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(-90deg);
+  -o-transform: translate3d(-11.884691684408438px, -79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(-90deg);
+  -ms-transform: translate3d(-11.884691684408438px, -79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(-90deg);
+  transform: translate3d(-11.884691684408438px, -79.4654472061009px, 0) rotateX(90deg) rotateY(0deg) rotateZ(-90deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 63 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face {
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+/* line 66 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .face[data-face-id="11"] {
+  -webkit-transform-origin: inherit;
+  -moz-transform-origin: inherit;
+  -o-transform-origin: inherit;
+  -ms-transform-origin: inherit;
+  transform-origin: inherit;
+}
+
+/* line 95 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="1"] {
+  -webkit-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(28.867513464886507px) rotateY(54deg);
+  -moz-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(28.867513464886507px) rotateY(54deg);
+  -o-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(28.867513464886507px) rotateY(54deg);
+  -ms-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(28.867513464886507px) rotateY(54deg);
+  transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(28.867513464886507px) rotateY(54deg);
+}
+
+/* line 103 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="1"] .face[data-face-id="1"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 95 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="2"] {
+  -webkit-transform: translateX(-21.118895804923px) translateY(24.55617365731326px) translateZ(46.70861795354101px) rotateY(-18deg);
+  -moz-transform: translateX(-21.118895804923px) translateY(24.55617365731326px) translateZ(46.70861795354101px) rotateY(-18deg);
+  -o-transform: translateX(-21.118895804923px) translateY(24.55617365731326px) translateZ(46.70861795354101px) rotateY(-18deg);
+  -ms-transform: translateX(-21.118895804923px) translateY(24.55617365731326px) translateZ(46.70861795354101px) rotateY(-18deg);
+  transform: translateX(-21.118895804923px) translateY(24.55617365731326px) translateZ(46.70861795354101px) rotateY(-18deg);
+}
+
+/* line 103 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="2"] .face[data-face-id="2"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 95 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="3"] {
+  -webkit-transform: translateX(-55.054693162722465px) translateY(24.55617365731326px) translateZ(0) rotateY(-90deg);
+  -moz-transform: translateX(-55.054693162722465px) translateY(24.55617365731326px) translateZ(0) rotateY(-90deg);
+  -o-transform: translateX(-55.054693162722465px) translateY(24.55617365731326px) translateZ(0) rotateY(-90deg);
+  -ms-transform: translateX(-55.054693162722465px) translateY(24.55617365731326px) translateZ(0) rotateY(-90deg);
+  transform: translateX(-55.054693162722465px) translateY(24.55617365731326px) translateZ(0) rotateY(-90deg);
+}
+
+/* line 103 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="3"] .face[data-face-id="3"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 95 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="4"] {
+  -webkit-transform: translateX(-21.118895804923007px) translateY(24.55617365731326px) translateZ(-46.70861795354101px) rotateY(-162deg);
+  -moz-transform: translateX(-21.118895804923007px) translateY(24.55617365731326px) translateZ(-46.70861795354101px) rotateY(-162deg);
+  -o-transform: translateX(-21.118895804923007px) translateY(24.55617365731326px) translateZ(-46.70861795354101px) rotateY(-162deg);
+  -ms-transform: translateX(-21.118895804923007px) translateY(24.55617365731326px) translateZ(-46.70861795354101px) rotateY(-162deg);
+  transform: translateX(-21.118895804923007px) translateY(24.55617365731326px) translateZ(-46.70861795354101px) rotateY(-162deg);
+}
+
+/* line 103 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="4"] .face[data-face-id="4"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 95 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="5"] {
+  -webkit-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(-28.867513464886507px) rotateY(-234deg);
+  -moz-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(-28.867513464886507px) rotateY(-234deg);
+  -o-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(-28.867513464886507px) rotateY(-234deg);
+  -ms-transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(-28.867513464886507px) rotateY(-234deg);
+  transform: translateX(33.79037778077368px) translateY(24.55617365731326px) translateZ(-28.867513464886507px) rotateY(-234deg);
+}
+
+/* line 103 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="5"] .face[data-face-id="5"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-26.565051177077994deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 128 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="6"] {
+  -webkit-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(-28.867513464886507px) rotateY(234deg);
+  -moz-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(-28.867513464886507px) rotateY(234deg);
+  -o-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(-28.867513464886507px) rotateY(234deg);
+  -ms-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(-28.867513464886507px) rotateY(234deg);
+  transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(-28.867513464886507px) rotateY(234deg);
+}
+
+/* line 136 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="6"] .face[data-face-id="6"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 128 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="7"] {
+  -webkit-transform: translateX(9.234204120514562px) translateY(-134.37472075488856px) translateZ(-46.70861795354101px) rotateY(162deg);
+  -moz-transform: translateX(9.234204120514562px) translateY(-134.37472075488856px) translateZ(-46.70861795354101px) rotateY(162deg);
+  -o-transform: translateX(9.234204120514562px) translateY(-134.37472075488856px) translateZ(-46.70861795354101px) rotateY(162deg);
+  -ms-transform: translateX(9.234204120514562px) translateY(-134.37472075488856px) translateZ(-46.70861795354101px) rotateY(162deg);
+  transform: translateX(9.234204120514562px) translateY(-134.37472075488856px) translateZ(-46.70861795354101px) rotateY(162deg);
+}
+
+/* line 136 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="7"] .face[data-face-id="7"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 128 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="8"] {
+  -webkit-transform: translateX(43.17000147831403px) translateY(-134.37472075488856px) translateZ(0px) rotateY(90deg);
+  -moz-transform: translateX(43.17000147831403px) translateY(-134.37472075488856px) translateZ(0px) rotateY(90deg);
+  -o-transform: translateX(43.17000147831403px) translateY(-134.37472075488856px) translateZ(0px) rotateY(90deg);
+  -ms-transform: translateX(43.17000147831403px) translateY(-134.37472075488856px) translateZ(0px) rotateY(90deg);
+  transform: translateX(43.17000147831403px) translateY(-134.37472075488856px) translateZ(0px) rotateY(90deg);
+}
+
+/* line 136 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="8"] .face[data-face-id="8"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 128 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="9"] {
+  -webkit-transform: translateX(9.234204120514569px) translateY(-134.37472075488856px) translateZ(46.70861795354101px) rotateY(18deg);
+  -moz-transform: translateX(9.234204120514569px) translateY(-134.37472075488856px) translateZ(46.70861795354101px) rotateY(18deg);
+  -o-transform: translateX(9.234204120514569px) translateY(-134.37472075488856px) translateZ(46.70861795354101px) rotateY(18deg);
+  -ms-transform: translateX(9.234204120514569px) translateY(-134.37472075488856px) translateZ(46.70861795354101px) rotateY(18deg);
+  transform: translateX(9.234204120514569px) translateY(-134.37472075488856px) translateZ(46.70861795354101px) rotateY(18deg);
+}
+
+/* line 136 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="9"] .face[data-face-id="9"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 128 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="10"] {
+  -webkit-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(28.867513464886507px) rotateY(-54deg);
+  -moz-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(28.867513464886507px) rotateY(-54deg);
+  -o-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(28.867513464886507px) rotateY(-54deg);
+  -ms-transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(28.867513464886507px) rotateY(-54deg);
+  transform: translateX(-45.67506946518212px) translateY(-134.37472075488856px) translateZ(28.867513464886507px) rotateY(-54deg);
+}
+
+/* line 136 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.dodecahedron[data-mesh-id="0"] .group[data-group-id="10"] .face[data-face-id="10"] {
+  margin-top: -54.909273548787645px;
+  margin-left: -57.735026929773014px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(-153.434948822922deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 115.47005385954603px;
+  height: 109.81854709757529px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTUuNDcwMDUzODU5NTQ2MDNweCIgaGVpZ2h0PSIxMDkuODE4NTQ3MDk3NTc1MjlweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNTcuNzM1MDI2OTI5NzczMDE0LDAgMTE1LjQ3MDA1Mzg1OTU0NjAzLDQxLjk0Njk1MjQ1NTc5NDQ0NSA5My40MTcyMzU5MDcwODIwMiwxMDkuODE4NTQ3MTcxMzkzMzYgMjIuMDUyODE3OTUyNDY0MDE4LDEwOS44MTg1NDcxNzEzOTMzNiAwLDQxLjk0Njk1MjQ1NTc5NDQ0NSI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 23 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 201 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] {
+  -webkit-transform: translate3d(0, 0, 150px) rotateX(58deg) rotateY(72deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 150px) rotateX(58deg) rotateY(72deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 150px) rotateX(58deg) rotateY(72deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 150px) rotateX(58deg) rotateY(72deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 150px) rotateX(58deg) rotateY(72deg) rotateZ(0deg);
+}
+
+/* line 211 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 214 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="3"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="4"] {
+  margin-top: -45.529649876834206px;
+  margin-left: -52.573111211913364px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 105.14622242382673px;
+  height: 91.05929975366841px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUuMTQ2MjIyNDIzODI2NzNweCIgaGVpZ2h0PSI5MS4wNTkyOTk3NTM2Njg0MXB4Ij48cG9seWdvbiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iI2ZmZiIgcG9pbnRzPSI1Mi41NzMxMTEyMTE5MTMzNjQgMCAxMDUuMTQ2MjIyNDIzODI2NzMgOTEuMDU5Mjk5NzUzNjY4NDEgMCA5MS4wNTkyOTk3NTM2Njg0MSwgLCAsIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+/* line 226 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="0"] {
+  -webkit-transform: translateY(-50px) rotateY(0deg);
+  -moz-transform: translateY(-50px) rotateY(0deg);
+  -o-transform: translateY(-50px) rotateY(0deg);
+  -ms-transform: translateY(-50px) rotateY(0deg);
+  transform: translateY(-50px) rotateY(0deg);
+}
+
+/* line 230 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="0"] .face[data-face-id="0"] {
+  -webkit-transform: rotateX(52.62263187024507deg);
+  -moz-transform: rotateX(52.62263187024507deg);
+  -o-transform: rotateX(52.62263187024507deg);
+  -ms-transform: rotateX(52.62263187024507deg);
+  transform: rotateX(52.62263187024507deg);
+}
+
+/* line 226 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="1"] {
+  -webkit-transform: translateY(-50px) rotateY(72deg);
+  -moz-transform: translateY(-50px) rotateY(72deg);
+  -o-transform: translateY(-50px) rotateY(72deg);
+  -ms-transform: translateY(-50px) rotateY(72deg);
+  transform: translateY(-50px) rotateY(72deg);
+}
+
+/* line 230 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="1"] .face[data-face-id="1"] {
+  -webkit-transform: rotateX(52.62263187024507deg);
+  -moz-transform: rotateX(52.62263187024507deg);
+  -o-transform: rotateX(52.62263187024507deg);
+  -ms-transform: rotateX(52.62263187024507deg);
+  transform: rotateX(52.62263187024507deg);
+}
+
+/* line 226 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="2"] {
+  -webkit-transform: translateY(-50px) rotateY(144deg);
+  -moz-transform: translateY(-50px) rotateY(144deg);
+  -o-transform: translateY(-50px) rotateY(144deg);
+  -ms-transform: translateY(-50px) rotateY(144deg);
+  transform: translateY(-50px) rotateY(144deg);
+}
+
+/* line 230 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="2"] .face[data-face-id="2"] {
+  -webkit-transform: rotateX(52.62263187024507deg);
+  -moz-transform: rotateX(52.62263187024507deg);
+  -o-transform: rotateX(52.62263187024507deg);
+  -ms-transform: rotateX(52.62263187024507deg);
+  transform: rotateX(52.62263187024507deg);
+}
+
+/* line 226 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="3"] {
+  -webkit-transform: translateY(-50px) rotateY(216deg);
+  -moz-transform: translateY(-50px) rotateY(216deg);
+  -o-transform: translateY(-50px) rotateY(216deg);
+  -ms-transform: translateY(-50px) rotateY(216deg);
+  transform: translateY(-50px) rotateY(216deg);
+}
+
+/* line 230 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="3"] .face[data-face-id="3"] {
+  -webkit-transform: rotateX(52.62263187024507deg);
+  -moz-transform: rotateX(52.62263187024507deg);
+  -o-transform: rotateX(52.62263187024507deg);
+  -ms-transform: rotateX(52.62263187024507deg);
+  transform: rotateX(52.62263187024507deg);
+}
+
+/* line 226 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="4"] {
+  -webkit-transform: translateY(-50px) rotateY(288deg);
+  -moz-transform: translateY(-50px) rotateY(288deg);
+  -o-transform: translateY(-50px) rotateY(288deg);
+  -ms-transform: translateY(-50px) rotateY(288deg);
+  transform: translateY(-50px) rotateY(288deg);
+}
+
+/* line 230 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="4"] .face[data-face-id="4"] {
+  -webkit-transform: rotateX(52.62263187024507deg);
+  -moz-transform: rotateX(52.62263187024507deg);
+  -o-transform: rotateX(52.62263187024507deg);
+  -ms-transform: rotateX(52.62263187024507deg);
+  transform: rotateX(52.62263187024507deg);
+}
+
+/* line 226 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="5"] {
+  -webkit-transform: translateY(-50px) rotateY(360deg);
+  -moz-transform: translateY(-50px) rotateY(360deg);
+  -o-transform: translateY(-50px) rotateY(360deg);
+  -ms-transform: translateY(-50px) rotateY(360deg);
+  transform: translateY(-50px) rotateY(360deg);
+}
+
+/* line 230 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="5"] .face[data-face-id="5"] {
+  -webkit-transform: rotateX(52.62263187024507deg);
+  -moz-transform: rotateX(52.62263187024507deg);
+  -o-transform: rotateX(52.62263187024507deg);
+  -ms-transform: rotateX(52.62263187024507deg);
+  transform: rotateX(52.62263187024507deg);
+}
+
+/* line 234 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="5"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="7"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="9"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="11"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="13"] {
+  margin-top: -45.529649876834206px;
+  margin-left: -52.573111211913364px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 105.14622242382673px;
+  height: 91.05929975366841px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUuMTQ2MjIyNDIzODI2NzNweCIgaGVpZ2h0PSI5MS4wNTkyOTk3NTM2Njg0MXB4Ij48cG9seWdvbiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iI2ZmZiIgcG9pbnRzPSI1Mi41NzMxMTEyMTE5MTMzNjQgMCAxMDUuMTQ2MjIyNDIzODI2NzMgOTEuMDU5Mjk5NzUzNjY4NDEgMCA5MS4wNTkyOTk3NTM2Njg0MSwgLCAsIj48L3BvbHlnb24+PC9zdmc+');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+/* line 242 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="6"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="8"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="10"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="12"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="14"] {
+  margin-top: -45.529649876834206px;
+  margin-left: -52.573111211913364px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 105.14622242382673px;
+  height: 91.05929975366841px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUuMTQ2MjIyNDIzODI2NzNweCIgaGVpZ2h0PSI5MS4wNTkyOTk3NTM2Njg0MXB4Ij48cG9seWdvbiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iI2ZmZiIgcG9pbnRzPSIwIDAgNTIuNTczMTExMjExOTEzMzY0IDkxLjA1OTI5OTc1MzY2ODQxIDEwNS4xNDYyMjI0MjM4MjY3MyAwLCAsICwiPjwvcG9seWdvbj48L3N2Zz4=');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="5"] {
+  -webkit-transform: translateY(-50px) rotateY(-36deg);
+  -moz-transform: translateY(-50px) rotateY(-36deg);
+  -o-transform: translateY(-50px) rotateY(-36deg);
+  -ms-transform: translateY(-50px) rotateY(-36deg);
+  transform: translateY(-50px) rotateY(-36deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="5"] .face[data-face-id="5"] {
+  -webkit-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -moz-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -o-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -ms-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="6"] {
+  -webkit-transform: translateY(-50px) rotateY(72deg);
+  -moz-transform: translateY(-50px) rotateY(72deg);
+  -o-transform: translateY(-50px) rotateY(72deg);
+  -ms-transform: translateY(-50px) rotateY(72deg);
+  transform: translateY(-50px) rotateY(72deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="6"] .face[data-face-id="6"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="7"] {
+  -webkit-transform: translateY(-50px) rotateY(108deg);
+  -moz-transform: translateY(-50px) rotateY(108deg);
+  -o-transform: translateY(-50px) rotateY(108deg);
+  -ms-transform: translateY(-50px) rotateY(108deg);
+  transform: translateY(-50px) rotateY(108deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="7"] .face[data-face-id="7"] {
+  -webkit-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -moz-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -o-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -ms-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="8"] {
+  -webkit-transform: translateY(-50px) rotateY(216deg);
+  -moz-transform: translateY(-50px) rotateY(216deg);
+  -o-transform: translateY(-50px) rotateY(216deg);
+  -ms-transform: translateY(-50px) rotateY(216deg);
+  transform: translateY(-50px) rotateY(216deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="8"] .face[data-face-id="8"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="9"] {
+  -webkit-transform: translateY(-50px) rotateY(252deg);
+  -moz-transform: translateY(-50px) rotateY(252deg);
+  -o-transform: translateY(-50px) rotateY(252deg);
+  -ms-transform: translateY(-50px) rotateY(252deg);
+  transform: translateY(-50px) rotateY(252deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="9"] .face[data-face-id="9"] {
+  -webkit-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -moz-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -o-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -ms-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="10"] {
+  -webkit-transform: translateY(-50px) rotateY(360deg);
+  -moz-transform: translateY(-50px) rotateY(360deg);
+  -o-transform: translateY(-50px) rotateY(360deg);
+  -ms-transform: translateY(-50px) rotateY(360deg);
+  transform: translateY(-50px) rotateY(360deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="10"] .face[data-face-id="10"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="11"] {
+  -webkit-transform: translateY(-50px) rotateY(396deg);
+  -moz-transform: translateY(-50px) rotateY(396deg);
+  -o-transform: translateY(-50px) rotateY(396deg);
+  -ms-transform: translateY(-50px) rotateY(396deg);
+  transform: translateY(-50px) rotateY(396deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="11"] .face[data-face-id="11"] {
+  -webkit-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -moz-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -o-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -ms-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="12"] {
+  -webkit-transform: translateY(-50px) rotateY(504deg);
+  -moz-transform: translateY(-50px) rotateY(504deg);
+  -o-transform: translateY(-50px) rotateY(504deg);
+  -ms-transform: translateY(-50px) rotateY(504deg);
+  transform: translateY(-50px) rotateY(504deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="12"] .face[data-face-id="12"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="13"] {
+  -webkit-transform: translateY(-50px) rotateY(540deg);
+  -moz-transform: translateY(-50px) rotateY(540deg);
+  -o-transform: translateY(-50px) rotateY(540deg);
+  -ms-transform: translateY(-50px) rotateY(540deg);
+  transform: translateY(-50px) rotateY(540deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="13"] .face[data-face-id="13"] {
+  -webkit-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -moz-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -o-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  -ms-transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+  transform: translateZ(89.44271909999159px) translateY(55.27864045000421px) rotateX(-10.81231694257694deg);
+}
+
+/* line 260 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="14"] {
+  -webkit-transform: translateY(-50px) rotateY(648deg);
+  -moz-transform: translateY(-50px) rotateY(648deg);
+  -o-transform: translateY(-50px) rotateY(648deg);
+  -ms-transform: translateY(-50px) rotateY(648deg);
+  transform: translateY(-50px) rotateY(648deg);
+}
+
+/* line 264 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="14"] .face[data-face-id="14"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+  transform: translateZ(72.36067980352033px) translateY(55.27864045000421px) rotateX(10.81231694257694deg);
+}
+
+/* line 272 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="15"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="16"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="17"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="18"],
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .face[data-face-id="19"] {
+  margin-top: -45.529649876834206px;
+  margin-left: -52.573111211913364px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 105.14622242382673px;
+  height: 91.05929975366841px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUuMTQ2MjIyNDIzODI2NzNweCIgaGVpZ2h0PSI5MS4wNTkyOTk3NTM2Njg0MXB4Ij48cG9seWdvbiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iI2ZmZiIgcG9pbnRzPSIwIDAgNTIuNTczMTExMjExOTEzMzY0IDkxLjA1OTI5OTc1MzY2ODQxIDEwNS4xNDYyMjI0MjM4MjY3MyAwLCAsICwiPjwvcG9seWdvbj48L3N2Zz4=');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+
+/* line 289 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="15"] {
+  -webkit-transform: translateY(-50px) rotateY(36deg);
+  -moz-transform: translateY(-50px) rotateY(36deg);
+  -o-transform: translateY(-50px) rotateY(36deg);
+  -ms-transform: translateY(-50px) rotateY(36deg);
+  transform: translateY(-50px) rotateY(36deg);
+}
+
+/* line 293 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="15"] .face[data-face-id="15"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+}
+
+/* line 289 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="16"] {
+  -webkit-transform: translateY(-50px) rotateY(108deg);
+  -moz-transform: translateY(-50px) rotateY(108deg);
+  -o-transform: translateY(-50px) rotateY(108deg);
+  -ms-transform: translateY(-50px) rotateY(108deg);
+  transform: translateY(-50px) rotateY(108deg);
+}
+
+/* line 293 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="16"] .face[data-face-id="16"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+}
+
+/* line 289 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="17"] {
+  -webkit-transform: translateY(-50px) rotateY(180deg);
+  -moz-transform: translateY(-50px) rotateY(180deg);
+  -o-transform: translateY(-50px) rotateY(180deg);
+  -ms-transform: translateY(-50px) rotateY(180deg);
+  transform: translateY(-50px) rotateY(180deg);
+}
+
+/* line 293 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="17"] .face[data-face-id="17"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+}
+
+/* line 289 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="18"] {
+  -webkit-transform: translateY(-50px) rotateY(252deg);
+  -moz-transform: translateY(-50px) rotateY(252deg);
+  -o-transform: translateY(-50px) rotateY(252deg);
+  -ms-transform: translateY(-50px) rotateY(252deg);
+  transform: translateY(-50px) rotateY(252deg);
+}
+
+/* line 293 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="18"] .face[data-face-id="18"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+}
+
+/* line 289 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="19"] {
+  -webkit-transform: translateY(-50px) rotateY(324deg);
+  -moz-transform: translateY(-50px) rotateY(324deg);
+  -o-transform: translateY(-50px) rotateY(324deg);
+  -ms-transform: translateY(-50px) rotateY(324deg);
+  transform: translateY(-50px) rotateY(324deg);
+}
+
+/* line 293 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.icosahedron[data-mesh-id="1"] .group[data-group-id="19"] .face[data-face-id="19"] {
+  -webkit-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -moz-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -o-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  -ms-transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+  transform: translateZ(72.36067980352033px) translateY(144.72135953794356px) rotateX(-52.62263187024507deg);
+}
+
+/* line 26 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 322 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] {
+  -webkit-transform: translate3d(-150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(-150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(-150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(-150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(-150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* line 332 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 334 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 335 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="3"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="4"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="5"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="6"],
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="7"] {
+  margin-top: -61.05479098200001px;
+  margin-left: -70.5px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 141px;
+  height: 122.10958196400001px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDFweCIgaGVpZ2h0PSIxMjIuMTA5NTgxOTY0MDAwMDFweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iNzAuNSAwIDE0MSAxMjIuMTA5NTgxOTY0MDAwMDEgMCAxMjIuMTA5NTgxOTY0MDAwMDEsICwgLCI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+/* line 347 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="0"] {
+  -webkit-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(35.264389682754654deg);
+  -moz-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(35.264389682754654deg);
+  -o-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(35.264389682754654deg);
+  -ms-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(35.264389682754654deg);
+  transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(35.264389682754654deg);
+}
+
+/* line 351 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="1"] {
+  -webkit-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(35.264389682754654deg);
+  -moz-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(35.264389682754654deg);
+  -o-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(35.264389682754654deg);
+  -ms-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(35.264389682754654deg);
+  transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(35.264389682754654deg);
+}
+
+/* line 355 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="2"] {
+  -webkit-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(-35.264389682754654deg);
+  -moz-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(-35.264389682754654deg);
+  -o-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(-35.264389682754654deg);
+  -ms-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(-35.264389682754654deg);
+  transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(-35.264389682754654deg);
+}
+
+/* line 359 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="3"] {
+  -webkit-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(-35.264389682754654deg);
+  -moz-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(-35.264389682754654deg);
+  -o-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(-35.264389682754654deg);
+  -ms-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(-35.264389682754654deg);
+  transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(-35.264389682754654deg);
+}
+
+/* line 363 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="4"] {
+  -webkit-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(144.73561031724535deg);
+  -moz-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(144.73561031724535deg);
+  -o-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(144.73561031724535deg);
+  -ms-transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(144.73561031724535deg);
+  transform: translate3d(0, -61.05479098200001px, 70.5px) rotateX(144.73561031724535deg);
+}
+
+/* line 367 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="5"] {
+  -webkit-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(144.73561031724535deg);
+  -moz-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(144.73561031724535deg);
+  -o-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(144.73561031724535deg);
+  -ms-transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(144.73561031724535deg);
+  transform: translate3d(70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(144.73561031724535deg);
+}
+
+/* line 371 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="6"] {
+  -webkit-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(215.26438968275465deg);
+  -moz-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(215.26438968275465deg);
+  -o-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(215.26438968275465deg);
+  -ms-transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(215.26438968275465deg);
+  transform: translate3d(-70.5px, -61.05479098200001px, 0) rotateY(90deg) rotateX(215.26438968275465deg);
+}
+
+/* line 375 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.octahedron[data-mesh-id="2"] .face[data-face-id="7"] {
+  -webkit-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(215.26438968275465deg);
+  -moz-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(215.26438968275465deg);
+  -o-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(215.26438968275465deg);
+  -ms-transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(215.26438968275465deg);
+  transform: translate3d(0, -61.05479098200001px, -70.5px) rotateX(215.26438968275465deg);
+}
+
+/* line 29 : /Users/DPR/Projects/stylus-platonic/examples/src/stylus/platonic-solids.styl */
+
+/* line 406 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] {
+  -webkit-transform: translate3d(150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(150px, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+/* line 416 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 418 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+
+/* line 419 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="0"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="3"] {
+  margin-top: -70.58107042600001px;
+  margin-left: -81.5px;
+  -webkit-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background-color: #fff;
+  width: 163px;
+  height: 141.16214085200002px;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjNweCIgaGVpZ2h0PSIxNDEuMTYyMTQwODUyMDAwMDJweCI+PHBvbHlnb24gc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZmYiIHBvaW50cz0iODEuNSAwIDE2MyAxNDEuMTYyMTQwODUyMDAwMDIgMCAxNDEuMTYyMTQwODUyMDAwMDIsICwgLCI+PC9wb2x5Z29uPjwvc3ZnPg==');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0% 0%;
+  -webkit-mask-origin: padding;
+  -webkit-mask-clip: border;
+  -webkit-mask-composite: source-over;
+}
+
+/* line 425 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="1"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="2"],
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="3"] {
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+}
+
+/* line 431 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="0"] {
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: translate3d(0, -8.073198160780692px, -47.05404690361263px) rotateX(-90deg);
+  -moz-transform: translate3d(0, -8.073198160780692px, -47.05404690361263px) rotateX(-90deg);
+  -o-transform: translate3d(0, -8.073198160780692px, -47.05404690361263px) rotateX(-90deg);
+  -ms-transform: translate3d(0, -8.073198160780692px, -47.05404690361263px) rotateX(-90deg);
+  transform: translate3d(0, -8.073198160780692px, -47.05404690361263px) rotateX(-90deg);
+}
+
+/* line 436 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="1"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateX(-19.47122063449069deg);
+  -moz-transform: translate3d(0, 0, 0) rotateX(-19.47122063449069deg);
+  -o-transform: translate3d(0, 0, 0) rotateX(-19.47122063449069deg);
+  -ms-transform: translate3d(0, 0, 0) rotateX(-19.47122063449069deg);
+  transform: translate3d(0, 0, 0) rotateX(-19.47122063449069deg);
+}
+
+/* line 440 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="2"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateY(120deg) rotateX(-19.47122063449069deg);
+  -moz-transform: translate3d(0, 0, 0) rotateY(120deg) rotateX(-19.47122063449069deg);
+  -o-transform: translate3d(0, 0, 0) rotateY(120deg) rotateX(-19.47122063449069deg);
+  -ms-transform: translate3d(0, 0, 0) rotateY(120deg) rotateX(-19.47122063449069deg);
+  transform: translate3d(0, 0, 0) rotateY(120deg) rotateX(-19.47122063449069deg);
+}
+
+/* line 444 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/objects/platonic-solids.styl */
+.platonic-viewport .scene .mesh.tetrahedron[data-mesh-id="3"] .face[data-face-id="3"] {
+  -webkit-transform: translate3d(0, 0, 0) rotateY(240deg) rotateX(-19.47122063449069deg);
+  -moz-transform: translate3d(0, 0, 0) rotateY(240deg) rotateX(-19.47122063449069deg);
+  -o-transform: translate3d(0, 0, 0) rotateY(240deg) rotateX(-19.47122063449069deg);
+  -ms-transform: translate3d(0, 0, 0) rotateY(240deg) rotateX(-19.47122063449069deg);
+  transform: translate3d(0, 0, 0) rotateY(240deg) rotateX(-19.47122063449069deg);
+}
