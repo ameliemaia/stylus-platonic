@@ -2,28 +2,57 @@
 @import "stylus-platonic/dev/dev"
 @import "stylus-platonic"
 
+@keyframes rotate
+	0%
+		transform: rotate3d(0, 0, 0, 0deg)
+	100%
+		transform: rotate3d(1, 1, 1, 360deg)
+
+point-on-sphere(x = 0, y = 0, z = 0, radius = 1)
+	u     = random(0, 1)
+	v     = random(0, 1)
+	theta = 2 * PI * u
+	phi   = acos(2 * v - 1)
+	x     = x + (radius * sin(phi) * cos(theta))
+	y     = y + (radius * sin(phi) * sin(theta))
+	z     = z + (radius * cos(phi))
+	(x y z)
+
 .platonic-viewport
 
-    .scene
+	.scene
+			
+		.mesh
 
-        .ui-component.grid
-            grid()
+			&.particles
+				
+				colors = (red blue yellow)
 
-        .mesh
+				&[data-mesh-id="0"]
+					
+					animation-name: rotate
+					animation-duration: 20s
+					animation-timing-function: linear
+					animation-fill-mode: forwards
+					animation-iteration-count: infinite
+					animation-play-state: running
 
-            &.particles
+					totalParticles = 200
 
-                &[data-mesh-id="0"]
-
-                    for j in 0...200
-
-                        min = -400px
-                        max = 400px
-
-                        x = unit(random-range(min, max), px)
-                        y = unit(random-range(min, max), px)
-                        z = unit(random-range(min, max), px)
-                       
-                        particle(particle-size, x, y, z, instance: true, particle-id: j)
-
-        
+					for i in 0...totalParticles
+						
+						hue = (i / totalParticles) * 360
+						
+						position = point-on-sphere(radius: 200)
+						
+						x = unit(position[0], 'px')
+						y = unit(position[1], 'px')
+						z = unit(position[2], 'px')
+						
+						pColor = colors[ floor(random(0, 1) * length(colors) - 1 ) ]
+						
+						pColor = hsl(unit(hue, deg), 80%, 50%)
+						
+						pSize = unit(random-range(2, 10), 'px')
+												
+						particle(pSize, x, y, z, instance: false, particle-id: i, color: pColor)						

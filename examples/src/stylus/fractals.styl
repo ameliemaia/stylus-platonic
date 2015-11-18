@@ -7,16 +7,12 @@
 
 	.scene
 
-		.ui-component
-			
-			&.grid
-				grid(component-id: 0)
-
-			&.display-axis
-				display-axis(component-id: 1)
-
 		.group.sierpinski-sponge
-			sierpinksi-sponge(iterations: 1, group-id: 0)
-			
-			.face
-				background-color: red !important
+			sierpinksi-sponge(iterations: 2, size: 450px, group-id: 0)
+
+			total-faces = 6
+
+			for i in 0...total-faces
+				.face[data-face-id={'"%s"' % i}]
+					hue = (i / total-faces) * 360
+					background-color: hsl(unit(hue, deg), 80%, 50%) !important

@@ -5,11 +5,11 @@
 
 /* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/stylus/lib/functions/index.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
 
 /* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/dev/dev.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
 
@@ -29,7 +29,7 @@
 
 /* line 90 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
 
@@ -45,7 +45,7 @@
 
 /* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
 
 /* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
 
@@ -93,7 +93,7 @@
 
 /* line 5 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
 
@@ -239,7 +239,7 @@ div#stats {
 
 /* line 25 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/size.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/index.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/index.styl */
 
 /* line 43 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/index.styl */
 
@@ -247,7 +247,7 @@ div#stats {
 
 /* line 14 : /Users/DPR/Projects/stylus-platonic/src/stylus/stylus-platonic/core/config.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
 
 /* line 10 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/index.styl */
 
@@ -267,7 +267,7 @@ div#stats {
 
 /* line 90 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/flex.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
 
 /* line 11 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/gradients.styl */
 
@@ -283,7 +283,7 @@ div#stats {
 
 /* line 19 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/image.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
 
 /* line 8 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/normalize/index.styl */
 
@@ -331,7 +331,7 @@ div#stats {
 
 /* line 5 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/reset.styl */
 
-/* line 22 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
+/* line 14 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
 
 /* line 12 : /Users/DPR/Projects/stylus-platonic/node_modules/nib/lib/nib/text/index.styl */
 
@@ -421,17 +421,17 @@ div#stats {
   -moz-perspective-origin: 50%;
   -ms-perspective-origin: 50%;
   perspective-origin: 50%;
-  background-color: #575757;
-  background-image: -webkit--webkit-radial-gradient(#575757, #272727);
-  background-image: -webkit--moz-radial-gradient(#575757, #272727);
-  background-image: -webkit--o-radial-gradient(#575757, #272727);
-  background-image: -webkit--ms-radial-gradient(#575757, #272727);
-  background-image: -webkit-radial-gradient(#575757, #272727);
-  background-image: -webkit-radial-gradient(#575757, #272727);
-  background-image: -moz-radial-gradient(#575757, #272727);
-  background-image: -o-radial-gradient(#575757, #272727);
-  background-image: -ms-radial-gradient(#575757, #272727);
-  background-image: radial-gradient(#575757, #272727);
+  background-color: #272727;
+  background-image: -webkit--webkit-radial-gradient(#272727, #000);
+  background-image: -webkit--moz-radial-gradient(#272727, #000);
+  background-image: -webkit--o-radial-gradient(#272727, #000);
+  background-image: -webkit--ms-radial-gradient(#272727, #000);
+  background-image: -webkit-radial-gradient(#272727, #000);
+  background-image: -webkit-radial-gradient(#272727, #000);
+  background-image: -moz-radial-gradient(#272727, #000);
+  background-image: -o-radial-gradient(#272727, #000);
+  background-image: -ms-radial-gradient(#272727, #000);
+  background-image: radial-gradient(#272727, #000);
   overflow: hidden;
   position: relative;
   margin-top: 0;

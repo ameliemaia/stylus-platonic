@@ -8,13 +8,10 @@ block css
 
 block scene
 
-    include includes/grid
-    include includes/display-axis
-
-    .group.sierpinski-sponge(data-group-id="0", data-camera-transform="1")
-        - var iterations = 1
+    .group.sierpinski-sponge(data-group-id="0", data-camera-transform="1", data-light="0")
+        - var iterations = 2
         - var cubes = Math.pow(20, iterations)
         - for (var i = 0; i < cubes; i++)
-            .mesh(data-mesh-type="cube", data-mesh-id="#{i}", data-light="1")
+            .mesh(data-mesh-type="cube", data-mesh-id="#{i}")
                 - for (var j = 0; j < 6; j++)
                     .face(data-face-id="#{j}")

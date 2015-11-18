@@ -3,13 +3,11 @@ extends includes/layout
 
 block css
 
-    link(rel="stylesheet", href="css/particles.css")
+	link(rel="stylesheet", href="css/particles.css")
 
 
 block scene
 
-    include includes/grid
-
-    .mesh.particles(data-mesh-id="0", data-camera-transform="1") 
-        - for(j = 0; j < 200; j++)
-            .particle(data-particle-id="#{j}")
+	.mesh.particles(data-mesh-id="0", data-camera-transform="1") 
+		- for(j = 0; j < 200; j++)
+			.particle(data-particle-id="#{j}")

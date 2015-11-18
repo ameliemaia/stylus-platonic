@@ -27,7 +27,9 @@ Camera = (function() {
     rotation_x: -30,
     rotation_y: -45,
     max_rotation_x: 360,
-    max_rotation_y: 360
+    max_rotation_y: 360,
+    min_scale: 1,
+    max_scale: 10
   };
 
   Camera.prototype.el = null;
@@ -48,14 +50,24 @@ Camera = (function() {
 
   Camera.prototype.gimball_radius = 100;
 
+  Camera.prototype.scale = 1;
+
+  Camera.prototype.pivot_x = 0;
+
+  Camera.prototype.pivot_y = 0;
+
+  Camera.prototype.pivot_z = 0;
+
 
   /*
   constructor
   @param {$element} el
    */
 
-  function Camera(el) {
+  function Camera(el, gui) {
+    var cam_settings, range;
     this.el = el;
+    this._on_mouse_wheel = bind(this._on_mouse_wheel, this);
     this._update_viewport = bind(this._update_viewport, this);
     this.reset = bind(this.reset, this);
     this.config.perspective = parseFloat(this.el.css('perspective'));
@@ -76,6 +88,35 @@ Camera = (function() {
         return _this._on_mouse_down(event);
       };
     })(this));
+    this.el.on('mousewheel', this._on_mouse_wheel);
+    this.el.on('MozMousePixelScroll', this._on_mouse_wheel);
+    cam_settings = gui.addFolder('Camera');
+    cam_settings.add(this, 'perspective', 0, 2000);
+    cam_settings.open();
+    cam_settings.add(this, 'scale', 1, 10).name('zoom').listen().onChange((function(_this) {
+      return function() {
+        return _this._update_viewport(_this.config.rotation_x, _this.config.rotation_y);
+      };
+    })(this));
+    range = 1000;
+    cam_settings.add(this, 'pivot_x', -range, range).onChange((function(_this) {
+      return function() {
+        return _this._update_viewport(_this.config.rotation_x, _this.config.rotation_y);
+      };
+    })(this));
+    cam_settings.add(this, 'pivot_y', -range, range).onChange((function(_this) {
+      return function() {
+        return _this._update_viewport(_this.config.rotation_x, _this.config.rotation_y);
+      };
+    })(this));
+    cam_settings.add(this, 'pivot_z', -range, range).onChange((function(_this) {
+      return function() {
+        return _this._update_viewport(_this.config.rotation_x, _this.config.rotation_y);
+      };
+    })(this));
+    cam_settings.add(this, 'rotation_x').listen();
+    cam_settings.add(this, 'rotation_y').listen();
+    cam_settings.add(this, 'reset');
     this._update_viewport(this.config.rotation_x, this.config.rotation_y);
   }
 
@@ -145,7 +186,7 @@ Camera = (function() {
     ref = this._$objects;
     for (i = 0, len = ref.length; i < len; i++) {
       object = ref[i];
-      transform = "rotateX(" + this.rotation_x + "deg) rotateY(" + this.rotation_y + "deg)";
+      transform = ["rotateX(" + this.rotation_x + "deg) rotateY(" + this.rotation_y + "deg)", "scale3d(" + this.scale + "," + this.scale + "," + this.scale + ")", "translateX(" + this.pivot_x + "px) translateY(" + this.pivot_y + "px) translateZ(" + this.pivot_z + "px)"].join(' ');
       $(object).css({
         '-webkit-transform': transform,
         '-moz-transform': transform,
@@ -181,6 +222,13 @@ Camera = (function() {
     this._rotation_lock_y = this.rotation_y;
     this.el.css('cursor', '-webkit-grabbing');
     return event.preventDefault();
+  };
+
+  Camera.prototype._on_mouse_wheel = function(event) {
+    this.scale += event.originalEvent.wheelDelta * 0.001;
+    this.scale = Math.max(this.scale, this.config.min_scale);
+    this.scale = Math.min(this.scale, this.config.max_scale);
+    return this._update_viewport(this.rotation_x, this.rotation_y);
   };
 
 

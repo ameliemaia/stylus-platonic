@@ -26,7 +26,7 @@ Scene = (function() {
   function Scene() {
     this._change_view = bind(this._change_view, this);
     this.loop = bind(this.loop, this);
-    var cam_settings, i, j, len, ref, scene_stats, view;
+    var gui, i, j, len, ref, scene_stats, view;
     this.$window = $(window);
     ref = this.views;
     for (i = j = 0, len = ref.length; j < len; i = ++j) {
@@ -47,7 +47,8 @@ Scene = (function() {
         return _this.face_groups.push(face_group);
       };
     })(this));
-    this.cam = new Camera(this.$viewport);
+    gui = new dat.GUI();
+    this.cam = new Camera(this.$viewport, gui);
     this.fps = new Stats();
     this.$viewport.append(this.fps.domElement);
     this.stats.groups = $('.group').length;
@@ -55,8 +56,7 @@ Scene = (function() {
     this.stats.faces = $('.face').length;
     this.stats.photon_shaders = $('.photon-shader').length;
     this.stats.ui_components = $('.ui-component').length;
-    this.gui = new dat.GUI();
-    scene_stats = this.gui.addFolder('Scene');
+    scene_stats = gui.addFolder('Scene');
     scene_stats.add(this, 'view', this.views).onChange((function(_this) {
       return function(value) {
         return _this._change_view(value);
@@ -67,11 +67,7 @@ Scene = (function() {
     scene_stats.add(this.stats, 'faces').listen();
     scene_stats.add(this.stats, 'photon_shaders').listen();
     scene_stats.add(this.stats, 'ui_components').listen();
-    cam_settings = this.gui.addFolder('Camera');
-    cam_settings.add(this.cam, 'perspective', 0, 2000);
-    cam_settings.add(this.cam, 'rotation_x').listen();
-    cam_settings.add(this.cam, 'rotation_y').listen();
-    cam_settings.add(this.cam, 'reset');
+    scene_stats.open();
     this.$window.resize((function(_this) {
       return function() {
         return _this.on_resize();
