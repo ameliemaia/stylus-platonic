@@ -18,6 +18,8 @@ class Camera
         rotation_y     : -45
         max_rotation_x : 360
         max_rotation_y : 360
+        min_scale      : 1
+        max_scale      : 10
 
     el                 : null
     width              : 0
@@ -29,13 +31,19 @@ class Camera
     rotation_lock_y    : 0
     gimball_radius     : 100
 
+    scale: 1
+    pivot_x: 0
+    pivot_y: 0
+    pivot_z: 0
 
     ###
     constructor
     @param {$element} el
     ###
 
-    constructor: ( @el ) ->
+    constructor: ( @el, gui ) ->
+
+        # return
 
         # Get perspective
         @config.perspective = parseFloat @el.css 'perspective'
@@ -48,6 +56,23 @@ class Camera
         @el.mousemove ( event ) => @_on_mouse_move event
         @el.mouseup ( event ) => @_on_mouse_up event
         @el.mousedown ( event ) => @_on_mouse_down event
+        @el.on 'mousewheel', @_on_mouse_wheel
+        @el.on 'MozMousePixelScroll', @_on_mouse_wheel
+
+        cam_settings = gui.addFolder 'Camera'
+        cam_settings.add @, 'perspective', 0, 2000
+        cam_settings.open()
+
+        cam_settings.add(@, 'scale', 1, 10).name('zoom').listen().onChange => @_update_viewport @config.rotation_x, @config.rotation_y
+
+        range = 1000
+
+        cam_settings.add(@, 'pivot_x', -range, range).onChange => @_update_viewport @config.rotation_x, @config.rotation_y
+        cam_settings.add(@, 'pivot_y', -range, range).onChange => @_update_viewport @config.rotation_x, @config.rotation_y
+        cam_settings.add(@, 'pivot_z', -range, range).onChange => @_update_viewport @config.rotation_x, @config.rotation_y
+        cam_settings.add(@, 'rotation_x').listen()
+        cam_settings.add(@, 'rotation_y').listen()
+        cam_settings.add(@, 'reset')
 
         @_update_viewport @config.rotation_x, @config.rotation_y
 
@@ -117,7 +142,11 @@ class Camera
 
         for object in @_$objects
 
-            transform = "rotateX(#{@rotation_x}deg) rotateY(#{@rotation_y}deg)"    
+            transform = [
+                "rotateX(#{@rotation_x}deg) rotateY(#{@rotation_y}deg)" 
+                "scale3d(#{@scale},#{@scale},#{@scale})"
+                "translateX(#{@pivot_x}px) translateY(#{@pivot_y}px) translateZ(#{@pivot_z}px)"
+            ].join(' ')
 
             $(object).css
                 '-webkit-transform' : transform  
@@ -155,6 +184,18 @@ class Camera
         @el.css 'cursor', '-webkit-grabbing'
 
         event.preventDefault()
+
+    _on_mouse_wheel: ( event ) =>
+
+        @scale += event.originalEvent.wheelDelta * 0.001
+
+        @scale = Math.max( @scale, @config.min_scale )
+        @scale = Math.min( @scale, @config.max_scale )
+
+        @_update_viewport @rotation_x, @rotation_y 
+        # console.log @scale
+
+        
 
     ###
     Viewport mouse up handler
