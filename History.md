@@ -1,3 +1,11 @@
+0.0.3 / 2015-1-17
+==================
+
+    * Fixed dodecahedron material color
+    * Added zoom functionality to camera
+    * Switched to gulp for building examples
+
+
 0.0.2 / 2013-08-23
 ==================
 
