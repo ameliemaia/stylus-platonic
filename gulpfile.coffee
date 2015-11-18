@@ -9,7 +9,6 @@ gulpif 			= require 'gulp-if'
 browserSync 	= require 'browser-sync'
 gutil 			= require 'gulp-util'
 newer 			= require 'gulp-newer' 
-platonic 		= require './'
 
 handleError = ( (err) ->
 	gutil.log err
@@ -18,6 +17,8 @@ handleError = ( (err) ->
 )
 
 paths = {
+	platonic:
+		watch: './src/stylus/**/*.styl'
 	scripts:
 		source: './src/coffee/examples/**/*.coffee'
 		watch: './src/coffee/examples/**/*.coffee'
@@ -41,13 +42,13 @@ gulp.task( 'styles', ->
 	gulp
 		.src( paths.styles.source )
 		.pipe(stylus({
-			use: [ nib(), platonic() ]
+			use: [ nib(), require('./')() ]
 			linenos: true
 		}))
+		.on( 'error', handleError )
 		.pipe( newer( paths.styles.destination ) )
 		.pipe( gulp.dest paths.styles.destination )
-		.pipe( prefix 'last 2 versions', 'Chrome 34', 'Firefox 28', 'iOS 7' )
-		.on( 'error', handleError )
+		.pipe( prefix 'last 2 versions' )
 		.pipe( browserSync.stream() )
 )
 
@@ -113,9 +114,10 @@ Watch
 gulp.task( "watch", ->
 
 	gulp.watch( paths.templates.watch, [ 'templates' ] )
+	gulp.watch( paths.platonic.watch, [ 'styles' ] )
 	gulp.watch( paths.styles.watch, [ 'styles' ] )
 	gulp.watch( paths.scripts.watch, [ 'scripts' ] )
 )
 
 gulp.task "build", ['styles', 'templates', 'scripts']
-gulp.task "default", ['build', 'server', 'watch', 'browser-sync']
+gulp.task "default", ['build', 'server', 'browser-sync', 'watch']
