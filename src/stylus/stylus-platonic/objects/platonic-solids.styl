@@ -50,15 +50,15 @@ dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, 
         selector = '[data-mesh-id="%s"]' % mesh-id
 
     return if instance and mesh-id > 0
-
+    
     &{unquote(selector)}
 
         .face[data-face-id="0"]
-            pentagon(face_radius, translate-y: dodecahedron_center, rotate-x: 90deg, rotate-z: 90deg)
+            pentagon(face_radius, translate-y: dodecahedron_center, rotate-x: 90deg, rotate-z: 90deg, color: color)
 
         .face[data-face-id="11"]
             translate_y = dodecahedron_center + -(dodecahedron_height)
-            pentagon(face_radius, translate-y: translate_y, translate-x: -(difference * 2), rotate-x: 90deg, rotate-z: -90deg)
+            pentagon(face_radius, translate-y: translate_y, translate-x: -(difference * 2), rotate-x: 90deg, rotate-z: -90deg, color: color)
 
         .face
             transform-origin : 50% 100%
@@ -101,7 +101,7 @@ dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, 
                 transform : translateX(cx) translateY(translate_y) translateZ(cz) rotateY(rotation_y)
 
                 .face[data-face-id={'"%s"' % index}]
-                    pentagon(face_radius, rotate-x: -(face_angle))
+                    pentagon(face_radius, rotate-x: -(face_angle), color: color)
 
         for i in 0 .. 4
 
@@ -138,7 +138,7 @@ dodecahedron(radius = 100px, translate-x = 0, translate-y = 0, translate-z = 0, 
                     rotate_x = -(PI - radians(remove-unit(face_angle)))
                     rotate_x = unit(degrees(rotate_x), deg)
 
-                    pentagon(face_radius, rotate-x: rotate_x)
+                    pentagon(face_radius, rotate-x: rotate_x, color: color)
 
 
 
