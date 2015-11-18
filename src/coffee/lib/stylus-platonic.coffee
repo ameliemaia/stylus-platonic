@@ -26,11 +26,6 @@ utils = require './nodes/utils'
 exports = module.exports = plugin
 
 
-# Version
-
-exports.version = '0.0.1'
-
-
 # Path
 
 exports.path = __dirname
