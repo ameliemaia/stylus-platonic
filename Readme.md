@@ -100,7 +100,7 @@ You will first need to install the dependencies.
 $ npm install
 ```
 
-Then run ```grunt``` from the lib directory and open ```http://localhost:9055```
+Then run ```gulp``` from the lib directory and open ```http://localhost:3001```
 
 This will create a local test server with watch / compile action.
 
@@ -115,16 +115,10 @@ Q: When will more browsers be supported?
 
 A: As soon as the browser vendors implement the technology required to display the 3D content.
 
-Q: This is cool and all, but what about realtime?
-
-A: I'm working on a node.js-based solution for that : )
-
 
 ## Contributing
 
 For any issues and bugs please submit an issue.
-
-If you would like to contribute to the library and / or have some good ideas on how things could be improved let's discuss it in the [Google group]().
 
 
 ## License
