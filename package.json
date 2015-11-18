@@ -1,6 +1,6 @@
 {
   "name": "stylus-platonic",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CSS3D library built on Stylus",
   "main": "./lib/stylus-platonic.js",
   "repository": {
